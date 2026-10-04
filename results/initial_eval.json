@@ -1,0 +1,80 @@
+{
+  "kind": "trained_policy_physics_evaluation",
+  "checkpoint": "checkpoints/main",
+  "episodes": [
+    {
+      "seed": 1000,
+      "success": true,
+      "steps": 208,
+      "wall_seconds": 13.563556715998857,
+      "max_cube_height_m": 1.1249458756339479,
+      "final_cube_xyz": [
+        0.01642681992242419,
+        0.16980845891246923,
+        0.9298039966115128
+      ],
+      "video": null
+    },
+    {
+      "seed": 1001,
+      "success": true,
+      "steps": 192,
+      "wall_seconds": 11.981879564002156,
+      "max_cube_height_m": 1.1141511186772357,
+      "final_cube_xyz": [
+        -0.0002516949415475313,
+        0.18120965703987948,
+        0.931380156861075
+      ],
+      "video": null
+    },
+    {
+      "seed": 1002,
+      "success": true,
+      "steps": 191,
+      "wall_seconds": 12.072326928999246,
+      "max_cube_height_m": 1.079324815571659,
+      "final_cube_xyz": [
+        -0.004700610467829067,
+        0.18116398099092285,
+        0.9296912851546769
+      ],
+      "video": null
+    },
+    {
+      "seed": 1003,
+      "success": false,
+      "steps": 600,
+      "wall_seconds": 36.93440903800001,
+      "max_cube_height_m": 0.9223479431263287,
+      "final_cube_xyz": [
+        -0.021055990066930298,
+        -0.18672394296314793,
+        0.9199092400569475
+      ],
+      "video": null
+    },
+    {
+      "seed": 1004,
+      "success": false,
+      "steps": 600,
+      "wall_seconds": 37.819612772000255,
+      "max_cube_height_m": 0.9230453477628934,
+      "final_cube_xyz": [
+        -0.03482385450413022,
+        -0.19591927310803942,
+        0.9199092400569475
+      ],
+      "video": null
+    }
+  ],
+  "successes": 3,
+  "success_rate": 0.6,
+  "wall_seconds": 115.7078537419984,
+  "seed_start": 1000,
+  "held_out_from_training_seeds": true,
+  "orientation_control": "fixed_downward",
+  "controller": "SmolVLA XYZ and gripper plus fixed downward wrist feedback",
+  "video_recorded": false,
+  "interpretation": "Held-out random seeds test this simulation distribution; they do not prove real-world transfer."
+}

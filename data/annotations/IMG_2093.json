@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "start_time_s": 1.0,
+  "grasp_time_s": 4.6,
+  "release_time_s": 10.4,
+  "end_time_s": 11.4,
+  "estimated": true,
+  "event_uncertainty_s": {
+    "grasp_time_s": 0.2,
+    "release_time_s": 0.25
+  },
+  "method": "Visual review of full-clip contact sheets plus original-resolution cropped frames near physical lift and release. Marker coordinates used only to locate crops and identify the onset of motion.",
+  "notes": "Grip is closed and object stationary at 4.2-4.5 s; lift starts around 4.6-4.8 s and is clear by 5.1 s. Fingers separate around 10.4 s and continue withdrawing."
+}

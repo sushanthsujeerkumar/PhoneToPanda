@@ -1,0 +1,32 @@
+[
+  {
+    "file": "checkpoints/main/policy_preprocessor_step_5_normalizer_processor.safetensors",
+    "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "matches_original": true
+  },
+  {
+    "file": "checkpoints/main/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+    "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "matches_original": true
+  },
+  {
+    "file": "checkpoints/main/model.safetensors",
+    "sha256": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+    "matches_original": true
+  },
+  {
+    "file": "checkpoints/expanded/policy_preprocessor_step_5_normalizer_processor.safetensors",
+    "sha256": "3a035f968405a53770186e9b49077edc186754fc35009d4110af305c8336adbc",
+    "matches_original": true
+  },
+  {
+    "file": "checkpoints/expanded/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+    "sha256": "3a035f968405a53770186e9b49077edc186754fc35009d4110af305c8336adbc",
+    "matches_original": true
+  },
+  {
+    "file": "checkpoints/expanded/model.safetensors",
+    "sha256": "9ee855614b7cd669d708df800745a59b4e834e40a5e989144e275dd1e0de66d1",
+    "matches_original": true
+  }
+]

@@ -1,0 +1,105 @@
+{
+  "paired_starts": [
+    {
+      "group": "original_range",
+      "seed": 3000,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3001,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3002,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3003,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3004,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3005,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3006,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3007,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3008,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "original_range",
+      "seed": 3009,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3010,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3011,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3012,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3013,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3014,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3015,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3016,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3017,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3018,
+      "same_initial_cube_and_robot_state": true
+    },
+    {
+      "group": "wider_range",
+      "seed": 3019,
+      "same_initial_cube_and_robot_state": true
+    }
+  ],
+  "final_normalization_verified": true
+}

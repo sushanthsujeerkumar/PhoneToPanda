@@ -1,0 +1,58 @@
+{
+  "checked_at": "2026-10-04T14:56:05+01:00",
+  "scope": "Reorganised project checked in a fresh Python environment on the existing Ubuntu 24.04 host; package and model caches reused. Not a clean operating-system install.",
+  "environment": {
+    "python": "3.12.3",
+    "torch": "2.7.1+cu128",
+    "gpu": "NVIDIA GeForce RTX 5060",
+    "cuda_matrix_kernel_passed": true,
+    "aruco_available": true
+  },
+  "automated_checks": {
+    "command": "PHONE_PHYSICS_TEST=1 MUJOCO_GL=egl PYOPENGL_PLATFORM=egl .venv/bin/python -m pytest -q",
+    "passed": 44,
+    "skipped": 0,
+    "warnings": "Three upstream robosuite deprecation warnings."
+  },
+  "fresh_tracking": {
+    "recording": "IMG_2092",
+    "accepted": true,
+    "measured_samples_identical_to_preserved_track": true
+  },
+  "dataset_rebuild": {
+    "successful_physical_replays": 20,
+    "source_recordings": 5,
+    "frames": 4471,
+    "export_completed": true,
+    "second_build_reused_validated_outputs": true
+  },
+  "training_interface": {
+    "training_command_dry_run_passed": true,
+    "tiny_random_model_training_updates": 2,
+    "checkpoint_reloaded": true,
+    "optimizer_changed_weights": true,
+    "full_task_training_repeated_during_cleanup": false
+  },
+  "native_viewer": {
+    "checkpoint": "checkpoints/main",
+    "seed": 1000,
+    "kind": "interactive_native_policy",
+    "benchmark_evaluation": false,
+    "video_recorded": false,
+    "success": true,
+    "steps": 208,
+    "start_xy": [
+      0.0014970016582543932,
+      -0.16273107070935014
+    ],
+    "inside_training_area": true,
+    "orientation_control": "fixed_downward",
+    "step_limited": false,
+    "interpretation": "Repeat of a previously tested start for migration verification; not an additional independent policy trial."
+  },
+  "data_and_weights": "See data_integrity.json and checkpoint_integrity.json.",
+  "publication": {
+    "uploaded": false,
+    "public_checkpoint_url": null
+  }
+}

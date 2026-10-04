@@ -1,0 +1,598 @@
+{
+  "status": "completed",
+  "source_recordings": 5,
+  "additional_training_updates": 1000,
+  "episodes_per_model": 20,
+  "successes": {
+    "baseline": 15,
+    "adapted": 14
+  },
+  "reports": {
+    "baseline": {
+      "original_range": {
+        "kind": "trained_policy_physics_evaluation",
+        "checkpoint": "checkpoints/main",
+        "episodes": [
+          {
+            "seed": 3000,
+            "success": true,
+            "steps": 223,
+            "wall_seconds": 14.067417804000343,
+            "max_cube_height_m": 1.0763831628331786,
+            "final_cube_xyz": [
+              -0.003361473873695577,
+              0.1616619013243998,
+              0.929404287765978
+            ],
+            "video": null
+          },
+          {
+            "seed": 3001,
+            "success": true,
+            "steps": 225,
+            "wall_seconds": 13.29183807499976,
+            "max_cube_height_m": 1.1443879449059013,
+            "final_cube_xyz": [
+              -3.933461761077746e-05,
+              0.17906599731428388,
+              0.9300135895878561
+            ],
+            "video": null
+          },
+          {
+            "seed": 3002,
+            "success": true,
+            "steps": 243,
+            "wall_seconds": 14.501175614000203,
+            "max_cube_height_m": 1.1385761891417308,
+            "final_cube_xyz": [
+              -0.0019527542451547124,
+              0.18182555657655716,
+              0.9303186424553506
+            ],
+            "video": null
+          },
+          {
+            "seed": 3003,
+            "success": true,
+            "steps": 267,
+            "wall_seconds": 16.19375049900009,
+            "max_cube_height_m": 1.0769026335851608,
+            "final_cube_xyz": [
+              -0.0037963232312844676,
+              0.1691897042890987,
+              0.9303464859695043
+            ],
+            "video": null
+          },
+          {
+            "seed": 3004,
+            "success": true,
+            "steps": 218,
+            "wall_seconds": 13.029911317999904,
+            "max_cube_height_m": 1.124696620207903,
+            "final_cube_xyz": [
+              -0.00143306524948074,
+              0.18406602171045378,
+              0.9294351058148276
+            ],
+            "video": null
+          },
+          {
+            "seed": 3005,
+            "success": true,
+            "steps": 293,
+            "wall_seconds": 17.58982491500001,
+            "max_cube_height_m": 1.116884695230354,
+            "final_cube_xyz": [
+              -0.0018967791073138938,
+              0.16306933261639459,
+              0.9299976766713837
+            ],
+            "video": null
+          },
+          {
+            "seed": 3006,
+            "success": true,
+            "steps": 182,
+            "wall_seconds": 10.985603770000125,
+            "max_cube_height_m": 1.0583482632088594,
+            "final_cube_xyz": [
+              -0.01063242966164807,
+              0.17766665295334028,
+              0.9295784671208808
+            ],
+            "video": null
+          },
+          {
+            "seed": 3007,
+            "success": true,
+            "steps": 204,
+            "wall_seconds": 12.366665982000086,
+            "max_cube_height_m": 1.0743434242398575,
+            "final_cube_xyz": [
+              0.003417347858627102,
+              0.17327468916319055,
+              0.9303112270923778
+            ],
+            "video": null
+          },
+          {
+            "seed": 3008,
+            "success": true,
+            "steps": 316,
+            "wall_seconds": 19.30455182300011,
+            "max_cube_height_m": 1.1391074578962261,
+            "final_cube_xyz": [
+              0.015562220122591964,
+              0.17759764221456872,
+              0.9308582805766018
+            ],
+            "video": null
+          },
+          {
+            "seed": 3009,
+            "success": true,
+            "steps": 227,
+            "wall_seconds": 13.512281884999993,
+            "max_cube_height_m": 1.1479805078335084,
+            "final_cube_xyz": [
+              0.0031556215876356714,
+              0.18136904921477823,
+              0.9299079128675402
+            ],
+            "video": null
+          }
+        ],
+        "successes": 10,
+        "success_rate": 1.0,
+        "wall_seconds": 148.8482566749999,
+        "seed_start": 3000,
+        "held_out_from_training_seeds": true,
+        "orientation_control": "fixed_downward",
+        "controller": "SmolVLA XYZ and gripper plus fixed downward wrist feedback",
+        "video_recorded": false,
+        "interpretation": "Held-out random seeds test this simulation distribution; they do not prove real-world transfer."
+      },
+      "wider_range": {
+        "kind": "trained_policy_physics_evaluation",
+        "checkpoint": "checkpoints/main",
+        "episodes": [
+          {
+            "seed": 3010,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.20948392499986,
+            "max_cube_height_m": 0.9225873606093637,
+            "final_cube_xyz": [
+              -0.04563929518103638,
+              -0.19938506814056894,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3011,
+            "success": true,
+            "steps": 236,
+            "wall_seconds": 14.153036259000146,
+            "max_cube_height_m": 1.1773236681006831,
+            "final_cube_xyz": [
+              0.0026295982989101786,
+              0.17844786266952853,
+              0.9305567385081595
+            ],
+            "video": null
+          },
+          {
+            "seed": 3012,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.67797971400023,
+            "max_cube_height_m": 0.9306502140608054,
+            "final_cube_xyz": [
+              0.0074222371164012705,
+              -0.19687181125058448,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3013,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.27777154600017,
+            "max_cube_height_m": 0.9281181112892354,
+            "final_cube_xyz": [
+              -0.05143574022192,
+              -0.18490431557382342,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3014,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.08248019800021,
+            "max_cube_height_m": 0.9258317703789897,
+            "final_cube_xyz": [
+              0.011294984160192452,
+              -0.22728425719420478,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3015,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.543089726999824,
+            "max_cube_height_m": 0.9294790442302804,
+            "final_cube_xyz": [
+              -0.0516704075677382,
+              -0.20034645515612165,
+              0.9199092400569475
+            ],
+            "video": null
+          },
+          {
+            "seed": 3016,
+            "success": true,
+            "steps": 242,
+            "wall_seconds": 14.416288579000138,
+            "max_cube_height_m": 1.1585536429639707,
+            "final_cube_xyz": [
+              0.012437686502421542,
+              0.18323005868818584,
+              0.929973802446445
+            ],
+            "video": null
+          },
+          {
+            "seed": 3017,
+            "success": true,
+            "steps": 295,
+            "wall_seconds": 17.32560390699973,
+            "max_cube_height_m": 1.1211438973500707,
+            "final_cube_xyz": [
+              0.005545447122244229,
+              0.16339339282794293,
+              0.9289822842163715
+            ],
+            "video": null
+          },
+          {
+            "seed": 3018,
+            "success": true,
+            "steps": 214,
+            "wall_seconds": 12.699273006999647,
+            "max_cube_height_m": 1.1238896377350067,
+            "final_cube_xyz": [
+              0.008485684742140768,
+              0.18868358238556332,
+              0.9296941400902355
+            ],
+            "video": null
+          },
+          {
+            "seed": 3019,
+            "success": true,
+            "steps": 214,
+            "wall_seconds": 12.677084245999595,
+            "max_cube_height_m": 1.0795705189345222,
+            "final_cube_xyz": [
+              0.010087586643597489,
+              0.17170168774422354,
+              0.929230013581776
+            ],
+            "video": null
+          }
+        ],
+        "successes": 5,
+        "success_rate": 0.5,
+        "wall_seconds": 251.97739039999988,
+        "seed_start": 3010,
+        "held_out_from_training_seeds": true,
+        "orientation_control": "fixed_downward",
+        "controller": "SmolVLA XYZ and gripper plus fixed downward wrist feedback",
+        "video_recorded": false,
+        "interpretation": "Held-out random seeds test this simulation distribution; they do not prove real-world transfer."
+      }
+    },
+    "adapted": {
+      "original_range": {
+        "kind": "trained_policy_physics_evaluation",
+        "checkpoint": "checkpoints/expanded",
+        "episodes": [
+          {
+            "seed": 3000,
+            "success": true,
+            "steps": 180,
+            "wall_seconds": 10.917822987999898,
+            "max_cube_height_m": 1.0812426637328159,
+            "final_cube_xyz": [
+              -0.010606851857966058,
+              0.1737117745103527,
+              0.9296888307106819
+            ],
+            "video": null
+          },
+          {
+            "seed": 3001,
+            "success": true,
+            "steps": 225,
+            "wall_seconds": 13.621072652000294,
+            "max_cube_height_m": 1.1590066861636954,
+            "final_cube_xyz": [
+              -0.0037321993577939844,
+              0.19292930548133533,
+              0.9293843580817417
+            ],
+            "video": null
+          },
+          {
+            "seed": 3002,
+            "success": true,
+            "steps": 252,
+            "wall_seconds": 15.610814049000055,
+            "max_cube_height_m": 1.1649169504961872,
+            "final_cube_xyz": [
+              -0.009847487379511768,
+              0.1945826295213607,
+              0.9293796786283283
+            ],
+            "video": null
+          },
+          {
+            "seed": 3003,
+            "success": true,
+            "steps": 207,
+            "wall_seconds": 12.623491066000042,
+            "max_cube_height_m": 1.0768024991244933,
+            "final_cube_xyz": [
+              -0.006934022971525937,
+              0.18521244815871726,
+              0.9308022815461354
+            ],
+            "video": null
+          },
+          {
+            "seed": 3004,
+            "success": true,
+            "steps": 292,
+            "wall_seconds": 17.61235963399986,
+            "max_cube_height_m": 1.1616988043086407,
+            "final_cube_xyz": [
+              -0.0006128866398171472,
+              0.19679026548174655,
+              0.929710910424966
+            ],
+            "video": null
+          },
+          {
+            "seed": 3005,
+            "success": true,
+            "steps": 271,
+            "wall_seconds": 16.506529516000228,
+            "max_cube_height_m": 1.1095006750692655,
+            "final_cube_xyz": [
+              -0.006678502556334369,
+              0.1710416375962374,
+              0.9300059267778725
+            ],
+            "video": null
+          },
+          {
+            "seed": 3006,
+            "success": true,
+            "steps": 177,
+            "wall_seconds": 10.948881335999886,
+            "max_cube_height_m": 1.076601632427558,
+            "final_cube_xyz": [
+              -0.008605954964651595,
+              0.18636967946696756,
+              0.9301382261385839
+            ],
+            "video": null
+          },
+          {
+            "seed": 3007,
+            "success": true,
+            "steps": 218,
+            "wall_seconds": 13.328261321000355,
+            "max_cube_height_m": 1.065764720985722,
+            "final_cube_xyz": [
+              0.004021807655101215,
+              0.1818579056426523,
+              0.9303741616357926
+            ],
+            "video": null
+          },
+          {
+            "seed": 3008,
+            "success": true,
+            "steps": 238,
+            "wall_seconds": 14.580087536000065,
+            "max_cube_height_m": 1.1341502073995209,
+            "final_cube_xyz": [
+              -0.004726761211810763,
+              0.18454486242447868,
+              0.9300629512785191
+            ],
+            "video": null
+          },
+          {
+            "seed": 3009,
+            "success": true,
+            "steps": 223,
+            "wall_seconds": 13.316188985999815,
+            "max_cube_height_m": 1.1579583949037633,
+            "final_cube_xyz": [
+              -0.001173837303407569,
+              0.19353234204863648,
+              0.9288829101112434
+            ],
+            "video": null
+          }
+        ],
+        "successes": 10,
+        "success_rate": 1.0,
+        "wall_seconds": 142.8882528940003,
+        "seed_start": 3000,
+        "held_out_from_training_seeds": true,
+        "orientation_control": "fixed_downward",
+        "controller": "SmolVLA XYZ and gripper plus fixed downward wrist feedback",
+        "video_recorded": false,
+        "interpretation": "Held-out random seeds test this simulation distribution; they do not prove real-world transfer."
+      },
+      "wider_range": {
+        "kind": "trained_policy_physics_evaluation",
+        "checkpoint": "checkpoints/expanded",
+        "episodes": [
+          {
+            "seed": 3010,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.20458186499991,
+            "max_cube_height_m": 0.9278810654566114,
+            "final_cube_xyz": [
+              -0.046337553949089255,
+              -0.1992106759823012,
+              0.9199092400569475
+            ],
+            "video": null
+          },
+          {
+            "seed": 3011,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.736122352000166,
+            "max_cube_height_m": 0.923250377350084,
+            "final_cube_xyz": [
+              0.0416297746295174,
+              -0.16179879043211512,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3012,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.134082948000014,
+            "max_cube_height_m": 0.9313626877662988,
+            "final_cube_xyz": [
+              -0.03716418184405054,
+              -0.19986587959444488,
+              0.9199092400569475
+            ],
+            "video": null
+          },
+          {
+            "seed": 3013,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.75216728699979,
+            "max_cube_height_m": 0.9254752761432513,
+            "final_cube_xyz": [
+              -0.05148475283985612,
+              -0.1841139355952497,
+              0.9199092400569475
+            ],
+            "video": null
+          },
+          {
+            "seed": 3014,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 36.12228323699992,
+            "max_cube_height_m": 0.9240503000207504,
+            "final_cube_xyz": [
+              0.0114413531071422,
+              -0.22704016454494455,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3015,
+            "success": false,
+            "steps": 600,
+            "wall_seconds": 35.79048931999978,
+            "max_cube_height_m": 0.9278378141432942,
+            "final_cube_xyz": [
+              -0.05191697389172364,
+              -0.19968980517584545,
+              0.9199092400569476
+            ],
+            "video": null
+          },
+          {
+            "seed": 3016,
+            "success": true,
+            "steps": 212,
+            "wall_seconds": 12.861263837000024,
+            "max_cube_height_m": 1.1511628143938264,
+            "final_cube_xyz": [
+              0.005978677618789316,
+              0.1908738640006113,
+              0.9302525480228409
+            ],
+            "video": null
+          },
+          {
+            "seed": 3017,
+            "success": true,
+            "steps": 255,
+            "wall_seconds": 15.34429406900017,
+            "max_cube_height_m": 1.125011861619092,
+            "final_cube_xyz": [
+              -0.00737036912782926,
+              0.17312255879770724,
+              0.9295377350209302
+            ],
+            "video": null
+          },
+          {
+            "seed": 3018,
+            "success": true,
+            "steps": 212,
+            "wall_seconds": 12.78257927200002,
+            "max_cube_height_m": 1.1501625886433093,
+            "final_cube_xyz": [
+              -0.0061117774094959255,
+              0.19300568892231054,
+              0.9293162557003525
+            ],
+            "video": null
+          },
+          {
+            "seed": 3019,
+            "success": true,
+            "steps": 247,
+            "wall_seconds": 14.603493686000093,
+            "max_cube_height_m": 1.0928887305943267,
+            "final_cube_xyz": [
+              0.003941397509792636,
+              0.18119824342278265,
+              0.9303150347963229
+            ],
+            "video": null
+          }
+        ],
+        "successes": 4,
+        "success_rate": 0.4,
+        "wall_seconds": 273.22680237999975,
+        "seed_start": 3010,
+        "held_out_from_training_seeds": true,
+        "orientation_control": "fixed_downward",
+        "controller": "SmolVLA XYZ and gripper plus fixed downward wrist feedback",
+        "video_recorded": false,
+        "interpretation": "Held-out random seeds test this simulation distribution; they do not prove real-world transfer."
+      }
+    }
+  },
+  "improved_on_this_sample": false,
+  "interpretation": "Paired new simulation starts, same object and target. Incremental adaptation changes both data and training budget. Small sample; no real-world generalization claim."
+}

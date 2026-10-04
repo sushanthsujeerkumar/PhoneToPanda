@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=71"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phone-to-panda"
+version = "0.1.0"
+description = "Measured phone recordings retargeted to a simulated Panda, with SmolVLA imitation learning."
+requires-python = ">=3.12,<3.13"
+dependencies = ["numpy>=2,<2.3", "PyYAML>=6"]
+
+[project.scripts]
+phone-panda = "phone_to_panda.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["phone_to_panda*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

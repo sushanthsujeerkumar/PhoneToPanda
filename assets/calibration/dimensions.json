@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "dictionary": "DICT_4X4_50",
+  "dpi": 300,
+  "table_marker_ids": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "table_marker_size_m": 0.05,
+  "object_marker_id": 1,
+  "object_marker_size_m": 0.03,
+  "chessboard_inner_corners": [
+    9,
+    6
+  ],
+  "chessboard_square_size_m": 0.025,
+  "files": {
+    "table_marker_0": "assets/calibration/table_marker_0.png",
+    "table_marker_1": "assets/calibration/table_marker_1.png",
+    "table_marker_2": "assets/calibration/table_marker_2.png",
+    "table_marker_3": "assets/calibration/table_marker_3.png",
+    "object_marker_1": "assets/calibration/object_marker_1.png",
+    "chessboard": "assets/calibration/chessboard.png"
+  },
+  "printing": "Print at actual size / 100%, not fit-to-page. Measure the black marker square and chessboard squares with a ruler; use measured dimensions in configuration."
+}

@@ -1,0 +1,88 @@
+{
+  "accepted": true,
+  "tracking_mode": "multi_marker",
+  "video_metadata": {
+    "fps": 30.0,
+    "frame_count": 424,
+    "image_size": [
+      1920,
+      1080
+    ],
+    "duration_s": 14.1
+  },
+  "coordinate_note": "Marker 0 printed axes; +z above common reference plane; object-top marker center in metres.",
+  "reference_board": "data/processed/IMG_2098.board.json",
+  "reference_board_rms_px": 0.9430308821539163,
+  "sample_count": 298,
+  "measured_samples": 285,
+  "measured_fraction": 0.9563758389261745,
+  "sample_hz": 30.0,
+  "max_allowed_gap_s": 0.2,
+  "max_table_corner_drift_px": 1.515240104214054,
+  "per_reference_drift_px": {
+    "0": 1.2568627283676228,
+    "1": 1.427001072056925,
+    "2": 1.515240104214054,
+    "3": 1.12525613215176
+  },
+  "max_pose_reprojection_error_px": 1.509240745528858,
+  "median_pose_reprojection_error_px": 0.13092471455545784,
+  "missing_or_ambiguous_object_samples": 13,
+  "preview": null,
+  "resting_height_check": {
+    "median_marker_top_height_m": 0.03134417249632473,
+    "allowed_range_m": [
+      -0.01,
+      0.15
+    ],
+    "samples": 127
+  },
+  "interpolated_gaps": [
+    {
+      "start_s": 4.800000000000001,
+      "end_s": 4.9,
+      "filled_samples": 2
+    },
+    {
+      "start_s": 6.666666666666667,
+      "end_s": 6.7666666666666675,
+      "filled_samples": 2
+    },
+    {
+      "start_s": 6.966666666666667,
+      "end_s": 7.066666666666667,
+      "filled_samples": 2
+    },
+    {
+      "start_s": 7.066666666666667,
+      "end_s": 7.133333333333334,
+      "filled_samples": 1
+    },
+    {
+      "start_s": 7.166666666666667,
+      "end_s": 7.2666666666666675,
+      "filled_samples": 2
+    },
+    {
+      "start_s": 7.7666666666666675,
+      "end_s": 7.833333333333334,
+      "filled_samples": 1
+    },
+    {
+      "start_s": 8.833333333333334,
+      "end_s": 8.9,
+      "filled_samples": 1
+    },
+    {
+      "start_s": 8.933333333333334,
+      "end_s": 9.033333333333333,
+      "filled_samples": 2
+    }
+  ],
+  "interpolated_samples": 13,
+  "trajectory_extent_m": [
+    0.20342231649599984,
+    0.02264607308252145,
+    0.10155013668967605
+  ]
+}

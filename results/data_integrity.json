@@ -1,0 +1,67 @@
+[
+  {
+    "recording": "IMG_2092",
+    "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+    "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+    "video_bytes_unchanged": false,
+    "video_frames_unchanged": true,
+    "encoded_video_packets_unchanged": true,
+    "all_frames_checked": 384,
+    "private_original_archive_verified": true,
+    "measured_samples_unchanged": true,
+    "metadata_hashes_valid": true,
+    "note": "Container bytes changed to remove private metadata and audio; video samples and timing did not change."
+  },
+  {
+    "recording": "IMG_2093",
+    "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+    "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+    "video_bytes_unchanged": false,
+    "video_frames_unchanged": true,
+    "encoded_video_packets_unchanged": true,
+    "all_frames_checked": 413,
+    "private_original_archive_verified": true,
+    "measured_samples_unchanged": true,
+    "metadata_hashes_valid": true,
+    "note": "Container bytes changed to remove private metadata and audio; video samples and timing did not change."
+  },
+  {
+    "recording": "IMG_2095",
+    "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+    "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+    "video_bytes_unchanged": false,
+    "video_frames_unchanged": true,
+    "encoded_video_packets_unchanged": true,
+    "all_frames_checked": 433,
+    "private_original_archive_verified": true,
+    "measured_samples_unchanged": true,
+    "metadata_hashes_valid": true,
+    "note": "Container bytes changed to remove private metadata and audio; video samples and timing did not change."
+  },
+  {
+    "recording": "IMG_2096",
+    "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+    "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+    "video_bytes_unchanged": false,
+    "video_frames_unchanged": true,
+    "encoded_video_packets_unchanged": true,
+    "all_frames_checked": 452,
+    "private_original_archive_verified": true,
+    "measured_samples_unchanged": true,
+    "metadata_hashes_valid": true,
+    "note": "Container bytes changed to remove private metadata and audio; video samples and timing did not change."
+  },
+  {
+    "recording": "IMG_2098",
+    "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+    "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+    "video_bytes_unchanged": false,
+    "video_frames_unchanged": true,
+    "encoded_video_packets_unchanged": true,
+    "all_frames_checked": 424,
+    "private_original_archive_verified": true,
+    "measured_samples_unchanged": true,
+    "metadata_hashes_valid": true,
+    "note": "Container bytes changed to remove private metadata and audio; video samples and timing did not change."
+  }
+]

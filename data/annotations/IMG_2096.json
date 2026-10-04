@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "start_time_s": 1.0,
+  "grasp_time_s": 6.0,
+  "release_time_s": 11.5,
+  "end_time_s": 12.5,
+  "estimated": true,
+  "event_uncertainty_s": {
+    "grasp_time_s": 0.2,
+    "release_time_s": 0.25
+  },
+  "method": "Visual review of full-clip contact sheets plus original-resolution cropped frames near physical lift and release. Marker coordinates used only to locate crops and identify the onset of motion.",
+  "notes": "Object remains at initial surface through about 5.9 s; lift begins near 6.2 s. Fingers release between 11.3 and 11.6 s, with withdrawal clear by 11.9 s."
+}

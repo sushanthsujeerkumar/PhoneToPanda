@@ -1,0 +1,21 @@
+# Local software, generated datasets and model weights
+.venv/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+checkpoints/*
+!checkpoints/README.md
+data/robot/
+data/datasets/
+data/calibration/*.MOV
+runs/
+work/
+MUJOCO_LOG.TXT
+*.log
+.env
+*.token
+
+# The five small source recordings, calibration JSON, annotations,
+# measured paths and selected results are intentionally included.

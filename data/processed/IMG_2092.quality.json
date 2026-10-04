@@ -1,0 +1,53 @@
+{
+  "accepted": true,
+  "tracking_mode": "multi_marker",
+  "video_metadata": {
+    "fps": 30.0,
+    "frame_count": 384,
+    "image_size": [
+      1920,
+      1080
+    ],
+    "duration_s": 12.766666666666667
+  },
+  "coordinate_note": "Marker 0 printed axes; +z above common reference plane; object-top marker center in metres.",
+  "reference_board": "data/processed/IMG_2092.board.json",
+  "reference_board_rms_px": 0.9539456013259756,
+  "sample_count": 252,
+  "measured_samples": 251,
+  "measured_fraction": 0.996031746031746,
+  "sample_hz": 30.0,
+  "max_allowed_gap_s": 0.2,
+  "max_table_corner_drift_px": 0.9636256834293208,
+  "per_reference_drift_px": {
+    "0": 0.5757745642307043,
+    "1": 0.9375758654552856,
+    "2": 0.9636256834293208,
+    "3": 0.9303146443880473
+  },
+  "max_pose_reprojection_error_px": 1.0417853890476283,
+  "median_pose_reprojection_error_px": 0.15099010068885174,
+  "missing_or_ambiguous_object_samples": 1,
+  "preview": null,
+  "resting_height_check": {
+    "median_marker_top_height_m": 0.03263996799508895,
+    "allowed_range_m": [
+      -0.01,
+      0.15
+    ],
+    "samples": 78
+  },
+  "interpolated_gaps": [
+    {
+      "start_s": 4.766666666666667,
+      "end_s": 4.833333333333334,
+      "filled_samples": 1
+    }
+  ],
+  "interpolated_samples": 1,
+  "trajectory_extent_m": [
+    0.18506866746345252,
+    0.025038301338610514,
+    0.05282626809739976
+  ]
+}

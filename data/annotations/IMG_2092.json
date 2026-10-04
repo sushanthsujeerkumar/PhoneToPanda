@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "start_time_s": 1.0,
+  "grasp_time_s": 3.6,
+  "release_time_s": 8.35,
+  "end_time_s": 9.35,
+  "estimated": true,
+  "event_uncertainty_s": {
+    "grasp_time_s": 0.2,
+    "release_time_s": 0.25
+  },
+  "method": "Visual review of full-clip contact sheets plus original-resolution cropped frames near physical lift and release. Marker coordinates used only to locate crops and identify the onset of motion.",
+  "notes": "Fingers already closed by 3.0 s; object begins lifting around 3.7-3.9 s. At 8.2 s fingers remain near the object, opening by 8.3-8.6 s; hand clearly withdrawing by 8.9 s."
+}

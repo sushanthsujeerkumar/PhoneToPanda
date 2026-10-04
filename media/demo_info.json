@@ -1,0 +1,14 @@
+{
+  "duration_seconds": 151.55,
+  "video_width": 1280,
+  "video_height": 720,
+  "audio_present": false,
+  "codec": "h264",
+  "source_filename": "Screencast from 2026-10-04 15-40-47.webm",
+  "source_duration_seconds": 151.549469,
+  "source_sha256": "e9df66f2d0d59407b39571a46a2cba1ba544b2eb5b85f31768d3cb1e4b3c397c",
+  "published_sha256": "7c641fcafbbff3d4f70d2877e80750fc8999e858fed65293f12c59b5d5f2b871",
+  "edits": "Full recording converted to H.264 MP4 at 1280x720 and 20 fps for playback. No sections removed or retimed. Source has no audio track.",
+  "interpretation": "Interactive demonstration; not an additional benchmark evaluation.",
+  "github_video_url": "https://github.com/user-attachments/assets/be2a7a18-ede6-4dbe-93df-fda033dd7acc"
+}

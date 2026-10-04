@@ -1,0 +1,228 @@
+{
+  "method": "Five public source copies sanitized by lossless video-only remux. Original captures are preserved outside this repository. No image sample, packet timing, color setting or measured trajectory was changed.",
+  "recordings": [
+    {
+      "recording": "IMG_2092",
+      "path": "data/raw/IMG_2092.MOV",
+      "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+      "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+      "private_original_archive_verified": true,
+      "method": "Video-only lossless container remux; audio, location tags and opaque metadata streams removed.",
+      "video_reencoded": false,
+      "packet_payloads_and_pts_dts_duration_identical": true,
+      "all_decoded_native_10bit_frames_identical": true,
+      "decoded_frames_checked": 384,
+      "decoded_planes_sha256": "410e1df8aadf6174e0c535890ae26bb13164b99b9c02f43af3552e243be51cdc",
+      "frame_timestamps_dimensions_rotation_identical": true,
+      "codec_and_color_parameters_identical": true,
+      "public_stream_types": [
+        "video"
+      ],
+      "public_metadata_keys": [
+        "major_brand",
+        "minor_version",
+        "compatible_brands",
+        "encoder",
+        "handler_name",
+        "vendor_id"
+      ],
+      "original_video_stream_duration_ticks": 7679,
+      "public_video_stream_duration_ticks": 7680,
+      "time_base": "1/600",
+      "duration_note": "Container end duration can round by one timescale tick; encoded packet timings and every frame timestamp are unchanged."
+    },
+    {
+      "recording": "IMG_2093",
+      "path": "data/raw/IMG_2093.MOV",
+      "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+      "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+      "private_original_archive_verified": true,
+      "method": "Video-only lossless container remux; audio, location tags and opaque metadata streams removed.",
+      "video_reencoded": false,
+      "packet_payloads_and_pts_dts_duration_identical": true,
+      "all_decoded_native_10bit_frames_identical": true,
+      "decoded_frames_checked": 413,
+      "decoded_planes_sha256": "11b85228565b5863ed99d269d2b8f68d75bd9d3dadabda1f6e9ca39949444d89",
+      "frame_timestamps_dimensions_rotation_identical": true,
+      "codec_and_color_parameters_identical": true,
+      "public_stream_types": [
+        "video"
+      ],
+      "public_metadata_keys": [
+        "major_brand",
+        "minor_version",
+        "compatible_brands",
+        "encoder",
+        "handler_name",
+        "vendor_id"
+      ],
+      "original_video_stream_duration_ticks": 8260,
+      "public_video_stream_duration_ticks": 8260,
+      "time_base": "1/600",
+      "duration_note": "Container end duration can round by one timescale tick; encoded packet timings and every frame timestamp are unchanged."
+    },
+    {
+      "recording": "IMG_2095",
+      "path": "data/raw/IMG_2095.MOV",
+      "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+      "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+      "private_original_archive_verified": true,
+      "method": "Video-only lossless container remux; audio, location tags and opaque metadata streams removed.",
+      "video_reencoded": false,
+      "packet_payloads_and_pts_dts_duration_identical": true,
+      "all_decoded_native_10bit_frames_identical": true,
+      "decoded_frames_checked": 433,
+      "decoded_planes_sha256": "698dc96b5903d0d0b88a85203940478bff6228c1e0ec9e1649af1cb16c3fd9ac",
+      "frame_timestamps_dimensions_rotation_identical": true,
+      "codec_and_color_parameters_identical": true,
+      "public_stream_types": [
+        "video"
+      ],
+      "public_metadata_keys": [
+        "major_brand",
+        "minor_version",
+        "compatible_brands",
+        "encoder",
+        "handler_name",
+        "vendor_id"
+      ],
+      "original_video_stream_duration_ticks": 8659,
+      "public_video_stream_duration_ticks": 8660,
+      "time_base": "1/600",
+      "duration_note": "Container end duration can round by one timescale tick; encoded packet timings and every frame timestamp are unchanged."
+    },
+    {
+      "recording": "IMG_2096",
+      "path": "data/raw/IMG_2096.MOV",
+      "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+      "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+      "private_original_archive_verified": true,
+      "method": "Video-only lossless container remux; audio, location tags and opaque metadata streams removed.",
+      "video_reencoded": false,
+      "packet_payloads_and_pts_dts_duration_identical": true,
+      "all_decoded_native_10bit_frames_identical": true,
+      "decoded_frames_checked": 452,
+      "decoded_planes_sha256": "084b86772f2757fbf40df46143485ad882b159635bbf6e62baef0938f602b101",
+      "frame_timestamps_dimensions_rotation_identical": true,
+      "codec_and_color_parameters_identical": true,
+      "public_stream_types": [
+        "video"
+      ],
+      "public_metadata_keys": [
+        "major_brand",
+        "minor_version",
+        "compatible_brands",
+        "encoder",
+        "handler_name",
+        "vendor_id"
+      ],
+      "original_video_stream_duration_ticks": 9040,
+      "public_video_stream_duration_ticks": 9040,
+      "time_base": "1/600",
+      "duration_note": "Container end duration can round by one timescale tick; encoded packet timings and every frame timestamp are unchanged."
+    },
+    {
+      "recording": "IMG_2098",
+      "path": "data/raw/IMG_2098.MOV",
+      "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+      "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+      "private_original_archive_verified": true,
+      "method": "Video-only lossless container remux; audio, location tags and opaque metadata streams removed.",
+      "video_reencoded": false,
+      "packet_payloads_and_pts_dts_duration_identical": true,
+      "all_decoded_native_10bit_frames_identical": true,
+      "decoded_frames_checked": 424,
+      "decoded_planes_sha256": "bba352f37a74ac84f59e213c120e8ea95081424290ed5472d7006d0b1e7927e2",
+      "frame_timestamps_dimensions_rotation_identical": true,
+      "codec_and_color_parameters_identical": true,
+      "public_stream_types": [
+        "video"
+      ],
+      "public_metadata_keys": [
+        "major_brand",
+        "minor_version",
+        "compatible_brands",
+        "encoder",
+        "handler_name",
+        "vendor_id"
+      ],
+      "original_video_stream_duration_ticks": 8479,
+      "public_video_stream_duration_ticks": 8480,
+      "time_base": "1/600",
+      "duration_note": "Container end duration can round by one timescale tick; encoded packet timings and every frame timestamp are unchanged."
+    }
+  ],
+  "provenance_updated": true,
+  "changed_metadata_files": [
+    "checkpoints/expanded/phone_to_panda_provenance.json",
+    "checkpoints/main/phone_to_panda_provenance.json",
+    "data/datasets/main/meta/phone_to_panda_provenance.json",
+    "data/processed/IMG_2092.json",
+    "data/processed/IMG_2093.json",
+    "data/processed/IMG_2095.json",
+    "data/processed/IMG_2096.json",
+    "data/processed/IMG_2098.json",
+    "data/robot/main/IMG_2092_seed_0.json",
+    "data/robot/main/IMG_2092_seed_1.json",
+    "data/robot/main/IMG_2092_seed_2.json",
+    "data/robot/main/IMG_2092_seed_3.json",
+    "data/robot/main/IMG_2093_seed_4.json",
+    "data/robot/main/IMG_2093_seed_5.json",
+    "data/robot/main/IMG_2093_seed_6.json",
+    "data/robot/main/IMG_2093_seed_7.json",
+    "data/robot/main/IMG_2095_seed_10.json",
+    "data/robot/main/IMG_2095_seed_11.json",
+    "data/robot/main/IMG_2095_seed_8.json",
+    "data/robot/main/IMG_2095_seed_9.json",
+    "data/robot/main/IMG_2096_seed_12.json",
+    "data/robot/main/IMG_2096_seed_13.json",
+    "data/robot/main/IMG_2096_seed_14.json",
+    "data/robot/main/IMG_2096_seed_15.json",
+    "data/robot/main/IMG_2098_seed_16.json",
+    "data/robot/main/IMG_2098_seed_17.json",
+    "data/robot/main/IMG_2098_seed_18.json",
+    "data/robot/main/IMG_2098_seed_19.json",
+    "data/robot/main/build/plan.json"
+  ],
+  "measured_trajectory_samples_unchanged": true,
+  "replay_array_files_unchanged": 20,
+  "checkpoint_weight_files_unchanged": 6,
+  "dataset_reuse_verified": true,
+  "dataset_reuse_command": ".venv/bin/python scripts/build_dataset.py --skip-prepare",
+  "reused_robot_episodes": 20,
+  "reused_dataset_frames": 4471,
+  "checkpoint_contracts_validated": [
+    "main",
+    "expanded"
+  ],
+  "original_gps_text_absent_from_public_files": true,
+  "opencv_tracking_recheck": {
+    "recording": "IMG_2092",
+    "samples_exactly_match_preserved_track": true,
+    "samples": 252,
+    "events_identical": true,
+    "accepted": true,
+    "original_video_metadata": {
+      "fps": 30.0,
+      "frame_count": 384,
+      "image_size": [
+        1920,
+        1080
+      ],
+      "duration_s": 12.766666666666667
+    },
+    "public_video_metadata": {
+      "fps": 30.0,
+      "frame_count": 384,
+      "image_size": [
+        1920,
+        1080
+      ],
+      "duration_s": 12.766666666666667
+    },
+    "quality_differences_only_output_paths": true,
+    "grasp_release_and_target_identical": true
+  },
+  "public_report_contains_no_original_gps_values_or_private_paths": true,
+  "all_six_weight_hashes_rechecked_against_prepublication_integrity_report": true
+}

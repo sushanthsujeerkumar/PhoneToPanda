@@ -1,0 +1,23 @@
+{
+  "recordings": {
+    "data/raw/IMG_2092.MOV": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+    "data/raw/IMG_2093.MOV": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+    "data/raw/IMG_2095.MOV": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+    "data/raw/IMG_2096.MOV": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+    "data/raw/IMG_2098.MOV": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+  },
+  "calibration_recording": {
+    "path": "data/calibration/IMG_2090.MOV",
+    "sha256": "c153ecaeeb9c5cd098b09ca5feffc4f40e6570af2d852d201e9563459114e0b5",
+    "git_included": false
+  },
+  "calibration_json_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+  "notes": "Public recordings are video-only lossless remuxes of the original phone captures. GPS/private container metadata, audio and opaque data streams were removed. Every compressed video packet and every decoded native 10-bit frame was verified identical, with unchanged packet/frame timestamps, dimensions, orientation and color settings. Original captures remain in a separate private archive. Recording hashes name the public copies; original_capture_sha256 identifies the captures. Measured trajectory samples are unchanged. See results/publication_data_check.json.",
+  "original_capture_sha256": {
+    "data/raw/IMG_2092.MOV": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+    "data/raw/IMG_2093.MOV": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+    "data/raw/IMG_2095.MOV": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+    "data/raw/IMG_2096.MOV": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+    "data/raw/IMG_2098.MOV": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef"
+  }
+}

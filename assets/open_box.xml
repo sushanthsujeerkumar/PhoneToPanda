@@ -1,0 +1,17 @@
+<mujoco model="phone_open_box">
+  <worldbody>
+    <body>
+      <body name="object">
+        <geom name="base" type="box" size="0.085 0.085 0.006" pos="0 0 0.006" rgba="0.18 0.45 0.68 1" friction="1 0.005 0.0001" group="0"/>
+        <geom name="wall_x_plus" type="box" size="0.006 0.085 0.032" pos="0.079 0 0.044" rgba="0.2 0.5 0.72 1" group="0"/>
+        <geom name="wall_x_minus" type="box" size="0.006 0.085 0.032" pos="-0.079 0 0.044" rgba="0.2 0.5 0.72 1" group="0"/>
+        <geom name="wall_y_plus" type="box" size="0.073 0.006 0.032" pos="0 0.079 0.044" rgba="0.2 0.5 0.72 1" group="0"/>
+        <geom name="wall_y_minus" type="box" size="0.073 0.006 0.032" pos="0 -0.079 0.044" rgba="0.2 0.5 0.72 1" group="0"/>
+        <site name="contain_region" type="box" size="0.073 0.073 0.034" pos="0 0 0.044" quat="1 0 0 0" rgba="0 0 0 0"/>
+      </body>
+      <site name="bottom_site" pos="0 0 0" size="0.005" rgba="0 0 0 0"/>
+      <site name="top_site" pos="0 0 0.076" size="0.005" rgba="0 0 0 0"/>
+      <site name="horizontal_radius_site" pos="0.12 0 0" size="0.005" rgba="0 0 0 0"/>
+    </body>
+  </worldbody>
+</mujoco>
