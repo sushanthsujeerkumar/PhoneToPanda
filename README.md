@@ -206,6 +206,11 @@ separate 4 October fresh-environment check. The 15 October pilot added 30 planne
 policy trials; its [verification record](results/imu_pilot_20261015/verification.json)
 records 197 passing tests and two optional physics-test skips.
 
+The [publication checks](results/publication_20261015.json) then passed 224 project
+tests, 111 arm-checker tests and 10 recording-timer checks, with the same two
+optional physics-test skips. The [inline video copies](media/video_links.json)
+were fetched without signing in and matched the repository MP4s byte for byte.
+
 ## What is in the project?
 
 | Path | Contents |

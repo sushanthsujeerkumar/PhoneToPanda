@@ -1,0 +1,38 @@
+{
+  "verified_date": "2026-10-15",
+  "verification": "Fetched each attachment without authentication and compared every byte with its repository MP4.",
+  "videos": [
+    {
+      "file": "media/imu_pilot/paired_video_imu.mp4",
+      "watch_url": "https://github.com/user-attachments/assets/fd77a2ce-bcf4-40fd-b95f-831d87905c92",
+      "sha256": "111a4022163ca1c2fd89fd70f975c7a1d28623b85f00931aa0d4a5f167d34a2d",
+      "size_bytes": 1115895,
+      "public_http_status": 200,
+      "byte_identical": true
+    },
+    {
+      "file": "media/imu_pilot/policy_comparison.mp4",
+      "watch_url": "https://github.com/user-attachments/assets/358c801e-04f7-4bf5-8e96-ca9819406703",
+      "sha256": "9697b4099fd36f450e73f86869e8b21a72f635057f445906c3c7474548ac166d",
+      "size_bytes": 2881864,
+      "public_http_status": 200,
+      "byte_identical": true
+    },
+    {
+      "file": "media/imu_pilot/phone_recording.mp4",
+      "watch_url": "https://github.com/user-attachments/assets/f407df74-4ec6-40a4-8f8c-1756380ca6cf",
+      "sha256": "eb4308949375227e21c1beebd3585ca86a558d6d0975aaf094f57cf35a93eaa1",
+      "size_bytes": 4866882,
+      "public_http_status": 200,
+      "byte_identical": true
+    },
+    {
+      "file": "media/demo.mp4",
+      "watch_url": "https://github.com/user-attachments/assets/cd2a40a9-f291-4689-98fd-d2583f1f6e8b",
+      "sha256": "0acfec2b0853731e3c2e7e69f35f2ff92b4947cc12f96797aaa868f57d935f2d",
+      "size_bytes": 7202512,
+      "public_http_status": 200,
+      "byte_identical": true
+    }
+  ]
+}
