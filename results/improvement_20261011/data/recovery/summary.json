@@ -1,0 +1,176 @@
+{
+  "kind": "fixed_recovery_collection",
+  "complete": true,
+  "plan_sha256": "1d95da9b0f953989bde35612d40bb6939f5c1f2f2b02d7592d0565b135097253",
+  "planned": 20,
+  "attempted": 20,
+  "successes": 20,
+  "original_successes": 20,
+  "source_recordings": 5,
+  "new_human_recordings": 0,
+  "training_started": false,
+  "reports": [
+    {
+      "clip": "IMG_2092",
+      "seed": 3010,
+      "prefix_steps": 60,
+      "success": true,
+      "frames": 203,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2093",
+      "seed": 3010,
+      "prefix_steps": 80,
+      "success": true,
+      "frames": 229,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2095",
+      "seed": 3010,
+      "prefix_steps": 100,
+      "success": true,
+      "frames": 242,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2096",
+      "seed": 3010,
+      "prefix_steps": 120,
+      "success": true,
+      "frames": 232,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2098",
+      "seed": 3012,
+      "prefix_steps": 60,
+      "success": true,
+      "frames": 201,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2092",
+      "seed": 3012,
+      "prefix_steps": 80,
+      "success": true,
+      "frames": 204,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2093",
+      "seed": 3012,
+      "prefix_steps": 100,
+      "success": true,
+      "frames": 227,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2095",
+      "seed": 3012,
+      "prefix_steps": 120,
+      "success": true,
+      "frames": 238,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2096",
+      "seed": 3013,
+      "prefix_steps": 60,
+      "success": true,
+      "frames": 220,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2098",
+      "seed": 3013,
+      "prefix_steps": 80,
+      "success": true,
+      "frames": 204,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2092",
+      "seed": 3013,
+      "prefix_steps": 100,
+      "success": true,
+      "frames": 209,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2093",
+      "seed": 3013,
+      "prefix_steps": 120,
+      "success": true,
+      "frames": 232,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2095",
+      "seed": 3014,
+      "prefix_steps": 60,
+      "success": true,
+      "frames": 232,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2096",
+      "seed": 3014,
+      "prefix_steps": 80,
+      "success": true,
+      "frames": 217,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2098",
+      "seed": 3014,
+      "prefix_steps": 100,
+      "success": true,
+      "frames": 202,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2092",
+      "seed": 3014,
+      "prefix_steps": 120,
+      "success": true,
+      "frames": 207,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2093",
+      "seed": 3015,
+      "prefix_steps": 60,
+      "success": true,
+      "frames": 225,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2095",
+      "seed": 3015,
+      "prefix_steps": 80,
+      "success": true,
+      "frames": 237,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2096",
+      "seed": 3015,
+      "prefix_steps": 100,
+      "success": true,
+      "frames": 226,
+      "failure": null
+    },
+    {
+      "clip": "IMG_2098",
+      "seed": 3015,
+      "prefix_steps": 120,
+      "success": true,
+      "frames": 211,
+      "failure": null
+    }
+  ],
+  "dataset": "/home/sushanth/PhoneToPanda/data/datasets/improvement_20261011/recovery",
+  "exported_episodes": 40
+}

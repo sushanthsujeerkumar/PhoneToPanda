@@ -1,0 +1,65 @@
+{
+  "model": "original",
+  "checkpoint": "/home/sushanth/PhoneToPanda/checkpoints/main",
+  "checkpoint_files_sha256": {
+    "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+    "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+    "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+    "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+  },
+  "plan_sha256": "bbdb97f0573c55bb8f5562953396734efb3e4f107482b37d7c1e889a3cf97b75",
+  "base_config": "/home/sushanth/PhoneToPanda/configs/imu_pilot_20261015/continuation.yaml",
+  "base_config_sha256": "223c1f454fc56903346252409f5969773389f8f9bbe38fbdef385a223dafed65",
+  "source_sha256": {
+    "phone_to_panda/common.py": "5bc1425536cd4c8c64b96503db68b2b1fb9982279469429c854a890d362a2fd6",
+    "phone_to_panda/learning.py": "790377ae4092c9c027c874bfde35fec76cd22f60b4a74ec9be591135bb7d5b64",
+    "phone_to_panda/simulation.py": "790ce76701b1a66b8f2a9b5c07c2517dc4d4dd8a1be7633cb37af5b172eabf7b",
+    "scripts/evaluate_candidate.py": "3d2401dce707136b2d1caac7ac07fdaa8498beddb755c64436ef3b42d4e29f72",
+    "scripts/evaluate_imu_pilot.py": "5256e4d58f8b4743cec934defa6f66df4b7992bc3c01261d92eb7ccfc57c488a"
+  },
+  "scene_assets_sha256": {
+    "calibration/chessboard.png": "fed1b7cfeb0da981f5e968cc39ecbadcb164f2a25ddb9c0d1b0b960feca7b319",
+    "calibration/dimensions.json": "d56d7f8e300b28c3be953d5a69f1dfcb3eb226557638a3486d0e7dde9c494004",
+    "calibration/object_marker_1.png": "6e7beca748819219aa94a581270f2c63b91b1ceae7357ed2e2842de87e38f4b8",
+    "calibration/table_marker_0.png": "991418c665f90867a70d7f6b8f733a65d1b73048bcf916065845689ce41be4ea",
+    "calibration/table_marker_1.png": "4c503d0111ebf683080866b564b64b8df96cf00b2ade1f86eebccd17e719b310",
+    "calibration/table_marker_2.png": "e75ec6e1ab4f2e5ec2ec4f219c8384bab6304e2cf5c246f502d382c65593ff57",
+    "calibration/table_marker_3.png": "9e71ebcc48cb8ec2e4b02046d32455af4e7e641193b101ed030e29bf1fe4b126",
+    "cube.xml": "a1c7365145ec182288393aff9db56eccf84cc8a06b541332525323d958cf3438",
+    "libero/LICENSE": "e2885fd30a08381b799c4a33385522b23d637b4051b8f9a7f9f2519944b68ff6",
+    "libero/PROVENANCE.md": "068a8ee84361144e917de4714e4aac4fc3a1356fe16d09e8e763296a75fd0c17",
+    "libero/scenes/libero_tabletop_base_style.xml": "bb118118e3e02a0f23295c072d77c5a7c6b44cc773032dc79c17070b4e133f86",
+    "libero/textures/light-gray-floor-tile.png": "a2aae4ba3b38c3ab9851eca9ad6e76cef9357ef75b3e9a4b280f694ca30acbc5",
+    "libero/textures/light-gray-plaster.png": "d0bdaf13b44ab6ef3122451f6b3853e40bdf20bb9be7662649683ba525dfe191",
+    "libero/textures/martin_novak_wood_table.png": "9d714fbf44d4d44f279761c0ddd0b2fd7271446cdbb85fcbef8677fe5f929850",
+    "libero/textures/smooth_light_gray_plaster.png": "d0bdaf13b44ab6ef3122451f6b3853e40bdf20bb9be7662649683ba525dfe191",
+    "libero/textures/tile_grigia_caldera_porcelain_floor.png": "a2aae4ba3b38c3ab9851eca9ad6e76cef9357ef75b3e9a4b280f694ca30acbc5",
+    "open_box.xml": "a787b50825f381a0624b2f01d316a1047dd6571d4887e45dbb99058210998063",
+    "pick_place.bddl": "7ecadc16a6cb9914b64fa272f300d2df50f3afebc31ad41ddd0159297401240d"
+  },
+  "recording": {
+    "video": {
+      "path": "/home/sushanth/Downloads/IMG_2276.MOV",
+      "sha256": "76217a274c97f8999f328c98bd7b15c6776963c2c9fb2b952f039a0814431225"
+    },
+    "imu_session": {
+      "path": "/home/sushanth/PhoneToPanda/arm_checker/sessions/20261015T165828Z_92196435.json",
+      "sha256": "500ce448410581ebd9e9927883ccb36e27fa59bba4146b4f8cd9f3b88dde7889"
+    },
+    "events": {
+      "path": "/home/sushanth/PhoneToPanda/data/experimental/imu_20261015/events.json",
+      "sha256": "92a3932b7d1398d7b66c4ddd28bd0a59c674271fa60e6d89b3211b8a7f70a670"
+    }
+  },
+  "evidence_sha256": {
+    "/home/sushanth/PhoneToPanda/data/experimental/imu_20261015/trajectory.json": "13507bebdc3ccc40985c939cd2e0143e883642913b52cf394c596c293664019e",
+    "/home/sushanth/PhoneToPanda/results/imu_pilot_20261015/dataset_inputs.json": "b34ab4d5eeb63f8f0798baecb8ce22775029fa247bf6a3eda6756a99c6745c5f",
+    "/home/sushanth/PhoneToPanda/results/imu_pilot_20261015/dataset_summary.json": "78adf9fb0e9564288ebe199a2fc40876c7c6c167ae40a8a1d3fa3ac571598b6c",
+    "/home/sushanth/PhoneToPanda/results/imu_pilot_20261015/replays.json": "5a4ea2300bd70dbb309492f67f045dc73509f154d094249f4aff45add6e35b40",
+    "/home/sushanth/PhoneToPanda/data/datasets/main/meta/phone_to_panda_provenance.json": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0"
+  }
+}

@@ -1,0 +1,170 @@
+[
+  {
+    "file": "IMG_2092_seed_0.npz",
+    "npz_sha256": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "metadata_sha256": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+    "source_kind": "personal_video",
+    "seed": 0
+  },
+  {
+    "file": "IMG_2092_seed_1.npz",
+    "npz_sha256": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "metadata_sha256": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+    "source_kind": "personal_video",
+    "seed": 1
+  },
+  {
+    "file": "IMG_2092_seed_2.npz",
+    "npz_sha256": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "metadata_sha256": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+    "source_kind": "personal_video",
+    "seed": 2
+  },
+  {
+    "file": "IMG_2092_seed_3.npz",
+    "npz_sha256": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "metadata_sha256": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+    "source_kind": "personal_video",
+    "seed": 3
+  },
+  {
+    "file": "IMG_2093_seed_4.npz",
+    "npz_sha256": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "metadata_sha256": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+    "source_kind": "personal_video",
+    "seed": 4
+  },
+  {
+    "file": "IMG_2093_seed_5.npz",
+    "npz_sha256": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "metadata_sha256": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+    "source_kind": "personal_video",
+    "seed": 5
+  },
+  {
+    "file": "IMG_2093_seed_6.npz",
+    "npz_sha256": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "metadata_sha256": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+    "source_kind": "personal_video",
+    "seed": 6
+  },
+  {
+    "file": "IMG_2093_seed_7.npz",
+    "npz_sha256": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "metadata_sha256": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+    "source_kind": "personal_video",
+    "seed": 7
+  },
+  {
+    "file": "IMG_2095_seed_10.npz",
+    "npz_sha256": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "metadata_sha256": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+    "source_kind": "personal_video",
+    "seed": 10
+  },
+  {
+    "file": "IMG_2095_seed_11.npz",
+    "npz_sha256": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "metadata_sha256": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+    "source_kind": "personal_video",
+    "seed": 11
+  },
+  {
+    "file": "IMG_2095_seed_8.npz",
+    "npz_sha256": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "metadata_sha256": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+    "source_kind": "personal_video",
+    "seed": 8
+  },
+  {
+    "file": "IMG_2095_seed_9.npz",
+    "npz_sha256": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "metadata_sha256": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+    "source_kind": "personal_video",
+    "seed": 9
+  },
+  {
+    "file": "IMG_2096_seed_12.npz",
+    "npz_sha256": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "metadata_sha256": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+    "source_kind": "personal_video",
+    "seed": 12
+  },
+  {
+    "file": "IMG_2096_seed_13.npz",
+    "npz_sha256": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "metadata_sha256": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+    "source_kind": "personal_video",
+    "seed": 13
+  },
+  {
+    "file": "IMG_2096_seed_14.npz",
+    "npz_sha256": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "metadata_sha256": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+    "source_kind": "personal_video",
+    "seed": 14
+  },
+  {
+    "file": "IMG_2096_seed_15.npz",
+    "npz_sha256": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "metadata_sha256": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+    "source_kind": "personal_video",
+    "seed": 15
+  },
+  {
+    "file": "IMG_2098_seed_16.npz",
+    "npz_sha256": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "metadata_sha256": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+    "source_kind": "personal_video",
+    "seed": 16
+  },
+  {
+    "file": "IMG_2098_seed_17.npz",
+    "npz_sha256": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "metadata_sha256": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+    "source_kind": "personal_video",
+    "seed": 17
+  },
+  {
+    "file": "IMG_2098_seed_18.npz",
+    "npz_sha256": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "metadata_sha256": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+    "source_kind": "personal_video",
+    "seed": 18
+  },
+  {
+    "file": "IMG_2098_seed_19.npz",
+    "npz_sha256": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "metadata_sha256": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+    "source_kind": "personal_video",
+    "seed": 19
+  },
+  {
+    "file": "IMG2276_seed81000.npz",
+    "npz_sha256": "a8acd2f964fbc47f0320502db35944c034391270585991e27111622f33ee1a61",
+    "metadata_sha256": "16dcdb95367996901818453853427937a3832c7f2079b8ec831a4fc3c5c94134",
+    "source_kind": "personal_video_imu_pilot",
+    "seed": 81000
+  },
+  {
+    "file": "IMG2276_seed81001.npz",
+    "npz_sha256": "1b77ab51eeb6c1cf3a18b0934b269a22c0cbf2b674891b4b614ee2fd768ff0d8",
+    "metadata_sha256": "3668b880bddd9d974fab095850c54c64d6768fd1fdf50b3700443412464182e0",
+    "source_kind": "personal_video_imu_pilot",
+    "seed": 81001
+  },
+  {
+    "file": "IMG2276_seed81002.npz",
+    "npz_sha256": "ac970ff11bed446487fd7efe27185f4877150dd42bc8c65b003929e22d14b66f",
+    "metadata_sha256": "f0583bd1b6578d21aaf4a52e76f7c1b70eff3c7cfc51b39fcd86bc3c9d82d7ba",
+    "source_kind": "personal_video_imu_pilot",
+    "seed": 81002
+  },
+  {
+    "file": "IMG2276_seed81003.npz",
+    "npz_sha256": "b2762fe95463c1e790b5475967c9b655c57a68f08afbc9591f577ec058f9d378",
+    "metadata_sha256": "b89df95ec33bb108678663a6be199bf2e80406cc0f4f32846794420d39485df9",
+    "source_kind": "personal_video_imu_pilot",
+    "seed": 81003
+  }
+]

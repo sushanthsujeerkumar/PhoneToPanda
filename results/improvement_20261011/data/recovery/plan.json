@@ -1,0 +1,916 @@
+{
+  "schema_version": 2,
+  "kind": "fixed_recovery_collection",
+  "selection_plan": {
+    "selection_name": "recovery",
+    "require_all_successful": true,
+    "source_phase": "development",
+    "source_candidate": "original_h5",
+    "source_group": "known_wide",
+    "jobs": [
+      {
+        "seed": 3010,
+        "prefix_steps": 60,
+        "clip": "IMG_2092"
+      },
+      {
+        "seed": 3010,
+        "prefix_steps": 80,
+        "clip": "IMG_2093"
+      },
+      {
+        "seed": 3010,
+        "prefix_steps": 100,
+        "clip": "IMG_2095"
+      },
+      {
+        "seed": 3010,
+        "prefix_steps": 120,
+        "clip": "IMG_2096"
+      },
+      {
+        "seed": 3012,
+        "prefix_steps": 60,
+        "clip": "IMG_2098"
+      },
+      {
+        "seed": 3012,
+        "prefix_steps": 80,
+        "clip": "IMG_2092"
+      },
+      {
+        "seed": 3012,
+        "prefix_steps": 100,
+        "clip": "IMG_2093"
+      },
+      {
+        "seed": 3012,
+        "prefix_steps": 120,
+        "clip": "IMG_2095"
+      },
+      {
+        "seed": 3013,
+        "prefix_steps": 60,
+        "clip": "IMG_2096"
+      },
+      {
+        "seed": 3013,
+        "prefix_steps": 80,
+        "clip": "IMG_2098"
+      },
+      {
+        "seed": 3013,
+        "prefix_steps": 100,
+        "clip": "IMG_2092"
+      },
+      {
+        "seed": 3013,
+        "prefix_steps": 120,
+        "clip": "IMG_2093"
+      },
+      {
+        "seed": 3014,
+        "prefix_steps": 60,
+        "clip": "IMG_2095"
+      },
+      {
+        "seed": 3014,
+        "prefix_steps": 80,
+        "clip": "IMG_2096"
+      },
+      {
+        "seed": 3014,
+        "prefix_steps": 100,
+        "clip": "IMG_2098"
+      },
+      {
+        "seed": 3014,
+        "prefix_steps": 120,
+        "clip": "IMG_2092"
+      },
+      {
+        "seed": 3015,
+        "prefix_steps": 60,
+        "clip": "IMG_2093"
+      },
+      {
+        "seed": 3015,
+        "prefix_steps": 80,
+        "clip": "IMG_2095"
+      },
+      {
+        "seed": 3015,
+        "prefix_steps": 100,
+        "clip": "IMG_2096"
+      },
+      {
+        "seed": 3015,
+        "prefix_steps": 120,
+        "clip": "IMG_2098"
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "seed": 3010,
+      "prefix_steps": 60,
+      "clip": "IMG_2092",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_000_trace.json",
+      "trace_sha256": "73f2d081061e108d24eba797c3990fe8b9873a9b6e528e29b6443a5b252de25f",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2092.json",
+      "trajectory_sha256": "925ca053918f8f9dcd4421ba390fbb00582a5839a2370e596c7ac70d6e17dbe3"
+    },
+    {
+      "seed": 3010,
+      "prefix_steps": 80,
+      "clip": "IMG_2093",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_000_trace.json",
+      "trace_sha256": "73f2d081061e108d24eba797c3990fe8b9873a9b6e528e29b6443a5b252de25f",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2093.json",
+      "trajectory_sha256": "b48c5b226e3dbb5bfb39081b5bc692990bbf40f99aebd22cac25077c486629ca"
+    },
+    {
+      "seed": 3010,
+      "prefix_steps": 100,
+      "clip": "IMG_2095",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_000_trace.json",
+      "trace_sha256": "73f2d081061e108d24eba797c3990fe8b9873a9b6e528e29b6443a5b252de25f",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2095.json",
+      "trajectory_sha256": "8b16552ed2328dc50d9472708789092e5e4caaeae9d1306003066e261e1d1014"
+    },
+    {
+      "seed": 3010,
+      "prefix_steps": 120,
+      "clip": "IMG_2096",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_000_trace.json",
+      "trace_sha256": "73f2d081061e108d24eba797c3990fe8b9873a9b6e528e29b6443a5b252de25f",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2096.json",
+      "trajectory_sha256": "c312debd57d4bd39566de03ef27aa7db8de5954a2f34d85e66fc3a2d699cda90"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 60,
+      "clip": "IMG_2098",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_002_trace.json",
+      "trace_sha256": "9ba6adac422d90939da419cbd7f9ca3ac21a56ab4cd65d0c88cfe84410cf4752",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2098.json",
+      "trajectory_sha256": "c4de8bb9491e4947f27dbc26cd34b229c8e3069f6621ebdcf68c03422719e74a"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 80,
+      "clip": "IMG_2092",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_002_trace.json",
+      "trace_sha256": "9ba6adac422d90939da419cbd7f9ca3ac21a56ab4cd65d0c88cfe84410cf4752",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2092.json",
+      "trajectory_sha256": "925ca053918f8f9dcd4421ba390fbb00582a5839a2370e596c7ac70d6e17dbe3"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 100,
+      "clip": "IMG_2093",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_002_trace.json",
+      "trace_sha256": "9ba6adac422d90939da419cbd7f9ca3ac21a56ab4cd65d0c88cfe84410cf4752",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2093.json",
+      "trajectory_sha256": "b48c5b226e3dbb5bfb39081b5bc692990bbf40f99aebd22cac25077c486629ca"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 120,
+      "clip": "IMG_2095",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_002_trace.json",
+      "trace_sha256": "9ba6adac422d90939da419cbd7f9ca3ac21a56ab4cd65d0c88cfe84410cf4752",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2095.json",
+      "trajectory_sha256": "8b16552ed2328dc50d9472708789092e5e4caaeae9d1306003066e261e1d1014"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 60,
+      "clip": "IMG_2096",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_003_trace.json",
+      "trace_sha256": "be72deda208229b29f3b9be813bdf130d2118c5f7462f509ea15e3a8cd311395",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2096.json",
+      "trajectory_sha256": "c312debd57d4bd39566de03ef27aa7db8de5954a2f34d85e66fc3a2d699cda90"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 80,
+      "clip": "IMG_2098",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_003_trace.json",
+      "trace_sha256": "be72deda208229b29f3b9be813bdf130d2118c5f7462f509ea15e3a8cd311395",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2098.json",
+      "trajectory_sha256": "c4de8bb9491e4947f27dbc26cd34b229c8e3069f6621ebdcf68c03422719e74a"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 100,
+      "clip": "IMG_2092",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_003_trace.json",
+      "trace_sha256": "be72deda208229b29f3b9be813bdf130d2118c5f7462f509ea15e3a8cd311395",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2092.json",
+      "trajectory_sha256": "925ca053918f8f9dcd4421ba390fbb00582a5839a2370e596c7ac70d6e17dbe3"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 120,
+      "clip": "IMG_2093",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_003_trace.json",
+      "trace_sha256": "be72deda208229b29f3b9be813bdf130d2118c5f7462f509ea15e3a8cd311395",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2093.json",
+      "trajectory_sha256": "b48c5b226e3dbb5bfb39081b5bc692990bbf40f99aebd22cac25077c486629ca"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 60,
+      "clip": "IMG_2095",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_004_trace.json",
+      "trace_sha256": "0d0e9cdfc9ca41a1ef839e2061fdbf46ba1f0360ba2ed891ee3fb9c6876c1c5c",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2095.json",
+      "trajectory_sha256": "8b16552ed2328dc50d9472708789092e5e4caaeae9d1306003066e261e1d1014"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 80,
+      "clip": "IMG_2096",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_004_trace.json",
+      "trace_sha256": "0d0e9cdfc9ca41a1ef839e2061fdbf46ba1f0360ba2ed891ee3fb9c6876c1c5c",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2096.json",
+      "trajectory_sha256": "c312debd57d4bd39566de03ef27aa7db8de5954a2f34d85e66fc3a2d699cda90"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 100,
+      "clip": "IMG_2098",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_004_trace.json",
+      "trace_sha256": "0d0e9cdfc9ca41a1ef839e2061fdbf46ba1f0360ba2ed891ee3fb9c6876c1c5c",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2098.json",
+      "trajectory_sha256": "c4de8bb9491e4947f27dbc26cd34b229c8e3069f6621ebdcf68c03422719e74a"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 120,
+      "clip": "IMG_2092",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_004_trace.json",
+      "trace_sha256": "0d0e9cdfc9ca41a1ef839e2061fdbf46ba1f0360ba2ed891ee3fb9c6876c1c5c",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2092.json",
+      "trajectory_sha256": "925ca053918f8f9dcd4421ba390fbb00582a5839a2370e596c7ac70d6e17dbe3"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 60,
+      "clip": "IMG_2093",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_005_trace.json",
+      "trace_sha256": "7ed8f6f39c1d47da5cd41a16c5700019da51f2bad9f26162d4d5d910ece2a719",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2093.json",
+      "trajectory_sha256": "b48c5b226e3dbb5bfb39081b5bc692990bbf40f99aebd22cac25077c486629ca"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 80,
+      "clip": "IMG_2095",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_005_trace.json",
+      "trace_sha256": "7ed8f6f39c1d47da5cd41a16c5700019da51f2bad9f26162d4d5d910ece2a719",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2095.json",
+      "trajectory_sha256": "8b16552ed2328dc50d9472708789092e5e4caaeae9d1306003066e261e1d1014"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 100,
+      "clip": "IMG_2096",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_005_trace.json",
+      "trace_sha256": "7ed8f6f39c1d47da5cd41a16c5700019da51f2bad9f26162d4d5d910ece2a719",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2096.json",
+      "trajectory_sha256": "c312debd57d4bd39566de03ef27aa7db8de5954a2f34d85e66fc3a2d699cda90"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 120,
+      "clip": "IMG_2098",
+      "source_phase": "development",
+      "source_candidate": "original_h5",
+      "source_group": "known_wide",
+      "trace": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_005_trace.json",
+      "trace_sha256": "7ed8f6f39c1d47da5cd41a16c5700019da51f2bad9f26162d4d5d910ece2a719",
+      "source_report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+      "source_manifest_sha256": "734050576a61bfee266e54c48e31121ce98f6bfffc30af0b09d3dce4ad3ddde9",
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "trajectory": "/home/sushanth/PhoneToPanda/data/processed/IMG_2098.json",
+      "trajectory_sha256": "c4de8bb9491e4947f27dbc26cd34b229c8e3069f6621ebdcf68c03422719e74a"
+    }
+  ],
+  "selection_plan_sha256": "1bb389c4ea1d02648be74f2e3c10735a672b31b7a707c7b5d8caaa172bb057d5",
+  "config_file_sha256": "ca2f32fea8b32c63d6ac09a846412e3383b6b039713ead9b07d4455d7b5a2145",
+  "config": {
+    "task": "Pick up the cube and place it inside the box.",
+    "paths": {
+      "raw": "data/raw",
+      "calibration": "data/calibration/camera.json",
+      "annotations": "data/annotations",
+      "processed": "data/processed",
+      "robot": "data/robot/improvement_20261011/recovery",
+      "dataset": "data/datasets/improvement_20261011/recovery",
+      "runs": "runs"
+    },
+    "video": {
+      "table_marker_size_m": 0.05,
+      "object_marker_size_m": 0.03,
+      "chess_square_size_m": 0.025,
+      "sample_hz": 30,
+      "max_gap_s": 0.2,
+      "tracking_mode": "multi_marker",
+      "object_marker_id": 1,
+      "write_previews": false,
+      "reference_markers": [
+        {
+          "id": 0,
+          "region": [
+            0.1,
+            0,
+            0.35,
+            0.2
+          ]
+        },
+        {
+          "id": 1,
+          "region": [
+            0.72,
+            0,
+            0.96,
+            0.2
+          ]
+        },
+        {
+          "id": 2,
+          "region": [
+            0.72,
+            0.75,
+            0.98,
+            1
+          ]
+        },
+        {
+          "id": 3,
+          "region": [
+            0.05,
+            0.7,
+            0.28,
+            1
+          ]
+        }
+      ],
+      "resting_height_range_m": [
+        -0.01,
+        0.15
+      ]
+    },
+    "simulation": {
+      "control_hz": 20,
+      "image_size": 256,
+      "horizon": 600,
+      "demo_transition_mode": "contact",
+      "orientation_control": "fixed_downward",
+      "save_replay_video": false,
+      "randomize_start_m": 0.035
+    },
+    "training": {
+      "policy_path": "/home/sushanth/PhoneToPanda/checkpoints/main",
+      "repo_id": "local/phonetopanda_recovery_20261011",
+      "batch_size": 4,
+      "steps": 2000,
+      "save_freq": 2000,
+      "num_workers": 0,
+      "device": "cuda",
+      "use_amp": true,
+      "output_dir": "runs/improvement_20261011/train_recovery",
+      "seed": 42,
+      "resize_imgs_with_padding": [
+        256,
+        256
+      ],
+      "n_action_steps": 5,
+      "chunk_size": 20,
+      "optimizer_lr": 1e-05,
+      "preserve_normalization": true
+    },
+    "evaluation": {
+      "episodes": 20,
+      "seed": 4000,
+      "save_video": false,
+      "save_trace": true
+    },
+    "batch": {
+      "name": "Five accepted personal recordings",
+      "clips": [
+        "IMG_2092",
+        "IMG_2093",
+        "IMG_2095",
+        "IMG_2096",
+        "IMG_2098"
+      ],
+      "notes": "Five personal recordings, measured 50 mm references and 30 mm object marker. Translation and gripper are learned; downward wrist orientation uses feedback.",
+      "source_clips": [
+        "IMG_2092",
+        "IMG_2093",
+        "IMG_2095",
+        "IMG_2096",
+        "IMG_2097",
+        "IMG_2098"
+      ],
+      "excluded_clips": {
+        "IMG_2097": "273/304 measured samples in annotated action window (89.80%), below unchanged 90% threshold."
+      }
+    },
+    "demonstrations": {
+      "replays_per_clip": 4,
+      "seed_start": 0,
+      "minimum_successes_per_clip": 4,
+      "minimum_successes": 20
+    }
+  },
+  "replay_simulation": {
+    "control_hz": 20,
+    "image_size": 256,
+    "horizon": 600,
+    "demo_transition_mode": "contact",
+    "orientation_control": "fixed_downward",
+    "save_replay_video": false,
+    "randomize_start_m": 0.06
+  },
+  "task": "Pick up the cube and place it inside the box.",
+  "study_plan_sha256": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+  "decision_sha256": "44d78b2546e6efa88c5ba0a1bcceed66740b075826d8e0b54cf684be86d0e198",
+  "source_sha256": {
+    "scripts/build_recovery_dataset.py": "71050fdbba29b383329505161465fd3e1b7a1fbaf8044781ccf63d0e277eb763",
+    "scripts/build_dataset.py": "f8ae20b963ff180338fa65d28bc977a74fc09edda5df8553de7a0c967657710e",
+    "scripts/build_selected_dataset.py": "9579b85a940405141a4863f559ce8aea0070606f9471ad1952b56bceb3a5770a",
+    "phone_to_panda/common.py": "1f7026cec74fbdefc932a425e34c59d810e837dbba7b0da674db834ea575171f",
+    "phone_to_panda/learning.py": "f6f1787e56d29d05f9654e17b3f5052a01259393aea01a5adc9971b112f1338c",
+    "phone_to_panda/simulation.py": "97b3dc35cc276a9fa2771d3661357d2730ee531732dc65571d1a752bb9ec4a41"
+  },
+  "checkpoint_files": {
+    "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+    "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+    "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+    "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+  },
+  "raw_video_sha256": {
+    "data/raw/IMG_2092.MOV": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+    "data/raw/IMG_2093.MOV": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+    "data/raw/IMG_2095.MOV": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+    "data/raw/IMG_2096.MOV": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+    "data/raw/IMG_2098.MOV": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+  },
+  "trajectory_sha256": {
+    "IMG_2092": "925ca053918f8f9dcd4421ba390fbb00582a5839a2370e596c7ac70d6e17dbe3",
+    "IMG_2093": "b48c5b226e3dbb5bfb39081b5bc692990bbf40f99aebd22cac25077c486629ca",
+    "IMG_2095": "8b16552ed2328dc50d9472708789092e5e4caaeae9d1306003066e261e1d1014",
+    "IMG_2096": "c312debd57d4bd39566de03ef27aa7db8de5954a2f34d85e66fc3a2d699cda90",
+    "IMG_2098": "c4de8bb9491e4947f27dbc26cd34b229c8e3069f6621ebdcf68c03422719e74a"
+  },
+  "original": [
+    {
+      "name": "IMG_2092_seed_0.npz",
+      "sha256": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+      "metadata_sha256": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+      "seed": 0,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2092_seed_1.npz",
+      "sha256": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+      "metadata_sha256": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+      "seed": 1,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2092_seed_2.npz",
+      "sha256": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+      "metadata_sha256": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+      "seed": 2,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2092_seed_3.npz",
+      "sha256": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+      "metadata_sha256": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+      "seed": 3,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2093_seed_4.npz",
+      "sha256": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+      "metadata_sha256": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+      "seed": 4,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2093_seed_5.npz",
+      "sha256": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+      "metadata_sha256": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+      "seed": 5,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2093_seed_6.npz",
+      "sha256": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+      "metadata_sha256": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+      "seed": 6,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2093_seed_7.npz",
+      "sha256": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+      "metadata_sha256": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+      "seed": 7,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2095_seed_10.npz",
+      "sha256": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+      "metadata_sha256": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+      "seed": 10,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2095_seed_11.npz",
+      "sha256": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+      "metadata_sha256": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+      "seed": 11,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2095_seed_8.npz",
+      "sha256": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+      "metadata_sha256": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+      "seed": 8,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2095_seed_9.npz",
+      "sha256": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+      "metadata_sha256": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+      "seed": 9,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2096_seed_12.npz",
+      "sha256": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+      "metadata_sha256": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+      "seed": 12,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2096_seed_13.npz",
+      "sha256": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+      "metadata_sha256": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+      "seed": 13,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2096_seed_14.npz",
+      "sha256": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+      "metadata_sha256": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+      "seed": 14,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2096_seed_15.npz",
+      "sha256": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+      "metadata_sha256": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+      "seed": 15,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2098_seed_16.npz",
+      "sha256": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+      "metadata_sha256": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+      "seed": 16,
+      "clip": "IMG_2098"
+    },
+    {
+      "name": "IMG_2098_seed_17.npz",
+      "sha256": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+      "metadata_sha256": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+      "seed": 17,
+      "clip": "IMG_2098"
+    },
+    {
+      "name": "IMG_2098_seed_18.npz",
+      "sha256": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+      "metadata_sha256": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+      "seed": 18,
+      "clip": "IMG_2098"
+    },
+    {
+      "name": "IMG_2098_seed_19.npz",
+      "sha256": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+      "metadata_sha256": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+      "seed": 19,
+      "clip": "IMG_2098"
+    }
+  ],
+  "original_dir": "/home/sushanth/PhoneToPanda/data/robot/main",
+  "robot_dir": "/home/sushanth/PhoneToPanda/data/robot/improvement_20261011/recovery",
+  "dataset_dir": "/home/sushanth/PhoneToPanda/data/datasets/improvement_20261011/recovery",
+  "takeover_tolerance": 1e-06,
+  "labels": "Only expert actions after takeover; preserved policy prefix is unlabelled context",
+  "evaluation": "No rescue controller in evaluation; source seeds recorded at top level to prevent overlap"
+}

@@ -1,0 +1,73 @@
+{
+  "checked_utc": "2026-10-11T19:03:35.433253+00:00",
+  "scope": "Readability edits after the completed 11 October study",
+  "source_archive": "evaluated_source.tar.gz",
+  "source_archive_sha256": "bd5f696dd7f9387ed8afa50ed3a0610b368b8d03adbe46daec2276f86768b62a",
+  "archived_files_verified": 49,
+  "python_files_compared": 31,
+  "executable_ast_equal_ignoring_docstrings": true,
+  "non_python_source_unchanged": true,
+  "changed_source_files": [
+    {
+      "path": "phone_to_panda/common.py",
+      "before_sha256": "1f7026cec74fbdefc932a425e34c59d810e837dbba7b0da674db834ea575171f",
+      "after_sha256": "5bc1425536cd4c8c64b96503db68b2b1fb9982279469429c854a890d362a2fd6"
+    },
+    {
+      "path": "phone_to_panda/learning.py",
+      "before_sha256": "f6f1787e56d29d05f9654e17b3f5052a01259393aea01a5adc9971b112f1338c",
+      "after_sha256": "bdb424ce8435f5677e6eb4348606b349d75bce674ba047abc6082de8bdb6886b"
+    },
+    {
+      "path": "phone_to_panda/multimarker.py",
+      "before_sha256": "13e77eb2a851bdd2fb0f5495e36ae49deddf43d185460a0b8eedb0ee24434e0c",
+      "after_sha256": "ecb56e02f00958467341bb50a976f02d3fdfb990f97775d5bc75f630367292a3"
+    },
+    {
+      "path": "phone_to_panda/simulation.py",
+      "before_sha256": "97b3dc35cc276a9fa2771d3661357d2730ee531732dc65571d1a752bb9ec4a41",
+      "after_sha256": "d96e9ffb0824a4d528fa698974bcc1161e2e2363e6d01a4194cd7c4bbbc3c310"
+    },
+    {
+      "path": "scripts/build_dataset.py",
+      "before_sha256": "f8ae20b963ff180338fa65d28bc977a74fc09edda5df8553de7a0c967657710e",
+      "after_sha256": "df0dd99aa5b26f0fa841b7454b172482a56676d1d8a8c7f41afd2ca9ee453220"
+    },
+    {
+      "path": "scripts/train_with_frozen_stats.py",
+      "before_sha256": "683f211912fd00d37be18fc5d83442b99f816a6e9ab24ecc075244903e358f14",
+      "after_sha256": "69cda02d395484231ccf8781e1178babd82e87a410a0e26a46080b02e2deb231"
+    }
+  ],
+  "note": "Comments and docstrings differ. The historical final evaluation lock continues to refer to the archived source.",
+  "tests": {
+    "command": "PHONE_PHYSICS_TEST=1 .venv/bin/python -m pytest -q",
+    "passed": 137,
+    "warnings": 3,
+    "seconds": 15.98,
+    "warnings_source": "upstream robosuite deprecated logger.warn",
+    "log_sha256": "6136f358f95b1bc3cc84a4ead8c41f84551da8cd23a438028980fcbbbf920bc2"
+  },
+  "local_markdown_links_checked": 119,
+  "missing_local_links": [],
+  "practice_exercises": {
+    "count": 3,
+    "verified": "Training command dry run, numeric carry-time mapping, and four unit-test cases; no policy training or evaluation."
+  },
+  "presentation_video": {
+    "metadata": "media/demo_info.json",
+    "dimensions": [
+      1180,
+      506
+    ],
+    "frames": 2191,
+    "seconds": 109.55,
+    "all_output_frame_timestamps_verified": true,
+    "sha256": "0acfec2b0853731e3c2e7e69f35f2ff92b4947cc12f96797aaa868f57d935f2d",
+    "source_original_hash_verified": true,
+    "preview_hash_verified": true,
+    "preview_visually_reviewed": true,
+    "edit_scope": "Crop application windows and omit startup before first policy attempt; retain continuous sequence at normal speed."
+  },
+  "publication": "Local edits only; no commit, push or upload."
+}

@@ -1,0 +1,43 @@
+{
+  "selection_name": "targeted",
+  "plan_sha256": "feb28315eda8945745ae1bdd65a3d97edb0940d0a078c254f7246f671d35e207",
+  "complete": true,
+  "source_recordings": 5,
+  "original_successes": 20,
+  "new_successes_per_clip": {
+    "IMG_2092": 4,
+    "IMG_2093": 4,
+    "IMG_2095": 4,
+    "IMG_2096": 4,
+    "IMG_2098": 4
+  },
+  "new_successes": 20,
+  "attempted_candidates": 20,
+  "failed_candidates": 0,
+  "new_attempts_this_run": 20,
+  "candidate_directory": "/home/sushanth/PhoneToPanda/data/robot/improvement_20261011/targeted/build/candidates",
+  "selected_episodes": [
+    "IMG_2092_seed_12000.npz",
+    "IMG_2092_seed_12001.npz",
+    "IMG_2092_seed_12002.npz",
+    "IMG_2092_seed_12003.npz",
+    "IMG_2093_seed_12010.npz",
+    "IMG_2093_seed_12011.npz",
+    "IMG_2093_seed_12012.npz",
+    "IMG_2093_seed_12013.npz",
+    "IMG_2095_seed_12020.npz",
+    "IMG_2095_seed_12021.npz",
+    "IMG_2095_seed_12022.npz",
+    "IMG_2095_seed_12023.npz",
+    "IMG_2096_seed_12030.npz",
+    "IMG_2096_seed_12031.npz",
+    "IMG_2096_seed_12032.npz",
+    "IMG_2096_seed_12033.npz",
+    "IMG_2098_seed_12040.npz",
+    "IMG_2098_seed_12041.npz",
+    "IMG_2098_seed_12042.npz",
+    "IMG_2098_seed_12043.npz"
+  ],
+  "dataset": "/home/sushanth/PhoneToPanda/data/datasets/improvement_20261011/targeted",
+  "exported_episodes": 40
+}

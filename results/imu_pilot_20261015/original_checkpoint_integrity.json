@@ -1,0 +1,14 @@
+{
+  "original_checkpoint_unchanged_from_11_october": true,
+  "reference": "results/improvement_20261011/candidate_lock.json",
+  "checkpoint_files": {
+    "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+    "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+    "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+    "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+  }
+}

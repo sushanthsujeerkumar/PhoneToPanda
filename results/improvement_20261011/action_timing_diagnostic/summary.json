@@ -1,0 +1,642 @@
+{
+  "phase": "development",
+  "names": [
+    "original_h5",
+    "original_h1"
+  ],
+  "groups": [
+    "known_wide"
+  ],
+  "reference": "original_h5",
+  "combined_group_weights": {
+    "known_wide": 1.0
+  },
+  "study_plan_sha256": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+  "source_recording_count": 5,
+  "selection_rule": "Choose candidates using development only. Before final-test execution lock chosen model/settings. Final test cannot guide further tuning. Report all completed interventions and failures.",
+  "models": {
+    "original_h5": {
+      "groups": {
+        "known_wide": {
+          "trials": 10,
+          "placements": 5,
+          "lifts": 5,
+          "failed_lift": 5,
+          "failed_after_lift": 0,
+          "placement_rate": 0.5,
+          "lift_rate": 0.5,
+          "placement_wilson95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "lift_wilson95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "episode_results": [
+            {
+              "seed": 3010,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9225873606093637,
+              "initial_cube_xyz": [
+                -0.045558641944434236,
+                -0.1993192669871758,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3011,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 236,
+              "max_cube_height_m": 1.1773236681006831,
+              "initial_cube_xyz": [
+                0.04164068832786472,
+                -0.16148566849228588,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3012,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9306502140608054,
+              "initial_cube_xyz": [
+                -0.03775082614429805,
+                -0.1980566983570999,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3013,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9281181112892354,
+              "initial_cube_xyz": [
+                -0.051580838825813546,
+                -0.18412371835651833,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3014,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9258317703789897,
+              "initial_cube_xyz": [
+                0.011294672171106161,
+                -0.22720054910298254,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3015,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9294790442302804,
+              "initial_cube_xyz": [
+                -0.051238920329419124,
+                -0.19964457776088243,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3016,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 242,
+              "max_cube_height_m": 1.1585536429639707,
+              "initial_cube_xyz": [
+                0.03523848221720782,
+                -0.1794064493798687,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3017,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 295,
+              "max_cube_height_m": 1.1211438973500707,
+              "initial_cube_xyz": [
+                -0.018862726504918048,
+                -0.13180441883789998,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3018,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 214,
+              "max_cube_height_m": 1.1238896377350067,
+              "initial_cube_xyz": [
+                -0.005009244897362507,
+                -0.14699151071883018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3019,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 214,
+              "max_cube_height_m": 1.0795705189345222,
+              "initial_cube_xyz": [
+                -0.005965758984900475,
+                -0.13488829669606772,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/original_h5/known_wide/evaluation/report.json",
+          "report_sha256": "7c6c382006001d3a3c16cb1f21eb2ba59199fb1be5acf2f78f839f1718fa28e5",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+              "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+              "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+              "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 300.1976467100003,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 10,
+        "placements": 5,
+        "lifts": 5,
+        "failed_lift": 5,
+        "failed_after_lift": 0,
+        "placement_rate": 0.5,
+        "lift_rate": 0.5,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    },
+    "original_h1": {
+      "groups": {
+        "known_wide": {
+          "trials": 10,
+          "placements": 4,
+          "lifts": 4,
+          "failed_lift": 6,
+          "failed_after_lift": 0,
+          "placement_rate": 0.4,
+          "lift_rate": 0.4,
+          "placement_wilson95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ],
+          "lift_wilson95": [
+            0.16818032970623614,
+            0.6873262302663417
+          ],
+          "episode_results": [
+            {
+              "seed": 3010,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9323243865580013,
+              "initial_cube_xyz": [
+                -0.045558641944434236,
+                -0.1993192669871758,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3011,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9283064414910639,
+              "initial_cube_xyz": [
+                0.04164068832786472,
+                -0.16148566849228588,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3012,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9317698834259618,
+              "initial_cube_xyz": [
+                -0.03775082614429805,
+                -0.1980566983570999,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3013,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9296907988465474,
+              "initial_cube_xyz": [
+                -0.051580838825813546,
+                -0.18412371835651833,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3014,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9285217372802054,
+              "initial_cube_xyz": [
+                0.011294672171106161,
+                -0.22720054910298254,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3015,
+              "group": "known_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9281719847471865,
+              "initial_cube_xyz": [
+                -0.051238920329419124,
+                -0.19964457776088243,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3016,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 222,
+              "max_cube_height_m": 1.1437736750892993,
+              "initial_cube_xyz": [
+                0.03523848221720782,
+                -0.1794064493798687,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3017,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 275,
+              "max_cube_height_m": 1.092113619124557,
+              "initial_cube_xyz": [
+                -0.018862726504918048,
+                -0.13180441883789998,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3018,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 199,
+              "max_cube_height_m": 1.0655046853827483,
+              "initial_cube_xyz": [
+                -0.005009244897362507,
+                -0.14699151071883018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 3019,
+              "group": "known_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 220,
+              "max_cube_height_m": 1.098322457346388,
+              "initial_cube_xyz": [
+                -0.005965758984900475,
+                -0.13488829669606772,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/original_h1/known_wide/evaluation/report.json",
+          "report_sha256": "285fafc4f663f514e340d37944c69b21512812197bdabfc0b89034434a900736",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+              "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+              "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+              "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+            },
+            "n_action_steps": 1
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 1,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 1
+          },
+          "wall_seconds": 1285.1893027900005,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 10,
+        "placements": 4,
+        "lifts": 4,
+        "failed_lift": 6,
+        "failed_after_lift": 0,
+        "placement_rate": 0.4,
+        "lift_rate": 0.4,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    }
+  },
+  "paired": {
+    "original_h1": {
+      "reference": "original_h5",
+      "groups": {
+        "known_wide": {
+          "trials": 10,
+          "improved": 0,
+          "regressed": 1,
+          "both_success": 4,
+          "both_failure": 5,
+          "placement_rate_difference": -0.1,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        }
+      },
+      "combined": {
+        "trials": 10,
+        "improved": 0,
+        "regressed": 1,
+        "both_success": 4,
+        "both_failure": 5,
+        "placement_rate_difference": -0.1,
+        "exact_mcnemar_two_sided_p": 1.0,
+        "identical_initial_cube_and_robot_states": true
+      }
+    }
+  },
+  "limits": [
+    "Development results are diagnostics and selection evidence, not a held-out final test.",
+    "One custom simulation scene, five source recordings, fixed cube and target; no new human recordings or real-robot evidence.",
+    "Hybrid control: learned XYZ/gripper with fixed downward wrist feedback.",
+    "Lift means cube centre exceeded 0.97 m. Failed after lift combines dropped-object and unsuccessful-placement outcomes; it does not diagnose which occurred.",
+    "Wilson intervals describe each start group's marginal binomial proportion; they are not confidence intervals on the paired difference.",
+    "Combined rates use fixed per-group trial quotas (known_wide: 100.0%). No pooled binomial interval is reported for this fixed stratified design.",
+    "Intervals and exact paired p values compare these fixed checkpoints over simulator starts. One training seed provides no estimate of optimizer-seed or training-run variability.",
+    "Development comparisons used for candidate selection are exploratory. Final candidate identities must be locked before final outcomes are observed; final outcomes must not select a new winner.",
+    "Repeated starts in this scene do not establish broad task generalization. A selected rollout video illustrates one seed; aggregate counts provide the performance comparison.",
+    "Recorded wall times may include concurrent workloads and are not a latency benchmark."
+  ]
+}

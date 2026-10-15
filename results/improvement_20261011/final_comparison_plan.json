@@ -1,0 +1,24 @@
+{
+  "specified_utc": "2026-10-11T17:17:41.589929+00:00",
+  "reference_candidate": "original_h5",
+  "matched_final_models": [
+    "original_h5",
+    "continuation2000_h5",
+    "uniform2000_h5",
+    "targeted2000_h5"
+  ],
+  "maximum_extra_budget_finalists": 1,
+  "exploratory_finalist_selection": "Among completed uniform4000_h5 and recovery2000_h5 choose greatest placements across the same20 new development starts; tie prefers uniform4000_h5. Include that single model as exploratory, even if it does not beat the original. Do not run final tests for the other exploratory model.",
+  "primary_selection": "Maximum development placements over completed candidates, original first in ties; existing matched2k tie order then uniform4000_h5 then recovery2000_h5. If original wins, retain it as selected_candidate and label every adaptation secondary.",
+  "locked_before_testing": true,
+  "trials_per_final_model": 60,
+  "final_groups": [
+    "narrow",
+    "wide"
+  ],
+  "maximum_final_episodes": 300,
+  "promotion": "Only the development-selected non-reference candidate may be promoted. Its final total placements must exceed original and its narrow count must not fall. Secondary final outcomes may not select a replacement winner. If reference is selected or criterion fails, retain original.",
+  "fallback_if_time_insufficient": "Before lock only, reduce to complete reference plus selected model evaluations and label matched2k ablation development-only; never drop a group or model after seeing its final outcomes.",
+  "uncertainty": "Per-group Wilson intervals and fixed-checkpoint paired discordances. Additional contrasts exploratory, unadjusted p values descriptive, one training seed.",
+  "final_has_not_started": true
+}

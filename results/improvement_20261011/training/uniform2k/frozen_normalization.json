@@ -1,0 +1,23 @@
+{
+  "kind": "preserved_checkpoint_normalization",
+  "source_checkpoint": "/home/sushanth/PhoneToPanda/checkpoints/main",
+  "source_files_sha256": {
+    "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9"
+  },
+  "dataset_statistics_modified": false,
+  "description": "Training and inference use the source checkpoint's observation/action statistics.",
+  "checkpoint_step": 2000,
+  "saved_statistics_verified_equal": true,
+  "normalization_transform_tensors_verified_exact": true,
+  "ancillary_metadata_policy": "Single count or episode/frame/task/index/timestamp metadata may have shape () or (1,) with identical value; action/state/image normalization transform tensors retain exact source shape and values.",
+  "saved_processor_files_sha256": {
+    "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+    "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+  }
+}

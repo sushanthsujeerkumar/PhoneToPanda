@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101820" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23111b25'/%3E%3Cpath d='M12 9L20 23' stroke='%23a4e9ce' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M20 23L30 28' stroke='%23f4aa97' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <title>Arm Studio · PhoneToPanda</title>
+    <link rel="stylesheet" href="/style.css?v=4" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "/vendor/three.module.js",
+          "three/addons/controls/OrbitControls.js": "/vendor/OrbitControls.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Arm Studio home"
+          ><span class="brand-mark" aria-hidden="true"
+            ><i></i><i></i><i></i></span
+          ><span
+            >Arm Studio<small>PhoneToPanda / sensor workspace</small></span
+          ></a
+        >
+        <div class="top-status">
+          <span id="sourceBadge" class="badge source-badge">OFFLINE</span
+          ><span class="connection"
+            ><i id="connectionDot" class="status-dot"></i
+            ><span id="connectionLabel">Connecting to workspace</span></span
+          >
+        </div>
+        <button
+          class="quiet-button"
+          id="helpButton"
+          aria-label="Open setup guide"
+        >
+          <span aria-hidden="true">?</span> Quick guide
+        </button>
+      </header>
+
+      <main class="workspace">
+        <aside class="setup-panel" aria-label="Sensor setup">
+          <div class="panel-intro">
+            <p class="eyebrow">RIGHT ARM · TWO SENSORS</p>
+            <h1>Check your arm.</h1>
+            <p>
+              Connect, align, and check your motion<br class="desktop-break" />
+              before recording.
+            </p>
+          </div>
+
+          <section class="setup-section">
+            <div class="section-title">
+              <span class="step-number">01</span>
+              <h2>Choose your source</h2>
+            </div>
+            <div
+              class="segmented source-choice"
+              role="group"
+              aria-label="Data source"
+            >
+              <button id="sourceDemo" class="active" data-source="demo">
+                Demo</button
+              ><button id="sourceSerial" data-source="serial">
+                Live sensors
+              </button>
+            </div>
+            <div id="serialControls" class="serial-controls" hidden>
+              <label for="portSelect">USB receiver</label>
+              <div class="port-row">
+                <select id="portSelect">
+                  <option value="">Choose a port</option></select
+                ><button
+                  id="refreshPorts"
+                  class="icon-button"
+                  title="Refresh USB ports"
+                  aria-label="Refresh USB ports"
+                >
+                  ↻
+                </button>
+              </div>
+              <label for="protocolSelect">Receiver format</label
+              ><select id="protocolSelect">
+                <option value="am">AM binary</option>
+                <option value="json">JSON lines</option>
+              </select>
+              <button id="connectButton" class="button primary full">
+                Connect receiver <span aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p id="sourceDescription" class="helper">
+              Explore the workspace with simulated motion. No hardware is
+              connected in demo mode.
+            </p>
+          </section>
+
+          <section class="setup-section">
+            <div class="section-title">
+              <span class="step-number">02</span>
+              <h2>Match your sensors</h2>
+            </div>
+            <p class="helper section-helper">
+              Move one sensor at a time. Watch its movement indicator on the
+              right.
+            </p>
+            <form id="configForm">
+              <div class="assignment-grid">
+                <span></span><span class="field-heading">Sensor ID</span
+                ><span class="field-heading">Length</span>
+                <label for="upperId" class="segment-label"
+                  ><i class="swatch mint"></i>Upper arm</label
+                ><input
+                  id="upperId"
+                  name="upper_id"
+                  value="3"
+                  maxlength="30"
+                  aria-label="Upper arm sensor ID"
+                  required
+                />
+                <div class="unit-input">
+                  <input
+                    id="upperLength"
+                    name="upper_length"
+                    type="number"
+                    value="30"
+                    min="10"
+                    max="60"
+                    step="0.5"
+                    aria-label="Upper arm length in centimetres"
+                    required
+                  /><span>cm</span>
+                </div>
+                <label for="forearmId" class="segment-label"
+                  ><i class="swatch coral"></i>Forearm</label
+                ><input
+                  id="forearmId"
+                  name="forearm_id"
+                  value="4"
+                  maxlength="30"
+                  aria-label="Forearm sensor ID"
+                  required
+                />
+                <div class="unit-input">
+                  <input
+                    id="forearmLength"
+                    name="forearm_length"
+                    type="number"
+                    value="26"
+                    min="10"
+                    max="60"
+                    step="0.5"
+                    aria-label="Forearm length in centimetres"
+                    required
+                  /><span>cm</span>
+                </div>
+              </div>
+              <button
+                type="submit"
+                id="saveConfig"
+                class="button secondary full"
+              >
+                Apply assignment
+              </button>
+            </form>
+            <p class="helper tiny">
+              Measure shoulder to elbow, then elbow to wrist.
+            </p>
+          </section>
+
+          <section class="setup-section calibration-section">
+            <div class="section-title">
+              <span class="step-number">03</span>
+              <h2>Align your arm</h2>
+              <button
+                id="resetCalibration"
+                class="text-button"
+                title="Clear calibration"
+              >
+                Reset
+              </button>
+            </div>
+            <button id="tableButton" class="calibration-card" disabled>
+              <span class="calibration-icon table-icon" aria-hidden="true"
+                >⌑</span
+              ><span
+                ><strong>Table alignment</strong
+                ><small
+                  >Lay both sensors flat, chip side up, with both +X axes pointing forward from your body.</small
+                ></span
+              ><span id="tableCheck" class="step-check">1</span>
+            </button>
+            <button id="neutralButton" class="calibration-card" disabled>
+              <span class="calibration-icon" aria-hidden="true">↧</span
+              ><span
+                ><strong>Neutral pose</strong
+                ><small
+                  >Wear the sensors. Relax your right arm down.</small
+                ></span
+              ><span id="neutralCheck" class="step-check">2</span>
+            </button>
+            <div id="calibrationProgress" class="calibration-progress" hidden>
+              <div class="progress-copy">
+                <span id="calibrationPrompt">Hold still</span
+                ><strong id="countdown"></strong>
+              </div>
+              <div class="progress-track"><i id="progressBar"></i></div>
+            </div>
+            <p id="calibrationMessage" class="helper" aria-live="polite">
+              Start with table alignment. Keep both sensors still while each
+              step is captured.
+            </p>
+          </section>
+          <div class="setup-footer">
+            <i class="status-dot neutral"></i> Your data stays on this computer.
+          </div>
+        </aside>
+
+        <section
+          class="main-panel"
+          aria-label="Arm visualization and recording"
+        >
+          <div class="main-heading">
+            <div>
+              <p class="eyebrow">MOTION CHECK</p>
+              <h2>Your arm, in view.</h2>
+            </div>
+            <span id="trackingBadge" class="badge muted"
+              >Calibration needed</span
+            >
+          </div>
+          <div class="viewport" id="viewport">
+            <canvas
+              id="armCanvas"
+              aria-label="Interactive 3D right arm schematic"
+            ></canvas>
+            <div class="viewport-toolbar">
+              <div class="view-presets" role="group" aria-label="Camera view">
+                <button class="active" data-view="perspective">3D</button
+                ><button data-view="front">Front</button
+                ><button data-view="side">Side</button
+                ><button data-view="top">Top</button>
+              </div>
+              <div class="view-options">
+                <button
+                  id="axesToggle"
+                  class="toggle-button active"
+                  aria-pressed="true"
+                >
+                  Axes</button
+                ><button
+                  id="trailToggle"
+                  class="toggle-button"
+                  aria-pressed="false"
+                >
+                  Trail
+                </button>
+              </div>
+            </div>
+            <div class="scene-labels" aria-hidden="true">
+              <span id="pointShoulder" class="point-label"
+                >Shoulder <small>fixed anchor</small></span
+              ><span id="pointElbow" class="point-label mint-text">Elbow</span
+              ><span id="pointWrist" class="point-label coral-text">Wrist</span>
+            </div>
+            <div id="sceneNotice" class="scene-notice">
+              <span class="notice-dot"></span
+              ><span id="sceneNoticeText"
+                >Preview pose · align sensors to begin</span
+              >
+            </div>
+            <div class="viewport-bottom">
+              <span
+                ><i class="swatch mint"></i> Upper arm
+                <i class="swatch coral"></i> Forearm</span
+              ><span class="orbit-hint">Drag to orbit · scroll to zoom</span>
+            </div>
+            <div id="sceneError" class="scene-error" hidden>
+              3D view is unavailable. Sensor readings and recording controls
+              remain available.
+            </div>
+          </div>
+
+          <div class="pose-metrics" aria-label="Estimated arm measurements">
+            <div class="metric elbow-metric">
+              <span class="metric-label">ELBOW BEND</span>
+              <div>
+                <strong id="elbowAngle">—</strong
+                ><span class="metric-unit">°</span>
+              </div>
+              <small>0° is a straight arm</small>
+            </div>
+            <div class="metric wrist-metric">
+              <span class="metric-label"
+                >WRIST FROM SHOULDER <span class="metric-unit">cm</span></span
+              >
+              <div class="xyz-values">
+                <span
+                  ><i class="axis-x">X</i><strong id="wristX">—</strong></span
+                ><span
+                  ><i class="axis-y">Y</i><strong id="wristY">—</strong></span
+                ><span
+                  ><i class="axis-z">Z</i><strong id="wristZ">—</strong></span
+                >
+              </div>
+              <small>Estimated from orientation and arm lengths</small>
+            </div>
+            <div class="metric calibration-metric">
+              <span class="metric-label">ALIGNMENT</span>
+              <div class="alignment-value">
+                <i id="alignmentDot" class="status-dot neutral"></i
+                ><strong id="alignmentStatus">Not set</strong>
+              </div>
+              <small id="alignmentDetail">Two quick steps to get ready</small>
+            </div>
+          </div>
+
+          <section class="capture-bar" aria-label="Session recording">
+            <div class="capture-title">
+              <span id="recordIndicator" class="record-indicator"></span>
+              <div>
+                <h3 id="recordTitle" aria-live="polite" aria-atomic="true">Capture a session</h3>
+                <p id="recordDetail">
+                  Five-second countdown. Start your phone, then use the elbow timing cue.
+                </p>
+              </div>
+            </div>
+            <div class="capture-actions">
+              <label class="duration-control" for="recordDuration">Record for
+                <select id="recordDuration">
+                  <option value="10">10 seconds</option>
+                  <option value="15" selected>15 seconds</option>
+                  <option value="30">30 seconds</option>
+                </select>
+              </label>
+              <span id="recordFrames" class="record-frames"></span
+              ><button id="recordButton" class="button record-button">
+                <span aria-hidden="true">●</span> Start recording · 5s
+              </button>
+            </div>
+          </section>
+          <p class="scope-note">
+            Human arm schematic · fixed shoulder · estimated wrist position. No
+            finger tracking or robot control.
+          </p>
+        </section>
+
+        <aside
+          class="telemetry-panel"
+          aria-label="Sensor health and saved sessions"
+        >
+          <div class="telemetry-heading">
+            <div>
+              <p class="eyebrow">SENSOR CHECK</p>
+              <h2>Keep an eye on<br />the signal.</h2>
+            </div>
+            <span id="sensorCount" class="count-badge">0</span>
+          </div>
+          <p class="helper sensor-intro">
+            Move one sensor. Its rotation and activity should change
+            independently.
+            <span id="streamQuality" class="stream-quality" role="status" hidden>
+              USB stream needed recovery. Inspect the connection before recording.
+            </span>
+          </p>
+          <div id="sensorCards" class="sensor-cards">
+            <div class="empty-sensors">
+              <span class="empty-orbit" aria-hidden="true">◎</span
+              ><strong>Waiting for a signal</strong>
+              <p>Choose demo to explore, or connect your USB receiver.</p>
+            </div>
+          </div>
+          <section class="sessions-section">
+            <div class="sessions-heading">
+              <h3>Saved sessions</h3>
+              <button id="deleteAllSessions" class="delete-all-button" disabled>Delete all</button>
+              <button
+                id="refreshSessions"
+                class="icon-button"
+                aria-label="Refresh sessions"
+                title="Refresh sessions"
+              >
+                ↻
+              </button>
+            </div>
+            <div id="sessionList" class="session-list">
+              <p class="empty-copy">Your recordings will appear here.</p>
+            </div>
+            <button id="returnLive" class="button secondary full" hidden>
+              ← Return to source
+            </button>
+          </section>
+          <div class="signal-key">
+            <span><i class="status-dot good"></i> Fresh</span
+            ><span><i class="status-dot warning"></i> Delayed</span
+            ><span><i class="status-dot neutral"></i> No signal</span>
+          </div>
+        </aside>
+      </main>
+      <footer class="app-footer">
+        <span id="statusMessage">Starting workspace…</span
+        ><span
+          >RIGHT ARM WORKSPACE <span class="footer-divider">/</span> LOCAL
+          SESSION</span
+        >
+      </footer>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <dialog id="deleteSessionDialog" aria-labelledby="deleteSessionTitle" aria-describedby="deleteSessionDescription">
+      <h2 id="deleteSessionTitle">Delete saved sessions?</h2>
+      <p id="deleteSessionDescription"></p>
+      <p class="delete-session-note">Files move to the app's Trash folder and can be recovered. Calibration stays unchanged.</p>
+      <div class="delete-dialog-actions">
+        <button id="cancelDeleteSessions" class="button secondary">Cancel</button>
+        <button id="confirmDeleteSessions" class="button delete-confirm">Delete sessions</button>
+      </div>
+    </dialog>
+    <dialog id="helpDialog">
+      <form method="dialog">
+        <button class="dialog-close icon-button" aria-label="Close guide">
+          ×
+        </button>
+      </form>
+      <p class="eyebrow">A GOOD FIRST CHECK</p>
+      <h2>Two sensors.<br />One clear starting point.</h2>
+      <ol>
+        <li>
+          <strong>Identify each sensor.</strong>
+          <p>
+            Connect your receiver and move one sensor at a time. Match the
+            changing sensor ID to the upper arm or forearm.
+          </p>
+        </li>
+        <li>
+          <strong>Align them on a table.</strong>
+          <p>
+            Place both flat with their marked directions parallel. Start table
+            alignment and keep them completely still.
+          </p>
+        </li>
+        <li>
+          <strong>Capture a neutral pose.</strong>
+          <p>
+            Secure the sensors to your right upper arm and forearm. Stand
+            upright, relax your arm straight down and hold still for neutral
+            capture.
+          </p>
+        </li>
+        <li>
+          <strong>Move slowly, then record.</strong>
+          <p>
+            Raise your arm and bend your elbow. Check that the correct segment
+            moves. A fixed shoulder and measured arm lengths estimate wrist
+            position; this is not independent position or finger tracking.
+          </p>
+        </li>
+      </ol>
+      <p class="guide-download">
+        <a href="/guide/recording_guide.pdf" target="_blank" rel="noopener"
+          >Illustrated recording guide (PDF) ↗</a
+        >
+      </p>
+      <p class="dialog-note">
+        Demo uses simulated readings. Replay uses a saved session. LIVE selects
+        serial input; check the receiver and sensor status before recording.
+      </p>
+    </dialog>
+    <script type="module" src="/app.js?v=4"></script>
+  </body>
+</html>

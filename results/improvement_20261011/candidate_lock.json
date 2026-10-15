@@ -1,0 +1,111 @@
+{
+  "locked_utc": "2026-10-11T17:48:20.079022+00:00",
+  "study_plan_sha256": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+  "config_sha256": "ecd63c588325f8719c7e144eb49956da0ca308e34670774ed95142931f2ba21a",
+  "source_sha256": {
+    "phone_to_panda/learning.py": "f6f1787e56d29d05f9654e17b3f5052a01259393aea01a5adc9971b112f1338c",
+    "phone_to_panda/simulation.py": "97b3dc35cc276a9fa2771d3661357d2730ee531732dc65571d1a752bb9ec4a41"
+  },
+  "reference_candidate": "original_h5",
+  "selected_candidate": "original_h5",
+  "contrast_roles": {
+    "continuation2000_h5": "Secondary matched-update control on the original20 demonstrations.",
+    "uniform2000_h5": "Secondary matched2k uniform replay-augmentation contrast.",
+    "targeted2000_h5": "Secondary matched2k failure-targeted replay-augmentation contrast.",
+    "uniform4000_h5": "Secondary exploratory longer uniform-training contrast; differs in update budget from matched2k arms."
+  },
+  "selection_sidecars_sha256": {
+    "selection_rule.json": "772e4732c51b3416ccac63a4c61d1a92dc3bcd22d891c3dba6ca2d954ea2fd43",
+    "tie_break_plan.json": "3f40ff47e92c0e1d65a7cd70126faefbe6488f9b8b8f7fdd190e5b441e4cfda1",
+    "continuation_control_plan.json": "9f37c091d46977918f441f817aa3d692b0884500c28f3890813a61493e755b05",
+    "data_selection_notes.json": "817d7b490b0f4b614b56a0c0606de1d34566761254fb4ffbddbc8bcd59c86e22",
+    "uniform_extension_plan.json": "560ae0154b306ff4f8274e1114a8f8d60a465639823a5d97fdb92f44a6951eb0",
+    "recovery_plan.json": "44d78b2546e6efa88c5ba0a1bcceed66740b075826d8e0b54cf684be86d0e198",
+    "final_comparison_plan.json": "44e84661aab78a424071dc0821e43275081e6090263a68d38043fb39f99cc582",
+    "selection_decision.json": "9c2abb7b621b4a33224b3a33900790b637c3da4d894c86bc6444311c61e1000c",
+    "implementation_hashes_before_final.json": "19a3ac4a9e39891d4fabab5514a545a8b652679fbd542dbb7902c0c3c4ffe566",
+    "runtime_environment.json": "0591b8b99672d7940e8cc942a8c24661d707762b61ed81dd42ba7c5627ed3672"
+  },
+  "candidates": {
+    "original_h5": {
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "n_action_steps": 5
+    },
+    "continuation2000_h5": {
+      "checkpoint_files": {
+        "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+        "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+        "model.safetensors": "4deffd0d0e8db42f60f35ab516d6b67e8086da3fba590343bcb41ada0cda6d37",
+        "phone_to_panda_provenance.json": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "069b37cf7a953b553fadce5b848ca87567ce1331458eaae6e4361fa88dd83d8c"
+      },
+      "n_action_steps": 5
+    },
+    "uniform2000_h5": {
+      "checkpoint_files": {
+        "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+        "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+        "model.safetensors": "79bd1f50ba3298f6a2b9e7383bddca48251f94aff10a8437050ec3edc7695afd",
+        "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "8676aa17abf5b00b7766709477209a799d0c9a49f0f4e8c6a9537b890e32e8a2"
+      },
+      "n_action_steps": 5
+    },
+    "targeted2000_h5": {
+      "checkpoint_files": {
+        "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+        "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+        "model.safetensors": "a397df828991e22e784a8c990fb5e7648e377bf0c798b8920d062fedcfd178f4",
+        "phone_to_panda_provenance.json": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "9d0dc8757e8216c592f6e8aabed835246969e1eb4c884598d6fc0529853761df"
+      },
+      "n_action_steps": 5
+    },
+    "uniform4000_h5": {
+      "checkpoint_files": {
+        "config.json": "5eb0338844a5beffa036276ae39e833d4e599bd860f5bba372f4757a44d8d245",
+        "frozen_normalization.json": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+        "model.safetensors": "f0ada1ada9db6fe08cfeca5f528309c2ada89c726a578fce8fda801976a5761f",
+        "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "4016cf14416e21df97de7cc76868ba5ac57ae941d65f57e70e11d350a00ec44d"
+      },
+      "n_action_steps": 5
+    }
+  },
+  "checkpoint_paths": {
+    "original_h5": "/home/sushanth/PhoneToPanda/checkpoints/main",
+    "continuation2000_h5": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model",
+    "uniform2000_h5": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model",
+    "targeted2000_h5": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model",
+    "uniform4000_h5": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model"
+  },
+  "primary_decision": "Retain original_h5, selected before final testing. No post-test replacement by a secondary contrast.",
+  "final_trial_count": 300,
+  "completed_training": true,
+  "new_human_recordings": 0
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "checkpoint_metadata_curation_addendum",
+  "candidate": "recovery2000_h5",
+  "checkpoint": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model",
+  "reported_model_sha256": "16e4f0d7d476770c1c55072cfae80d05029ab8cfdcb02ff7ae82624905e484f2",
+  "identity_source": "runs/improvement_20261011/completed_training_recovery.json",
+  "identity_source_sha256": "3da3dd51372517470e6272cb0c7699ccaa1a73a7dc7039bb447fb49253cedbb6",
+  "additional_updates": 2000,
+  "episodes": 40,
+  "frames": 8869,
+  "source_normalization_transform_verified_exact": true,
+  "weights_and_tensors_included": false,
+  "relationship_to_initial_curation": "Adds the now-completed recovery checkpoint; the initial curation manifest and its earlier pending note remain historical and unchanged."
+}

@@ -1,0 +1,1788 @@
+{
+  "kind": "video_and_recorded_imu_inspection",
+  "learned_policy": false,
+  "fused_tracker": false,
+  "normal_speed": true,
+  "fps": 15,
+  "frames": 216,
+  "duration_s": 14.4,
+  "video_range_s": [
+    0.0,
+    14.4
+  ],
+  "available_overlap_s": [
+    0.0,
+    14.464039948000355
+  ],
+  "source_video_duration_s": 14.733333333333333,
+  "excluded_video_start_s": 0.0,
+  "excluded_video_end_s": 0.33333333333333215,
+  "imu_time_offset_s": 0.54,
+  "alignment": "provisional",
+  "offset_uncertainty_s": 0.5,
+  "time_relation": "sensor_elapsed_s = video_elapsed_s + imu_time_offset_s",
+  "pose_source": "Recorded valid pose.points; nearest sample within 40 ms; no interpolation",
+  "coordinate_frame": "Fixed shoulder: +X forward, +Y left, +Z up; metres",
+  "limb_lengths_m": {
+    "upper": 0.3,
+    "forearm": 0.26
+  },
+  "missing_pose_preview_frames": 0,
+  "audio_included": false,
+  "original_metadata_copied": false,
+  "sources": {
+    "video": {
+      "filename": "IMG_2276.MOV",
+      "sha256": "76217a274c97f8999f328c98bd7b15c6776963c2c9fb2b952f039a0814431225"
+    },
+    "session": {
+      "filename": "20261015T165828Z_92196435.json",
+      "sha256": "500ce448410581ebd9e9927883ccb36e27fa59bba4146b4f8cd9f3b88dde7889"
+    },
+    "events": {
+      "filename": "events.json",
+      "sha256": "92a3932b7d1398d7b66c4ddd28bd0a59c674271fa60e6d89b3211b8a7f70a670"
+    }
+  },
+  "snapshots": [
+    "paired_preview_000.jpg",
+    "paired_preview_108.jpg",
+    "paired_preview_215.jpg"
+  ],
+  "samples": [
+    {
+      "preview_frame": 0,
+      "video_time_s": 0.0,
+      "source_video_pts_s": 0.0,
+      "sensor_target_s": 0.54,
+      "sensor_sample_s": 0.5431910930001322,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 1,
+      "video_time_s": 0.06666666666666667,
+      "source_video_pts_s": 0.06666666666666667,
+      "sensor_target_s": 0.6066666666666667,
+      "sensor_sample_s": 0.6031489580000198,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 2,
+      "video_time_s": 0.13333333333333333,
+      "source_video_pts_s": 0.13333333333333333,
+      "sensor_target_s": 0.6733333333333333,
+      "sensor_sample_s": 0.6731266950000645,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 3,
+      "video_time_s": 0.2,
+      "source_video_pts_s": 0.2,
+      "sensor_target_s": 0.74,
+      "sensor_sample_s": 0.7431530180001573,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 4,
+      "video_time_s": 0.26666666666666666,
+      "source_video_pts_s": 0.26666666666666666,
+      "sensor_target_s": 0.8066666666666666,
+      "sensor_sample_s": 0.8031446810000489,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 5,
+      "video_time_s": 0.3333333333333333,
+      "source_video_pts_s": 0.3333333333333333,
+      "sensor_target_s": 0.8733333333333333,
+      "sensor_sample_s": 0.8731785669997407,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 6,
+      "video_time_s": 0.4,
+      "source_video_pts_s": 0.4,
+      "sensor_target_s": 0.9400000000000001,
+      "sensor_sample_s": 0.9431861909997679,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 7,
+      "video_time_s": 0.4666666666666667,
+      "source_video_pts_s": 0.4666666666666667,
+      "sensor_target_s": 1.0066666666666668,
+      "sensor_sample_s": 1.0031690380001237,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 8,
+      "video_time_s": 0.5333333333333333,
+      "source_video_pts_s": 0.5333333333333333,
+      "sensor_target_s": 1.0733333333333333,
+      "sensor_sample_s": 1.0731524889997672,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 9,
+      "video_time_s": 0.6,
+      "source_video_pts_s": 0.6,
+      "sensor_target_s": 1.1400000000000001,
+      "sensor_sample_s": 1.143206812000244,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 10,
+      "video_time_s": 0.6666666666666666,
+      "source_video_pts_s": 0.6666666666666666,
+      "sensor_target_s": 1.2066666666666666,
+      "sensor_sample_s": 1.203184154000155,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 11,
+      "video_time_s": 0.7333333333333333,
+      "source_video_pts_s": 0.7333333333333333,
+      "sensor_target_s": 1.2733333333333334,
+      "sensor_sample_s": 1.2731599509997977,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 12,
+      "video_time_s": 0.8,
+      "source_video_pts_s": 0.8,
+      "sensor_target_s": 1.34,
+      "sensor_sample_s": 1.3432037470001887,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 13,
+      "video_time_s": 0.8666666666666667,
+      "source_video_pts_s": 0.8666666666666667,
+      "sensor_target_s": 1.4066666666666667,
+      "sensor_sample_s": 1.40319640800044,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 14,
+      "video_time_s": 0.9333333333333333,
+      "source_video_pts_s": 0.9333333333333333,
+      "sensor_target_s": 1.4733333333333334,
+      "sensor_sample_s": 1.4731993330005935,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 15,
+      "video_time_s": 1.0,
+      "source_video_pts_s": 1.0,
+      "sensor_target_s": 1.54,
+      "sensor_sample_s": 1.5431611720005094,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 16,
+      "video_time_s": 1.0666666666666667,
+      "source_video_pts_s": 1.0666666666666667,
+      "sensor_target_s": 1.6066666666666667,
+      "sensor_sample_s": 1.6031739569998535,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 17,
+      "video_time_s": 1.1333333333333333,
+      "source_video_pts_s": 1.1333333333333333,
+      "sensor_target_s": 1.6733333333333333,
+      "sensor_sample_s": 1.6731948540000303,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 18,
+      "video_time_s": 1.2,
+      "source_video_pts_s": 1.2,
+      "sensor_target_s": 1.74,
+      "sensor_sample_s": 1.7431693830003496,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 19,
+      "video_time_s": 1.2666666666666666,
+      "source_video_pts_s": 1.2666666666666666,
+      "sensor_target_s": 1.8066666666666666,
+      "sensor_sample_s": 1.8031671360004111,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 20,
+      "video_time_s": 1.3333333333333333,
+      "source_video_pts_s": 1.3333333333333333,
+      "sensor_target_s": 1.8733333333333333,
+      "sensor_sample_s": 1.873150741000245,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 21,
+      "video_time_s": 1.4,
+      "source_video_pts_s": 1.4,
+      "sensor_target_s": 1.94,
+      "sensor_sample_s": 1.9431365770005868,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 22,
+      "video_time_s": 1.4666666666666666,
+      "source_video_pts_s": 1.4666666666666666,
+      "sensor_target_s": 2.006666666666667,
+      "sensor_sample_s": 2.003209340000467,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 23,
+      "video_time_s": 1.5333333333333334,
+      "source_video_pts_s": 1.5333333333333334,
+      "sensor_target_s": 2.0733333333333333,
+      "sensor_sample_s": 2.0731375610002942,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 24,
+      "video_time_s": 1.6,
+      "source_video_pts_s": 1.6,
+      "sensor_target_s": 2.14,
+      "sensor_sample_s": 2.143202403000032,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 25,
+      "video_time_s": 1.6666666666666667,
+      "source_video_pts_s": 1.6666666666666667,
+      "sensor_target_s": 2.206666666666667,
+      "sensor_sample_s": 2.2031464980000237,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 26,
+      "video_time_s": 1.7333333333333334,
+      "source_video_pts_s": 1.7333333333333334,
+      "sensor_target_s": 2.2733333333333334,
+      "sensor_sample_s": 2.2731672820000313,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 27,
+      "video_time_s": 1.8,
+      "source_video_pts_s": 1.8,
+      "sensor_target_s": 2.34,
+      "sensor_sample_s": 2.343131833999905,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 28,
+      "video_time_s": 1.8666666666666667,
+      "source_video_pts_s": 1.8666666666666667,
+      "sensor_target_s": 2.4066666666666667,
+      "sensor_sample_s": 2.4031306140004745,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 29,
+      "video_time_s": 1.9333333333333333,
+      "source_video_pts_s": 1.9333333333333333,
+      "sensor_target_s": 2.4733333333333336,
+      "sensor_sample_s": 2.473140556000544,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 30,
+      "video_time_s": 2.0,
+      "source_video_pts_s": 2.0,
+      "sensor_target_s": 2.54,
+      "sensor_sample_s": 2.5431237630000396,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 31,
+      "video_time_s": 2.066666666666667,
+      "source_video_pts_s": 2.066666666666667,
+      "sensor_target_s": 2.606666666666667,
+      "sensor_sample_s": 2.6031033460003528,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 32,
+      "video_time_s": 2.1333333333333333,
+      "source_video_pts_s": 2.1333333333333333,
+      "sensor_target_s": 2.6733333333333333,
+      "sensor_sample_s": 2.67312341700017,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 33,
+      "video_time_s": 2.2,
+      "source_video_pts_s": 2.2,
+      "sensor_target_s": 2.74,
+      "sensor_sample_s": 2.743121467000492,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 34,
+      "video_time_s": 2.2666666666666666,
+      "source_video_pts_s": 2.2666666666666666,
+      "sensor_target_s": 2.8066666666666666,
+      "sensor_sample_s": 2.8031061130004673,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 35,
+      "video_time_s": 2.3333333333333335,
+      "source_video_pts_s": 2.3333333333333335,
+      "sensor_target_s": 2.8733333333333335,
+      "sensor_sample_s": 2.8737094349999097,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 36,
+      "video_time_s": 2.4,
+      "source_video_pts_s": 2.4,
+      "sensor_target_s": 2.94,
+      "sensor_sample_s": 2.943812858000456,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 37,
+      "video_time_s": 2.466666666666667,
+      "source_video_pts_s": 2.466666666666667,
+      "sensor_target_s": 3.006666666666667,
+      "sensor_sample_s": 3.0030802830005996,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 38,
+      "video_time_s": 2.533333333333333,
+      "source_video_pts_s": 2.533333333333333,
+      "sensor_target_s": 3.0733333333333333,
+      "sensor_sample_s": 3.0731431240001257,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 39,
+      "video_time_s": 2.6,
+      "source_video_pts_s": 2.6,
+      "sensor_target_s": 3.14,
+      "sensor_sample_s": 3.1431275510003616,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 40,
+      "video_time_s": 2.6666666666666665,
+      "source_video_pts_s": 2.6666666666666665,
+      "sensor_target_s": 3.2066666666666666,
+      "sensor_sample_s": 3.20311694800057,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 41,
+      "video_time_s": 2.7333333333333334,
+      "source_video_pts_s": 2.7333333333333334,
+      "sensor_target_s": 3.2733333333333334,
+      "sensor_sample_s": 3.2731732219999685,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 42,
+      "video_time_s": 2.8,
+      "source_video_pts_s": 2.8,
+      "sensor_target_s": 3.34,
+      "sensor_sample_s": 3.3432085880003797,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 43,
+      "video_time_s": 2.8666666666666667,
+      "source_video_pts_s": 2.8666666666666667,
+      "sensor_target_s": 3.4066666666666667,
+      "sensor_sample_s": 3.4032192089998716,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 44,
+      "video_time_s": 2.933333333333333,
+      "source_video_pts_s": 2.933333333333333,
+      "sensor_target_s": 3.473333333333333,
+      "sensor_sample_s": 3.4740888730002553,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 45,
+      "video_time_s": 3.0,
+      "source_video_pts_s": 3.0,
+      "sensor_target_s": 3.54,
+      "sensor_sample_s": 3.5435645070001556,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 46,
+      "video_time_s": 3.066666666666667,
+      "source_video_pts_s": 3.066666666666667,
+      "sensor_target_s": 3.606666666666667,
+      "sensor_sample_s": 3.6031996460005757,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 47,
+      "video_time_s": 3.1333333333333333,
+      "source_video_pts_s": 3.1333333333333333,
+      "sensor_target_s": 3.6733333333333333,
+      "sensor_sample_s": 3.673127056999874,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 48,
+      "video_time_s": 3.2,
+      "source_video_pts_s": 3.2,
+      "sensor_target_s": 3.74,
+      "sensor_sample_s": 3.7432290819997434,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 49,
+      "video_time_s": 3.2666666666666666,
+      "source_video_pts_s": 3.2666666666666666,
+      "sensor_target_s": 3.8066666666666666,
+      "sensor_sample_s": 3.8032095160006065,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 50,
+      "video_time_s": 3.3333333333333335,
+      "source_video_pts_s": 3.3333333333333335,
+      "sensor_target_s": 3.8733333333333335,
+      "sensor_sample_s": 3.873231182999916,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 51,
+      "video_time_s": 3.4,
+      "source_video_pts_s": 3.4,
+      "sensor_target_s": 3.94,
+      "sensor_sample_s": 3.943119931000183,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 52,
+      "video_time_s": 3.466666666666667,
+      "source_video_pts_s": 3.466666666666667,
+      "sensor_target_s": 4.006666666666667,
+      "sensor_sample_s": 4.003184602000147,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 53,
+      "video_time_s": 3.533333333333333,
+      "source_video_pts_s": 3.533333333333333,
+      "sensor_target_s": 4.073333333333333,
+      "sensor_sample_s": 4.073172917999727,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 54,
+      "video_time_s": 3.6,
+      "source_video_pts_s": 3.6,
+      "sensor_target_s": 4.140000000000001,
+      "sensor_sample_s": 4.143179096000495,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 55,
+      "video_time_s": 3.6666666666666665,
+      "source_video_pts_s": 3.6666666666666665,
+      "sensor_target_s": 4.206666666666667,
+      "sensor_sample_s": 4.2031946870001775,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 56,
+      "video_time_s": 3.7333333333333334,
+      "source_video_pts_s": 3.7333333333333334,
+      "sensor_target_s": 4.273333333333333,
+      "sensor_sample_s": 4.273214593000375,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 57,
+      "video_time_s": 3.8,
+      "source_video_pts_s": 3.8,
+      "sensor_target_s": 4.34,
+      "sensor_sample_s": 4.343722737000462,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 58,
+      "video_time_s": 3.8666666666666667,
+      "source_video_pts_s": 3.8666666666666667,
+      "sensor_target_s": 4.406666666666666,
+      "sensor_sample_s": 4.403242217999832,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 59,
+      "video_time_s": 3.933333333333333,
+      "source_video_pts_s": 3.933333333333333,
+      "sensor_target_s": 4.473333333333333,
+      "sensor_sample_s": 4.4732108180005525,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 60,
+      "video_time_s": 4.0,
+      "source_video_pts_s": 4.0,
+      "sensor_target_s": 4.54,
+      "sensor_sample_s": 4.543180340000617,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 61,
+      "video_time_s": 4.066666666666666,
+      "source_video_pts_s": 4.066666666666666,
+      "sensor_target_s": 4.6066666666666665,
+      "sensor_sample_s": 4.60346176100029,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 62,
+      "video_time_s": 4.133333333333334,
+      "source_video_pts_s": 4.133333333333334,
+      "sensor_target_s": 4.673333333333334,
+      "sensor_sample_s": 4.673125498000445,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 63,
+      "video_time_s": 4.2,
+      "source_video_pts_s": 4.2,
+      "sensor_target_s": 4.74,
+      "sensor_sample_s": 4.743737474999762,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 64,
+      "video_time_s": 4.266666666666667,
+      "source_video_pts_s": 4.266666666666667,
+      "sensor_target_s": 4.806666666666667,
+      "sensor_sample_s": 4.803240477000145,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 65,
+      "video_time_s": 4.333333333333333,
+      "source_video_pts_s": 4.333333333333333,
+      "sensor_target_s": 4.873333333333333,
+      "sensor_sample_s": 4.873164079000162,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 66,
+      "video_time_s": 4.4,
+      "source_video_pts_s": 4.4,
+      "sensor_target_s": 4.94,
+      "sensor_sample_s": 4.9431523880002715,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 67,
+      "video_time_s": 4.466666666666667,
+      "source_video_pts_s": 4.466666666666667,
+      "sensor_target_s": 5.006666666666667,
+      "sensor_sample_s": 5.003166929000145,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 68,
+      "video_time_s": 4.533333333333333,
+      "source_video_pts_s": 4.533333333333333,
+      "sensor_target_s": 5.073333333333333,
+      "sensor_sample_s": 5.0731620500000645,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 69,
+      "video_time_s": 4.6,
+      "source_video_pts_s": 4.6,
+      "sensor_target_s": 5.14,
+      "sensor_sample_s": 5.14318014499986,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 70,
+      "video_time_s": 4.666666666666667,
+      "source_video_pts_s": 4.666666666666667,
+      "sensor_target_s": 5.206666666666667,
+      "sensor_sample_s": 5.203137792999769,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 71,
+      "video_time_s": 4.733333333333333,
+      "source_video_pts_s": 4.733333333333333,
+      "sensor_target_s": 5.273333333333333,
+      "sensor_sample_s": 5.273247244999766,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 72,
+      "video_time_s": 4.8,
+      "source_video_pts_s": 4.8,
+      "sensor_target_s": 5.34,
+      "sensor_sample_s": 5.343263481000577,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 73,
+      "video_time_s": 4.866666666666666,
+      "source_video_pts_s": 4.866666666666666,
+      "sensor_target_s": 5.406666666666666,
+      "sensor_sample_s": 5.403282738000598,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 74,
+      "video_time_s": 4.933333333333334,
+      "source_video_pts_s": 4.933333333333334,
+      "sensor_target_s": 5.473333333333334,
+      "sensor_sample_s": 5.473427620000621,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 75,
+      "video_time_s": 5.0,
+      "source_video_pts_s": 5.0,
+      "sensor_target_s": 5.54,
+      "sensor_sample_s": 5.5433155259997875,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 76,
+      "video_time_s": 5.066666666666666,
+      "source_video_pts_s": 5.066666666666666,
+      "sensor_target_s": 5.6066666666666665,
+      "sensor_sample_s": 5.603375815000618,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 77,
+      "video_time_s": 5.133333333333334,
+      "source_video_pts_s": 5.133333333333334,
+      "sensor_target_s": 5.673333333333334,
+      "sensor_sample_s": 5.67349065200051,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 78,
+      "video_time_s": 5.2,
+      "source_video_pts_s": 5.2,
+      "sensor_target_s": 5.74,
+      "sensor_sample_s": 5.743457061000299,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 79,
+      "video_time_s": 5.266666666666667,
+      "source_video_pts_s": 5.266666666666667,
+      "sensor_target_s": 5.806666666666667,
+      "sensor_sample_s": 5.803506887000367,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 80,
+      "video_time_s": 5.333333333333333,
+      "source_video_pts_s": 5.333333333333333,
+      "sensor_target_s": 5.873333333333333,
+      "sensor_sample_s": 5.873578011000063,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 81,
+      "video_time_s": 5.4,
+      "source_video_pts_s": 5.4,
+      "sensor_target_s": 5.94,
+      "sensor_sample_s": 5.943703873000231,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 82,
+      "video_time_s": 5.466666666666667,
+      "source_video_pts_s": 5.466666666666667,
+      "sensor_target_s": 6.006666666666667,
+      "sensor_sample_s": 6.003602124999816,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 83,
+      "video_time_s": 5.533333333333333,
+      "source_video_pts_s": 5.533333333333333,
+      "sensor_target_s": 6.073333333333333,
+      "sensor_sample_s": 6.073594651999883,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 84,
+      "video_time_s": 5.6,
+      "source_video_pts_s": 5.6,
+      "sensor_target_s": 6.14,
+      "sensor_sample_s": 6.143651811999916,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 85,
+      "video_time_s": 5.666666666666667,
+      "source_video_pts_s": 5.666666666666667,
+      "sensor_target_s": 6.206666666666667,
+      "sensor_sample_s": 6.203681558000426,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 86,
+      "video_time_s": 5.733333333333333,
+      "source_video_pts_s": 5.733333333333333,
+      "sensor_target_s": 6.273333333333333,
+      "sensor_sample_s": 6.273687218999839,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 87,
+      "video_time_s": 5.8,
+      "source_video_pts_s": 5.8,
+      "sensor_target_s": 6.34,
+      "sensor_sample_s": 6.343757940000614,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 88,
+      "video_time_s": 5.866666666666666,
+      "source_video_pts_s": 5.866666666666666,
+      "sensor_target_s": 6.406666666666666,
+      "sensor_sample_s": 6.403814234000492,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 89,
+      "video_time_s": 5.933333333333334,
+      "source_video_pts_s": 5.933333333333334,
+      "sensor_target_s": 6.473333333333334,
+      "sensor_sample_s": 6.473775929000112,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 90,
+      "video_time_s": 6.0,
+      "source_video_pts_s": 6.0,
+      "sensor_target_s": 6.54,
+      "sensor_sample_s": 6.543821662000482,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 91,
+      "video_time_s": 6.066666666666666,
+      "source_video_pts_s": 6.066666666666666,
+      "sensor_target_s": 6.6066666666666665,
+      "sensor_sample_s": 6.603779643000053,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 92,
+      "video_time_s": 6.133333333333334,
+      "source_video_pts_s": 6.133333333333334,
+      "sensor_target_s": 6.673333333333334,
+      "sensor_sample_s": 6.673791039999742,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 93,
+      "video_time_s": 6.2,
+      "source_video_pts_s": 6.2,
+      "sensor_target_s": 6.74,
+      "sensor_sample_s": 6.743826882000576,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 94,
+      "video_time_s": 6.266666666666667,
+      "source_video_pts_s": 6.266666666666667,
+      "sensor_target_s": 6.806666666666667,
+      "sensor_sample_s": 6.803800028000296,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 95,
+      "video_time_s": 6.333333333333333,
+      "source_video_pts_s": 6.333333333333333,
+      "sensor_target_s": 6.873333333333333,
+      "sensor_sample_s": 6.873779438000383,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 96,
+      "video_time_s": 6.4,
+      "source_video_pts_s": 6.4,
+      "sensor_target_s": 6.94,
+      "sensor_sample_s": 6.943773091999901,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 97,
+      "video_time_s": 6.466666666666667,
+      "source_video_pts_s": 6.466666666666667,
+      "sensor_target_s": 7.006666666666667,
+      "sensor_sample_s": 7.003809468999862,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 98,
+      "video_time_s": 6.533333333333333,
+      "source_video_pts_s": 6.533333333333333,
+      "sensor_target_s": 7.073333333333333,
+      "sensor_sample_s": 7.073787250999885,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 99,
+      "video_time_s": 6.6,
+      "source_video_pts_s": 6.6,
+      "sensor_target_s": 7.14,
+      "sensor_sample_s": 7.143791919999785,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 100,
+      "video_time_s": 6.666666666666667,
+      "source_video_pts_s": 6.666666666666667,
+      "sensor_target_s": 7.206666666666667,
+      "sensor_sample_s": 7.203788365000037,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 101,
+      "video_time_s": 6.733333333333333,
+      "source_video_pts_s": 6.733333333333333,
+      "sensor_target_s": 7.273333333333333,
+      "sensor_sample_s": 7.273822322999877,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 102,
+      "video_time_s": 6.8,
+      "source_video_pts_s": 6.8,
+      "sensor_target_s": 7.34,
+      "sensor_sample_s": 7.343857290000415,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 103,
+      "video_time_s": 6.866666666666666,
+      "source_video_pts_s": 6.866666666666666,
+      "sensor_target_s": 7.406666666666666,
+      "sensor_sample_s": 7.4038307549999445,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 104,
+      "video_time_s": 6.933333333333334,
+      "source_video_pts_s": 6.933333333333334,
+      "sensor_target_s": 7.473333333333334,
+      "sensor_sample_s": 7.473844025999824,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 105,
+      "video_time_s": 7.0,
+      "source_video_pts_s": 7.0,
+      "sensor_target_s": 7.54,
+      "sensor_sample_s": 7.543875101000594,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 106,
+      "video_time_s": 7.066666666666666,
+      "source_video_pts_s": 7.066666666666666,
+      "sensor_target_s": 7.6066666666666665,
+      "sensor_sample_s": 7.603780481000285,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 107,
+      "video_time_s": 7.133333333333334,
+      "source_video_pts_s": 7.133333333333334,
+      "sensor_target_s": 7.673333333333334,
+      "sensor_sample_s": 7.673800603000018,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 108,
+      "video_time_s": 7.2,
+      "source_video_pts_s": 7.2,
+      "sensor_target_s": 7.74,
+      "sensor_sample_s": 7.7437976649998745,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 109,
+      "video_time_s": 7.266666666666667,
+      "source_video_pts_s": 7.266666666666667,
+      "sensor_target_s": 7.806666666666667,
+      "sensor_sample_s": 7.803819769999791,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 110,
+      "video_time_s": 7.333333333333333,
+      "source_video_pts_s": 7.333333333333333,
+      "sensor_target_s": 7.873333333333333,
+      "sensor_sample_s": 7.873816518999774,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 111,
+      "video_time_s": 7.4,
+      "source_video_pts_s": 7.4,
+      "sensor_target_s": 7.94,
+      "sensor_sample_s": 7.943797685999925,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 112,
+      "video_time_s": 7.466666666666667,
+      "source_video_pts_s": 7.466666666666667,
+      "sensor_target_s": 8.006666666666668,
+      "sensor_sample_s": 8.003815912999926,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 113,
+      "video_time_s": 7.533333333333333,
+      "source_video_pts_s": 7.533333333333333,
+      "sensor_target_s": 8.073333333333334,
+      "sensor_sample_s": 8.073775720999947,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 114,
+      "video_time_s": 7.6,
+      "source_video_pts_s": 7.6,
+      "sensor_target_s": 8.14,
+      "sensor_sample_s": 8.14381526499983,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 115,
+      "video_time_s": 7.666666666666667,
+      "source_video_pts_s": 7.666666666666667,
+      "sensor_target_s": 8.206666666666667,
+      "sensor_sample_s": 8.203876467000555,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 116,
+      "video_time_s": 7.733333333333333,
+      "source_video_pts_s": 7.733333333333333,
+      "sensor_target_s": 8.273333333333333,
+      "sensor_sample_s": 8.273912962000395,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 117,
+      "video_time_s": 7.8,
+      "source_video_pts_s": 7.8,
+      "sensor_target_s": 8.34,
+      "sensor_sample_s": 8.343994319000558,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 118,
+      "video_time_s": 7.866666666666666,
+      "source_video_pts_s": 7.866666666666666,
+      "sensor_target_s": 8.406666666666666,
+      "sensor_sample_s": 8.40398937200007,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 119,
+      "video_time_s": 7.933333333333334,
+      "source_video_pts_s": 7.933333333333334,
+      "sensor_target_s": 8.473333333333333,
+      "sensor_sample_s": 8.473982346999946,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 120,
+      "video_time_s": 8.0,
+      "source_video_pts_s": 8.0,
+      "sensor_target_s": 8.54,
+      "sensor_sample_s": 8.543983428000502,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 121,
+      "video_time_s": 8.066666666666666,
+      "source_video_pts_s": 8.066666666666666,
+      "sensor_target_s": 8.606666666666666,
+      "sensor_sample_s": 8.603956591000497,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 122,
+      "video_time_s": 8.133333333333333,
+      "source_video_pts_s": 8.133333333333333,
+      "sensor_target_s": 8.673333333333332,
+      "sensor_sample_s": 8.673993915999745,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 123,
+      "video_time_s": 8.2,
+      "source_video_pts_s": 8.2,
+      "sensor_target_s": 8.739999999999998,
+      "sensor_sample_s": 8.744005121000555,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 124,
+      "video_time_s": 8.266666666666667,
+      "source_video_pts_s": 8.266666666666667,
+      "sensor_target_s": 8.806666666666668,
+      "sensor_sample_s": 8.80401504099973,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 125,
+      "video_time_s": 8.333333333333334,
+      "source_video_pts_s": 8.333333333333334,
+      "sensor_target_s": 8.873333333333335,
+      "sensor_sample_s": 8.874005221000516,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 126,
+      "video_time_s": 8.4,
+      "source_video_pts_s": 8.4,
+      "sensor_target_s": 8.940000000000001,
+      "sensor_sample_s": 8.944020934000037,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 127,
+      "video_time_s": 8.466666666666667,
+      "source_video_pts_s": 8.466666666666667,
+      "sensor_target_s": 9.006666666666668,
+      "sensor_sample_s": 9.00401682699976,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 128,
+      "video_time_s": 8.533333333333333,
+      "source_video_pts_s": 8.533333333333333,
+      "sensor_target_s": 9.073333333333334,
+      "sensor_sample_s": 9.073994772999868,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 129,
+      "video_time_s": 8.6,
+      "source_video_pts_s": 8.6,
+      "sensor_target_s": 9.14,
+      "sensor_sample_s": 9.143972059000589,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 130,
+      "video_time_s": 8.666666666666666,
+      "source_video_pts_s": 8.666666666666666,
+      "sensor_target_s": 9.206666666666667,
+      "sensor_sample_s": 9.203978997999911,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 131,
+      "video_time_s": 8.733333333333333,
+      "source_video_pts_s": 8.733333333333333,
+      "sensor_target_s": 9.273333333333333,
+      "sensor_sample_s": 9.274266535000606,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 132,
+      "video_time_s": 8.8,
+      "source_video_pts_s": 8.8,
+      "sensor_target_s": 9.34,
+      "sensor_sample_s": 9.344010212000285,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 133,
+      "video_time_s": 8.866666666666667,
+      "source_video_pts_s": 8.866666666666667,
+      "sensor_target_s": 9.406666666666666,
+      "sensor_sample_s": 9.404024838000623,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 134,
+      "video_time_s": 8.933333333333334,
+      "source_video_pts_s": 8.933333333333334,
+      "sensor_target_s": 9.473333333333333,
+      "sensor_sample_s": 9.474011178000183,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 135,
+      "video_time_s": 9.0,
+      "source_video_pts_s": 9.0,
+      "sensor_target_s": 9.54,
+      "sensor_sample_s": 9.543999614000313,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 136,
+      "video_time_s": 9.066666666666666,
+      "source_video_pts_s": 9.066666666666666,
+      "sensor_target_s": 9.606666666666666,
+      "sensor_sample_s": 9.603996302999803,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 137,
+      "video_time_s": 9.133333333333333,
+      "source_video_pts_s": 9.133333333333333,
+      "sensor_target_s": 9.673333333333332,
+      "sensor_sample_s": 9.674007338000592,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 138,
+      "video_time_s": 9.2,
+      "source_video_pts_s": 9.2,
+      "sensor_target_s": 9.739999999999998,
+      "sensor_sample_s": 9.744016532999922,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 139,
+      "video_time_s": 9.266666666666667,
+      "source_video_pts_s": 9.266666666666667,
+      "sensor_target_s": 9.806666666666668,
+      "sensor_sample_s": 9.80409280999993,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 140,
+      "video_time_s": 9.333333333333334,
+      "source_video_pts_s": 9.333333333333334,
+      "sensor_target_s": 9.873333333333335,
+      "sensor_sample_s": 9.874039428999822,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 141,
+      "video_time_s": 9.4,
+      "source_video_pts_s": 9.4,
+      "sensor_target_s": 9.940000000000001,
+      "sensor_sample_s": 9.944016862000353,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 142,
+      "video_time_s": 9.466666666666667,
+      "source_video_pts_s": 9.466666666666667,
+      "sensor_target_s": 10.006666666666668,
+      "sensor_sample_s": 10.004081730000507,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 143,
+      "video_time_s": 9.533333333333333,
+      "source_video_pts_s": 9.533333333333333,
+      "sensor_target_s": 10.073333333333334,
+      "sensor_sample_s": 10.074109711999881,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 144,
+      "video_time_s": 9.6,
+      "source_video_pts_s": 9.6,
+      "sensor_target_s": 10.14,
+      "sensor_sample_s": 10.143979198000125,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 145,
+      "video_time_s": 9.666666666666666,
+      "source_video_pts_s": 9.666666666666666,
+      "sensor_target_s": 10.206666666666667,
+      "sensor_sample_s": 10.204020705999937,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 146,
+      "video_time_s": 9.733333333333333,
+      "source_video_pts_s": 9.733333333333333,
+      "sensor_target_s": 10.273333333333333,
+      "sensor_sample_s": 10.273991834999833,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 147,
+      "video_time_s": 9.8,
+      "source_video_pts_s": 9.8,
+      "sensor_target_s": 10.34,
+      "sensor_sample_s": 10.343965926000237,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 148,
+      "video_time_s": 9.866666666666667,
+      "source_video_pts_s": 9.866666666666667,
+      "sensor_target_s": 10.406666666666666,
+      "sensor_sample_s": 10.40407074199993,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 149,
+      "video_time_s": 9.933333333333334,
+      "source_video_pts_s": 9.933333333333334,
+      "sensor_target_s": 10.473333333333333,
+      "sensor_sample_s": 10.47461957500036,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 150,
+      "video_time_s": 10.0,
+      "source_video_pts_s": 10.0,
+      "sensor_target_s": 10.54,
+      "sensor_sample_s": 10.544006934000208,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 151,
+      "video_time_s": 10.066666666666666,
+      "source_video_pts_s": 10.066666666666666,
+      "sensor_target_s": 10.606666666666666,
+      "sensor_sample_s": 10.604021295000166,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 152,
+      "video_time_s": 10.133333333333333,
+      "source_video_pts_s": 10.133333333333333,
+      "sensor_target_s": 10.673333333333332,
+      "sensor_sample_s": 10.674039309999898,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 153,
+      "video_time_s": 10.2,
+      "source_video_pts_s": 10.2,
+      "sensor_target_s": 10.739999999999998,
+      "sensor_sample_s": 10.743987507000384,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 154,
+      "video_time_s": 10.266666666666667,
+      "source_video_pts_s": 10.266666666666667,
+      "sensor_target_s": 10.806666666666668,
+      "sensor_sample_s": 10.804001891000553,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 155,
+      "video_time_s": 10.333333333333334,
+      "source_video_pts_s": 10.333333333333334,
+      "sensor_target_s": 10.873333333333335,
+      "sensor_sample_s": 10.874646772000233,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 156,
+      "video_time_s": 10.4,
+      "source_video_pts_s": 10.4,
+      "sensor_target_s": 10.940000000000001,
+      "sensor_sample_s": 10.944010377999803,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 157,
+      "video_time_s": 10.466666666666667,
+      "source_video_pts_s": 10.466666666666667,
+      "sensor_target_s": 11.006666666666668,
+      "sensor_sample_s": 11.004271423999853,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 158,
+      "video_time_s": 10.533333333333333,
+      "source_video_pts_s": 10.533333333333333,
+      "sensor_target_s": 11.073333333333334,
+      "sensor_sample_s": 11.074090251000598,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 159,
+      "video_time_s": 10.6,
+      "source_video_pts_s": 10.6,
+      "sensor_target_s": 11.14,
+      "sensor_sample_s": 11.144034904999899,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 160,
+      "video_time_s": 10.666666666666666,
+      "source_video_pts_s": 10.666666666666666,
+      "sensor_target_s": 11.206666666666667,
+      "sensor_sample_s": 11.204103572999884,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 161,
+      "video_time_s": 10.733333333333333,
+      "source_video_pts_s": 10.733333333333333,
+      "sensor_target_s": 11.273333333333333,
+      "sensor_sample_s": 11.274107674999868,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 162,
+      "video_time_s": 10.8,
+      "source_video_pts_s": 10.8,
+      "sensor_target_s": 11.34,
+      "sensor_sample_s": 11.344126822999897,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 163,
+      "video_time_s": 10.866666666666667,
+      "source_video_pts_s": 10.866666666666667,
+      "sensor_target_s": 11.406666666666666,
+      "sensor_sample_s": 11.404113102999872,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 164,
+      "video_time_s": 10.933333333333334,
+      "source_video_pts_s": 10.933333333333334,
+      "sensor_target_s": 11.473333333333333,
+      "sensor_sample_s": 11.47409745799996,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 165,
+      "video_time_s": 11.0,
+      "source_video_pts_s": 11.0,
+      "sensor_target_s": 11.54,
+      "sensor_sample_s": 11.54407640000045,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 166,
+      "video_time_s": 11.066666666666666,
+      "source_video_pts_s": 11.066666666666666,
+      "sensor_target_s": 11.606666666666666,
+      "sensor_sample_s": 11.604106046999732,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 167,
+      "video_time_s": 11.133333333333333,
+      "source_video_pts_s": 11.133333333333333,
+      "sensor_target_s": 11.673333333333332,
+      "sensor_sample_s": 11.674533811999936,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 168,
+      "video_time_s": 11.2,
+      "source_video_pts_s": 11.2,
+      "sensor_target_s": 11.739999999999998,
+      "sensor_sample_s": 11.744125461999829,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 169,
+      "video_time_s": 11.266666666666667,
+      "source_video_pts_s": 11.266666666666667,
+      "sensor_target_s": 11.806666666666668,
+      "sensor_sample_s": 11.804116608000186,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 170,
+      "video_time_s": 11.333333333333334,
+      "source_video_pts_s": 11.333333333333334,
+      "sensor_target_s": 11.873333333333335,
+      "sensor_sample_s": 11.87405658300031,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 171,
+      "video_time_s": 11.4,
+      "source_video_pts_s": 11.4,
+      "sensor_target_s": 11.940000000000001,
+      "sensor_sample_s": 11.944099706000088,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 172,
+      "video_time_s": 11.466666666666667,
+      "source_video_pts_s": 11.466666666666667,
+      "sensor_target_s": 12.006666666666668,
+      "sensor_sample_s": 12.004087537000487,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 173,
+      "video_time_s": 11.533333333333333,
+      "source_video_pts_s": 11.533333333333333,
+      "sensor_target_s": 12.073333333333334,
+      "sensor_sample_s": 12.074071953000384,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 174,
+      "video_time_s": 11.6,
+      "source_video_pts_s": 11.6,
+      "sensor_target_s": 12.14,
+      "sensor_sample_s": 12.144070383000326,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 175,
+      "video_time_s": 11.666666666666666,
+      "source_video_pts_s": 11.666666666666666,
+      "sensor_target_s": 12.206666666666667,
+      "sensor_sample_s": 12.204139608000332,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 176,
+      "video_time_s": 11.733333333333333,
+      "source_video_pts_s": 11.733333333333333,
+      "sensor_target_s": 12.273333333333333,
+      "sensor_sample_s": 12.274401192000369,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 177,
+      "video_time_s": 11.8,
+      "source_video_pts_s": 11.8,
+      "sensor_target_s": 12.34,
+      "sensor_sample_s": 12.34411395799998,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 178,
+      "video_time_s": 11.866666666666667,
+      "source_video_pts_s": 11.866666666666667,
+      "sensor_target_s": 12.406666666666666,
+      "sensor_sample_s": 12.40409861199987,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 179,
+      "video_time_s": 11.933333333333334,
+      "source_video_pts_s": 11.933333333333334,
+      "sensor_target_s": 12.473333333333333,
+      "sensor_sample_s": 12.474174382000456,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 180,
+      "video_time_s": 12.0,
+      "source_video_pts_s": 12.0,
+      "sensor_target_s": 12.54,
+      "sensor_sample_s": 12.544052027999896,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 181,
+      "video_time_s": 12.066666666666666,
+      "source_video_pts_s": 12.066666666666666,
+      "sensor_target_s": 12.606666666666666,
+      "sensor_sample_s": 12.60408678099975,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 182,
+      "video_time_s": 12.133333333333333,
+      "source_video_pts_s": 12.133333333333333,
+      "sensor_target_s": 12.673333333333332,
+      "sensor_sample_s": 12.67407618300058,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 183,
+      "video_time_s": 12.2,
+      "source_video_pts_s": 12.2,
+      "sensor_target_s": 12.739999999999998,
+      "sensor_sample_s": 12.744054026000413,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 184,
+      "video_time_s": 12.266666666666667,
+      "source_video_pts_s": 12.266666666666667,
+      "sensor_target_s": 12.806666666666668,
+      "sensor_sample_s": 12.804215504999775,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 185,
+      "video_time_s": 12.333333333333334,
+      "source_video_pts_s": 12.333333333333334,
+      "sensor_target_s": 12.873333333333335,
+      "sensor_sample_s": 12.874100795000231,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 186,
+      "video_time_s": 12.4,
+      "source_video_pts_s": 12.4,
+      "sensor_target_s": 12.940000000000001,
+      "sensor_sample_s": 12.944460266000533,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 187,
+      "video_time_s": 12.466666666666667,
+      "source_video_pts_s": 12.466666666666667,
+      "sensor_target_s": 13.006666666666668,
+      "sensor_sample_s": 13.004123235999941,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 188,
+      "video_time_s": 12.533333333333333,
+      "source_video_pts_s": 12.533333333333333,
+      "sensor_target_s": 13.073333333333334,
+      "sensor_sample_s": 13.07417069999974,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 189,
+      "video_time_s": 12.6,
+      "source_video_pts_s": 12.6,
+      "sensor_target_s": 13.14,
+      "sensor_sample_s": 13.144023906000257,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 190,
+      "video_time_s": 12.666666666666666,
+      "source_video_pts_s": 12.666666666666666,
+      "sensor_target_s": 13.206666666666667,
+      "sensor_sample_s": 13.204002575999766,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 191,
+      "video_time_s": 12.733333333333333,
+      "source_video_pts_s": 12.733333333333333,
+      "sensor_target_s": 13.273333333333333,
+      "sensor_sample_s": 13.274060988000201,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 192,
+      "video_time_s": 12.8,
+      "source_video_pts_s": 12.8,
+      "sensor_target_s": 13.34,
+      "sensor_sample_s": 13.344056248000015,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 193,
+      "video_time_s": 12.866666666666667,
+      "source_video_pts_s": 12.866666666666667,
+      "sensor_target_s": 13.406666666666666,
+      "sensor_sample_s": 13.40406232300029,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 194,
+      "video_time_s": 12.933333333333334,
+      "source_video_pts_s": 12.933333333333334,
+      "sensor_target_s": 13.473333333333333,
+      "sensor_sample_s": 13.474080914000297,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 195,
+      "video_time_s": 13.0,
+      "source_video_pts_s": 13.0,
+      "sensor_target_s": 13.54,
+      "sensor_sample_s": 13.544072194999899,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 196,
+      "video_time_s": 13.066666666666666,
+      "source_video_pts_s": 13.066666666666666,
+      "sensor_target_s": 13.606666666666666,
+      "sensor_sample_s": 13.604077095999855,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 197,
+      "video_time_s": 13.133333333333333,
+      "source_video_pts_s": 13.133333333333333,
+      "sensor_target_s": 13.673333333333332,
+      "sensor_sample_s": 13.6741070449998,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 198,
+      "video_time_s": 13.2,
+      "source_video_pts_s": 13.2,
+      "sensor_target_s": 13.739999999999998,
+      "sensor_sample_s": 13.744052732000455,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 199,
+      "video_time_s": 13.266666666666667,
+      "source_video_pts_s": 13.266666666666667,
+      "sensor_target_s": 13.806666666666668,
+      "sensor_sample_s": 13.80414265699983,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 200,
+      "video_time_s": 13.333333333333334,
+      "source_video_pts_s": 13.333333333333334,
+      "sensor_target_s": 13.873333333333335,
+      "sensor_sample_s": 13.87409906799985,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 201,
+      "video_time_s": 13.4,
+      "source_video_pts_s": 13.4,
+      "sensor_target_s": 13.940000000000001,
+      "sensor_sample_s": 13.944083072000467,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 202,
+      "video_time_s": 13.466666666666667,
+      "source_video_pts_s": 13.466666666666667,
+      "sensor_target_s": 14.006666666666668,
+      "sensor_sample_s": 14.004075020000528,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 203,
+      "video_time_s": 13.533333333333333,
+      "source_video_pts_s": 13.533333333333333,
+      "sensor_target_s": 14.073333333333334,
+      "sensor_sample_s": 14.074062767999749,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 204,
+      "video_time_s": 13.6,
+      "source_video_pts_s": 13.6,
+      "sensor_target_s": 14.14,
+      "sensor_sample_s": 14.14446751000014,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 205,
+      "video_time_s": 13.666666666666666,
+      "source_video_pts_s": 13.666666666666666,
+      "sensor_target_s": 14.206666666666667,
+      "sensor_sample_s": 14.2040667199999,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 206,
+      "video_time_s": 13.733333333333333,
+      "source_video_pts_s": 13.733333333333333,
+      "sensor_target_s": 14.273333333333333,
+      "sensor_sample_s": 14.274074394000309,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 207,
+      "video_time_s": 13.8,
+      "source_video_pts_s": 13.8,
+      "sensor_target_s": 14.34,
+      "sensor_sample_s": 14.344101845000296,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 208,
+      "video_time_s": 13.866666666666667,
+      "source_video_pts_s": 13.866666666666667,
+      "sensor_target_s": 14.406666666666666,
+      "sensor_sample_s": 14.404108219000591,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 209,
+      "video_time_s": 13.933333333333334,
+      "source_video_pts_s": 13.933333333333334,
+      "sensor_target_s": 14.473333333333333,
+      "sensor_sample_s": 14.474402923000525,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 210,
+      "video_time_s": 14.0,
+      "source_video_pts_s": 14.0,
+      "sensor_target_s": 14.54,
+      "sensor_sample_s": 14.544087545000366,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 211,
+      "video_time_s": 14.066666666666666,
+      "source_video_pts_s": 14.066666666666666,
+      "sensor_target_s": 14.606666666666666,
+      "sensor_sample_s": 14.604086303999793,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 212,
+      "video_time_s": 14.133333333333333,
+      "source_video_pts_s": 14.133333333333333,
+      "sensor_target_s": 14.673333333333332,
+      "sensor_sample_s": 14.6741245660005,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 213,
+      "video_time_s": 14.2,
+      "source_video_pts_s": 14.2,
+      "sensor_target_s": 14.739999999999998,
+      "sensor_sample_s": 14.744011386000238,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 214,
+      "video_time_s": 14.266666666666667,
+      "source_video_pts_s": 14.266666666666667,
+      "sensor_target_s": 14.806666666666668,
+      "sensor_sample_s": 14.80410759500046,
+      "pose_available": true
+    },
+    {
+      "preview_frame": 215,
+      "video_time_s": 14.333333333333334,
+      "source_video_pts_s": 14.333333333333334,
+      "sensor_target_s": 14.873333333333335,
+      "sensor_sample_s": 14.87411305400019,
+      "pose_available": true
+    }
+  ],
+  "limitations": [
+    "Alignment is provisional, not measured synchronization.",
+    "Arm pose uses configured limb lengths and a fixed shoulder.",
+    "This view is not a learned policy, fused tracker, or tracking accuracy test.",
+    "Only the overlapping source time range is shown; absent poses are never filled."
+  ]
+}

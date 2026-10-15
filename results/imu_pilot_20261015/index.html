@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Phone to Panda · IMU experiment</title>
+  <style>
+    :root { color-scheme:light; --ink:#172e38; --muted:#61747e; --line:#dae3e7; --teal:#087d79; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#f2f5f6; color:var(--ink); font:15px/1.5 system-ui,sans-serif; }
+    header { background:#17313c; color:white; padding:32px max(24px,calc((100vw - 1400px)/2)); }
+    .eyebrow { margin:0 0 8px; font-size:11px; letter-spacing:.15em; font-weight:750; color:#a8d5d3; }
+    h1 { font-size:clamp(26px,3vw,38px); margin:0 0 8px; letter-spacing:-.035em; line-height:1.15; }
+    header p:last-child { margin:0; color:#cfdee4; max-width:820px; }
+    main { max-width:1448px; margin:auto; padding:24px; }
+    .notice { background:white; border:1px solid var(--line); border-left:4px solid var(--teal); border-radius:12px; padding:17px 20px; margin-bottom:20px; }
+    .notice strong { display:block; font-size:17px; }
+    .notice p { margin:4px 0 0; color:var(--muted); }
+    .toolbar { display:flex; gap:12px; align-items:end; flex-wrap:wrap; margin:22px 0 16px; }
+    label { display:block; font-size:11px; font-weight:750; text-transform:uppercase; letter-spacing:.06em; margin-bottom:6px; color:var(--muted); }
+    select,button { font:inherit; border:1px solid #c9d6dd; background:white; border-radius:8px; padding:10px 14px; color:var(--ink); }
+    button { cursor:pointer; font-weight:650; }
+    button.primary { background:var(--teal); color:white; border-color:var(--teal); }
+    button:disabled,select:disabled { cursor:default; opacity:.45; }
+    button:hover:not(:disabled) { filter:brightness(.94); }
+    :focus-visible { outline:3px solid #73cfc6; outline-offset:2px; }
+    .case-note { margin-left:auto; color:var(--muted); font-size:13px; padding-bottom:10px; }
+    .grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    article { background:white; border:1px solid var(--line); border-radius:14px; overflow:hidden; min-width:0; }
+    .card-head { padding:18px; border-top:4px solid var(--model); }
+    h2 { font-size:18px; margin:0 0 3px; letter-spacing:-.02em; }
+    .detail { font-size:12px; color:var(--muted); margin:0; }
+    .score { display:flex; gap:6px; align-items:baseline; margin-top:15px; }
+    .score b { font-size:32px; line-height:1; letter-spacing:-.04em; }
+    .score span { color:var(--muted); font-size:12px; }
+    .breakdown { margin-top:6px; color:var(--muted); font-size:12px; }
+    video { display:block; width:100%; aspect-ratio:2/1; background:#162832; object-fit:contain; }
+    .card-foot { padding:14px 18px 18px; }
+    .badge { display:inline-block; border-radius:20px; padding:4px 10px; background:#edf2f4; font-size:12px; font-weight:750; }
+    .badge.passed { background:#d9f1e9; color:#09664f; }
+    .badge.failed { background:#fbe5e2; color:#9d3226; }
+    .playback { font-variant-numeric:tabular-nums; font-size:12px; color:var(--muted); margin-left:8px; }
+    .camera-note { margin:10px 0 0; color:var(--muted); font-size:11px; }
+    .progress { height:4px; background:#e7edef; margin-top:12px; border-radius:4px; overflow:hidden; }
+    .progress span { display:block; width:0; height:100%; background:var(--model); }
+    .method { display:grid; grid-template-columns:1.2fr 1fr; gap:26px; margin-top:24px; padding:24px; background:#e7eef0; border-radius:14px; }
+    .method h3 { font-size:14px; margin:0 0 8px; }
+    .method p { font-size:13px; margin:0; color:#435c67; }
+    .method ul { padding-left:18px; font-size:13px; margin:0; color:#435c67; }
+    footer { display:flex; gap:18px; flex-wrap:wrap; padding:20px 2px; font-size:12px; color:var(--muted); }
+    a { color:var(--teal); }
+    @media(max-width:950px) { .grid { grid-template-columns:1fr; } article { max-width:800px; width:100%; margin:auto; } .method { grid-template-columns:1fr; } .case-note { margin-left:0; } }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow">PHONE TO PANDA / EXPERIMENTAL EXTENSION / 15 OCTOBER 2026</p>
+    <h1>Does one IMU recording help the policy?</h1>
+    <p>Compare three saved learned-policy simulations at the same starting positions. Each video shows the Panda camera and its wrist camera.</p>
+  </header>
+  <main>
+    <section class="notice" aria-live="polite"><strong id="headline">Loading the measured results…</strong><p id="finding">No results are displayed until the completed comparison is available.</p></section>
+    <div class="toolbar">
+      <div><label for="case">Starting position</label><select id="case" disabled>
+        <optgroup label="Narrow · ±3.5 cm on each axis"><option value="narrow:0">N1 · first narrow start</option><option value="narrow:1">N2</option><option value="narrow:2">N3</option><option value="narrow:3">N4</option><option value="narrow:4">N5</option></optgroup>
+        <optgroup label="Wide · ±7 cm on each axis"><option value="wide:0">W1 · first wide start</option><option value="wide:1">W2</option><option value="wide:2">W3</option><option value="wide:3">W4</option><option value="wide:4">W5</option></optgroup>
+      </select></div>
+      <button id="play" class="primary" disabled>Play all</button><button id="pause" disabled>Pause all</button><button id="restart" disabled>Restart</button>
+      <span class="case-note" id="case-note">Same cube and robot initial state in all three videos</span>
+    </div>
+    <section class="grid" id="models" aria-label="Three policy comparisons"></section>
+    <section class="method">
+      <div><h3>What was tested</h3><p>The original 20 demonstrations were compared with those same demonstrations plus four robot replays derived from one new human recording. Both adapted models received 500 extra training updates. The original model remains the default.</p></div>
+      <div><h3>How to read these results</h3><ul><li>Ten simulator starts, one scene and one training seed.</li><li>IMUs helped construct carry-path demonstrations; the policy reads simulated images and robot state.</li><li>A fixed wrist-orientation controller is used by all three policies.</li><li>This is saved simulation playback, not live robot control or sensor fusion.</li></ul></div>
+    </section>
+    <footer><a href="comparison.png" target="_blank" rel="noopener">All outcomes</a><a href="summary.json" target="_blank" rel="noopener">Result data</a><a href="verification.json" target="_blank" rel="noopener">Verification</a><span>Normal-speed playback. Completed videos hold their final frame. No model was selected using these test cases.</span></footer>
+  </main>
+  <script>
+    'use strict';
+    const models = [
+      {id:'original',label:'Original model',detail:'20 demonstrations · original checkpoint',color:'#64748b'},
+      {id:'continuation',label:'Continued training',detail:'20 demonstrations · +500 updates',color:'#2563eb'},
+      {id:'augmented',label:'IMU-assisted training',detail:'20 + 4 demonstrations · +500 updates',color:'#087d79'}
+    ];
+    const cards = new Map();
+    const selector = document.querySelector('#case');
+    let summary;
+    for (const model of models) {
+      const card = document.createElement('article');
+      card.style.setProperty('--model',model.color);
+      card.innerHTML = `<div class="card-head"><h2>${model.label}</h2><p class="detail">${model.detail}</p><div class="score"><b>—</b><span>placements / 10 trials</span></div><div class="breakdown">Awaiting completed results</div></div><video muted playsinline preload="auto" aria-label="${model.label} saved simulation"></video><div class="card-foot"><span class="badge">Awaiting result</span><span class="playback">0.0 s</span><div class="progress"><span></span></div><p class="camera-note">Left: simulator view · Right: wrist camera</p></div>`;
+      document.querySelector('#models').append(card);
+      cards.set(model.id,{card,video:card.querySelector('video')});
+    }
+    function pauseAll() {
+      for (const {video} of cards.values()) video.pause();
+    }
+    function showCase() {
+      pauseAll();
+      const [group,number] = selector.value.split(':');
+      const index = Number(number);
+      for (const model of models) {
+        const {card,video} = cards.get(model.id);
+        const episode = summary.models[model.id].groups[group].episodes[index];
+        video.src = `evaluation/${model.id}/${group}/evaluation/episode_${String(index).padStart(3,'0')}.mp4`;
+        video.load();
+        card.querySelector('.badge').textContent = episode.success ? 'Placed successfully' : 'Placement failed';
+        card.querySelector('.badge').className = `badge ${episode.success ? 'passed' : 'failed'}`;
+        card.querySelector('.playback').textContent = '0.0 s';
+        card.querySelector('.progress span').style.width = '0%';
+      }
+      document.querySelector('#case-note').textContent = `${group === 'narrow' ? 'N' : 'W'}${index+1} · Identical initial cube and robot states`;
+    }
+    async function playAll() {
+      const videos = [...cards.values()].map(item=>item.video);
+      if (videos.every(video=>video.ended)) for (const video of videos) video.currentTime = 0;
+      const attempts = await Promise.allSettled(videos.filter(video=>!video.ended).map(video=>video.play()));
+      if (attempts.some(attempt=>attempt.status === 'rejected')) {
+        pauseAll();
+        document.querySelector('#case-note').textContent = 'Playback could not start. Check that the local server is still running, then try Play all.';
+      }
+    }
+    function updateTime() {
+      for (const {card,video} of cards.values()) {
+        const duration = Number.isFinite(video.duration) ? video.duration : 0;
+        card.querySelector('.playback').textContent = `${video.currentTime.toFixed(1)} / ${duration.toFixed(1)} s${video.ended ? ' · finished' : ''}`;
+        card.querySelector('.progress span').style.width = `${duration ? 100*video.currentTime/duration : 0}%`;
+      }
+      requestAnimationFrame(updateTime);
+    }
+    document.querySelector('#play').addEventListener('click',playAll);
+    document.querySelector('#pause').addEventListener('click',pauseAll);
+    document.querySelector('#restart').addEventListener('click',()=>{
+      pauseAll();
+      for (const {video} of cards.values()) video.currentTime = 0;
+      playAll();
+    });
+    selector.addEventListener('change',showCase);
+    for (const {video} of cards.values()) video.addEventListener('error',()=>{
+      if (!summary) return;
+      pauseAll();
+      document.querySelector('#case-note').textContent = 'A saved video could not load. Keep the evaluation files beside this page and serve this folder locally.';
+    });
+    async function loadResults() {
+      try {
+        const response = await fetch('summary.json',{cache:'no-store'});
+        if (!response.ok) throw new Error('Summary is not ready');
+        const candidate = await response.json();
+        for (const model of models) {
+          const result = candidate.models[model.id];
+          if (result.trials !== 10 || !Number.isInteger(result.successes)) throw new Error('Incomplete model result');
+          for (const group of ['narrow','wide']) {
+            const data = result.groups[group];
+            if (data.trials !== 5 || data.episodes.length !== 5 || data.episodes.some(ep=>typeof ep.success !== 'boolean')) throw new Error('Incomplete group');
+          }
+        }
+        summary = candidate;
+        for (const model of models) {
+          const result = summary.models[model.id];
+          const card = cards.get(model.id).card;
+          card.querySelector('.score b').textContent = `${result.successes}/10`;
+          card.querySelector('.score span').textContent = 'successful placements';
+          card.querySelector('.breakdown').textContent = `Narrow ${result.groups.narrow.successes}/5 · Wide ${result.groups.wide.successes}/5`;
+        }
+        const pair = summary.paired.augmented_vs_continuation;
+        document.querySelector('#headline').textContent = 'No improvement demonstrated in this pilot';
+        document.querySelector('#finding').textContent = `Original ${summary.models.original.successes}/10 · continued training ${summary.models.continuation.successes}/10 · IMU-assisted training ${summary.models.augmented.successes}/10. Compared with continued training, augmentation recovered ${pair.improved} failed starts and lost ${pair.regressed} previously successful case${pair.regressed === 1 ? '' : 's'}.`;
+        for (const control of document.querySelectorAll('button,select')) control.disabled = false;
+        showCase();
+      } catch (error) {
+        document.querySelector('#headline').textContent = 'Evaluation results are not available yet';
+        document.querySelector('#finding').textContent = 'Serve this folder locally and wait for the completed summary. The page will retry; no provisional scores are shown.';
+        setTimeout(loadResults,5000);
+      }
+    }
+    loadResults();
+    updateTime();
+  </script>
+</body>
+</html>

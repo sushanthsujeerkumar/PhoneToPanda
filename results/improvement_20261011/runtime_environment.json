@@ -1,0 +1,17 @@
+{
+  "recorded_utc": "2026-10-11T16:28:55.343248+00:00",
+  "python": "3.12.3",
+  "packages": {
+    "torch": "2.7.1+cu128",
+    "lerobot": "0.4.3",
+    "hf-libero": "0.1.4",
+    "robosuite": "1.4.0",
+    "mujoco": "3.3.7",
+    "transformers": "4.57.6",
+    "accelerate": "1.15.0"
+  },
+  "gpu": "NVIDIA GeForce RTX 5060",
+  "cuda": "12.8",
+  "actual_accelerator_mixed_precision": "no",
+  "note": "Installed trainer does not consume policy.use_amp; matched processes inherit the same environment. Concurrent job durations are not isolated latency."
+}

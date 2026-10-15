@@ -1,0 +1,66 @@
+{
+  "model": "augmented",
+  "checkpoint": "/home/sushanth/PhoneToPanda/runs/imu_pilot_20261015/train_augmented/checkpoints/000500/pretrained_model",
+  "checkpoint_files_sha256": {
+    "config.json": "1c31c8a57a2fc8c3178e8ac633c7b166de37d5d989b1586f500ef63f2cdd149e",
+    "frozen_normalization.json": "69ad5670040e2d5c9abeec0242a6b5d0632f5e49ba8eccf17585303730078611",
+    "model.safetensors": "c0800832eee9fa2a5c9ac7e86acf450c3ce63887329c8665208eebb2777b2969",
+    "phone_to_panda_provenance.json": "4953b00ac4cb16ac2ffd43364549a8de559477374b0944312086bd5b55a716ae",
+    "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+    "train_config.json": "5df8fe98660b0c26379a7d1bc034bd8cf914e9ce5e681385f89da6c46257571d"
+  },
+  "plan_sha256": "bbdb97f0573c55bb8f5562953396734efb3e4f107482b37d7c1e889a3cf97b75",
+  "base_config": "/home/sushanth/PhoneToPanda/configs/imu_pilot_20261015/augmented.yaml",
+  "base_config_sha256": "d7cbbd790e521bb0223f67dfc2f6bd221c10ad4d2d167de579988742655ce3cf",
+  "source_sha256": {
+    "phone_to_panda/common.py": "5bc1425536cd4c8c64b96503db68b2b1fb9982279469429c854a890d362a2fd6",
+    "phone_to_panda/learning.py": "790377ae4092c9c027c874bfde35fec76cd22f60b4a74ec9be591135bb7d5b64",
+    "phone_to_panda/simulation.py": "790ce76701b1a66b8f2a9b5c07c2517dc4d4dd8a1be7633cb37af5b172eabf7b",
+    "scripts/evaluate_candidate.py": "3d2401dce707136b2d1caac7ac07fdaa8498beddb755c64436ef3b42d4e29f72",
+    "scripts/evaluate_imu_pilot.py": "5256e4d58f8b4743cec934defa6f66df4b7992bc3c01261d92eb7ccfc57c488a"
+  },
+  "scene_assets_sha256": {
+    "calibration/chessboard.png": "fed1b7cfeb0da981f5e968cc39ecbadcb164f2a25ddb9c0d1b0b960feca7b319",
+    "calibration/dimensions.json": "d56d7f8e300b28c3be953d5a69f1dfcb3eb226557638a3486d0e7dde9c494004",
+    "calibration/object_marker_1.png": "6e7beca748819219aa94a581270f2c63b91b1ceae7357ed2e2842de87e38f4b8",
+    "calibration/table_marker_0.png": "991418c665f90867a70d7f6b8f733a65d1b73048bcf916065845689ce41be4ea",
+    "calibration/table_marker_1.png": "4c503d0111ebf683080866b564b64b8df96cf00b2ade1f86eebccd17e719b310",
+    "calibration/table_marker_2.png": "e75ec6e1ab4f2e5ec2ec4f219c8384bab6304e2cf5c246f502d382c65593ff57",
+    "calibration/table_marker_3.png": "9e71ebcc48cb8ec2e4b02046d32455af4e7e641193b101ed030e29bf1fe4b126",
+    "cube.xml": "a1c7365145ec182288393aff9db56eccf84cc8a06b541332525323d958cf3438",
+    "libero/LICENSE": "e2885fd30a08381b799c4a33385522b23d637b4051b8f9a7f9f2519944b68ff6",
+    "libero/PROVENANCE.md": "068a8ee84361144e917de4714e4aac4fc3a1356fe16d09e8e763296a75fd0c17",
+    "libero/scenes/libero_tabletop_base_style.xml": "bb118118e3e02a0f23295c072d77c5a7c6b44cc773032dc79c17070b4e133f86",
+    "libero/textures/light-gray-floor-tile.png": "a2aae4ba3b38c3ab9851eca9ad6e76cef9357ef75b3e9a4b280f694ca30acbc5",
+    "libero/textures/light-gray-plaster.png": "d0bdaf13b44ab6ef3122451f6b3853e40bdf20bb9be7662649683ba525dfe191",
+    "libero/textures/martin_novak_wood_table.png": "9d714fbf44d4d44f279761c0ddd0b2fd7271446cdbb85fcbef8677fe5f929850",
+    "libero/textures/smooth_light_gray_plaster.png": "d0bdaf13b44ab6ef3122451f6b3853e40bdf20bb9be7662649683ba525dfe191",
+    "libero/textures/tile_grigia_caldera_porcelain_floor.png": "a2aae4ba3b38c3ab9851eca9ad6e76cef9357ef75b3e9a4b280f694ca30acbc5",
+    "open_box.xml": "a787b50825f381a0624b2f01d316a1047dd6571d4887e45dbb99058210998063",
+    "pick_place.bddl": "7ecadc16a6cb9914b64fa272f300d2df50f3afebc31ad41ddd0159297401240d"
+  },
+  "recording": {
+    "video": {
+      "path": "/home/sushanth/Downloads/IMG_2276.MOV",
+      "sha256": "76217a274c97f8999f328c98bd7b15c6776963c2c9fb2b952f039a0814431225"
+    },
+    "imu_session": {
+      "path": "/home/sushanth/PhoneToPanda/arm_checker/sessions/20261015T165828Z_92196435.json",
+      "sha256": "500ce448410581ebd9e9927883ccb36e27fa59bba4146b4f8cd9f3b88dde7889"
+    },
+    "events": {
+      "path": "/home/sushanth/PhoneToPanda/data/experimental/imu_20261015/events.json",
+      "sha256": "92a3932b7d1398d7b66c4ddd28bd0a59c674271fa60e6d89b3211b8a7f70a670"
+    }
+  },
+  "evidence_sha256": {
+    "/home/sushanth/PhoneToPanda/data/experimental/imu_20261015/trajectory.json": "13507bebdc3ccc40985c939cd2e0143e883642913b52cf394c596c293664019e",
+    "/home/sushanth/PhoneToPanda/results/imu_pilot_20261015/dataset_inputs.json": "b34ab4d5eeb63f8f0798baecb8ce22775029fa247bf6a3eda6756a99c6745c5f",
+    "/home/sushanth/PhoneToPanda/results/imu_pilot_20261015/dataset_summary.json": "78adf9fb0e9564288ebe199a2fc40876c7c6c167ae40a8a1d3fa3ac571598b6c",
+    "/home/sushanth/PhoneToPanda/results/imu_pilot_20261015/replays.json": "5a4ea2300bd70dbb309492f67f045dc73509f154d094249f4aff45add6e35b40",
+    "/home/sushanth/PhoneToPanda/data/datasets/imu_pilot_20261015/meta/phone_to_panda_provenance.json": "4953b00ac4cb16ac2ffd43364549a8de559477374b0944312086bd5b55a716ae"
+  }
+}

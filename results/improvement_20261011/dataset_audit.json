@@ -1,0 +1,1607 @@
+{
+  "schema_version": 1,
+  "kind": "independent_dataset_export_audit",
+  "audited_utc": "2026-10-11T17:31:39.470529+00:00",
+  "status": "passed",
+  "scope": "Existing five phone recordings; read-only dataset/trace checks without model inference or final outcomes.",
+  "methods": [
+    "Compare every state/action float32 row in exported Parquet to its source NPZ, by episode_index and frame_index.",
+    "SHA256-match original NPZ and JSON copies, all five source videos, source traces, metadata and export files.",
+    "For recovery, verify the first labelled state equals the saved takeover state, expert phase labels cover all exported rows, and no exported state/action pair equals an unlabelled prefix pair.",
+    "Check original and added episode coverage, frozen top-level training seeds, and no overlap with either new-development or final seed ranges."
+  ],
+  "arms": {
+    "uniform": {
+      "status": "passed",
+      "episodes": 40,
+      "original_episodes": 20,
+      "added_episodes": 20,
+      "frames": 8946,
+      "source_recordings": 5,
+      "new_human_recordings": 0,
+      "added_episodes_per_clip": {
+        "IMG_2092": 4,
+        "IMG_2093": 4,
+        "IMG_2095": 4,
+        "IMG_2096": 4,
+        "IMG_2098": 4
+      },
+      "original_npz_and_json_copies_byte_identical": true,
+      "all_source_video_hashes_match_frozen_study": true,
+      "every_exported_state_action_row_exactly_matches_npz": true,
+      "exported_episode_and_frame_indices_contiguous": true,
+      "every_exported_provenance_entry_matches_npz_sidecar": true,
+      "training_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        11000,
+        11001,
+        11002,
+        11003,
+        11010,
+        11011,
+        11012,
+        11013,
+        11020,
+        11021,
+        11022,
+        11023,
+        11030,
+        11031,
+        11032,
+        11033,
+        11040,
+        11041,
+        11042,
+        11043
+      ],
+      "overlap_with_new_development_and_final_seeds": {
+        "development": [],
+        "final_test": []
+      },
+      "episode_checks": [
+        {
+          "file": "IMG_2092_seed_0.npz",
+          "episode_index": 0,
+          "seed": 0,
+          "frames": 212,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_1.npz",
+          "episode_index": 1,
+          "seed": 1,
+          "frames": 210,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_11000.npz",
+          "episode_index": 2,
+          "seed": 11000,
+          "frames": 219,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_11001.npz",
+          "episode_index": 3,
+          "seed": 11001,
+          "frames": 218,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_11002.npz",
+          "episode_index": 4,
+          "seed": 11002,
+          "frames": 208,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_11003.npz",
+          "episode_index": 5,
+          "seed": 11003,
+          "frames": 207,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_2.npz",
+          "episode_index": 6,
+          "seed": 2,
+          "frames": 208,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_3.npz",
+          "episode_index": 7,
+          "seed": 3,
+          "frames": 207,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_11010.npz",
+          "episode_index": 8,
+          "seed": 11010,
+          "frames": 229,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_11011.npz",
+          "episode_index": 9,
+          "seed": 11011,
+          "frames": 232,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_11012.npz",
+          "episode_index": 10,
+          "seed": 11012,
+          "frames": 232,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_11013.npz",
+          "episode_index": 11,
+          "seed": 11013,
+          "frames": 239,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_4.npz",
+          "episode_index": 12,
+          "seed": 4,
+          "frames": 236,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_5.npz",
+          "episode_index": 13,
+          "seed": 5,
+          "frames": 235,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_6.npz",
+          "episode_index": 14,
+          "seed": 6,
+          "frames": 232,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_7.npz",
+          "episode_index": 15,
+          "seed": 7,
+          "frames": 232,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_10.npz",
+          "episode_index": 16,
+          "seed": 10,
+          "frames": 244,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_11.npz",
+          "episode_index": 17,
+          "seed": 11,
+          "frames": 236,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_11020.npz",
+          "episode_index": 18,
+          "seed": 11020,
+          "frames": 236,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_11021.npz",
+          "episode_index": 19,
+          "seed": 11021,
+          "frames": 245,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_11022.npz",
+          "episode_index": 20,
+          "seed": 11022,
+          "frames": 238,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_11023.npz",
+          "episode_index": 21,
+          "seed": 11023,
+          "frames": 247,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_8.npz",
+          "episode_index": 22,
+          "seed": 8,
+          "frames": 237,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_9.npz",
+          "episode_index": 23,
+          "seed": 9,
+          "frames": 243,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_11030.npz",
+          "episode_index": 24,
+          "seed": 11030,
+          "frames": 218,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_11031.npz",
+          "episode_index": 25,
+          "seed": 11031,
+          "frames": 233,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_11032.npz",
+          "episode_index": 26,
+          "seed": 11032,
+          "frames": 228,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_11033.npz",
+          "episode_index": 27,
+          "seed": 11033,
+          "frames": 221,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_12.npz",
+          "episode_index": 28,
+          "seed": 12,
+          "frames": 223,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_13.npz",
+          "episode_index": 29,
+          "seed": 13,
+          "frames": 229,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_14.npz",
+          "episode_index": 30,
+          "seed": 14,
+          "frames": 229,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_15.npz",
+          "episode_index": 31,
+          "seed": 15,
+          "frames": 227,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_11040.npz",
+          "episode_index": 32,
+          "seed": 11040,
+          "frames": 204,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_11041.npz",
+          "episode_index": 33,
+          "seed": 11041,
+          "frames": 215,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_11042.npz",
+          "episode_index": 34,
+          "seed": 11042,
+          "frames": 200,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_11043.npz",
+          "episode_index": 35,
+          "seed": 11043,
+          "frames": 206,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_16.npz",
+          "episode_index": 36,
+          "seed": 16,
+          "frames": 208,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_17.npz",
+          "episode_index": 37,
+          "seed": 17,
+          "frames": 211,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_18.npz",
+          "episode_index": 38,
+          "seed": 18,
+          "frames": 206,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_19.npz",
+          "episode_index": 39,
+          "seed": 19,
+          "frames": 206,
+          "original": true
+        }
+      ],
+      "original_copies_match_frozen_build_manifest_hashes": true,
+      "original_frames": 4471,
+      "added_frames": 4475
+    },
+    "targeted": {
+      "status": "passed",
+      "episodes": 40,
+      "original_episodes": 20,
+      "added_episodes": 20,
+      "frames": 8881,
+      "source_recordings": 5,
+      "new_human_recordings": 0,
+      "added_episodes_per_clip": {
+        "IMG_2092": 4,
+        "IMG_2093": 4,
+        "IMG_2095": 4,
+        "IMG_2096": 4,
+        "IMG_2098": 4
+      },
+      "original_npz_and_json_copies_byte_identical": true,
+      "all_source_video_hashes_match_frozen_study": true,
+      "every_exported_state_action_row_exactly_matches_npz": true,
+      "exported_episode_and_frame_indices_contiguous": true,
+      "every_exported_provenance_entry_matches_npz_sidecar": true,
+      "training_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        12000,
+        12001,
+        12002,
+        12003,
+        12010,
+        12011,
+        12012,
+        12013,
+        12020,
+        12021,
+        12022,
+        12023,
+        12030,
+        12031,
+        12032,
+        12033,
+        12040,
+        12041,
+        12042,
+        12043
+      ],
+      "overlap_with_new_development_and_final_seeds": {
+        "development": [],
+        "final_test": []
+      },
+      "episode_checks": [
+        {
+          "file": "IMG_2092_seed_0.npz",
+          "episode_index": 0,
+          "seed": 0,
+          "frames": 212,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_1.npz",
+          "episode_index": 1,
+          "seed": 1,
+          "frames": 210,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_12000.npz",
+          "episode_index": 2,
+          "seed": 12000,
+          "frames": 207,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_12001.npz",
+          "episode_index": 3,
+          "seed": 12001,
+          "frames": 207,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_12002.npz",
+          "episode_index": 4,
+          "seed": 12002,
+          "frames": 205,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_12003.npz",
+          "episode_index": 5,
+          "seed": 12003,
+          "frames": 214,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_2.npz",
+          "episode_index": 6,
+          "seed": 2,
+          "frames": 208,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_3.npz",
+          "episode_index": 7,
+          "seed": 3,
+          "frames": 207,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_12010.npz",
+          "episode_index": 8,
+          "seed": 12010,
+          "frames": 229,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_12011.npz",
+          "episode_index": 9,
+          "seed": 12011,
+          "frames": 227,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_12012.npz",
+          "episode_index": 10,
+          "seed": 12012,
+          "frames": 234,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_12013.npz",
+          "episode_index": 11,
+          "seed": 12013,
+          "frames": 227,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_4.npz",
+          "episode_index": 12,
+          "seed": 4,
+          "frames": 236,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_5.npz",
+          "episode_index": 13,
+          "seed": 5,
+          "frames": 235,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_6.npz",
+          "episode_index": 14,
+          "seed": 6,
+          "frames": 232,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_7.npz",
+          "episode_index": 15,
+          "seed": 7,
+          "frames": 232,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_10.npz",
+          "episode_index": 16,
+          "seed": 10,
+          "frames": 244,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_11.npz",
+          "episode_index": 17,
+          "seed": 11,
+          "frames": 236,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_12020.npz",
+          "episode_index": 18,
+          "seed": 12020,
+          "frames": 235,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_12021.npz",
+          "episode_index": 19,
+          "seed": 12021,
+          "frames": 243,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_12022.npz",
+          "episode_index": 20,
+          "seed": 12022,
+          "frames": 237,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_12023.npz",
+          "episode_index": 21,
+          "seed": 12023,
+          "frames": 235,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_8.npz",
+          "episode_index": 22,
+          "seed": 8,
+          "frames": 237,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_9.npz",
+          "episode_index": 23,
+          "seed": 9,
+          "frames": 243,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_12.npz",
+          "episode_index": 24,
+          "seed": 12,
+          "frames": 223,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_12030.npz",
+          "episode_index": 25,
+          "seed": 12030,
+          "frames": 227,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_12031.npz",
+          "episode_index": 26,
+          "seed": 12031,
+          "frames": 223,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_12032.npz",
+          "episode_index": 27,
+          "seed": 12032,
+          "frames": 222,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_12033.npz",
+          "episode_index": 28,
+          "seed": 12033,
+          "frames": 222,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_13.npz",
+          "episode_index": 29,
+          "seed": 13,
+          "frames": 229,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_14.npz",
+          "episode_index": 30,
+          "seed": 14,
+          "frames": 229,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_15.npz",
+          "episode_index": 31,
+          "seed": 15,
+          "frames": 227,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_12040.npz",
+          "episode_index": 32,
+          "seed": 12040,
+          "frames": 203,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_12041.npz",
+          "episode_index": 33,
+          "seed": 12041,
+          "frames": 205,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_12042.npz",
+          "episode_index": 34,
+          "seed": 12042,
+          "frames": 205,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_12043.npz",
+          "episode_index": 35,
+          "seed": 12043,
+          "frames": 203,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_16.npz",
+          "episode_index": 36,
+          "seed": 16,
+          "frames": 208,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_17.npz",
+          "episode_index": 37,
+          "seed": 17,
+          "frames": 211,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_18.npz",
+          "episode_index": 38,
+          "seed": 18,
+          "frames": 206,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_19.npz",
+          "episode_index": 39,
+          "seed": 19,
+          "frames": 206,
+          "original": true
+        }
+      ],
+      "original_copies_match_frozen_build_manifest_hashes": true,
+      "original_frames": 4471,
+      "added_frames": 4410
+    },
+    "recovery": {
+      "status": "passed",
+      "episodes": 40,
+      "original_episodes": 20,
+      "added_episodes": 20,
+      "frames": 8869,
+      "source_recordings": 5,
+      "new_human_recordings": 0,
+      "added_episodes_per_clip": {
+        "IMG_2092": 4,
+        "IMG_2093": 4,
+        "IMG_2095": 4,
+        "IMG_2096": 4,
+        "IMG_2098": 4
+      },
+      "original_npz_and_json_copies_byte_identical": true,
+      "all_source_video_hashes_match_frozen_study": true,
+      "every_exported_state_action_row_exactly_matches_npz": true,
+      "exported_episode_and_frame_indices_contiguous": true,
+      "every_exported_provenance_entry_matches_npz_sidecar": true,
+      "training_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        3010,
+        3012,
+        3013,
+        3014,
+        3015
+      ],
+      "overlap_with_new_development_and_final_seeds": {
+        "development": [],
+        "final_test": []
+      },
+      "episode_checks": [
+        {
+          "file": "IMG_2092_seed_0.npz",
+          "episode_index": 0,
+          "seed": 0,
+          "frames": 212,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_1.npz",
+          "episode_index": 1,
+          "seed": 1,
+          "frames": 210,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_2.npz",
+          "episode_index": 2,
+          "seed": 2,
+          "frames": 208,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_3.npz",
+          "episode_index": 3,
+          "seed": 3,
+          "frames": 207,
+          "original": true
+        },
+        {
+          "file": "IMG_2092_seed_3010_prefix_60.npz",
+          "episode_index": 4,
+          "seed": 3010,
+          "frames": 203,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_3012_prefix_80.npz",
+          "episode_index": 5,
+          "seed": 3012,
+          "frames": 204,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_3013_prefix_100.npz",
+          "episode_index": 6,
+          "seed": 3013,
+          "frames": 209,
+          "original": false
+        },
+        {
+          "file": "IMG_2092_seed_3014_prefix_120.npz",
+          "episode_index": 7,
+          "seed": 3014,
+          "frames": 207,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_3010_prefix_80.npz",
+          "episode_index": 8,
+          "seed": 3010,
+          "frames": 229,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_3012_prefix_100.npz",
+          "episode_index": 9,
+          "seed": 3012,
+          "frames": 227,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_3013_prefix_120.npz",
+          "episode_index": 10,
+          "seed": 3013,
+          "frames": 232,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_3015_prefix_60.npz",
+          "episode_index": 11,
+          "seed": 3015,
+          "frames": 225,
+          "original": false
+        },
+        {
+          "file": "IMG_2093_seed_4.npz",
+          "episode_index": 12,
+          "seed": 4,
+          "frames": 236,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_5.npz",
+          "episode_index": 13,
+          "seed": 5,
+          "frames": 235,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_6.npz",
+          "episode_index": 14,
+          "seed": 6,
+          "frames": 232,
+          "original": true
+        },
+        {
+          "file": "IMG_2093_seed_7.npz",
+          "episode_index": 15,
+          "seed": 7,
+          "frames": 232,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_10.npz",
+          "episode_index": 16,
+          "seed": 10,
+          "frames": 244,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_11.npz",
+          "episode_index": 17,
+          "seed": 11,
+          "frames": 236,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_3010_prefix_100.npz",
+          "episode_index": 18,
+          "seed": 3010,
+          "frames": 242,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_3012_prefix_120.npz",
+          "episode_index": 19,
+          "seed": 3012,
+          "frames": 238,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_3014_prefix_60.npz",
+          "episode_index": 20,
+          "seed": 3014,
+          "frames": 232,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_3015_prefix_80.npz",
+          "episode_index": 21,
+          "seed": 3015,
+          "frames": 237,
+          "original": false
+        },
+        {
+          "file": "IMG_2095_seed_8.npz",
+          "episode_index": 22,
+          "seed": 8,
+          "frames": 237,
+          "original": true
+        },
+        {
+          "file": "IMG_2095_seed_9.npz",
+          "episode_index": 23,
+          "seed": 9,
+          "frames": 243,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_12.npz",
+          "episode_index": 24,
+          "seed": 12,
+          "frames": 223,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_13.npz",
+          "episode_index": 25,
+          "seed": 13,
+          "frames": 229,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_14.npz",
+          "episode_index": 26,
+          "seed": 14,
+          "frames": 229,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_15.npz",
+          "episode_index": 27,
+          "seed": 15,
+          "frames": 227,
+          "original": true
+        },
+        {
+          "file": "IMG_2096_seed_3010_prefix_120.npz",
+          "episode_index": 28,
+          "seed": 3010,
+          "frames": 232,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_3013_prefix_60.npz",
+          "episode_index": 29,
+          "seed": 3013,
+          "frames": 220,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_3014_prefix_80.npz",
+          "episode_index": 30,
+          "seed": 3014,
+          "frames": 217,
+          "original": false
+        },
+        {
+          "file": "IMG_2096_seed_3015_prefix_100.npz",
+          "episode_index": 31,
+          "seed": 3015,
+          "frames": 226,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_16.npz",
+          "episode_index": 32,
+          "seed": 16,
+          "frames": 208,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_17.npz",
+          "episode_index": 33,
+          "seed": 17,
+          "frames": 211,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_18.npz",
+          "episode_index": 34,
+          "seed": 18,
+          "frames": 206,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_19.npz",
+          "episode_index": 35,
+          "seed": 19,
+          "frames": 206,
+          "original": true
+        },
+        {
+          "file": "IMG_2098_seed_3012_prefix_60.npz",
+          "episode_index": 36,
+          "seed": 3012,
+          "frames": 201,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_3013_prefix_80.npz",
+          "episode_index": 37,
+          "seed": 3013,
+          "frames": 204,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_3014_prefix_100.npz",
+          "episode_index": 38,
+          "seed": 3014,
+          "frames": 202,
+          "original": false
+        },
+        {
+          "file": "IMG_2098_seed_3015_prefix_120.npz",
+          "episode_index": 39,
+          "seed": 3015,
+          "frames": 211,
+          "original": false
+        }
+      ],
+      "distinct_takeover_states": 20,
+      "source_failure_rollouts": 5,
+      "all_prefix_initial_takeover_and_applied_action_errors_zero": true,
+      "no_failed_policy_prefix_rows_in_exported_labels": true,
+      "recovery_checks": [
+        {
+          "file": "IMG_2092_seed_3010_prefix_60.npz",
+          "source_seed": 3010,
+          "prefix_steps": 60,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "af0580744fbe1dab1b054e21345c889957bc7725991f826925107e838ba4291b"
+        },
+        {
+          "file": "IMG_2092_seed_3012_prefix_80.npz",
+          "source_seed": 3012,
+          "prefix_steps": 80,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "b7b6b97d8d517efe0f7522f255741a1004c8301e7fa82ad91751b774bc6cac4f"
+        },
+        {
+          "file": "IMG_2092_seed_3013_prefix_100.npz",
+          "source_seed": 3013,
+          "prefix_steps": 100,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "7676f90716d4422c7db2b50a1014d5ab64d5e9eaa8793741db1309963f63143a"
+        },
+        {
+          "file": "IMG_2092_seed_3014_prefix_120.npz",
+          "source_seed": 3014,
+          "prefix_steps": 120,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "4013139c1431ca6047214772b2f3a0c9030d4226e05e05d36e0f71f803369fd5"
+        },
+        {
+          "file": "IMG_2093_seed_3010_prefix_80.npz",
+          "source_seed": 3010,
+          "prefix_steps": 80,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "86dafd87687d020c68100a34992bf323a1936d4c495f6d5659bdc9df91707de9"
+        },
+        {
+          "file": "IMG_2093_seed_3012_prefix_100.npz",
+          "source_seed": 3012,
+          "prefix_steps": 100,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "56f7fe1e31554c9c46a13e9f4a7a773f2103316539ebf8656b41f190692f3b9d"
+        },
+        {
+          "file": "IMG_2093_seed_3013_prefix_120.npz",
+          "source_seed": 3013,
+          "prefix_steps": 120,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "f51d47313a22b29957209cfcd88274577926672e5b56a49fe241729d30a2d185"
+        },
+        {
+          "file": "IMG_2093_seed_3015_prefix_60.npz",
+          "source_seed": 3015,
+          "prefix_steps": 60,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "a88b433712254e21b618ba3e6bace019d744397c5eb5d035c58dc1711627b678"
+        },
+        {
+          "file": "IMG_2095_seed_3010_prefix_100.npz",
+          "source_seed": 3010,
+          "prefix_steps": 100,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "279f8e4fd863d8f4874bd1c3e3b8ed2ceb0e6aec40eb0b557fbe5399977fd56d"
+        },
+        {
+          "file": "IMG_2095_seed_3012_prefix_120.npz",
+          "source_seed": 3012,
+          "prefix_steps": 120,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "850c3efbf19e57d3ddf847760ed18a9304bd8991f40a0f02e9bdbd0777ba78d9"
+        },
+        {
+          "file": "IMG_2095_seed_3014_prefix_60.npz",
+          "source_seed": 3014,
+          "prefix_steps": 60,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "0d361ffa479db8d03e01a570c0643355c0d155fa0643958324ebe0de653cefff"
+        },
+        {
+          "file": "IMG_2095_seed_3015_prefix_80.npz",
+          "source_seed": 3015,
+          "prefix_steps": 80,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "78a35ec65e046bcf2f4a6c7d34282ca5623294ca52e193d9fc75e1981f85ccec"
+        },
+        {
+          "file": "IMG_2096_seed_3010_prefix_120.npz",
+          "source_seed": 3010,
+          "prefix_steps": 120,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "94b984395e51c0e1728fce11152a805c1b9dd36130760c17480ade21bd3a3dc5"
+        },
+        {
+          "file": "IMG_2096_seed_3013_prefix_60.npz",
+          "source_seed": 3013,
+          "prefix_steps": 60,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "df7ee18988120300657ec20db7ef17ead0533d297d4fb7f5660b1c271300af01"
+        },
+        {
+          "file": "IMG_2096_seed_3014_prefix_80.npz",
+          "source_seed": 3014,
+          "prefix_steps": 80,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "e90e73e08c42320e9adbe384d49943ee09e01e5bae40939ea2aa642a9fe1d01e"
+        },
+        {
+          "file": "IMG_2096_seed_3015_prefix_100.npz",
+          "source_seed": 3015,
+          "prefix_steps": 100,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "46aabe4b3e62f637d1f7f57be7abc465ca4766afae66478330c6d363d85da357"
+        },
+        {
+          "file": "IMG_2098_seed_3012_prefix_60.npz",
+          "source_seed": 3012,
+          "prefix_steps": 60,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "242cecce89858933d59d6122ce01fa7a621000b21b2a998348820c0641b5ffcb"
+        },
+        {
+          "file": "IMG_2098_seed_3013_prefix_80.npz",
+          "source_seed": 3013,
+          "prefix_steps": 80,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "2276c6f8f49a7e7346bf23f397284d442edf5eb14d34a0f90288a215f8d7e128"
+        },
+        {
+          "file": "IMG_2098_seed_3014_prefix_100.npz",
+          "source_seed": 3014,
+          "prefix_steps": 100,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "932d00e03ca88bda580d4bf7e96535903990990cf6a4690f99c520067e86dfd2"
+        },
+        {
+          "file": "IMG_2098_seed_3015_prefix_120.npz",
+          "source_seed": 3015,
+          "prefix_steps": 120,
+          "all_initial_takeover_and_action_errors_zero": true,
+          "first_exported_state_is_takeover": true,
+          "exported_rows_identical_to_any_source_prefix_state_action_pair": 0,
+          "takeover_state_sha256": "f5f1c58fc58d5755dbacc8298ac48147a5aa6de604c22fcee05906fd0475c14f"
+        }
+      ],
+      "original_copies_match_frozen_build_manifest_hashes": true,
+      "original_frames": 4471,
+      "added_frames": 4398,
+      "generator_source_matches_frozen_build_manifest": true
+    }
+  },
+  "file_sha256": {
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-000.parquet": "2defd4554efa48dcc813372c40513ae18e087d9a422c0a12e32ef557cfe4e7ad",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-001.parquet": "f27ad220a25a3cffc075ba70c88428c1337a206ea3af24ae8061ae61a60d7fd4",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-002.parquet": "b128f098a149e803b84885960044601adceed109ba24401438951ec166e42975",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-003.parquet": "52252e6b949b6375b95e07c1c9a42f566cf83b4e5a23228a1cb36f3bfb28a273",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-004.parquet": "b4905d79162f9bc4235175f4887613e9c076271d8da075c2eba76875107e8464",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-005.parquet": "16da2eaef743c8fd8b2ea56abbc57ecc68a298c9c1aebea2ff86bcd7842b35f3",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-006.parquet": "fd3f7b25c44b11666c61d1082505d4840846bec80314933a6f43a9e8dc87acf8",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-007.parquet": "d3feea3d3022e358b37520aa8d99987c5818262d3f03ab8ecdb685450ea983b8",
+    "data/datasets/improvement_20261011/recovery/meta/episodes/chunk-000/file-000.parquet": "3d65e39940810e77bdf3cbf622fa94d6d4867857d77648dd31cc2ee3ee97c896",
+    "data/datasets/improvement_20261011/recovery/meta/info.json": "90459243551a77b4d992ff2b3beb0f8d501b17e45b6d661aa4165b00b117cfe7",
+    "data/datasets/improvement_20261011/recovery/meta/phone_to_panda_provenance.json": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+    "data/datasets/improvement_20261011/recovery/meta/stats.json": "85350f9179567ce16695d23b15bc86d5e8cab7ac5b929e9f57d8d516bee3814f",
+    "data/datasets/improvement_20261011/recovery/meta/tasks.parquet": "579f70af670fc3a1effe850f2f967139e37355ffe813b35c2fea88b2599495cd",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-000.parquet": "0393159c090056675f790ddac6fdf6aa236402a67cb71ec974537faa9e6070d4",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-001.parquet": "80dc4eff7b444764c245688052eae08d3a59d77bb1f6cf2e4de890a1c7849d57",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-002.parquet": "7d847eb359ce1b2eebd03927135a45832ca603e826a2139bcd948436df7ef9f8",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-003.parquet": "dd8aea5a69690b52b299d13568607f1e5481d17f3132f583e9fb27b63dc45eea",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-004.parquet": "0957e2fa9702d5c45738df379f22e0d621eddbbf16439f4c15baa0d7f5194513",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-005.parquet": "828abb3b35bb6cf9415b38fbcca4264955d55188f64fb7e214ce9fc525dbf38b",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-006.parquet": "1db46b2121a2db13d84f9161ffe4811151c7beead6ed1621b26d05b6327ded45",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-007.parquet": "4b98c5081c594ca80e14eab07d8a5da2897e9a891ca4b7228eb6ad5286391ed9",
+    "data/datasets/improvement_20261011/targeted/meta/info.json": "ca3906d3df53b82d27b5740f6cc32b812cb3197b761554e3162ef7ddb615b314",
+    "data/datasets/improvement_20261011/targeted/meta/phone_to_panda_provenance.json": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-000.parquet": "562fa9c3933a86f29791fd661ec51eafda89847421f39bc7e566c8e6f8ba6ee3",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-001.parquet": "77abe1711e7e6c068647ba1b2e1c68b120fd4f8a5c26c53d1375376f8f5c0af0",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-002.parquet": "5008a89e7a66bb7e0e19fdbfaf1c29287e883ad56dd2f04275a15ebb79d082ba",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-003.parquet": "79a916b98ed760cf4db2a5f374091665d8ae4445aa51e36c9cbdf6bd5e76c41f",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-004.parquet": "c9b39a1367d4cbd3a24cdf34bbfdc34d26b4459966dfc4c4a2000710f71cf8ac",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-005.parquet": "6768fd08df32e5140799804054339988456095b2a946bcfba865a92f30e0d70c",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-006.parquet": "aed22e92dc8629911889175fe9c80c17ca65eece6464279a26fa5a776edb3001",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-007.parquet": "3774dcfe556baf442d5f941a931f22c81c43936199b1e22352eafeefccbac7f7",
+    "data/datasets/improvement_20261011/uniform/meta/info.json": "f0cc5037909b48f1bb86da901f0f6bc06a00fcabf9532573044ace4bb39099a1",
+    "data/datasets/improvement_20261011/uniform/meta/phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+    "data/raw/IMG_2092.MOV": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+    "data/raw/IMG_2093.MOV": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+    "data/raw/IMG_2095.MOV": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+    "data/raw/IMG_2096.MOV": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+    "data/raw/IMG_2098.MOV": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_0.json": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_1.json": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_2.json": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3.json": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3010_prefix_60.json": "fd470a64cc3bfd896066f30ae4e3d5db14db27c3cc77fc24427ba50764e0d1d3",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3010_prefix_60.npz": "aa1d46faa54e71434f02cda76bc6106b12785a7a93c13f5aa5f5708c54c379ad",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3012_prefix_80.json": "03e398a32cf32ef2477e8e3b64926ea1311c35c91e492656cbf84f705f39da08",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3012_prefix_80.npz": "d06b14fae1c5886885d54ba1a8fbc55975326ff8066a230e06fd6e1535f2460c",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3013_prefix_100.json": "b8a518ace382c2dfad5a4151359714e981353ffcbec7cd1682b870df05850c7b",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3013_prefix_100.npz": "80f965617071b4c037919ca1c128b33c2a1d6442b980bdcee22157141327c3a9",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3014_prefix_120.json": "f9781555907e18a20bdd78b045e586c5502b389c3c5c5a7929336ecb16cc8f69",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3014_prefix_120.npz": "aa6751e1cb281ca95634f75e484d7d57a150cc3cfa77c8611f554461ce200061",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3010_prefix_80.json": "b5ae966b2b801c14c972a982f9daae4b6924ed65003e32d41b7435a4a6b89695",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3010_prefix_80.npz": "0508cbbfd6c33334eaa06ca1585d253871d793a321d09d045d43ab90b6745227",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3012_prefix_100.json": "0045ac9076587a601a9bfca010396ebd7b428c8b76fa5e716d801ed10b97ef0b",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3012_prefix_100.npz": "411c0b9634253e624e4a773b9dfee6baa399f73ed6bb07880dddfb53e778ffb3",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3013_prefix_120.json": "8b99faa15eee56d498f5ca98d40e95590b8c728cc0009ab10702bc050662e0e7",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3013_prefix_120.npz": "30f71de0320a24334c6b1bb445d56c379f1d2ce8f7120b4e1bdf8fe3ab47437d",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3015_prefix_60.json": "7fb0428df8a11850c5e3ee3de5e554f2a793c711f168d44e5272669a2de34d1c",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3015_prefix_60.npz": "4ad9ff652782d2aab7c32d9cf8c5da16b99c57a64baaaa3a70586e6c5d82703d",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_4.json": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_5.json": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_6.json": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_7.json": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_10.json": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_11.json": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3010_prefix_100.json": "7979cd0bde0aa440f5d3125942233192eff75e1abce2ae7e7eb6354da7595b6f",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3010_prefix_100.npz": "c3862f44176908821cf9382e80dc99146f204d44aad4c2aa7c7d4dd24fae8683",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3012_prefix_120.json": "77144e82d5a5f9812cda2603f97d4d19749c0524a4de1aebcf1ee616a0b60304",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3012_prefix_120.npz": "ebf4ab43d38bdc60956383aab3e842e22feedc3e13f7db6f1c48d23cb3d3b388",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3014_prefix_60.json": "1b1212f705d94daf6985d161e391bebf175d413dd611484aea62f61f24988828",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3014_prefix_60.npz": "215c58e9ddd85f50eda4707b865ad569a1db9504c5257ed003b906b44d5f9538",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3015_prefix_80.json": "6402c7d93e8a3ab8f3387e2b3fbcc099931853c194b755683b52086311fbf1b4",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3015_prefix_80.npz": "7796826037ebf0199c1159e8f9b18421eda90d68dc8abcf1a8b243f431de5cef",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_8.json": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_9.json": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_12.json": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_13.json": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_14.json": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_15.json": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3010_prefix_120.json": "482e8c7ece3d8b9bfd9da3e5983dac3fff69ba13784b49d78afe89f18a02517d",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3010_prefix_120.npz": "cb9e407f8e67374fae9ccc4c256774cddbd66d115fb31ca9c73376e4b3f6f6f1",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3013_prefix_60.json": "1bdbd80e3832cc64d58450d8c38dfc461c59cee43dc5fa8ad04e37bfc22e7305",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3013_prefix_60.npz": "ba9074a6e97eac245f132ab5246b036e6d10f10667766ee6f5152429fd3e0d1b",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3014_prefix_80.json": "46eab80c12114172b4af3e6d2c628860dce107cc80b72515944caf2ebf97696b",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3014_prefix_80.npz": "feb7a6a8ca79610a10f1d34d32478f4ae14449c45a1bc737aace459c96906677",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3015_prefix_100.json": "ec5e0849cabf1a51d5fb403a78a67b0d2c1b26588cdd34a69065483257e68338",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3015_prefix_100.npz": "e043679d1e4cb47c43094fd0f4ae54da15e9f6e6e09714cc60d344a5f7cf7427",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_16.json": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_17.json": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_18.json": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_19.json": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3012_prefix_60.json": "1c8aec4a9588cd38c99da1a4bd703e9d9b37a891fa862253a2790893ac51cf0c",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3012_prefix_60.npz": "0de51f8ceaad6b770e0974c83b7a7a9a36f375cebb4fb7992255b6818335b5d3",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3013_prefix_80.json": "7f57cf024d14b6337ba8f446b2249b1665926b31a6c71def19f28e68c214c2a0",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3013_prefix_80.npz": "35d36e3b7056f1cb8321050a2bf4f93676a26a31187410f90ca0e4d428f4e5fd",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3014_prefix_100.json": "6a463edc785df39c28224717c1e620b836e902556f2d0590a400cc19f6f57539",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3014_prefix_100.npz": "9deae919068de5d1fed16721916c903f8cc872a864b0b11c200b5ffb8a007ae9",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3015_prefix_120.json": "97c8cb5cdc3bd3e918d4d410aa1f35d0f40ab010c1b59406daf831e1f26678e7",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3015_prefix_120.npz": "41b9dc6ff0b547b1c1e6fa450fa4b26499a4d7f04523493dd26bc412df5afb78",
+    "data/robot/improvement_20261011/recovery/build/export_receipt.json": "6811123b1e0a6d71f094850ed9292b850271de868aec50f401eca4d2ff113157",
+    "data/robot/improvement_20261011/recovery/build/plan.json": "940a41896c6c334d99ba3b28d4b331b4cb56709851aca446cebdd13c9d24afab",
+    "data/robot/improvement_20261011/recovery/build/summary.json": "3caf317df12f59164eb4075df354ff35bba04a1352402dff95161f68758ec562",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_0.json": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_1.json": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12000.json": "7dc082a6c86744839f2733b895de730508c361ab033fcea5c79c7514cc9f1fdd",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12000.npz": "9e18b80da8d82e56478526af436a0f4c4aa712b7947b0a4fb1120f090825cc0f",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12001.json": "2253760f2dacdf5ef94fc94adff686dfc9f6c80bbc4150179fd3559a2a756f8e",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12001.npz": "b7e9a3a1782d77f8789b836cef605dbd86101790e8227906d9a83efb02626e73",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12002.json": "cc8023a919045120e6f40f99d56b2b6b88af1a5c8b785408ab4041d788d9cf91",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12002.npz": "9d24ac7167c338b09d944e3869dfaeb6fbe01d9c0d852650ebeb92b10afe660d",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12003.json": "a1a8b1ee5c3ea075fbbc177bb825f1c1d7659f6e43be3f621476ef8bb31b1b78",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12003.npz": "eb45948689a601e2113f35c8b14d57ced5fd940925f2bc4b9cc63e1d34783684",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_2.json": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_3.json": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12010.json": "144a3794b2854805af909aff8d833b91968db4dc0a880992c628a4681c2502b6",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12010.npz": "b11cc536e2ea8642272ac4cb379f44c59aac208ddfc85ea62de0c7104a50c241",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12011.json": "4b47db8fdba3c6ef8390f687a605af4c639ee95b6b1596604268d4c1d90ed9a0",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12011.npz": "4112c52972967bab11da1f6b05695e974cce14011d2a3526c0b4524b870f1639",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12012.json": "d1f65022b3fb339b788b2a2c50c258b41098f338441b6f007fd6bdf5b5e6e75d",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12012.npz": "8f62dda4c552d61db81eafea053a60cb2185ad83ab11d888c4bf9bd1c8d162b1",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12013.json": "9c2a8becf30262d18e7146e096815ed360ed59b931855ba4c369db4c02d201f1",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12013.npz": "3867b64cf876a2b25d14db9dac1980df7aeb896c822e3da4895667bf5752c49d",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_4.json": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_5.json": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_6.json": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_7.json": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_10.json": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_11.json": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12020.json": "403a2119da71f07895c2b16006dd7167d2d3a36b83bfe739fffc7b1070fab484",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12020.npz": "529103f950425cf3861583563103f083a752e7541677700999a0fea4bde69dd5",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12021.json": "54b32bba234d365803eee0fb1f12a20f9415cdec22637bba258a111af89bba55",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12021.npz": "fe9cf25e21a60d2b27b1e0dc0db0fd34c18e96b5f26d68e4936a0e3ac67c590c",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12022.json": "b97932a90dcb7c9ceec8858937475d04e0104eebf3bece322b9336e380d885a7",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12022.npz": "feff3c5fc00aedcc913b925f382541cb9ca49bf652793457134e6e58dc0f2ca3",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12023.json": "8736ce2912a5f70b8bd12cc8150e5b9d61ab3729a3ed4f5f8eb023bc7f7dd2c1",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12023.npz": "1af8c4578fe7dfec67f676e6c8877303a8530d9c9378e34597f3139a52a0482e",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_8.json": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_9.json": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12.json": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12030.json": "fa0a1cfcb1d8c6581c81e80096df216227d5bf277aaa0338e770ee09bd2d6cc9",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12030.npz": "ada79c008551341878a74c7bc5220bd5d66cd099f8e18ac7d621864397a3cfb4",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12031.json": "89015e89b10ca40a5f9c34f7b012677b778efc3da4b97141440870deee571aa6",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12031.npz": "b520e6cc9af011773a591df5bf41d8e9af06181af5d99dc5197501769d647919",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12032.json": "6ef3bf52eb25d4955f2a3319f6080a9209918e6b69dbeb8f5264c645b903747e",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12032.npz": "345ec876f82a9d8570212192fb8b5ffc399b77dfdb7a536c540fc6f0f9d4a037",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12033.json": "796f55de0f37ee46324716a9b9edaf0784e7babcd5f0e2a6c6df959aa8ecc9d7",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12033.npz": "b53ed0693b20ddee6836b090e7a992d2b7b14b1a322812974707c71e34b7c5c6",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_13.json": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_14.json": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_15.json": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12040.json": "d7bb545e9853d4fb2ffa6142d73cbeff8f1d078052fc17d313ceb85f1dc51c3a",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12040.npz": "4f4c1ce406e61b2aa23fb812df66dcd1059c1266668a49d67f5dc7e309dfbf4a",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12041.json": "3787214c983afe4e371bb91f9f5a34b4ac7857255ad0d24205e632b896b7b97c",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12041.npz": "8acc0c79494b0ad419bea8c1cae38eb9ed1643b990b8b629efc76d4d443acc59",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12042.json": "a434f3d94acecde8f3d53e6ac55172c73a727ea4e014d55b5f614101570d5a91",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12042.npz": "1b1e7d93085ef1e2381aa9e98031a6424820a3172c6901578b65a8e4e594fe84",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12043.json": "05ab2cb12892092b5b749e4799ff58b65f24938e6c9fb40cb5fee2d3099b5db5",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12043.npz": "867414575dee16019fa8ab8b709d49842e33b5ba731823f7d758775382e4997d",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_16.json": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_17.json": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_18.json": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_19.json": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "data/robot/improvement_20261011/targeted/build/plan.json": "58d26905c4a0aa46a571af3bec2bd55987b2c9dfa58da616a0591ef25cb7ffe6",
+    "data/robot/improvement_20261011/targeted/build/summary.json": "1c157328955adf0e0f16b535b9cf37168f688192a9ceabac57d79804f1def6dc",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_0.json": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_1.json": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11000.json": "45461deecf97b5a1b33b8e6e0d002008db8329332be60400e9db00e63d0fd21b",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11000.npz": "bb8143851881c6b68915a130aeb985146ca94e700e41ed9d0c3b8a35d49b1049",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11001.json": "13cf58ad33300dc839501230aa1ad4c3295fc27fcd3ac1bfb4f9d274a1587309",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11001.npz": "793df09f4dac8dd21d0156069a948aa5e14a5ccc117f60f116931230f56854f7",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11002.json": "4da78e433185c1e19641457fac2f26611e4beabc547a151be3910fe5be2f7049",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11002.npz": "c29aa1c4cdd14f65cb96b683b071b0572291d4e6d6ed579a6c9b4fad686504a3",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11003.json": "c7ef6a57afbdf4d21d97610e7fedcc7180432044f92ee7e7ca0fcc98e3e6021a",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11003.npz": "176ada43d5d544169c47830d91b53681e478f63ae51664a08599b2ccc0639429",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_2.json": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_3.json": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11010.json": "2ffb96a98b5e527a680bc110a3750e7dc42f1b50fb5aacae7cb85112f2eb67ad",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11010.npz": "a931ced5c96e14f33c8fd3facb2b475fab6e17a6319ee8fc2f0c7ea8d4b17555",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11011.json": "6c5b046d3bd5a1403cba30c345aa474fbd468f49079c65d4890075aa40d55c10",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11011.npz": "ee830c2b0c5edd4a169284717c674fb2700a5881bdcdf3562fe9e69b32807c14",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11012.json": "eb20e1ea177a912a49a0ffd11498f0c64237076c16c24d508ef395bcb837c430",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11012.npz": "bec5825d39523e4eadb38a4675b3b6c02becb97ccf9fd78dc1d86a93215df0bb",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11013.json": "2cb9c10d8ed10186210da6629cf849f96fc4124f5301806c458ec9b094002f32",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11013.npz": "83b5638165556373b2ca7f8695b4111efda3383468c91acd8e2b13866526d266",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_4.json": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_5.json": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_6.json": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_7.json": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_10.json": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11.json": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11020.json": "b45af8cf01cc47026898686264e399024505911257f8d3f9c7e061003ff1ae29",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11020.npz": "7de918041b1d93e16ed5bb515fadb7a1e9d89166762031ce32715d783ade3cb3",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11021.json": "1f0afbc7ae50c651c8c5cc470f089b5dedf88a4452b21e331d098f4fa852e976",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11021.npz": "b71bcd887c7f9ef4a588051470c51b9b6d4813cc5910e3a234e2f2e442468379",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11022.json": "be0c03ef8d65b93be9ce585f4ae88bc15f17ecd3a1e5b6beab8740ba8d839f01",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11022.npz": "5ec10f25c474051ebfa4d73eacb903281b62d86a2e5a72d80e625a112a9eac85",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11023.json": "b86f0ee07c8565f919bba5ab94a4a687c3b47afd0dd08538a19f72a67080506b",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11023.npz": "7309863f03e6cea98ac822c8eb4914cf1dbf72c6606318aa2c3cde0f2317fb7c",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_8.json": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_9.json": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11030.json": "b329681eb9a4e792767e19db4c217df20f141498e25604769742b9b9c120866d",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11030.npz": "c4691e1e0cde03c1d3807c74727379102f1dc4d830f382b43bf5b5a62093bf53",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11031.json": "9038cbfb3ae022850e6e5f815dfbd24da3b713c52025b8a0d1041ad96d7c1da9",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11031.npz": "3f1ff335b8c2d3529aa758a63252e19c3a07fdd5ae73853d1d6f014658518882",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11032.json": "4b478dfd3dd0b754a9cdc534f6d3b8b4088e80de3d2f28a21db19a240f4beba8",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11032.npz": "c583cfa5f6ea4df319f683c22cd041fff08b87ee38e88d464358e8effa057b54",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11033.json": "c96cecd0e842f42eba764892cd981807f565a39d144abcd0e9835c8dd029009f",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11033.npz": "909da13982072b1b7b73e31e4b6ab2f02ea3fe36c4405a99b116eabbb1e8717c",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_12.json": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_13.json": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_14.json": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_15.json": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11040.json": "ee7a227dba8271275476423ee375926f96daa5b6d251004d59265532e45a8d29",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11040.npz": "da3eea78a1bd13919309e35abc71af6be0cedab10b60dabe7d3d99bbfcd69e56",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11041.json": "92fc3b6aa17c0c9f1abcc44052810ab1e4c5cdd3010d22297488b938bb1524ac",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11041.npz": "a44b7988f374ba4c28c556492607e42993be2db3d78b959ef3e61807bae897c3",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11042.json": "53a10cbcc6a4ff45f738a6c79e38573bbe101f6d0a09faefcbce98fffb4154e7",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11042.npz": "4daf51244d7275917fcf159410d130cd36d29ac14678a49f8f96d390059153ea",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11043.json": "883b187f73a5f998a544b87df45708eaae00a7427f6dc1f2f8e502700dc80eb5",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11043.npz": "2a53c81fcec8eec7ba4218097c7000b5d5ef8d778662dd11d62c4c180e26adc8",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_16.json": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_17.json": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_18.json": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_19.json": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "data/robot/improvement_20261011/uniform/build/plan.json": "e9233fbe2278bacbf3f93fd479dacb72897cbc92e99005a1cc6c6ffecf60cc3d",
+    "data/robot/improvement_20261011/uniform/build/summary.json": "43648502285b3c9644d3b3a5daf1624f8f42d7bb313adeecdf460ecf5ac51423",
+    "data/robot/main/IMG_2092_seed_0.json": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+    "data/robot/main/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/main/IMG_2092_seed_1.json": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+    "data/robot/main/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/main/IMG_2092_seed_2.json": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+    "data/robot/main/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/main/IMG_2092_seed_3.json": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+    "data/robot/main/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/main/IMG_2093_seed_4.json": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+    "data/robot/main/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/main/IMG_2093_seed_5.json": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+    "data/robot/main/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/main/IMG_2093_seed_6.json": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+    "data/robot/main/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/main/IMG_2093_seed_7.json": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+    "data/robot/main/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/main/IMG_2095_seed_10.json": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+    "data/robot/main/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/main/IMG_2095_seed_11.json": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+    "data/robot/main/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/main/IMG_2095_seed_8.json": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+    "data/robot/main/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/main/IMG_2095_seed_9.json": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+    "data/robot/main/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/main/IMG_2096_seed_12.json": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+    "data/robot/main/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/main/IMG_2096_seed_13.json": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+    "data/robot/main/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/main/IMG_2096_seed_14.json": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+    "data/robot/main/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/main/IMG_2096_seed_15.json": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+    "data/robot/main/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/main/IMG_2098_seed_16.json": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+    "data/robot/main/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/main/IMG_2098_seed_17.json": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+    "data/robot/main/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/main/IMG_2098_seed_18.json": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+    "data/robot/main/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/main/IMG_2098_seed_19.json": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+    "data/robot/main/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "phone_to_panda/common.py": "1f7026cec74fbdefc932a425e34c59d810e837dbba7b0da674db834ea575171f",
+    "phone_to_panda/learning.py": "f6f1787e56d29d05f9654e17b3f5052a01259393aea01a5adc9971b112f1338c",
+    "phone_to_panda/simulation.py": "97b3dc35cc276a9fa2771d3661357d2730ee531732dc65571d1a752bb9ec4a41",
+    "runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_000_trace.json": "73f2d081061e108d24eba797c3990fe8b9873a9b6e528e29b6443a5b252de25f",
+    "runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_002_trace.json": "9ba6adac422d90939da419cbd7f9ca3ac21a56ab4cd65d0c88cfe84410cf4752",
+    "runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_003_trace.json": "be72deda208229b29f3b9be813bdf130d2118c5f7462f509ea15e3a8cd311395",
+    "runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_004_trace.json": "0d0e9cdfc9ca41a1ef839e2061fdbf46ba1f0360ba2ed891ee3fb9c6876c1c5c",
+    "runs/improvement_20261011/development/original_h5/known_wide/evaluation/episode_005_trace.json": "7ed8f6f39c1d47da5cd41a16c5700019da51f2bad9f26162d4d5d910ece2a719",
+    "runs/improvement_20261011/study_plan.json": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+    "scripts/build_dataset.py": "f8ae20b963ff180338fa65d28bc977a74fc09edda5df8553de7a0c967657710e",
+    "scripts/build_recovery_dataset.py": "71050fdbba29b383329505161465fd3e1b7a1fbaf8044781ccf63d0e277eb763",
+    "scripts/build_selected_dataset.py": "9579b85a940405141a4863f559ce8aea0070606f9471ad1952b56bceb3a5770a"
+  },
+  "limitations": [
+    "Equal episode counts and update budgets do not imply equal frame counts or equal epochs; frame counts differ among arms.",
+    "Twenty recovery takeovers come from five correlated failed policy rollouts, not twenty independent failure scenarios.",
+    "Recovery/grasp/release labels come from a simulator expert; only carry-path shape and timing derive from existing human video.",
+    "Prefix reproduction verifies observed robot state, cube position and applied actions; it does not independently compare all latent MuJoCo state variables.",
+    "Camera PNG content was not decoded or pixel-compared in this audit; numeric state/action rows and file provenance were checked.",
+    "No training or final evaluation outcomes were used in this audit."
+  ],
+  "checks_passed": {
+    "all_three_arms": true,
+    "originals_identical_and_frozen": true,
+    "five_source_video_hashes": true,
+    "40_episodes_per_arm": true,
+    "four_additions_per_clip": true,
+    "parquet_state_action_rows_exact": true,
+    "no_selection_or_final_seed_overlap": true,
+    "recovery_20_distinct_takeovers": true,
+    "recovery_all_prefix_errors_exactly_zero": true,
+    "recovery_expert_only_label_boundary": true
+  },
+  "numeric_checks_completed_utc": {
+    "uniform": "2026-10-11T17:29:03.809798+00:00",
+    "targeted": "2026-10-11T17:29:03.809798+00:00",
+    "recovery": "2026-10-11T17:31:06.364749+00:00"
+  }
+}

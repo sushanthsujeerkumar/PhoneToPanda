@@ -1,0 +1,10 @@
+{
+  "reason": "Equal-budget continued-training control on original20 demos distinguishes extra updates from extra replay data; specified before any adapted model is trained or evaluated.",
+  "source": "checkpoints/main",
+  "config": "configs/improvement_20261011/continuation.yaml",
+  "training_updates": 2000,
+  "optimizer_lr": 1e-05,
+  "normalization": "frozen original",
+  "selection": "same frozen new_narrow and new_wide development groups; no final-test access",
+  "time_utc": "2026-10-11T16:20:14.185740+00:00"
+}

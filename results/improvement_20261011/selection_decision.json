@@ -1,0 +1,47 @@
+{
+  "recorded_utc": "2026-10-11T17:48:20.078596+00:00",
+  "development_scores_out_of_20": {
+    "original_h5": 16,
+    "continuation2000_h5": 15,
+    "uniform2000_h5": 16,
+    "targeted2000_h5": 12,
+    "uniform4000_h5": 16,
+    "recovery2000_h5": 13
+  },
+  "tie_order": [
+    "original_h5",
+    "continuation2000_h5",
+    "uniform2000_h5",
+    "targeted2000_h5",
+    "uniform4000_h5",
+    "recovery2000_h5"
+  ],
+  "selected_candidate": "original_h5",
+  "reference_candidate": "original_h5",
+  "exploratory_finalist": "uniform4000_h5",
+  "final_candidates": [
+    "original_h5",
+    "continuation2000_h5",
+    "uniform2000_h5",
+    "targeted2000_h5",
+    "uniform4000_h5"
+  ],
+  "development_summary_sha256": "6983483cae149be922df5dc4d48ffeb03d93b34dfd7dc51a3c4de79647c8165c",
+  "development_report_sha256": {
+    "development/original_h5/new_narrow/evaluation/report.json": "2a7aa38e32d852b7fccad863b9337daa9cd76cad1cfd1295e4e53989d285868f",
+    "development/original_h5/new_wide/evaluation/report.json": "b13017c8c0dc48c03060d7e1bc28dc8cfcf2d42a10862f0e7eaf1e27ef235d40",
+    "development/continuation2000_h5/new_narrow/evaluation/report.json": "7634a8fd78f07a0f83c614a277ae9e72e165292fdfbdb4388888c60c2fbe5d62",
+    "development/continuation2000_h5/new_wide/evaluation/report.json": "d689df071aebdd6c186693f025ee092d14bdebaac824fade6b58332e90f0e721",
+    "development/uniform2000_h5/new_narrow/evaluation/report.json": "7dc029272c01ac3688e2b1a6c10f2b1904f88cf45140d5e8f3993b8e1997698c",
+    "development/uniform2000_h5/new_wide/evaluation/report.json": "95b5203ca69c54a70975014d21b14dbc883eb4579f10f9c82f09552778d48b99",
+    "development/targeted2000_h5/new_narrow/evaluation/report.json": "3c793c667d206374f9764314adf6691705f7a4a29047087a5132251e37768d59",
+    "development/targeted2000_h5/new_wide/evaluation/report.json": "c657fdc24e703828d2fb9b7822a8c11d337fa1440b192bc6c4c2e22503ad756c",
+    "development/uniform4000_h5/new_narrow/evaluation/report.json": "edcda415441630eadb5b0de66383801e1e6e35a8b6355bd74836a1b1fef47960",
+    "development/uniform4000_h5/new_wide/evaluation/report.json": "65b60e8fb16dcfb6383aa28c356e90372f9d37cb995a35d9ab26af308c40593b",
+    "development/recovery2000_h5/new_narrow/evaluation/report.json": "91e11b6259c2ceb0423fe522560c1f8b28c30e30a6e0070b728ba37b24c04e6e",
+    "development/recovery2000_h5/new_wide/evaluation/report.json": "173e05f19e51d15e8061d911b5b28a3fa5b7212ff9700fd1303b16bc63fbf7db"
+  },
+  "reason": "Original ties the best development score and wins the predeclared tie rule. Uniform4000 is the higher-scoring exploratory follow-up, so recovery does not advance. No adaptation is preselected for promotion; final adapted-model contrasts are secondary.",
+  "final_outcomes_observed": false,
+  "no_further_tuning": true
+}

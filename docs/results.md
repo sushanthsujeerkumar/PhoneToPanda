@@ -1,5 +1,8 @@
 # Results
 
+For the later controlled study, see the [11 October report](improvement_20261011.md).
+The counts below are retained as the separate historical experiment.
+
 These experiments finished on **4 October 2026**. All policy scores below use the
 same hybrid control: SmolVLA supplies XYZ movement and gripper commands while
 feedback keeps the wrist downward. The policy tests do not use scripted

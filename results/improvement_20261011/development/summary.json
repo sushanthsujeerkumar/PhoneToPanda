@@ -1,0 +1,3644 @@
+{
+  "phase": "development",
+  "names": [
+    "original_h5",
+    "continuation2000_h5",
+    "uniform2000_h5",
+    "targeted2000_h5",
+    "uniform4000_h5",
+    "recovery2000_h5"
+  ],
+  "groups": [
+    "new_narrow",
+    "new_wide"
+  ],
+  "reference": "original_h5",
+  "combined_group_weights": {
+    "new_narrow": 0.5,
+    "new_wide": 0.5
+  },
+  "study_plan_sha256": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+  "source_recording_count": 5,
+  "selection_rule": "Choose candidates using development only. Before final-test execution lock chosen model/settings. Final test cannot guide further tuning. Report all completed interventions and failures.",
+  "models": {
+    "original_h5": {
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "placements": 10,
+          "lifts": 10,
+          "failed_lift": 0,
+          "failed_after_lift": 0,
+          "placement_rate": 1.0,
+          "lift_rate": 1.0,
+          "placement_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "lift_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "episode_results": [
+            {
+              "seed": 4100,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 274,
+              "max_cube_height_m": 1.0740810094296365,
+              "initial_cube_xyz": [
+                -0.02599543501476624,
+                -0.1424340624189067,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4101,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 213,
+              "max_cube_height_m": 1.08402623074493,
+              "initial_cube_xyz": [
+                -3.306425253753881e-05,
+                -0.16339037623614347,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4102,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 258,
+              "max_cube_height_m": 1.1291670796023716,
+              "initial_cube_xyz": [
+                -0.007764309948406177,
+                -0.16654935400685075,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4103,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 247,
+              "max_cube_height_m": 1.1706950803355232,
+              "initial_cube_xyz": [
+                0.02459633816393363,
+                -0.18427097420519076,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4104,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 222,
+              "max_cube_height_m": 1.074868547836191,
+              "initial_cube_xyz": [
+                0.020700121960024083,
+                -0.2008574801904893,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4105,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 218,
+              "max_cube_height_m": 1.109822631433812,
+              "initial_cube_xyz": [
+                -0.022692862056543986,
+                -0.18366988463452721,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4106,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 264,
+              "max_cube_height_m": 1.166277572869569,
+              "initial_cube_xyz": [
+                0.02026216363828539,
+                -0.14198485281135018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4107,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 190,
+              "max_cube_height_m": 1.1107196227189273,
+              "initial_cube_xyz": [
+                -0.0067368532060133254,
+                -0.17447206361625084,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4108,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 182,
+              "max_cube_height_m": 1.0540973061012249,
+              "initial_cube_xyz": [
+                -0.01633022981957762,
+                -0.14667964594089913,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4109,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 415,
+              "max_cube_height_m": 1.1547177076622726,
+              "initial_cube_xyz": [
+                0.026467442515202045,
+                -0.17784403986206598,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/original_h5/new_narrow/evaluation/report.json",
+          "report_sha256": "2a7aa38e32d852b7fccad863b9337daa9cd76cad1cfd1295e4e53989d285868f",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+              "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+              "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+              "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 177.54568937099975,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        },
+        "new_wide": {
+          "trials": 10,
+          "placements": 6,
+          "lifts": 6,
+          "failed_lift": 4,
+          "failed_after_lift": 0,
+          "placement_rate": 0.6,
+          "lift_rate": 0.6,
+          "placement_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "lift_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "episode_results": [
+            {
+              "seed": 4200,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9287427443083592,
+              "initial_cube_xyz": [
+                0.007248032163259782,
+                -0.2141401638953681,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4201,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9317705995692763,
+              "initial_cube_xyz": [
+                -0.04931672349492343,
+                -0.12005462326455756,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4202,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.921725270780459,
+              "initial_cube_xyz": [
+                0.03788465065302411,
+                -0.20227128380165563,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4203,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 363,
+              "max_cube_height_m": 1.0609647465849266,
+              "initial_cube_xyz": [
+                -0.02337782004141853,
+                -0.14588186213429113,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4204,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 200,
+              "max_cube_height_m": 1.0614605504121637,
+              "initial_cube_xyz": [
+                -0.04868299298608897,
+                -0.15306950835801353,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4205,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 288,
+              "max_cube_height_m": 1.111854531073589,
+              "initial_cube_xyz": [
+                0.016486804849501383,
+                -0.18234830126333676,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4206,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 191,
+              "max_cube_height_m": 1.124176158897886,
+              "initial_cube_xyz": [
+                0.018755034237273194,
+                -0.16317283686618128,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4207,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 260,
+              "max_cube_height_m": 1.1910400992641001,
+              "initial_cube_xyz": [
+                0.059991672861166,
+                -0.17558638695825218,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4208,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9281361252100473,
+              "initial_cube_xyz": [
+                -0.043286628270135796,
+                -0.1900825865874872,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4209,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 244,
+              "max_cube_height_m": 1.0249872616728606,
+              "initial_cube_xyz": [
+                -0.058185737172442194,
+                -0.13465684881314402,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/original_h5/new_wide/evaluation/report.json",
+          "report_sha256": "b13017c8c0dc48c03060d7e1bc28dc8cfcf2d42a10862f0e7eaf1e27ef235d40",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+              "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+              "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+              "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 276.2913056339994,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "placements": 16,
+        "lifts": 16,
+        "failed_lift": 4,
+        "failed_after_lift": 0,
+        "placement_rate": 0.8,
+        "lift_rate": 0.8,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    },
+    "continuation2000_h5": {
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "placements": 9,
+          "lifts": 10,
+          "failed_lift": 0,
+          "failed_after_lift": 1,
+          "placement_rate": 0.9,
+          "lift_rate": 1.0,
+          "placement_wilson95": [
+            0.5958499732047615,
+            0.9821237869049271
+          ],
+          "lift_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "episode_results": [
+            {
+              "seed": 4100,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 229,
+              "max_cube_height_m": 1.0711140920644688,
+              "initial_cube_xyz": [
+                -0.02599543501476624,
+                -0.1424340624189067,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4101,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 213,
+              "max_cube_height_m": 1.1253700569972687,
+              "initial_cube_xyz": [
+                -3.306425253753881e-05,
+                -0.16339037623614347,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4102,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 199,
+              "max_cube_height_m": 1.137858669480995,
+              "initial_cube_xyz": [
+                -0.007764309948406177,
+                -0.16654935400685075,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4103,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 222,
+              "max_cube_height_m": 1.1788853496036884,
+              "initial_cube_xyz": [
+                0.02459633816393363,
+                -0.18427097420519076,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4104,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 200,
+              "max_cube_height_m": 1.0842746384288224,
+              "initial_cube_xyz": [
+                0.020700121960024083,
+                -0.2008574801904893,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4105,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 197,
+              "max_cube_height_m": 1.1167022419310666,
+              "initial_cube_xyz": [
+                -0.022692862056543986,
+                -0.18366988463452721,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4106,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": true,
+              "steps": 600,
+              "max_cube_height_m": 1.0255262216991097,
+              "initial_cube_xyz": [
+                0.02026216363828539,
+                -0.14198485281135018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4107,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 199,
+              "max_cube_height_m": 1.1251386603731048,
+              "initial_cube_xyz": [
+                -0.0067368532060133254,
+                -0.17447206361625084,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4108,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 187,
+              "max_cube_height_m": 1.064903924378387,
+              "initial_cube_xyz": [
+                -0.01633022981957762,
+                -0.14667964594089913,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4109,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 246,
+              "max_cube_height_m": 1.1433179634669834,
+              "initial_cube_xyz": [
+                0.026467442515202045,
+                -0.17784403986206598,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/continuation2000_h5/new_narrow/evaluation/report.json",
+          "report_sha256": "7634a8fd78f07a0f83c614a277ae9e72e165292fdfbdb4388888c60c2fbe5d62",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "4deffd0d0e8db42f60f35ab516d6b67e8086da3fba590343bcb41ada0cda6d37",
+              "phone_to_panda_provenance.json": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "069b37cf7a953b553fadce5b848ca87567ce1331458eaae6e4361fa88dd83d8c"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 191.49332720599978,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        },
+        "new_wide": {
+          "trials": 10,
+          "placements": 6,
+          "lifts": 6,
+          "failed_lift": 4,
+          "failed_after_lift": 0,
+          "placement_rate": 0.6,
+          "lift_rate": 0.6,
+          "placement_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "lift_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "episode_results": [
+            {
+              "seed": 4200,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9253583716247278,
+              "initial_cube_xyz": [
+                0.007248032163259782,
+                -0.2141401638953681,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4201,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.930792917130963,
+              "initial_cube_xyz": [
+                -0.04931672349492343,
+                -0.12005462326455756,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4202,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 247,
+              "max_cube_height_m": 1.1540578665522407,
+              "initial_cube_xyz": [
+                0.03788465065302411,
+                -0.20227128380165563,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4203,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 211,
+              "max_cube_height_m": 1.0829232248176497,
+              "initial_cube_xyz": [
+                -0.02337782004141853,
+                -0.14588186213429113,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4204,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 222,
+              "max_cube_height_m": 1.0832932615812463,
+              "initial_cube_xyz": [
+                -0.04868299298608897,
+                -0.15306950835801353,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4205,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 217,
+              "max_cube_height_m": 1.136809435270388,
+              "initial_cube_xyz": [
+                0.016486804849501383,
+                -0.18234830126333676,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4206,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 202,
+              "max_cube_height_m": 1.1392221322367477,
+              "initial_cube_xyz": [
+                0.018755034237273194,
+                -0.16317283686618128,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4207,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 250,
+              "max_cube_height_m": 1.1818657360032907,
+              "initial_cube_xyz": [
+                0.059991672861166,
+                -0.17558638695825218,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4208,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9267377606712733,
+              "initial_cube_xyz": [
+                -0.043286628270135796,
+                -0.1900825865874872,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4209,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9298750811818733,
+              "initial_cube_xyz": [
+                -0.058185737172442194,
+                -0.13465684881314402,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/continuation2000_h5/new_wide/evaluation/report.json",
+          "report_sha256": "d689df071aebdd6c186693f025ee092d14bdebaac824fade6b58332e90f0e721",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "4deffd0d0e8db42f60f35ab516d6b67e8086da3fba590343bcb41ada0cda6d37",
+              "phone_to_panda_provenance.json": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "069b37cf7a953b553fadce5b848ca87567ce1331458eaae6e4361fa88dd83d8c"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 280.7914870650002,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "placements": 15,
+        "lifts": 16,
+        "failed_lift": 4,
+        "failed_after_lift": 1,
+        "placement_rate": 0.75,
+        "lift_rate": 0.8,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    },
+    "uniform2000_h5": {
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "placements": 10,
+          "lifts": 10,
+          "failed_lift": 0,
+          "failed_after_lift": 0,
+          "placement_rate": 1.0,
+          "lift_rate": 1.0,
+          "placement_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "lift_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "episode_results": [
+            {
+              "seed": 4100,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 203,
+              "max_cube_height_m": 1.095009898015782,
+              "initial_cube_xyz": [
+                -0.02599543501476624,
+                -0.1424340624189067,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4101,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 203,
+              "max_cube_height_m": 1.1249997188799286,
+              "initial_cube_xyz": [
+                -3.306425253753881e-05,
+                -0.16339037623614347,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4102,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 199,
+              "max_cube_height_m": 1.152255204196857,
+              "initial_cube_xyz": [
+                -0.007764309948406177,
+                -0.16654935400685075,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4103,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 222,
+              "max_cube_height_m": 1.2082757592953628,
+              "initial_cube_xyz": [
+                0.02459633816393363,
+                -0.18427097420519076,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4104,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 200,
+              "max_cube_height_m": 1.0737592711793624,
+              "initial_cube_xyz": [
+                0.020700121960024083,
+                -0.2008574801904893,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4105,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 190,
+              "max_cube_height_m": 1.140876785438778,
+              "initial_cube_xyz": [
+                -0.022692862056543986,
+                -0.18366988463452721,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4106,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 296,
+              "max_cube_height_m": 1.152305319908624,
+              "initial_cube_xyz": [
+                0.02026216363828539,
+                -0.14198485281135018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4107,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 204,
+              "max_cube_height_m": 1.1505358221548947,
+              "initial_cube_xyz": [
+                -0.0067368532060133254,
+                -0.17447206361625084,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4108,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 318,
+              "max_cube_height_m": 1.0230292028202022,
+              "initial_cube_xyz": [
+                -0.01633022981957762,
+                -0.14667964594089913,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4109,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 233,
+              "max_cube_height_m": 1.1348305697263794,
+              "initial_cube_xyz": [
+                0.026467442515202045,
+                -0.17784403986206598,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/uniform2000_h5/new_narrow/evaluation/report.json",
+          "report_sha256": "7dc029272c01ac3688e2b1a6c10f2b1904f88cf45140d5e8f3993b8e1997698c",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "79bd1f50ba3298f6a2b9e7383bddca48251f94aff10a8437050ec3edc7695afd",
+              "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "8676aa17abf5b00b7766709477209a799d0c9a49f0f4e8c6a9537b890e32e8a2"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 176.17332791800072,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        },
+        "new_wide": {
+          "trials": 10,
+          "placements": 6,
+          "lifts": 7,
+          "failed_lift": 3,
+          "failed_after_lift": 1,
+          "placement_rate": 0.6,
+          "lift_rate": 0.7,
+          "placement_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "lift_wilson95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "episode_results": [
+            {
+              "seed": 4200,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9277529476542105,
+              "initial_cube_xyz": [
+                0.007248032163259782,
+                -0.2141401638953681,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4201,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9299062853302353,
+              "initial_cube_xyz": [
+                -0.04931672349492343,
+                -0.12005462326455756,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4202,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 211,
+              "max_cube_height_m": 1.0641002745251618,
+              "initial_cube_xyz": [
+                0.03788465065302411,
+                -0.20227128380165563,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4203,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 211,
+              "max_cube_height_m": 1.1068064985117712,
+              "initial_cube_xyz": [
+                -0.02337782004141853,
+                -0.14588186213429113,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4204,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 199,
+              "max_cube_height_m": 1.0880932575027138,
+              "initial_cube_xyz": [
+                -0.04868299298608897,
+                -0.15306950835801353,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4205,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 215,
+              "max_cube_height_m": 1.1271128666395671,
+              "initial_cube_xyz": [
+                0.016486804849501383,
+                -0.18234830126333676,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4206,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 195,
+              "max_cube_height_m": 1.1342064570096229,
+              "initial_cube_xyz": [
+                0.018755034237273194,
+                -0.16317283686618128,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4207,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 236,
+              "max_cube_height_m": 1.2104799789212575,
+              "initial_cube_xyz": [
+                0.059991672861166,
+                -0.17558638695825218,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4208,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9270241179157057,
+              "initial_cube_xyz": [
+                -0.043286628270135796,
+                -0.1900825865874872,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4209,
+              "group": "new_wide",
+              "success": false,
+              "lifted": true,
+              "steps": 600,
+              "max_cube_height_m": 0.9940349837417951,
+              "initial_cube_xyz": [
+                -0.058185737172442194,
+                -0.13465684881314402,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/uniform2000_h5/new_wide/evaluation/report.json",
+          "report_sha256": "95b5203ca69c54a70975014d21b14dbc883eb4579f10f9c82f09552778d48b99",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "79bd1f50ba3298f6a2b9e7383bddca48251f94aff10a8437050ec3edc7695afd",
+              "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "8676aa17abf5b00b7766709477209a799d0c9a49f0f4e8c6a9537b890e32e8a2"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 275.15828638200037,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "placements": 16,
+        "lifts": 17,
+        "failed_lift": 3,
+        "failed_after_lift": 1,
+        "placement_rate": 0.8,
+        "lift_rate": 0.85,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    },
+    "targeted2000_h5": {
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "placements": 7,
+          "lifts": 7,
+          "failed_lift": 3,
+          "failed_after_lift": 0,
+          "placement_rate": 0.7,
+          "lift_rate": 0.7,
+          "placement_wilson95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "lift_wilson95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "episode_results": [
+            {
+              "seed": 4100,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9300969038260724,
+              "initial_cube_xyz": [
+                -0.02599543501476624,
+                -0.1424340624189067,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4101,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 216,
+              "max_cube_height_m": 1.1263453422758525,
+              "initial_cube_xyz": [
+                -3.306425253753881e-05,
+                -0.16339037623614347,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4102,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 225,
+              "max_cube_height_m": 1.1441996056879942,
+              "initial_cube_xyz": [
+                -0.007764309948406177,
+                -0.16654935400685075,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4103,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9420853847804134,
+              "initial_cube_xyz": [
+                0.02459633816393363,
+                -0.18427097420519076,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4104,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 256,
+              "max_cube_height_m": 1.1595544017160166,
+              "initial_cube_xyz": [
+                0.020700121960024083,
+                -0.2008574801904893,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4105,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 197,
+              "max_cube_height_m": 1.1358596579840239,
+              "initial_cube_xyz": [
+                -0.022692862056543986,
+                -0.18366988463452721,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4106,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.926738472052437,
+              "initial_cube_xyz": [
+                0.02026216363828539,
+                -0.14198485281135018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4107,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 229,
+              "max_cube_height_m": 1.163661218688572,
+              "initial_cube_xyz": [
+                -0.0067368532060133254,
+                -0.17447206361625084,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4108,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 242,
+              "max_cube_height_m": 1.0914000114674143,
+              "initial_cube_xyz": [
+                -0.01633022981957762,
+                -0.14667964594089913,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4109,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 362,
+              "max_cube_height_m": 1.170671769651755,
+              "initial_cube_xyz": [
+                0.026467442515202045,
+                -0.17784403986206598,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/targeted2000_h5/new_narrow/evaluation/report.json",
+          "report_sha256": "3c793c667d206374f9764314adf6691705f7a4a29047087a5132251e37768d59",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "a397df828991e22e784a8c990fb5e7648e377bf0c798b8920d062fedcfd178f4",
+              "phone_to_panda_provenance.json": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "9d0dc8757e8216c592f6e8aabed835246969e1eb4c884598d6fc0529853761df"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 264.9018360330001,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        },
+        "new_wide": {
+          "trials": 10,
+          "placements": 5,
+          "lifts": 5,
+          "failed_lift": 5,
+          "failed_after_lift": 0,
+          "placement_rate": 0.5,
+          "lift_rate": 0.5,
+          "placement_wilson95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "lift_wilson95": [
+            0.236593090512564,
+            0.7634069094874361
+          ],
+          "episode_results": [
+            {
+              "seed": 4200,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9207924860012001,
+              "initial_cube_xyz": [
+                0.007248032163259782,
+                -0.2141401638953681,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4201,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9286192818896303,
+              "initial_cube_xyz": [
+                -0.04931672349492343,
+                -0.12005462326455756,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4202,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 303,
+              "max_cube_height_m": 1.1711732691213637,
+              "initial_cube_xyz": [
+                0.03788465065302411,
+                -0.20227128380165563,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4203,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.927587404850724,
+              "initial_cube_xyz": [
+                -0.02337782004141853,
+                -0.14588186213429113,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4204,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 201,
+              "max_cube_height_m": 1.0924995270335327,
+              "initial_cube_xyz": [
+                -0.04868299298608897,
+                -0.15306950835801353,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4205,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 234,
+              "max_cube_height_m": 1.1124706844249266,
+              "initial_cube_xyz": [
+                0.016486804849501383,
+                -0.18234830126333676,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4206,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 233,
+              "max_cube_height_m": 1.1183868643591384,
+              "initial_cube_xyz": [
+                0.018755034237273194,
+                -0.16317283686618128,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4207,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9335869673729116,
+              "initial_cube_xyz": [
+                0.059991672861166,
+                -0.17558638695825218,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4208,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 170,
+              "max_cube_height_m": 1.0747629594223127,
+              "initial_cube_xyz": [
+                -0.043286628270135796,
+                -0.1900825865874872,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4209,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9299750803177677,
+              "initial_cube_xyz": [
+                -0.058185737172442194,
+                -0.13465684881314402,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/targeted2000_h5/new_wide/evaluation/report.json",
+          "report_sha256": "c657fdc24e703828d2fb9b7822a8c11d337fa1440b192bc6c4c2e22503ad756c",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "a397df828991e22e784a8c990fb5e7648e377bf0c798b8920d062fedcfd178f4",
+              "phone_to_panda_provenance.json": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "9d0dc8757e8216c592f6e8aabed835246969e1eb4c884598d6fc0529853761df"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 295.7166130459991,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "placements": 12,
+        "lifts": 12,
+        "failed_lift": 8,
+        "failed_after_lift": 0,
+        "placement_rate": 0.6,
+        "lift_rate": 0.6,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    },
+    "uniform4000_h5": {
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "placements": 10,
+          "lifts": 10,
+          "failed_lift": 0,
+          "failed_after_lift": 0,
+          "placement_rate": 1.0,
+          "lift_rate": 1.0,
+          "placement_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "lift_wilson95": [
+            0.7224672001371107,
+            0.9999999999999999
+          ],
+          "episode_results": [
+            {
+              "seed": 4100,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 299,
+              "max_cube_height_m": 1.1115047223996506,
+              "initial_cube_xyz": [
+                -0.02599543501476624,
+                -0.1424340624189067,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4101,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 211,
+              "max_cube_height_m": 1.1199644396469284,
+              "initial_cube_xyz": [
+                -3.306425253753881e-05,
+                -0.16339037623614347,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4102,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 233,
+              "max_cube_height_m": 1.147259508742374,
+              "initial_cube_xyz": [
+                -0.007764309948406177,
+                -0.16654935400685075,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4103,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 218,
+              "max_cube_height_m": 1.1929619439703627,
+              "initial_cube_xyz": [
+                0.02459633816393363,
+                -0.18427097420519076,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4104,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 208,
+              "max_cube_height_m": 1.073648829486124,
+              "initial_cube_xyz": [
+                0.020700121960024083,
+                -0.2008574801904893,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4105,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 201,
+              "max_cube_height_m": 1.1512771184435053,
+              "initial_cube_xyz": [
+                -0.022692862056543986,
+                -0.18366988463452721,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4106,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 303,
+              "max_cube_height_m": 1.139993996200145,
+              "initial_cube_xyz": [
+                0.02026216363828539,
+                -0.14198485281135018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4107,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 218,
+              "max_cube_height_m": 1.1626245152536943,
+              "initial_cube_xyz": [
+                -0.0067368532060133254,
+                -0.17447206361625084,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4108,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 187,
+              "max_cube_height_m": 1.0527480174482657,
+              "initial_cube_xyz": [
+                -0.01633022981957762,
+                -0.14667964594089913,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4109,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 228,
+              "max_cube_height_m": 1.1433757520331989,
+              "initial_cube_xyz": [
+                0.026467442515202045,
+                -0.17784403986206598,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/uniform4000_h5/new_narrow/evaluation/report.json",
+          "report_sha256": "edcda415441630eadb5b0de66383801e1e6e35a8b6355bd74836a1b1fef47960",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5eb0338844a5beffa036276ae39e833d4e599bd860f5bba372f4757a44d8d245",
+              "frozen_normalization.json": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+              "model.safetensors": "f0ada1ada9db6fe08cfeca5f528309c2ada89c726a578fce8fda801976a5761f",
+              "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "4016cf14416e21df97de7cc76868ba5ac57ae941d65f57e70e11d350a00ec44d"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 154.19125193500076,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        },
+        "new_wide": {
+          "trials": 10,
+          "placements": 6,
+          "lifts": 7,
+          "failed_lift": 3,
+          "failed_after_lift": 1,
+          "placement_rate": 0.6,
+          "lift_rate": 0.7,
+          "placement_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "lift_wilson95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "episode_results": [
+            {
+              "seed": 4200,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9268795919216086,
+              "initial_cube_xyz": [
+                0.007248032163259782,
+                -0.2141401638953681,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4201,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9295540856038783,
+              "initial_cube_xyz": [
+                -0.04931672349492343,
+                -0.12005462326455756,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4202,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 218,
+              "max_cube_height_m": 1.1639410643383417,
+              "initial_cube_xyz": [
+                0.03788465065302411,
+                -0.20227128380165563,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4203,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 227,
+              "max_cube_height_m": 1.1082725636962885,
+              "initial_cube_xyz": [
+                -0.02337782004141853,
+                -0.14588186213429113,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4204,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 182,
+              "max_cube_height_m": 1.0788146396165548,
+              "initial_cube_xyz": [
+                -0.04868299298608897,
+                -0.15306950835801353,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4205,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 211,
+              "max_cube_height_m": 1.1362724964124338,
+              "initial_cube_xyz": [
+                0.016486804849501383,
+                -0.18234830126333676,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4206,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 188,
+              "max_cube_height_m": 1.1211335991560265,
+              "initial_cube_xyz": [
+                0.018755034237273194,
+                -0.16317283686618128,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4207,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 238,
+              "max_cube_height_m": 1.208756950148075,
+              "initial_cube_xyz": [
+                0.059991672861166,
+                -0.17558638695825218,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4208,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9285265067545083,
+              "initial_cube_xyz": [
+                -0.043286628270135796,
+                -0.1900825865874872,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4209,
+              "group": "new_wide",
+              "success": false,
+              "lifted": true,
+              "steps": 600,
+              "max_cube_height_m": 0.9939687919479967,
+              "initial_cube_xyz": [
+                -0.058185737172442194,
+                -0.13465684881314402,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/uniform4000_h5/new_wide/evaluation/report.json",
+          "report_sha256": "65b60e8fb16dcfb6383aa28c356e90372f9d37cb995a35d9ab26af308c40593b",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5eb0338844a5beffa036276ae39e833d4e599bd860f5bba372f4757a44d8d245",
+              "frozen_normalization.json": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+              "model.safetensors": "f0ada1ada9db6fe08cfeca5f528309c2ada89c726a578fce8fda801976a5761f",
+              "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "4016cf14416e21df97de7cc76868ba5ac57ae941d65f57e70e11d350a00ec44d"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 243.19839303700064,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "placements": 16,
+        "lifts": 17,
+        "failed_lift": 3,
+        "failed_after_lift": 1,
+        "placement_rate": 0.8,
+        "lift_rate": 0.85,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    },
+    "recovery2000_h5": {
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "placements": 7,
+          "lifts": 7,
+          "failed_lift": 3,
+          "failed_after_lift": 0,
+          "placement_rate": 0.7,
+          "lift_rate": 0.7,
+          "placement_wilson95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "lift_wilson95": [
+            0.39677814746114537,
+            0.8922087325936989
+          ],
+          "episode_results": [
+            {
+              "seed": 4100,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 211,
+              "max_cube_height_m": 1.0897040665776418,
+              "initial_cube_xyz": [
+                -0.02599543501476624,
+                -0.1424340624189067,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4101,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9199092400569476,
+              "initial_cube_xyz": [
+                -3.306425253753881e-05,
+                -0.16339037623614347,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4102,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9392275181939379,
+              "initial_cube_xyz": [
+                -0.007764309948406177,
+                -0.16654935400685075,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4103,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 227,
+              "max_cube_height_m": 1.169148599457643,
+              "initial_cube_xyz": [
+                0.02459633816393363,
+                -0.18427097420519076,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4104,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 258,
+              "max_cube_height_m": 1.0891044096060025,
+              "initial_cube_xyz": [
+                0.020700121960024083,
+                -0.2008574801904893,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4105,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 236,
+              "max_cube_height_m": 1.1283961150634185,
+              "initial_cube_xyz": [
+                -0.022692862056543986,
+                -0.18366988463452721,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4106,
+              "group": "new_narrow",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9287617083569683,
+              "initial_cube_xyz": [
+                0.02026216363828539,
+                -0.14198485281135018,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4107,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 230,
+              "max_cube_height_m": 1.1335431731092,
+              "initial_cube_xyz": [
+                -0.0067368532060133254,
+                -0.17447206361625084,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4108,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 210,
+              "max_cube_height_m": 1.0939323919814337,
+              "initial_cube_xyz": [
+                -0.01633022981957762,
+                -0.14667964594089913,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4109,
+              "group": "new_narrow",
+              "success": true,
+              "lifted": true,
+              "steps": 267,
+              "max_cube_height_m": 1.1559259673630626,
+              "initial_cube_xyz": [
+                0.026467442515202045,
+                -0.17784403986206598,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/recovery2000_h5/new_narrow/evaluation/report.json",
+          "report_sha256": "91e11b6259c2ceb0423fe522560c1f8b28c30e30a6e0070b728ba37b24c04e6e",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "16e4f0d7d476770c1c55072cfae80d05029ab8cfdcb02ff7ae82624905e484f2",
+              "phone_to_panda_provenance.json": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "23b4f54e4a4e8563a30645eeebc746eab7014dbf64d7ec82be8981c2133a1dbd"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 225.3738147089989,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        },
+        "new_wide": {
+          "trials": 10,
+          "placements": 6,
+          "lifts": 6,
+          "failed_lift": 4,
+          "failed_after_lift": 0,
+          "placement_rate": 0.6,
+          "lift_rate": 0.6,
+          "placement_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "lift_wilson95": [
+            0.31267376973365824,
+            0.8318196702937638
+          ],
+          "episode_results": [
+            {
+              "seed": 4200,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9301326436068196,
+              "initial_cube_xyz": [
+                0.007248032163259782,
+                -0.2141401638953681,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4201,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9261415492424031,
+              "initial_cube_xyz": [
+                -0.04931672349492343,
+                -0.12005462326455756,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4202,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 257,
+              "max_cube_height_m": 1.1621718625451842,
+              "initial_cube_xyz": [
+                0.03788465065302411,
+                -0.20227128380165563,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4203,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9269032420173537,
+              "initial_cube_xyz": [
+                -0.02337782004141853,
+                -0.14588186213429113,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4204,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 203,
+              "max_cube_height_m": 1.0958086061271881,
+              "initial_cube_xyz": [
+                -0.04868299298608897,
+                -0.15306950835801353,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4205,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 257,
+              "max_cube_height_m": 1.1272571466465027,
+              "initial_cube_xyz": [
+                0.016486804849501383,
+                -0.18234830126333676,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4206,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 226,
+              "max_cube_height_m": 1.1519508054355738,
+              "initial_cube_xyz": [
+                0.018755034237273194,
+                -0.16317283686618128,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4207,
+              "group": "new_wide",
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "max_cube_height_m": 0.9279553107589746,
+              "initial_cube_xyz": [
+                0.059991672861166,
+                -0.17558638695825218,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4208,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 201,
+              "max_cube_height_m": 1.0514237861877458,
+              "initial_cube_xyz": [
+                -0.043286628270135796,
+                -0.1900825865874872,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            },
+            {
+              "seed": 4209,
+              "group": "new_wide",
+              "success": true,
+              "lifted": true,
+              "steps": 198,
+              "max_cube_height_m": 1.0795250944427457,
+              "initial_cube_xyz": [
+                -0.058185737172442194,
+                -0.13465684881314402,
+                0.9199083359543676
+              ],
+              "initial_observation_state": [
+                -0.20846466720104218,
+                2.486378941277123e-12,
+                1.1732795238494873,
+                3.1403393745422363,
+                0.0007735038525424898,
+                -0.0892220064997673,
+                0.038133252412080765,
+                -0.03813319280743599
+              ]
+            }
+          ],
+          "report": "development/recovery2000_h5/new_wide/evaluation/report.json",
+          "report_sha256": "173e05f19e51d15e8061d911b5b28a3fa5b7212ff9700fd1303b16bc63fbf7db",
+          "identity": {
+            "checkpoint_files": {
+              "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+              "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+              "model.safetensors": "16e4f0d7d476770c1c55072cfae80d05029ab8cfdcb02ff7ae82624905e484f2",
+              "phone_to_panda_provenance.json": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+              "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+              "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+              "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+              "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+              "train_config.json": "23b4f54e4a4e8563a30645eeebc746eab7014dbf64d7ec82be8981c2133a1dbd"
+            },
+            "n_action_steps": 5
+          },
+          "policy_settings": {
+            "checkpoint_n_action_steps": 5,
+            "n_action_steps": 5,
+            "chunk_size": 20,
+            "denoising_steps": 10,
+            "evaluation_override": 5
+          },
+          "wall_seconds": 245.41792061699925,
+          "comparison_contract": {
+            "control_hz": 20,
+            "horizon": 600,
+            "image_size": 256,
+            "orientation_control": "fixed_downward"
+          }
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "placements": 13,
+        "lifts": 13,
+        "failed_lift": 7,
+        "failed_after_lift": 0,
+        "placement_rate": 0.65,
+        "lift_rate": 0.65,
+        "interval_note": "No pooled binomial interval: the combined result uses fixed per-group start quotas."
+      }
+    }
+  },
+  "paired": {
+    "continuation2000_h5": {
+      "reference": "original_h5",
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "improved": 0,
+          "regressed": 1,
+          "both_success": 9,
+          "both_failure": 0,
+          "placement_rate_difference": -0.1,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        },
+        "new_wide": {
+          "trials": 10,
+          "improved": 1,
+          "regressed": 1,
+          "both_success": 5,
+          "both_failure": 3,
+          "placement_rate_difference": 0.0,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "improved": 1,
+        "regressed": 2,
+        "both_success": 14,
+        "both_failure": 3,
+        "placement_rate_difference": -0.05,
+        "exact_mcnemar_two_sided_p": 1.0,
+        "identical_initial_cube_and_robot_states": true
+      }
+    },
+    "uniform2000_h5": {
+      "reference": "original_h5",
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "improved": 0,
+          "regressed": 0,
+          "both_success": 10,
+          "both_failure": 0,
+          "placement_rate_difference": 0.0,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        },
+        "new_wide": {
+          "trials": 10,
+          "improved": 1,
+          "regressed": 1,
+          "both_success": 5,
+          "both_failure": 3,
+          "placement_rate_difference": 0.0,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "improved": 1,
+        "regressed": 1,
+        "both_success": 15,
+        "both_failure": 3,
+        "placement_rate_difference": 0.0,
+        "exact_mcnemar_two_sided_p": 1.0,
+        "identical_initial_cube_and_robot_states": true
+      }
+    },
+    "targeted2000_h5": {
+      "reference": "original_h5",
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "improved": 0,
+          "regressed": 3,
+          "both_success": 7,
+          "both_failure": 0,
+          "placement_rate_difference": -0.3,
+          "exact_mcnemar_two_sided_p": 0.25,
+          "identical_initial_cube_and_robot_states": true
+        },
+        "new_wide": {
+          "trials": 10,
+          "improved": 2,
+          "regressed": 3,
+          "both_success": 3,
+          "both_failure": 2,
+          "placement_rate_difference": -0.1,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "improved": 2,
+        "regressed": 6,
+        "both_success": 10,
+        "both_failure": 2,
+        "placement_rate_difference": -0.2,
+        "exact_mcnemar_two_sided_p": 0.2890625,
+        "identical_initial_cube_and_robot_states": true
+      }
+    },
+    "uniform4000_h5": {
+      "reference": "original_h5",
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "improved": 0,
+          "regressed": 0,
+          "both_success": 10,
+          "both_failure": 0,
+          "placement_rate_difference": 0.0,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        },
+        "new_wide": {
+          "trials": 10,
+          "improved": 1,
+          "regressed": 1,
+          "both_success": 5,
+          "both_failure": 3,
+          "placement_rate_difference": 0.0,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "improved": 1,
+        "regressed": 1,
+        "both_success": 15,
+        "both_failure": 3,
+        "placement_rate_difference": 0.0,
+        "exact_mcnemar_two_sided_p": 1.0,
+        "identical_initial_cube_and_robot_states": true
+      }
+    },
+    "recovery2000_h5": {
+      "reference": "original_h5",
+      "groups": {
+        "new_narrow": {
+          "trials": 10,
+          "improved": 0,
+          "regressed": 3,
+          "both_success": 7,
+          "both_failure": 0,
+          "placement_rate_difference": -0.3,
+          "exact_mcnemar_two_sided_p": 0.25,
+          "identical_initial_cube_and_robot_states": true
+        },
+        "new_wide": {
+          "trials": 10,
+          "improved": 2,
+          "regressed": 2,
+          "both_success": 4,
+          "both_failure": 2,
+          "placement_rate_difference": 0.0,
+          "exact_mcnemar_two_sided_p": 1.0,
+          "identical_initial_cube_and_robot_states": true
+        }
+      },
+      "combined": {
+        "trials": 20,
+        "improved": 2,
+        "regressed": 5,
+        "both_success": 11,
+        "both_failure": 2,
+        "placement_rate_difference": -0.15,
+        "exact_mcnemar_two_sided_p": 0.453125,
+        "identical_initial_cube_and_robot_states": true
+      }
+    }
+  },
+  "limits": [
+    "Development results are diagnostics and selection evidence, not a held-out final test.",
+    "One custom simulation scene, five source recordings, fixed cube and target; no new human recordings or real-robot evidence.",
+    "Hybrid control: learned XYZ/gripper with fixed downward wrist feedback.",
+    "Lift means cube centre exceeded 0.97 m. Failed after lift combines dropped-object and unsuccessful-placement outcomes; it does not diagnose which occurred.",
+    "Wilson intervals describe each start group's marginal binomial proportion; they are not confidence intervals on the paired difference.",
+    "Combined rates use fixed per-group trial quotas (new_narrow: 50.0%, new_wide: 50.0%). No pooled binomial interval is reported for this fixed stratified design.",
+    "Intervals and exact paired p values compare these fixed checkpoints over simulator starts. One training seed provides no estimate of optimizer-seed or training-run variability.",
+    "Development comparisons used for candidate selection are exploratory. Final candidate identities must be locked before final outcomes are observed; final outcomes must not select a new winner.",
+    "Repeated starts in this scene do not establish broad task generalization. A selected rollout video illustrates one seed; aggregate counts provide the performance comparison.",
+    "Recorded wall times may include concurrent workloads and are not a latency benchmark."
+  ]
+}

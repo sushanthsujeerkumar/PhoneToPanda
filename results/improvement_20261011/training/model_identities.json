@@ -1,0 +1,80 @@
+{
+  "kind": "checkpoint_metadata_curation",
+  "models": {
+    "original_main": {
+      "checkpoint": "checkpoints/main",
+      "reported_model_sha256": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+      "identity_source": "runs/improvement_20261011/study_plan.json",
+      "identity_source_sha256": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+      "copied_metadata": [
+        "config.json",
+        "train_config.json",
+        "phone_to_panda_provenance.json",
+        "policy_preprocessor.json",
+        "policy_postprocessor.json"
+      ],
+      "weights_and_tensors_included": false
+    },
+    "uniform2k": {
+      "checkpoint": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model",
+      "reported_model_sha256": "79bd1f50ba3298f6a2b9e7383bddca48251f94aff10a8437050ec3edc7695afd",
+      "identity_source": "runs/improvement_20261011/completed_training_2000.json",
+      "identity_source_sha256": "3841e93b4c378d8d2261ba3b75bb9768454c3e83f2a323a0e638da0ade244fa5",
+      "copied_metadata": [
+        "config.json",
+        "train_config.json",
+        "frozen_normalization.json",
+        "phone_to_panda_provenance.json",
+        "policy_preprocessor.json",
+        "policy_postprocessor.json"
+      ],
+      "weights_and_tensors_included": false
+    },
+    "targeted2k": {
+      "checkpoint": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model",
+      "reported_model_sha256": "a397df828991e22e784a8c990fb5e7648e377bf0c798b8920d062fedcfd178f4",
+      "identity_source": "runs/improvement_20261011/completed_training_2000.json",
+      "identity_source_sha256": "3841e93b4c378d8d2261ba3b75bb9768454c3e83f2a323a0e638da0ade244fa5",
+      "copied_metadata": [
+        "config.json",
+        "train_config.json",
+        "frozen_normalization.json",
+        "phone_to_panda_provenance.json",
+        "policy_preprocessor.json",
+        "policy_postprocessor.json"
+      ],
+      "weights_and_tensors_included": false
+    },
+    "continuation2k": {
+      "checkpoint": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model",
+      "reported_model_sha256": "4deffd0d0e8db42f60f35ab516d6b67e8086da3fba590343bcb41ada0cda6d37",
+      "identity_source": "runs/improvement_20261011/completed_training_2000.json",
+      "identity_source_sha256": "3841e93b4c378d8d2261ba3b75bb9768454c3e83f2a323a0e638da0ade244fa5",
+      "copied_metadata": [
+        "config.json",
+        "train_config.json",
+        "frozen_normalization.json",
+        "phone_to_panda_provenance.json",
+        "policy_preprocessor.json",
+        "policy_postprocessor.json"
+      ],
+      "weights_and_tensors_included": false
+    },
+    "uniform4k": {
+      "checkpoint": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model",
+      "reported_model_sha256": "f0ada1ada9db6fe08cfeca5f528309c2ada89c726a578fce8fda801976a5761f",
+      "identity_source": "runs/improvement_20261011/completed_training_uniform_extended.json",
+      "identity_source_sha256": "7a40e3820ba24d324b716d2d77ccb0a988ed2510fe93a16fce48f85e63b322b4",
+      "copied_metadata": [
+        "config.json",
+        "train_config.json",
+        "frozen_normalization.json",
+        "phone_to_panda_provenance.json",
+        "policy_preprocessor.json",
+        "policy_postprocessor.json"
+      ],
+      "weights_and_tensors_included": false
+    }
+  },
+  "recovery_checkpoint": "Pending; intentionally omitted until completed training is verified."
+}

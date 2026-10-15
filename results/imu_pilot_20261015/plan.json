@@ -1,0 +1,49 @@
+{
+  "kind": "single_recording_imu_assisted_demonstration_pilot",
+  "paired_video": "IMG_2276.MOV",
+  "sensor_session_id": "20261015T165828Z_92196435",
+  "source_human_recordings": 1,
+  "primary_offset_s": 0.54,
+  "offset_status": "provisional",
+  "replay_seeds": [
+    81000,
+    81001,
+    81002,
+    81003
+  ],
+  "replay_gate": "All four attempts retained. Export only physically successful episodes; require four successes before augmentation. No synthetic setup episodes.",
+  "training": {
+    "initial_checkpoint": "checkpoints/main",
+    "updates_per_arm": 500,
+    "learning_rate": 1e-05,
+    "batch_size": 4,
+    "seed": 42,
+    "normalization": "preserve original checkpoint statistics",
+    "arms": {
+      "continuation": "Original 20 video-derived robot episodes",
+      "augmented": "Original 20 plus four robot replays of one IMU-estimated wrist trajectory with video-labelled event times"
+    }
+  },
+  "evaluation": {
+    "models": [
+      "original",
+      "continuation",
+      "augmented"
+    ],
+    "narrow": {
+      "radius_m": 0.035,
+      "seed": 84000,
+      "episodes": 5
+    },
+    "wide": {
+      "radius_m": 0.07,
+      "seed": 85000,
+      "episodes": 5
+    },
+    "n_action_steps": 5,
+    "selection": "No model selection on these pilot evaluation starts; report every result.",
+    "interpretation": "New simulator starts, same scene; not held-out human sessions."
+  },
+  "scope": "Comparison of extra IMU-assisted demonstrations against equal-budget continued training. Not a matched vision-only vs IMU-only vs sensor-fusion ablation. Policy still consumes simulated cameras and robot state, not live IMUs.",
+  "publication": "Local experiment; no commit or push performed."
+}

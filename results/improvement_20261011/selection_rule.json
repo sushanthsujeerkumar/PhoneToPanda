@@ -1,0 +1,10 @@
+{
+  "selection_groups": [
+    "new_narrow",
+    "new_wide"
+  ],
+  "rule": "Select maximum combined placement successes on the20 previously frozen development starts. Tie: retain original_h5 if tied; otherwise prefer5 actions per observation and fewer changes. Known wide cases are diagnostics and cannot decide candidate selection.",
+  "candidate_budget": "Original h5, original h1 if its known-wide diagnostic is competitive, uniform2000 h5, targeted2000 h5. Additional interventions require a separately recorded development-only rationale and cannot use final-test outcomes.",
+  "promotion_acceptance": "The locked candidate must improve total final placement count without reducing narrow-range placement count to be recommended over the original. Otherwise retain original as default and report result honestly.",
+  "timing_note": "Several diagnostics share the GPU. Do not treat their wall time or inference timing as isolated latency benchmarks."
+}

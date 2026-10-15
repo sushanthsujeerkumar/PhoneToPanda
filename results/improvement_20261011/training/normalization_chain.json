@@ -1,0 +1,94 @@
+{
+  "kind": "normalization_parent_chain_metadata_check",
+  "chains": [
+    {
+      "child": "uniform2k",
+      "parent": "original_main",
+      "child_evidence": "results/improvement_20261011/training/uniform2k/frozen_normalization.json",
+      "child_evidence_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "verified_parent_files": {
+        "policy_preprocessor.json": {
+          "sha256": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+          "method": "byte hash of curated parent JSON"
+        },
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "method": "parent normalization tensor hash recorded in preserved verification metadata; tensor not copied"
+        },
+        "policy_postprocessor.json": {
+          "sha256": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+          "method": "byte hash of curated parent JSON"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "method": "parent normalization tensor hash recorded in preserved verification metadata; tensor not copied"
+        },
+        "config.json": {
+          "sha256": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+          "method": "byte hash of curated parent JSON"
+        }
+      }
+    },
+    {
+      "child": "uniform4k",
+      "parent": "uniform2k",
+      "child_evidence": "results/improvement_20261011/training/uniform4k/frozen_normalization.json",
+      "child_evidence_sha256": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+      "verified_parent_files": {
+        "policy_preprocessor.json": {
+          "sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+          "method": "byte hash of curated parent JSON"
+        },
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "sha256": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+          "method": "parent normalization tensor hash recorded in preserved verification metadata; tensor not copied"
+        },
+        "policy_postprocessor.json": {
+          "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+          "method": "byte hash of curated parent JSON"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "method": "parent normalization tensor hash recorded in preserved verification metadata; tensor not copied"
+        },
+        "config.json": {
+          "sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+          "method": "byte hash of curated parent JSON"
+        },
+        "frozen_normalization.json": {
+          "sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+          "method": "byte hash of curated parent JSON"
+        }
+      }
+    },
+    {
+      "child": "recovery2k",
+      "parent": "original_main",
+      "child_evidence": "results/improvement_20261011/training/recovery2k/frozen_normalization.json",
+      "child_evidence_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "verified_parent_files": {
+        "policy_preprocessor.json": {
+          "sha256": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+          "method": "byte hash of curated parent JSON"
+        },
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "method": "parent normalization tensor hash recorded in preserved verification metadata; tensor not copied"
+        },
+        "policy_postprocessor.json": {
+          "sha256": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+          "method": "byte hash of curated parent JSON"
+        },
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "method": "parent normalization tensor hash recorded in preserved verification metadata; tensor not copied"
+        },
+        "config.json": {
+          "sha256": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+          "method": "byte hash of curated parent JSON"
+        }
+      }
+    }
+  ],
+  "scope": "Checks source-file identity chains recorded in metadata. Original root verification establishes transform tensor equality; no weight or tensor payloads are included."
+}

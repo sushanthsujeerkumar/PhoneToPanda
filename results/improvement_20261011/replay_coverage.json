@@ -1,0 +1,1432 @@
+{
+  "kind": "replay_start_coverage_not_policy_evaluation",
+  "source_recordings": 5,
+  "coordinate_method": "Median unsaturated approach target: state_xy + action_xy * 0.05 / 0.65; verified against recorded reset metadata.",
+  "original": [
+    {
+      "name": "IMG_2092_seed_0.npz",
+      "seed": 0,
+      "clip": "IMG_2092",
+      "xy": [
+        0.00958731787529989,
+        -0.18611493011793265
+      ],
+      "frames": 212,
+      "source": {
+        "video": "data/raw/IMG_2092.MOV",
+        "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+        "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+        "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+        "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+      },
+      "state_action_sha256": "fd9c9a972c69a99e678ab9b9454434c451b70390368cbd3ec6afc8cb3a362cc8",
+      "metadata_sha256": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150"
+    },
+    {
+      "name": "IMG_2092_seed_1.npz",
+      "seed": 1,
+      "clip": "IMG_2092",
+      "xy": [
+        0.000827513850079134,
+        -0.13846754125104502
+      ],
+      "frames": 210,
+      "source": {
+        "video": "data/raw/IMG_2092.MOV",
+        "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+        "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+        "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+        "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+      },
+      "state_action_sha256": "86617ae340a315bdd0fd4c14d0c27af221cfcca9b1f3558e6e4360649fe900d9",
+      "metadata_sha256": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32"
+    },
+    {
+      "name": "IMG_2092_seed_2.npz",
+      "seed": 2,
+      "clip": "IMG_2092",
+      "xy": [
+        -0.016687150471485578,
+        -0.18410561978816986
+      ],
+      "frames": 208,
+      "source": {
+        "video": "data/raw/IMG_2092.MOV",
+        "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+        "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+        "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+        "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+      },
+      "state_action_sha256": "a56d7a19d223b38dfac80e7a3195c10dfd82ea6a7ab9317e4fb932c886650add",
+      "metadata_sha256": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b"
+    },
+    {
+      "name": "IMG_2092_seed_3.npz",
+      "seed": 3,
+      "clip": "IMG_2092",
+      "xy": [
+        -0.029004557488056328,
+        -0.1884232644851391
+      ],
+      "frames": 207,
+      "source": {
+        "video": "data/raw/IMG_2092.MOV",
+        "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+        "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+        "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+        "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+      },
+      "state_action_sha256": "12d77267129e778de710bcc5693243fd882175b58afd90916e812e913d184ada",
+      "metadata_sha256": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba"
+    },
+    {
+      "name": "IMG_2093_seed_4.npz",
+      "seed": 4,
+      "clip": "IMG_2093",
+      "xy": [
+        0.031013927350823697,
+        -0.169207071312345
+      ],
+      "frames": 236,
+      "source": {
+        "video": "data/raw/IMG_2093.MOV",
+        "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+        "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+        "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+        "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+      },
+      "state_action_sha256": "c5d62936b7cb58ef2dcdb14b449bd5fe218e805ceea2c1923d7280bd1d8ebc89",
+      "metadata_sha256": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a"
+    },
+    {
+      "name": "IMG_2093_seed_5.npz",
+      "seed": 5,
+      "clip": "IMG_2093",
+      "xy": [
+        0.02135020455058951,
+        -0.14844414473582918
+      ],
+      "frames": 235,
+      "source": {
+        "video": "data/raw/IMG_2093.MOV",
+        "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+        "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+        "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+        "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+      },
+      "state_action_sha256": "4b56e628bd9e80d11abcd19c7bc852f64603006c0d0d37e8fd42d1e12496b547",
+      "metadata_sha256": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb"
+    },
+    {
+      "name": "IMG_2093_seed_6.npz",
+      "seed": 6,
+      "clip": "IMG_2093",
+      "xy": [
+        0.0026715050379817317,
+        -0.18097103902926812
+      ],
+      "frames": 232,
+      "source": {
+        "video": "data/raw/IMG_2093.MOV",
+        "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+        "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+        "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+        "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+      },
+      "state_action_sha256": "05a81ce936e2fb24717c7b2948f9d9768f57259192d44ea399deb7e4ba14ef8f",
+      "metadata_sha256": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f"
+    },
+    {
+      "name": "IMG_2093_seed_7.npz",
+      "seed": 7,
+      "clip": "IMG_2093",
+      "xy": [
+        0.00875668199016498,
+        -0.1421950339124753
+      ],
+      "frames": 232,
+      "source": {
+        "video": "data/raw/IMG_2093.MOV",
+        "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+        "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+        "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+        "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+      },
+      "state_action_sha256": "7ae2f44e2b7630a275b86005e4a291a4df2d8bf00ce9e5fcbc07ba17ba0c24f4",
+      "metadata_sha256": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4"
+    },
+    {
+      "name": "IMG_2095_seed_10.npz",
+      "seed": 10,
+      "clip": "IMG_2095",
+      "xy": [
+        0.03192011969020733,
+        -0.19046227329370316
+      ],
+      "frames": 244,
+      "source": {
+        "video": "data/raw/IMG_2095.MOV",
+        "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+        "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+        "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+        "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+      },
+      "state_action_sha256": "3aba42e516dd051567560abdde22b22cc0dcfaaed4219fe10c3eb2effdf453b5",
+      "metadata_sha256": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7"
+    },
+    {
+      "name": "IMG_2095_seed_11.npz",
+      "seed": 11,
+      "clip": "IMG_2095",
+      "xy": [
+        -0.026000085644997083,
+        -0.1700505496790776
+      ],
+      "frames": 236,
+      "source": {
+        "video": "data/raw/IMG_2095.MOV",
+        "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+        "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+        "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+        "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+      },
+      "state_action_sha256": "3fd2f9ed8bf13247aa10410fde05ce45b18848444e6cdd8b6966a23198eada9f",
+      "metadata_sha256": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf"
+    },
+    {
+      "name": "IMG_2095_seed_8.npz",
+      "seed": 8,
+      "clip": "IMG_2095",
+      "xy": [
+        -0.012111940636084628,
+        -0.13589062096658522
+      ],
+      "frames": 237,
+      "source": {
+        "video": "data/raw/IMG_2095.MOV",
+        "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+        "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+        "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+        "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+      },
+      "state_action_sha256": "29dcf0b2f485d0b61d6feabefd9f0860a80776a65613ae0da5b439156f60f6d7",
+      "metadata_sha256": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04"
+    },
+    {
+      "name": "IMG_2095_seed_9.npz",
+      "seed": 9,
+      "clip": "IMG_2095",
+      "xy": [
+        0.025917444664698384,
+        -0.18492279542036927
+      ],
+      "frames": 243,
+      "source": {
+        "video": "data/raw/IMG_2095.MOV",
+        "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+        "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+        "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+        "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+      },
+      "state_action_sha256": "0d20aa0c73085e2c44dc39e268ddb32cd22bc90bae392fab867aeb1526bb3e70",
+      "metadata_sha256": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26"
+    },
+    {
+      "name": "IMG_2096_seed_12.npz",
+      "seed": 12,
+      "clip": "IMG_2096",
+      "xy": [
+        -0.017442287733921636,
+        -0.1387272940035193
+      ],
+      "frames": 223,
+      "source": {
+        "video": "data/raw/IMG_2096.MOV",
+        "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+        "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+        "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+        "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+      },
+      "state_action_sha256": "302e7ee0f7fbb1daa92bd29395e29da9241b06fb6ad58db7fa023668acad5851",
+      "metadata_sha256": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0"
+    },
+    {
+      "name": "IMG_2096_seed_13.npz",
+      "seed": 13,
+      "clip": "IMG_2096",
+      "xy": [
+        0.0255358311562584,
+        -0.14512882396005666
+      ],
+      "frames": 229,
+      "source": {
+        "video": "data/raw/IMG_2096.MOV",
+        "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+        "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+        "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+        "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+      },
+      "state_action_sha256": "3a1a4760c5c1c89d51e41b97ac3931a0db98a4ef177f840ead5fa40031a9d28c",
+      "metadata_sha256": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff"
+    },
+    {
+      "name": "IMG_2096_seed_14.npz",
+      "seed": 14,
+      "clip": "IMG_2096",
+      "xy": [
+        0.023168831920394532,
+        -0.17973373332419074
+      ],
+      "frames": 229,
+      "source": {
+        "video": "data/raw/IMG_2096.MOV",
+        "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+        "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+        "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+        "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+      },
+      "state_action_sha256": "9c61123c758e5dfabe9d3e6fd5acbc92bc6a5cfdc7bd51bbb7d8a38e6e23ca57",
+      "metadata_sha256": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac"
+    },
+    {
+      "name": "IMG_2096_seed_15.npz",
+      "seed": 15,
+      "clip": "IMG_2096",
+      "xy": [
+        0.01349203560787898,
+        -0.1478928022373181
+      ],
+      "frames": 227,
+      "source": {
+        "video": "data/raw/IMG_2096.MOV",
+        "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+        "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+        "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+        "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+      },
+      "state_action_sha256": "fc9381713d0b03cd6e66848e6a0f97a3ca89adb547361e7300eed0778442ebc8",
+      "metadata_sha256": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa"
+    },
+    {
+      "name": "IMG_2098_seed_16.npz",
+      "seed": 16,
+      "clip": "IMG_2098",
+      "xy": [
+        0.004684178731762446,
+        -0.1748479098224869
+      ],
+      "frames": 208,
+      "source": {
+        "video": "data/raw/IMG_2098.MOV",
+        "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+        "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+        "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+        "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+      },
+      "state_action_sha256": "cb9359b1ef4cdc64013212df562dcf137ea7268ffaf11a65ba593cb3bd650a33",
+      "metadata_sha256": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80"
+    },
+    {
+      "name": "IMG_2098_seed_17.npz",
+      "seed": 17,
+      "clip": "IMG_2098",
+      "xy": [
+        0.024155235150828958,
+        -0.19373188361238974
+      ],
+      "frames": 211,
+      "source": {
+        "video": "data/raw/IMG_2098.MOV",
+        "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+        "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+        "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+        "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+      },
+      "state_action_sha256": "32c98d2a51153d722ee1e0ef0e811b4cb4939474ddb7b23c8f669ab8a75d1770",
+      "metadata_sha256": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22"
+    },
+    {
+      "name": "IMG_2098_seed_18.npz",
+      "seed": 18,
+      "clip": "IMG_2098",
+      "xy": [
+        -0.007048596269809283,
+        -0.15478097246243402
+      ],
+      "frames": 206,
+      "source": {
+        "video": "data/raw/IMG_2098.MOV",
+        "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+        "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+        "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+        "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+      },
+      "state_action_sha256": "6a28bc02e58d99732a364a6126fccd90f08e9ebc8ffc8f28e06e9f3c55c4108e",
+      "metadata_sha256": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674"
+    },
+    {
+      "name": "IMG_2098_seed_19.npz",
+      "seed": 19,
+      "clip": "IMG_2098",
+      "xy": [
+        -0.005573484903344739,
+        -0.1401891459066134
+      ],
+      "frames": 206,
+      "source": {
+        "video": "data/raw/IMG_2098.MOV",
+        "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+        "kind": "personal_video",
+        "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+        "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+        "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+        "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+        "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+      },
+      "state_action_sha256": "e2d8c7c9f356447209f0b0d9128dc8fe1b66b98305ff1339c0f7fe62077e4fc9",
+      "metadata_sha256": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4"
+    }
+  ],
+  "arms": {
+    "uniform": {
+      "points": [
+        {
+          "name": "IMG_2092_seed_11000.npz",
+          "seed": 11000,
+          "clip": "IMG_2092",
+          "xy": [
+            0.05227461600532898,
+            -0.21653418288154241
+          ],
+          "frames": 219,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "f7bb8267c10d1ae2c8fee06fee192078f0169b297989443fcad787e2a7f5c326",
+          "metadata_sha256": "45461deecf97b5a1b33b8e6e0d002008db8329332be60400e9db00e63d0fd21b"
+        },
+        {
+          "name": "IMG_2092_seed_11001.npz",
+          "seed": 11001,
+          "clip": "IMG_2092",
+          "xy": [
+            0.04613470329115024,
+            -0.2114660034959133
+          ],
+          "frames": 218,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "3912e9c696ed81f39476953114404263ace382821f344a7a2c679033b74e84f0",
+          "metadata_sha256": "13cf58ad33300dc839501230aa1ad4c3295fc27fcd3ac1bfb4f9d274a1587309"
+        },
+        {
+          "name": "IMG_2092_seed_11002.npz",
+          "seed": 11002,
+          "clip": "IMG_2092",
+          "xy": [
+            -0.019344543608335346,
+            -0.14556095462578994
+          ],
+          "frames": 208,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "ffca2363b0b815a6ceff71cba566d68405dc8e712d48ac3dacfef647cf960291",
+          "metadata_sha256": "4da78e433185c1e19641457fac2f26611e4beabc547a151be3910fe5be2f7049"
+        },
+        {
+          "name": "IMG_2092_seed_11003.npz",
+          "seed": 11003,
+          "clip": "IMG_2092",
+          "xy": [
+            -0.023074712317723494,
+            -0.1578984151665981
+          ],
+          "frames": 207,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "c43f65b926b7d6435f7c45dadbebbf8352744d3a270029597dbd460e901052fb",
+          "metadata_sha256": "c7ef6a57afbdf4d21d97610e7fedcc7180432044f92ee7e7ca0fcc98e3e6021a"
+        },
+        {
+          "name": "IMG_2093_seed_11010.npz",
+          "seed": 11010,
+          "clip": "IMG_2093",
+          "xy": [
+            -0.02025241805956914,
+            -0.19880425586150244
+          ],
+          "frames": 229,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "f5b9c587fbbcfc25ab0d73d5f02c2dcfe4f5a5328060abb84263a8dc8e4a1f7f",
+          "metadata_sha256": "2ffb96a98b5e527a680bc110a3750e7dc42f1b50fb5aacae7cb85112f2eb67ad"
+        },
+        {
+          "name": "IMG_2093_seed_11011.npz",
+          "seed": 11011,
+          "clip": "IMG_2093",
+          "xy": [
+            0.008239043840708641,
+            -0.14359109435911074
+          ],
+          "frames": 232,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "fa87126721159eebf84cf883fcb1cc11720507a0ea66a23ca79516852f6f2874",
+          "metadata_sha256": "6c5b046d3bd5a1403cba30c345aa474fbd468f49079c65d4890075aa40d55c10"
+        },
+        {
+          "name": "IMG_2093_seed_11012.npz",
+          "seed": 11012,
+          "clip": "IMG_2093",
+          "xy": [
+            -0.001270744376457654,
+            -0.1815291909644237
+          ],
+          "frames": 232,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "74aa214a9e174270c0315c423ae607ea4515634e69fda55b20e4c5842843de52",
+          "metadata_sha256": "eb20e1ea177a912a49a0ffd11498f0c64237076c16c24d508ef395bcb837c430"
+        },
+        {
+          "name": "IMG_2093_seed_11013.npz",
+          "seed": 11013,
+          "clip": "IMG_2093",
+          "xy": [
+            0.05576493103916828,
+            -0.13287378904911187
+          ],
+          "frames": 239,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "74bca1cec6344aec8cc1791f583884b4d2649ec505e16cae5e1840cab565f401",
+          "metadata_sha256": "2cb9c10d8ed10186210da6629cf849f96fc4124f5301806c458ec9b094002f32"
+        },
+        {
+          "name": "IMG_2095_seed_11020.npz",
+          "seed": 11020,
+          "clip": "IMG_2095",
+          "xy": [
+            -0.02935949942240348,
+            -0.17033096918692955
+          ],
+          "frames": 236,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "b7be23dedb985a1d902db09ec2b082399db26488d050d3e73df55395bb24b61c",
+          "metadata_sha256": "b45af8cf01cc47026898686264e399024505911257f8d3f9c7e061003ff1ae29"
+        },
+        {
+          "name": "IMG_2095_seed_11021.npz",
+          "seed": 11021,
+          "clip": "IMG_2095",
+          "xy": [
+            0.03797319961281923,
+            -0.16547235934278712
+          ],
+          "frames": 245,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "a089856e80fd8591d0ba310388f9dabcc647d70b622087ab1fdb62b1114de1ab",
+          "metadata_sha256": "1f0afbc7ae50c651c8c5cc470f089b5dedf88a4452b21e331d098f4fa852e976"
+        },
+        {
+          "name": "IMG_2095_seed_11022.npz",
+          "seed": 11022,
+          "clip": "IMG_2095",
+          "xy": [
+            -0.006251036690977903,
+            -0.13407943598352945
+          ],
+          "frames": 238,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "0b66d429707deab922b0ede1383d3544d62b414be1c0c1bc280bed8e47dc30bf",
+          "metadata_sha256": "be0c03ef8d65b93be9ce585f4ae88bc15f17ecd3a1e5b6beab8740ba8d839f01"
+        },
+        {
+          "name": "IMG_2095_seed_11023.npz",
+          "seed": 11023,
+          "clip": "IMG_2095",
+          "xy": [
+            0.05821114234053172,
+            -0.13477229703074464
+          ],
+          "frames": 247,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "e88b774d09f441e615a0824b070ecf931e593d3ff5a13b519b339ae98767505a",
+          "metadata_sha256": "b86f0ee07c8565f919bba5ab94a4a687c3b47afd0dd08538a19f72a67080506b"
+        },
+        {
+          "name": "IMG_2096_seed_11030.npz",
+          "seed": 11030,
+          "clip": "IMG_2096",
+          "xy": [
+            -0.05893019013679944,
+            -0.11123235953541902
+          ],
+          "frames": 218,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "e55e283585e33d16467e425a6bf483a6577a805d070fd47ed0556a8e8392a72a",
+          "metadata_sha256": "b329681eb9a4e792767e19db4c217df20f141498e25604769742b9b9c120866d"
+        },
+        {
+          "name": "IMG_2096_seed_11031.npz",
+          "seed": 11031,
+          "clip": "IMG_2096",
+          "xy": [
+            0.05759225957668745,
+            -0.11799580589509927
+          ],
+          "frames": 233,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "e29497445e685728de0f39301ad7abed18688ea268d2203a3c3c779ac17d5d13",
+          "metadata_sha256": "9038cbfb3ae022850e6e5f815dfbd24da3b713c52025b8a0d1041ad96d7c1da9"
+        },
+        {
+          "name": "IMG_2096_seed_11032.npz",
+          "seed": 11032,
+          "clip": "IMG_2096",
+          "xy": [
+            0.010522999478360781,
+            -0.21031844443999803
+          ],
+          "frames": 228,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "915fd12e7f02caa5a55030894683cffa8fa7e729db536f52559972065523e4fb",
+          "metadata_sha256": "4b478dfd3dd0b754a9cdc534f6d3b8b4088e80de3d2f28a21db19a240f4beba8"
+        },
+        {
+          "name": "IMG_2096_seed_11033.npz",
+          "seed": 11033,
+          "clip": "IMG_2096",
+          "xy": [
+            -0.03196932088870268,
+            -0.14788551342028838
+          ],
+          "frames": 221,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "5aea12f504f013eedd8688a2bbb726ce40ec48c54c0a7dc73e6af600f00350be",
+          "metadata_sha256": "c96cecd0e842f42eba764892cd981807f565a39d144abcd0e9835c8dd029009f"
+        },
+        {
+          "name": "IMG_2098_seed_11040.npz",
+          "seed": 11040,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.027067075555141155,
+            -0.15060675180015656
+          ],
+          "frames": 204,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "363c2088d55f087df8513611547ab0c392962313385a0c241e49c053ea6e60e2",
+          "metadata_sha256": "ee7a227dba8271275476423ee375926f96daa5b6d251004d59265532e45a8d29"
+        },
+        {
+          "name": "IMG_2098_seed_11041.npz",
+          "seed": 11041,
+          "clip": "IMG_2098",
+          "xy": [
+            0.05795697423701103,
+            -0.11687813853271879
+          ],
+          "frames": 215,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "10b5d7f17d976edc51178e68f58af321d38df1f9dde78c268e0643d22fd7b581",
+          "metadata_sha256": "92fc3b6aa17c0c9f1abcc44052810ab1e4c5cdd3010d22297488b938bb1524ac"
+        },
+        {
+          "name": "IMG_2098_seed_11042.npz",
+          "seed": 11042,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.05878468545583578,
+            -0.14152808945912582
+          ],
+          "frames": 200,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "d44b45676b97768587f947001d741340dda2ace3395dc769dcb8993da6d31768",
+          "metadata_sha256": "53a10cbcc6a4ff45f738a6c79e38573bbe101f6d0a09faefcbce98fffb4154e7"
+        },
+        {
+          "name": "IMG_2098_seed_11043.npz",
+          "seed": 11043,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.03793181736881916,
+            -0.22045067640451285
+          ],
+          "frames": 206,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "44f57091a43f9477612cc94ba9fc1f1f4db69c80cbf67ad7ff4c20b6335658f4",
+          "metadata_sha256": "883b187f73a5f998a544b87df45708eaae00a7427f6dc1f2f8e502700dc80eb5"
+        }
+      ],
+      "selected_per_clip": {
+        "IMG_2092": 4,
+        "IMG_2093": 4,
+        "IMG_2095": 4,
+        "IMG_2096": 4,
+        "IMG_2098": 4
+      },
+      "planned_per_clip": {
+        "IMG_2092": 10,
+        "IMG_2093": 10,
+        "IMG_2095": 10,
+        "IMG_2096": 10,
+        "IMG_2098": 10
+      },
+      "attempted": 20,
+      "selected": 20,
+      "unused_candidates": 30,
+      "plan_sha256": "d6eac93f54c346b8c3bd4c085bf4856efca03b684313922728575b03127e2df2"
+    },
+    "targeted": {
+      "points": [
+        {
+          "name": "IMG_2092_seed_12000.npz",
+          "seed": 12000,
+          "clip": "IMG_2092",
+          "xy": [
+            -0.044284408482221455,
+            -0.20345396720446074
+          ],
+          "frames": 207,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "d195db1c3fe8ab100e0a66b2d54dcf01051e2069298e2d38a30cea47712b9685",
+          "metadata_sha256": "7dc082a6c86744839f2733b895de730508c361ab033fcea5c79c7514cc9f1fdd"
+        },
+        {
+          "name": "IMG_2092_seed_12001.npz",
+          "seed": 12001,
+          "clip": "IMG_2092",
+          "xy": [
+            -0.03523863995304474,
+            -0.1883440212561534
+          ],
+          "frames": 207,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "48a997d860495de94513e5e194b6ab1a8ce33a729638f6dd9ac579031bca1b75",
+          "metadata_sha256": "2253760f2dacdf5ef94fc94adff686dfc9f6c80bbc4150179fd3559a2a756f8e"
+        },
+        {
+          "name": "IMG_2092_seed_12002.npz",
+          "seed": 12002,
+          "clip": "IMG_2092",
+          "xy": [
+            -0.053714136664684,
+            -0.18455084355977866
+          ],
+          "frames": 205,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "63d2a5c98d34139c7f9ebca2d47d4039c49fed8d2bbfd86afe93a37a2d81d538",
+          "metadata_sha256": "cc8023a919045120e6f40f99d56b2b6b88af1a5c8b785408ab4041d788d9cf91"
+        },
+        {
+          "name": "IMG_2092_seed_12003.npz",
+          "seed": 12003,
+          "clip": "IMG_2092",
+          "xy": [
+            0.01923655328125908,
+            -0.22999999987391326
+          ],
+          "frames": 214,
+          "source": {
+            "video": "data/raw/IMG_2092.MOV",
+            "sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7dd311a8f861653e88538c48d9a41a4786843aca34a07a3e72400404c90fb54a",
+            "reference_board_sha256": "6881b1f49fa016db1f4177004c7dbeed3e68063d9e74725a781bb11829aba709",
+            "original_capture_sha256": "452a1203faba56cada0a232d2580f378cc6c9255c2c426f642c7f1705186c3ab",
+            "public_sha256": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b"
+          },
+          "state_action_sha256": "ec33b02b094637b8506e427c12fb0d95816787e3446b508733df1860aec89db0",
+          "metadata_sha256": "a1a8b1ee5c3ea075fbbc177bb825f1c1d7659f6e43be3f621476ef8bb31b1b78"
+        },
+        {
+          "name": "IMG_2093_seed_12010.npz",
+          "seed": 12010,
+          "clip": "IMG_2093",
+          "xy": [
+            -0.03351042591608488,
+            -0.21002561656328347
+          ],
+          "frames": 229,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "723a478dbdc365bb8b346ceabde5f5b8997a53ac801be2ed603379f0ad4ddcb8",
+          "metadata_sha256": "144a3794b2854805af909aff8d833b91968db4dc0a880992c628a4681c2502b6"
+        },
+        {
+          "name": "IMG_2093_seed_12011.npz",
+          "seed": 12011,
+          "clip": "IMG_2093",
+          "xy": [
+            -0.04851216507645754,
+            -0.19215245315661797
+          ],
+          "frames": 227,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "5a20ec697bb36c576d17d4a3cc7102fef9cae3cbd9de2223e93984cf9aad32f5",
+          "metadata_sha256": "4b47db8fdba3c6ef8390f687a605af4c639ee95b6b1596604268d4c1d90ed9a0"
+        },
+        {
+          "name": "IMG_2093_seed_12012.npz",
+          "seed": 12012,
+          "clip": "IMG_2093",
+          "xy": [
+            0.006215948235386841,
+            -0.22999999958735245
+          ],
+          "frames": 234,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "58279d1a94dbd305f009684f33dbb8ab1eb74557ec3e24cb5ab10c9ac82660d5",
+          "metadata_sha256": "d1f65022b3fb339b788b2a2c50c258b41098f338441b6f007fd6bdf5b5e6e75d"
+        },
+        {
+          "name": "IMG_2093_seed_12013.npz",
+          "seed": 12013,
+          "clip": "IMG_2093",
+          "xy": [
+            -0.05804004405553524,
+            -0.1927565989586023
+          ],
+          "frames": 227,
+          "source": {
+            "video": "data/raw/IMG_2093.MOV",
+            "sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "2ba3ca95bf0ffb21732e676e3d816601a003a4da3743d3fcd4f020b237f46315",
+            "reference_board_sha256": "26c8c60db450cd024a9d19eb3731fbda44cadd6b0191ba0a2eb8966b50ee77bc",
+            "original_capture_sha256": "9b3dbafb7c6c0e7174ff8c9e64a34f779f86af97e7670dbced1d2623387e2e40",
+            "public_sha256": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6"
+          },
+          "state_action_sha256": "33880a0827c929186e2379c3d89dc6c61f6a022dc0317e612dd10204413900e2",
+          "metadata_sha256": "9c2a8becf30262d18e7146e096815ed360ed59b931855ba4c369db4c02d201f1"
+        },
+        {
+          "name": "IMG_2095_seed_12020.npz",
+          "seed": 12020,
+          "clip": "IMG_2095",
+          "xy": [
+            -0.04906931290259728,
+            -0.18920636062438673
+          ],
+          "frames": 235,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "edb6b28b618efd301e6f8653e35c470539ee43a9856995dbc5645ebfe7b5a4c9",
+          "metadata_sha256": "403a2119da71f07895c2b16006dd7167d2d3a36b83bfe739fffc7b1070fab484"
+        },
+        {
+          "name": "IMG_2095_seed_12021.npz",
+          "seed": 12021,
+          "clip": "IMG_2095",
+          "xy": [
+            0.01430594240530179,
+            -0.23000000001719365
+          ],
+          "frames": 243,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "0385ed88479797e1385e84615adcd7705fe417ca7ca12aec2d5510b7f7bf668f",
+          "metadata_sha256": "54b32bba234d365803eee0fb1f12a20f9415cdec22637bba258a111af89bba55"
+        },
+        {
+          "name": "IMG_2095_seed_12022.npz",
+          "seed": 12022,
+          "clip": "IMG_2095",
+          "xy": [
+            -0.060000000055879354,
+            -0.21449309759415114
+          ],
+          "frames": 237,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "3ec3f2c34fa37fb5f35d1b87dd3abe2662bb7e02236bd4abed0534ab35fd0417",
+          "metadata_sha256": "b97932a90dcb7c9ceec8858937475d04e0104eebf3bece322b9336e380d885a7"
+        },
+        {
+          "name": "IMG_2095_seed_12023.npz",
+          "seed": 12023,
+          "clip": "IMG_2095",
+          "xy": [
+            -0.05093505462774864,
+            -0.19456380376448998
+          ],
+          "frames": 235,
+          "source": {
+            "video": "data/raw/IMG_2095.MOV",
+            "sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "7275bf7787bc2372652a4bd823cbc59f88712134e143154f3a203150291246f9",
+            "reference_board_sha256": "9ba64099b368e85c46c1caa11cacc3d1303f4f924f05fc68d3dcc6aedb498b9e",
+            "original_capture_sha256": "8d8c7dca2040c4e24d2185a2a8ef22cd49f09fd22457702218e9f225440a96f3",
+            "public_sha256": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734"
+          },
+          "state_action_sha256": "95a84d17818ce0ee4b1283beff0991f42518e5c85b6edc258e39a9cb39aa24e4",
+          "metadata_sha256": "8736ce2912a5f70b8bd12cc8150e5b9d61ab3729a3ed4f5f8eb023bc7f7dd2c1"
+        },
+        {
+          "name": "IMG_2096_seed_12030.npz",
+          "seed": 12030,
+          "clip": "IMG_2096",
+          "xy": [
+            0.003328049197219886,
+            -0.22046062522209608
+          ],
+          "frames": 227,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "79914cc8a68f64eaeecb2efd4107feb643a40b03d143ab7afba3bc976fa382fe",
+          "metadata_sha256": "fa0a1cfcb1d8c6581c81e80096df216227d5bf277aaa0338e770ee09bd2d6cc9"
+        },
+        {
+          "name": "IMG_2096_seed_12031.npz",
+          "seed": 12031,
+          "clip": "IMG_2096",
+          "xy": [
+            -0.05311344141283861,
+            -0.2137328741642145
+          ],
+          "frames": 223,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "6fb2f71370b312e2f2b0dfd6f147a90e95004b65da5b2e5d316968dcec3ba6d8",
+          "metadata_sha256": "89015e89b10ca40a5f9c34f7b012677b778efc3da4b97141440870deee571aa6"
+        },
+        {
+          "name": "IMG_2096_seed_12032.npz",
+          "seed": 12032,
+          "clip": "IMG_2096",
+          "xy": [
+            -0.06000000009169945,
+            -0.20193762618761796
+          ],
+          "frames": 222,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "5ffcc7c1fa61e5a9db677fbdca027e8ee4aace6fa6a3751b4b14710fc59c0c8d",
+          "metadata_sha256": "6ef3bf52eb25d4955f2a3319f6080a9209918e6b69dbeb8f5264c645b903747e"
+        },
+        {
+          "name": "IMG_2096_seed_12033.npz",
+          "seed": 12033,
+          "clip": "IMG_2096",
+          "xy": [
+            -0.044939351769594044,
+            -0.20130548568872306
+          ],
+          "frames": 222,
+          "source": {
+            "video": "data/raw/IMG_2096.MOV",
+            "sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "b08405477735b7696f044c06fc5cf1b4d67414879a841b8afafcbf497b7fa121",
+            "reference_board_sha256": "4df9d61907d7e5daed2b74dcd977f5430829ef07a378af5258f261e583d5f16e",
+            "original_capture_sha256": "549d78f8898b75bb621c86b0e39e8e523710b745854e4308b468a7e73b459b1a",
+            "public_sha256": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395"
+          },
+          "state_action_sha256": "16155c4c8287a5806749ef50c3ad73beae9c1ba1b875194cf2dbef2545b49541",
+          "metadata_sha256": "796f55de0f37ee46324716a9b9edaf0784e7babcd5f0e2a6c6df959aa8ecc9d7"
+        },
+        {
+          "name": "IMG_2098_seed_12040.npz",
+          "seed": 12040,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.05773577667199648,
+            -0.18699016336065072
+          ],
+          "frames": 203,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "e823485dc13a7734046a28a25b216857e30b2b9fa0e1b9aaab8645ae60457671",
+          "metadata_sha256": "d7bb545e9853d4fb2ffa6142d73cbeff8f1d078052fc17d313ceb85f1dc51c3a"
+        },
+        {
+          "name": "IMG_2098_seed_12041.npz",
+          "seed": 12041,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.03592238689844425,
+            -0.20355884960064521
+          ],
+          "frames": 205,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "3f2ddfce1ec0ddfd320910bb9306d96beeddeaa7a8fe22a20c1c50230a6353fb",
+          "metadata_sha256": "3787214c983afe4e371bb91f9f5a34b4ac7857255ad0d24205e632b896b7b97c"
+        },
+        {
+          "name": "IMG_2098_seed_12042.npz",
+          "seed": 12042,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.046683659633764855,
+            -0.20740233476345354
+          ],
+          "frames": 205,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "a3282b55a0668fbe961a2bb91ed8756106f2315e5eb10db3b3b65168b05a4c2e",
+          "metadata_sha256": "a434f3d94acecde8f3d53e6ac55172c73a727ea4e014d55b5f614101570d5a91"
+        },
+        {
+          "name": "IMG_2098_seed_12043.npz",
+          "seed": 12043,
+          "clip": "IMG_2098",
+          "xy": [
+            -0.043537671749408424,
+            -0.18632905987592843
+          ],
+          "frames": 203,
+          "source": {
+            "video": "data/raw/IMG_2098.MOV",
+            "sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5",
+            "kind": "personal_video",
+            "calibration_sha256": "499ad29263d98d2db1e0b131491d93354726ffec115eaa892bb3fcbd03c33dcc",
+            "events_sha256": "8cae17d94d406837e2e55f2eeaabd487be44b789f7f82998f8fe83cdc30d3bcd",
+            "reference_board_sha256": "e87b1f0309144cff69314f821945d1d435ad9b9a7c01a84184d078b0585ee0f9",
+            "original_capture_sha256": "d84c59e821abe01487c6a2d77fcf7403a45919852f94aa06b1c9febfecca62ef",
+            "public_sha256": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+          },
+          "state_action_sha256": "ec10f15606d765fa5f26dc81ca01b71d666b91ae17177328f5e3838a872caeda",
+          "metadata_sha256": "05ab2cb12892092b5b749e4799ff58b65f24938e6c9fb40cb5fee2d3099b5db5"
+        }
+      ],
+      "selected_per_clip": {
+        "IMG_2092": 4,
+        "IMG_2093": 4,
+        "IMG_2095": 4,
+        "IMG_2096": 4,
+        "IMG_2098": 4
+      },
+      "planned_per_clip": {
+        "IMG_2092": 10,
+        "IMG_2093": 10,
+        "IMG_2095": 10,
+        "IMG_2096": 10,
+        "IMG_2098": 10
+      },
+      "attempted": 20,
+      "selected": 20,
+      "unused_candidates": 30,
+      "plan_sha256": "feb28315eda8945745ae1bdd65a3d97edb0940d0a078c254f7246f671d35e207"
+    }
+  },
+  "historical_failure_anchors": [
+    {
+      "seed": 3010,
+      "cube_start_xy": [
+        -0.045558641944434236,
+        -0.1993192669871758
+      ]
+    },
+    {
+      "seed": 3012,
+      "cube_start_xy": [
+        -0.03775082614429805,
+        -0.1980566983570999
+      ]
+    },
+    {
+      "seed": 3013,
+      "cube_start_xy": [
+        -0.051580838825813546,
+        -0.18412371835651833
+      ]
+    },
+    {
+      "seed": 3014,
+      "cube_start_xy": [
+        0.011294672171106161,
+        -0.22720054910298254
+      ]
+    },
+    {
+      "seed": 3015,
+      "cube_start_xy": [
+        -0.051238920329419124,
+        -0.19964457776088243
+      ]
+    }
+  ],
+  "narrow_bounds_xy": [
+    [
+      -0.035,
+      0.035
+    ],
+    [
+      -0.205,
+      -0.135
+    ]
+  ],
+  "wide_bounds_xy": [
+    [
+      -0.06,
+      0.06
+    ],
+    [
+      -0.23,
+      -0.11
+    ]
+  ],
+  "source_script_sha256": "0572c2abb8012bbea0fda17eb2b4feb9c5b2e31934db9c26b7145554bfc7db57",
+  "selection_notes_sha256": "817d7b490b0f4b614b56a0c0606de1d34566761254fb4ffbddbc8bcd59c86e22"
+}

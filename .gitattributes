@@ -1,0 +1,10 @@
+# Keep generated media out of text diffs and line-ending conversion.
+*.pdf binary
+*.mp4 binary
+*.MOV binary
+*.png binary
+*.jpg binary
+*.tar.gz binary
+
+# Preserve bundled upstream JavaScript formatting exactly.
+arm_checker/web/vendor/*.js whitespace=-space-before-tab

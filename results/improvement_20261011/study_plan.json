@@ -1,0 +1,68 @@
+{
+  "started_utc": "2026-10-11T16:05:51Z",
+  "budget_end_utc": "2026-10-11T20:05:51Z",
+  "source_videos": {
+    "data/raw/IMG_2092.MOV": "4618855ae5e0ac3d81726608f36643fd9700730e0ebd00a088d6a086fcb6614b",
+    "data/raw/IMG_2093.MOV": "1196f8058f554b4fb5712e0459ff5ed2f1b450579650f85bdb081f68333c6ba6",
+    "data/raw/IMG_2095.MOV": "7eefbd3b4b0b85ce1464ac0dea3acab04e387e036f14d8c22f0c10dba272d734",
+    "data/raw/IMG_2096.MOV": "d14d0fafec3fe263730ad673bd2ba8daa743023e6a1f84ade7ecade0d7864395",
+    "data/raw/IMG_2098.MOV": "88605fd01ca8a7d73055e6acb3b2b87edc54a5623db26eb413cdb4bdba096fd5"
+  },
+  "original_checkpoint_files": {
+    "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+    "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+    "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+    "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+  },
+  "scope": "Existing five personal videos only. No new human data; augmented replay count is distinct from recording count. No IMU work.",
+  "development": {
+    "known_wide": {
+      "seed": 3010,
+      "episodes": 10,
+      "radius_m": 0.06
+    },
+    "new_narrow": {
+      "seed": 4100,
+      "episodes": 10,
+      "radius_m": 0.035
+    },
+    "new_wide": {
+      "seed": 4200,
+      "episodes": 10,
+      "radius_m": 0.06
+    }
+  },
+  "final_test": {
+    "narrow": {
+      "seed": 6100,
+      "episodes": 30,
+      "radius_m": 0.035
+    },
+    "wide": {
+      "seed": 7100,
+      "episodes": 30,
+      "radius_m": 0.06
+    }
+  },
+  "selection_rule": "Choose candidates using development only. Before final-test execution lock chosen model/settings. Final test cannot guide further tuning. Report all completed interventions and failures.",
+  "training_design": {
+    "additional_successes_per_clip": 4,
+    "new_replay_count_per_arm": 20,
+    "original_replays_per_arm": 20,
+    "same_parent": "checkpoints/main",
+    "matched_optimizer_lr": 1e-05,
+    "matched_updates": 2000,
+    "batch_size": 4,
+    "seed": 42,
+    "normalization": "Preserve original checkpoint state/action normalization for all matched adaptations.",
+    "groups": [
+      "uniform",
+      "targeted"
+    ]
+  },
+  "secondary_limits": "One scene, fixed cube and target; unseen simulator starts only; no new recording-session or real-robot generalization claim."
+}

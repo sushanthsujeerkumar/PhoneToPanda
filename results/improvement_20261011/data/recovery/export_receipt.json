@@ -1,0 +1,18 @@
+{
+  "plan_sha256": "1d95da9b0f953989bde35612d40bb6939f5c1f2f2b02d7592d0565b135097253",
+  "files": {
+    "data/chunk-000/file-000.parquet": "2defd4554efa48dcc813372c40513ae18e087d9a422c0a12e32ef557cfe4e7ad",
+    "data/chunk-000/file-001.parquet": "f27ad220a25a3cffc075ba70c88428c1337a206ea3af24ae8061ae61a60d7fd4",
+    "data/chunk-000/file-002.parquet": "b128f098a149e803b84885960044601adceed109ba24401438951ec166e42975",
+    "data/chunk-000/file-003.parquet": "52252e6b949b6375b95e07c1c9a42f566cf83b4e5a23228a1cb36f3bfb28a273",
+    "data/chunk-000/file-004.parquet": "b4905d79162f9bc4235175f4887613e9c076271d8da075c2eba76875107e8464",
+    "data/chunk-000/file-005.parquet": "16da2eaef743c8fd8b2ea56abbc57ecc68a298c9c1aebea2ff86bcd7842b35f3",
+    "data/chunk-000/file-006.parquet": "fd3f7b25c44b11666c61d1082505d4840846bec80314933a6f43a9e8dc87acf8",
+    "data/chunk-000/file-007.parquet": "d3feea3d3022e358b37520aa8d99987c5818262d3f03ab8ecdb685450ea983b8",
+    "meta/episodes/chunk-000/file-000.parquet": "3d65e39940810e77bdf3cbf622fa94d6d4867857d77648dd31cc2ee3ee97c896",
+    "meta/info.json": "90459243551a77b4d992ff2b3beb0f8d501b17e45b6d661aa4165b00b117cfe7",
+    "meta/phone_to_panda_provenance.json": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+    "meta/stats.json": "85350f9179567ce16695d23b15bc86d5e8cab7ac5b929e9f57d8d516bee3814f",
+    "meta/tasks.parquet": "579f70af670fc3a1effe850f2f967139e37355ffe813b35c2fea88b2599495cd"
+  }
+}

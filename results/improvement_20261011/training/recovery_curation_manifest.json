@@ -1,0 +1,75 @@
+{
+  "kind": "completed_recovery_metadata_curation_addendum",
+  "created_utc": "2026-10-11T17:39:28.698123+00:00",
+  "initial_curation_manifest": "results/improvement_20261011/data/curation_manifest.json",
+  "initial_curation_manifest_sha256_unchanged": "c62f421acead2c8c8ed0e0af091c2cd436c2f1df1e8fa9ded5bb1b117c14eb96",
+  "files": [
+    {
+      "source": "runs/improvement_20261011/completed_training_recovery.json",
+      "target": "results/improvement_20261011/training/completed_training_recovery.json",
+      "source_sha256": "3da3dd51372517470e6272cb0c7699ccaa1a73a7dc7039bb447fb49253cedbb6",
+      "target_sha256": "3da3dd51372517470e6272cb0c7699ccaa1a73a7dc7039bb447fb49253cedbb6",
+      "bytes": 1333
+    },
+    {
+      "source": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model/config.json",
+      "target": "results/improvement_20261011/training/recovery2k/config.json",
+      "source_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "target_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "bytes": 2235
+    },
+    {
+      "source": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model/train_config.json",
+      "target": "results/improvement_20261011/training/recovery2k/train_config.json",
+      "source_sha256": "23b4f54e4a4e8563a30645eeebc746eab7014dbf64d7ec82be8981c2133a1dbd",
+      "target_sha256": "23b4f54e4a4e8563a30645eeebc746eab7014dbf64d7ec82be8981c2133a1dbd",
+      "bytes": 6435
+    },
+    {
+      "source": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model/frozen_normalization.json",
+      "target": "results/improvement_20261011/training/recovery2k/frozen_normalization.json",
+      "source_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "target_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "bytes": 1729
+    },
+    {
+      "source": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/training/recovery2k/phone_to_panda_provenance.json",
+      "source_sha256": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+      "target_sha256": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+      "bytes": 885162
+    },
+    {
+      "source": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model/policy_preprocessor.json",
+      "target": "results/improvement_20261011/training/recovery2k/policy_preprocessor.json",
+      "source_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "target_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "bytes": 1718
+    },
+    {
+      "source": "runs/improvement_20261011/train_recovery/checkpoints/002000/pretrained_model/policy_postprocessor.json",
+      "target": "results/improvement_20261011/training/recovery2k/policy_postprocessor.json",
+      "source_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "target_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "bytes": 660
+    }
+  ],
+  "copied_file_count": 7,
+  "copied_bytes": 899272,
+  "generated_metadata": [
+    {
+      "path": "results/improvement_20261011/training/recovery2k/model_identity.json",
+      "sha256": "92c4fb6572cd91eb8e5108fc852ef05ccc2a5d3404e6ec4bdff0df42eb2f420b"
+    },
+    {
+      "path": "results/improvement_20261011/training/normalization_chain.json",
+      "sha256": "fbd0961cb2a950f2e7f803772437f01d31391fc4c383cdc82e8bdc1a129bf49f"
+    }
+  ],
+  "excluded_payloads": [
+    "Model weights",
+    "Processor tensors",
+    "Dataset arrays"
+  ],
+  "uniform_extended_metadata_status": "Previously copied completed_training_uniform_extended.json and all checkpoint JSON metadata remain intact; normalization_chain.json records the verified uniform4k <- uniform2k <- original_main chain."
+}

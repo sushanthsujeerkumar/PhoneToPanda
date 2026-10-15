@@ -7,11 +7,13 @@ __pycache__/
 *.egg-info/
 checkpoints/*
 !checkpoints/README.md
+!checkpoints/release_20261015.json
 data/robot/
 data/datasets/
 data/calibration/*.MOV
 runs/
 work/
+output/
 MUJOCO_LOG.TXT
 *.log
 .env

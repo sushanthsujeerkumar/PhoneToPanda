@@ -1,8 +1,8 @@
 """Fixed-camera tracking with a fitted coplanar reference-marker board.
 
-Reference locations are learned from visible square geometry, not invented grid
-spacing. All points remain in marker 0's frame. Regions disambiguate the existing
-recordings' duplicate ID 1; new recordings should use unique IDs instead.
+Reference locations are fitted from detected corners and measured marker sizes.
+Their spacing need not form a grid. All points remain in marker 0's frame. Image
+regions separate the existing recordings' object and reference markers with ID 1.
 """
 from __future__ import annotations
 
@@ -63,11 +63,12 @@ def _pose_solutions(corners, size, matrix, distortion):
 
 def fit_reference_board(frames, reference_markers, image_size, marker_size_m,
                         matrix, distortion, max_reprojection_error_px=3.0):
-    """Fit a plane and free square centers/yaws from stationary reference corners.
+    """Fit one flat reference surface and each marker's position and rotation.
 
-    Planar PnP has two pose candidates. Their normal agreement initializes the
-    joint fit, preventing a single square's alternative pose from tilting the
-    whole coordinate frame. The anchor is ID 0 with its printed axes.
+    A square can give two camera-pose solutions. Start with the combination whose
+    surface normals agree most closely, then jointly fit all detected corners.
+    Marker 0 fixes the origin and axes; measured marker size sets the metric scale.
+    The reprojection-error limit rejects a poor fit but is not a ground-truth check.
     """
     from scipy.optimize import least_squares
     cv2 = _opencv()
@@ -156,7 +157,12 @@ def extract_video_multimarker(video_path, calibration_path, events_path, output_
                               min_valid_fraction=0.90, max_pose_reprojection_error_px=3.0,
                               max_table_drift_px=10.0, resting_height_range_m=(-0.01, 0.15),
                               preview_path=None, quality_path=None, write_preview=False):
-    """Extract physically checked object positions with explicit multi-marker QA."""
+    """Track the object-top marker centre in the fixed reference frame, in metres.
+
+    Quality checks cover calibration, reference drift, image reprojection error,
+    and resting marker height. Measured coverage is counted before interpolation;
+    only short gaps bounded by observed samples are filled afterward.
+    """
     output_path = Path(output_path)
     if output_path.exists():
         raise FileExistsError(f"Trajectory output already exists: {output_path}. Choose a new output.")

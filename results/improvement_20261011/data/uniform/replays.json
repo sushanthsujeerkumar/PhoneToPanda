@@ -1,0 +1,242 @@
+[
+  {
+    "clip": "IMG_2092",
+    "seed": 11000,
+    "cube_start_xy": [
+      0.052274616005188373,
+      -0.21653418288126003
+    ],
+    "candidate_index": 0,
+    "success": true,
+    "frames": 219,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2092",
+    "seed": 11001,
+    "cube_start_xy": [
+      0.04613470285525431,
+      -0.2114660035411613
+    ],
+    "candidate_index": 1,
+    "success": true,
+    "frames": 218,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2092",
+    "seed": 11002,
+    "cube_start_xy": [
+      -0.01934454381311161,
+      -0.14556095464792107
+    ],
+    "candidate_index": 2,
+    "success": true,
+    "frames": 208,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2092",
+    "seed": 11003,
+    "cube_start_xy": [
+      -0.023074712421258428,
+      -0.15789841503124113
+    ],
+    "candidate_index": 3,
+    "success": true,
+    "frames": 207,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2093",
+    "seed": 11010,
+    "cube_start_xy": [
+      -0.020252418181153246,
+      -0.1988042562833963
+    ],
+    "candidate_index": 0,
+    "success": true,
+    "frames": 229,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2093",
+    "seed": 11011,
+    "cube_start_xy": [
+      0.00823904405902151,
+      -0.1435910943591895
+    ],
+    "candidate_index": 1,
+    "success": true,
+    "frames": 232,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2093",
+    "seed": 11012,
+    "cube_start_xy": [
+      -0.001270744874466663,
+      -0.18152919108793908
+    ],
+    "candidate_index": 2,
+    "success": true,
+    "frames": 232,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2093",
+    "seed": 11013,
+    "cube_start_xy": [
+      0.05576493084651979,
+      -0.13287378906613567
+    ],
+    "candidate_index": 3,
+    "success": true,
+    "frames": 239,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2095",
+    "seed": 11020,
+    "cube_start_xy": [
+      -0.029359499135466528,
+      -0.17033096924275956
+    ],
+    "candidate_index": 0,
+    "success": true,
+    "frames": 236,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2095",
+    "seed": 11021,
+    "cube_start_xy": [
+      0.03797319969491485,
+      -0.1654723593518225
+    ],
+    "candidate_index": 1,
+    "success": true,
+    "frames": 245,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2095",
+    "seed": 11022,
+    "cube_start_xy": [
+      -0.0062510362533102284,
+      -0.13407943605077796
+    ],
+    "candidate_index": 2,
+    "success": true,
+    "frames": 238,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2095",
+    "seed": 11023,
+    "cube_start_xy": [
+      0.058211142558027895,
+      -0.13477229702354188
+    ],
+    "candidate_index": 3,
+    "success": true,
+    "frames": 247,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2096",
+    "seed": 11030,
+    "cube_start_xy": [
+      -0.05893019070206262,
+      -0.11123235954253967
+    ],
+    "candidate_index": 0,
+    "success": true,
+    "frames": 218,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2096",
+    "seed": 11031,
+    "cube_start_xy": [
+      0.057592259170509724,
+      -0.11799580589122166
+    ],
+    "candidate_index": 1,
+    "success": true,
+    "frames": 233,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2096",
+    "seed": 11032,
+    "cube_start_xy": [
+      0.010522999613647499,
+      -0.21031844454950915
+    ],
+    "candidate_index": 2,
+    "success": true,
+    "frames": 228,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2096",
+    "seed": 11033,
+    "cube_start_xy": [
+      -0.03196932165872394,
+      -0.14788551340867673
+    ],
+    "candidate_index": 3,
+    "success": true,
+    "frames": 221,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2098",
+    "seed": 11040,
+    "cube_start_xy": [
+      -0.027067076035402968,
+      -0.1506067518170445
+    ],
+    "candidate_index": 0,
+    "success": true,
+    "frames": 204,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2098",
+    "seed": 11041,
+    "cube_start_xy": [
+      0.057956974444136916,
+      -0.11687813851656216
+    ],
+    "candidate_index": 1,
+    "success": true,
+    "frames": 215,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2098",
+    "seed": 11042,
+    "cube_start_xy": [
+      -0.05878468511664616,
+      -0.14152808935272165
+    ],
+    "candidate_index": 2,
+    "success": true,
+    "frames": 200,
+    "failure": null
+  },
+  {
+    "clip": "IMG_2098",
+    "seed": 11043,
+    "cube_start_xy": [
+      -0.03793181742854934,
+      -0.22045067589193795
+    ],
+    "candidate_index": 3,
+    "success": true,
+    "frames": 206,
+    "failure": null
+  }
+]

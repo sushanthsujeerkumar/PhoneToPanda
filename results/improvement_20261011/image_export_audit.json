@@ -1,0 +1,1309 @@
+{
+  "schema_version": 1,
+  "kind": "sampled_camera_export_integrity_audit",
+  "started_utc": "2026-10-11T17:34:17.570933+00:00",
+  "completed_utc": "2026-10-11T17:35:00.999676+00:00",
+  "status": "passed",
+  "sampling_rule": "For every sorted source NPZ episode and both cameras, compare frame_index 0, floor(episode_length/2), and episode_length-1; use episode_index/frame_index to locate embedded Parquet images.",
+  "comparison": "Decode embedded image bytes with Pillow, convert to RGB as used by the training image path, compare uint8 shape and every RGB pixel exactly to the selected NPZ camera array. No resizing, normalization or colour-channel reorder applied.",
+  "camera_images_compared": 720,
+  "exact_rgb_pixel_matches": 720,
+  "numeric_audit_preserved_sha256": "ac030f395f87ed0a8a071058a24d829489a4a5eb7d4c5e85618924193c99148b",
+  "arms": {
+    "uniform": {
+      "status": "passed",
+      "episodes": 40,
+      "sampled_frames": 120,
+      "camera_images_compared": 240,
+      "exact_rgb_pixel_matches": 240,
+      "encoded_formats": {
+        "PNG": 240
+      },
+      "encoded_image_modes": {
+        "RGB": 240
+      },
+      "max_channel_difference": 0,
+      "changed_rgb_pixels": 0,
+      "all_sampled_rows_present_once": true,
+      "npz_and_parquet_inputs_unchanged_since_numeric_audit": true,
+      "sampled_pixel_comparison_inventory_sha256": "262541aadbebffec30e862c953b21e5778291e6e63f2d81d078384e668858c51",
+      "sampled_frames_per_episode": [
+        {
+          "episode_index": 0,
+          "npz": "IMG_2092_seed_0.npz",
+          "frames": [
+            0,
+            106,
+            211
+          ]
+        },
+        {
+          "episode_index": 1,
+          "npz": "IMG_2092_seed_1.npz",
+          "frames": [
+            0,
+            105,
+            209
+          ]
+        },
+        {
+          "episode_index": 2,
+          "npz": "IMG_2092_seed_11000.npz",
+          "frames": [
+            0,
+            109,
+            218
+          ]
+        },
+        {
+          "episode_index": 3,
+          "npz": "IMG_2092_seed_11001.npz",
+          "frames": [
+            0,
+            109,
+            217
+          ]
+        },
+        {
+          "episode_index": 4,
+          "npz": "IMG_2092_seed_11002.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 5,
+          "npz": "IMG_2092_seed_11003.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 6,
+          "npz": "IMG_2092_seed_2.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 7,
+          "npz": "IMG_2092_seed_3.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 8,
+          "npz": "IMG_2093_seed_11010.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 9,
+          "npz": "IMG_2093_seed_11011.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 10,
+          "npz": "IMG_2093_seed_11012.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 11,
+          "npz": "IMG_2093_seed_11013.npz",
+          "frames": [
+            0,
+            119,
+            238
+          ]
+        },
+        {
+          "episode_index": 12,
+          "npz": "IMG_2093_seed_4.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 13,
+          "npz": "IMG_2093_seed_5.npz",
+          "frames": [
+            0,
+            117,
+            234
+          ]
+        },
+        {
+          "episode_index": 14,
+          "npz": "IMG_2093_seed_6.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 15,
+          "npz": "IMG_2093_seed_7.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 16,
+          "npz": "IMG_2095_seed_10.npz",
+          "frames": [
+            0,
+            122,
+            243
+          ]
+        },
+        {
+          "episode_index": 17,
+          "npz": "IMG_2095_seed_11.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 18,
+          "npz": "IMG_2095_seed_11020.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 19,
+          "npz": "IMG_2095_seed_11021.npz",
+          "frames": [
+            0,
+            122,
+            244
+          ]
+        },
+        {
+          "episode_index": 20,
+          "npz": "IMG_2095_seed_11022.npz",
+          "frames": [
+            0,
+            119,
+            237
+          ]
+        },
+        {
+          "episode_index": 21,
+          "npz": "IMG_2095_seed_11023.npz",
+          "frames": [
+            0,
+            123,
+            246
+          ]
+        },
+        {
+          "episode_index": 22,
+          "npz": "IMG_2095_seed_8.npz",
+          "frames": [
+            0,
+            118,
+            236
+          ]
+        },
+        {
+          "episode_index": 23,
+          "npz": "IMG_2095_seed_9.npz",
+          "frames": [
+            0,
+            121,
+            242
+          ]
+        },
+        {
+          "episode_index": 24,
+          "npz": "IMG_2096_seed_11030.npz",
+          "frames": [
+            0,
+            109,
+            217
+          ]
+        },
+        {
+          "episode_index": 25,
+          "npz": "IMG_2096_seed_11031.npz",
+          "frames": [
+            0,
+            116,
+            232
+          ]
+        },
+        {
+          "episode_index": 26,
+          "npz": "IMG_2096_seed_11032.npz",
+          "frames": [
+            0,
+            114,
+            227
+          ]
+        },
+        {
+          "episode_index": 27,
+          "npz": "IMG_2096_seed_11033.npz",
+          "frames": [
+            0,
+            110,
+            220
+          ]
+        },
+        {
+          "episode_index": 28,
+          "npz": "IMG_2096_seed_12.npz",
+          "frames": [
+            0,
+            111,
+            222
+          ]
+        },
+        {
+          "episode_index": 29,
+          "npz": "IMG_2096_seed_13.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 30,
+          "npz": "IMG_2096_seed_14.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 31,
+          "npz": "IMG_2096_seed_15.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 32,
+          "npz": "IMG_2098_seed_11040.npz",
+          "frames": [
+            0,
+            102,
+            203
+          ]
+        },
+        {
+          "episode_index": 33,
+          "npz": "IMG_2098_seed_11041.npz",
+          "frames": [
+            0,
+            107,
+            214
+          ]
+        },
+        {
+          "episode_index": 34,
+          "npz": "IMG_2098_seed_11042.npz",
+          "frames": [
+            0,
+            100,
+            199
+          ]
+        },
+        {
+          "episode_index": 35,
+          "npz": "IMG_2098_seed_11043.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        },
+        {
+          "episode_index": 36,
+          "npz": "IMG_2098_seed_16.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 37,
+          "npz": "IMG_2098_seed_17.npz",
+          "frames": [
+            0,
+            105,
+            210
+          ]
+        },
+        {
+          "episode_index": 38,
+          "npz": "IMG_2098_seed_18.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        },
+        {
+          "episode_index": 39,
+          "npz": "IMG_2098_seed_19.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        }
+      ],
+      "differences": []
+    },
+    "targeted": {
+      "status": "passed",
+      "episodes": 40,
+      "sampled_frames": 120,
+      "camera_images_compared": 240,
+      "exact_rgb_pixel_matches": 240,
+      "encoded_formats": {
+        "PNG": 240
+      },
+      "encoded_image_modes": {
+        "RGB": 240
+      },
+      "max_channel_difference": 0,
+      "changed_rgb_pixels": 0,
+      "all_sampled_rows_present_once": true,
+      "npz_and_parquet_inputs_unchanged_since_numeric_audit": true,
+      "sampled_pixel_comparison_inventory_sha256": "43aad92d7db860ff9277ecdf1660f7508ab3f1a52ac0693fe9ef404a6b28e746",
+      "sampled_frames_per_episode": [
+        {
+          "episode_index": 0,
+          "npz": "IMG_2092_seed_0.npz",
+          "frames": [
+            0,
+            106,
+            211
+          ]
+        },
+        {
+          "episode_index": 1,
+          "npz": "IMG_2092_seed_1.npz",
+          "frames": [
+            0,
+            105,
+            209
+          ]
+        },
+        {
+          "episode_index": 2,
+          "npz": "IMG_2092_seed_12000.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 3,
+          "npz": "IMG_2092_seed_12001.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 4,
+          "npz": "IMG_2092_seed_12002.npz",
+          "frames": [
+            0,
+            102,
+            204
+          ]
+        },
+        {
+          "episode_index": 5,
+          "npz": "IMG_2092_seed_12003.npz",
+          "frames": [
+            0,
+            107,
+            213
+          ]
+        },
+        {
+          "episode_index": 6,
+          "npz": "IMG_2092_seed_2.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 7,
+          "npz": "IMG_2092_seed_3.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 8,
+          "npz": "IMG_2093_seed_12010.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 9,
+          "npz": "IMG_2093_seed_12011.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 10,
+          "npz": "IMG_2093_seed_12012.npz",
+          "frames": [
+            0,
+            117,
+            233
+          ]
+        },
+        {
+          "episode_index": 11,
+          "npz": "IMG_2093_seed_12013.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 12,
+          "npz": "IMG_2093_seed_4.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 13,
+          "npz": "IMG_2093_seed_5.npz",
+          "frames": [
+            0,
+            117,
+            234
+          ]
+        },
+        {
+          "episode_index": 14,
+          "npz": "IMG_2093_seed_6.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 15,
+          "npz": "IMG_2093_seed_7.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 16,
+          "npz": "IMG_2095_seed_10.npz",
+          "frames": [
+            0,
+            122,
+            243
+          ]
+        },
+        {
+          "episode_index": 17,
+          "npz": "IMG_2095_seed_11.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 18,
+          "npz": "IMG_2095_seed_12020.npz",
+          "frames": [
+            0,
+            117,
+            234
+          ]
+        },
+        {
+          "episode_index": 19,
+          "npz": "IMG_2095_seed_12021.npz",
+          "frames": [
+            0,
+            121,
+            242
+          ]
+        },
+        {
+          "episode_index": 20,
+          "npz": "IMG_2095_seed_12022.npz",
+          "frames": [
+            0,
+            118,
+            236
+          ]
+        },
+        {
+          "episode_index": 21,
+          "npz": "IMG_2095_seed_12023.npz",
+          "frames": [
+            0,
+            117,
+            234
+          ]
+        },
+        {
+          "episode_index": 22,
+          "npz": "IMG_2095_seed_8.npz",
+          "frames": [
+            0,
+            118,
+            236
+          ]
+        },
+        {
+          "episode_index": 23,
+          "npz": "IMG_2095_seed_9.npz",
+          "frames": [
+            0,
+            121,
+            242
+          ]
+        },
+        {
+          "episode_index": 24,
+          "npz": "IMG_2096_seed_12.npz",
+          "frames": [
+            0,
+            111,
+            222
+          ]
+        },
+        {
+          "episode_index": 25,
+          "npz": "IMG_2096_seed_12030.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 26,
+          "npz": "IMG_2096_seed_12031.npz",
+          "frames": [
+            0,
+            111,
+            222
+          ]
+        },
+        {
+          "episode_index": 27,
+          "npz": "IMG_2096_seed_12032.npz",
+          "frames": [
+            0,
+            111,
+            221
+          ]
+        },
+        {
+          "episode_index": 28,
+          "npz": "IMG_2096_seed_12033.npz",
+          "frames": [
+            0,
+            111,
+            221
+          ]
+        },
+        {
+          "episode_index": 29,
+          "npz": "IMG_2096_seed_13.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 30,
+          "npz": "IMG_2096_seed_14.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 31,
+          "npz": "IMG_2096_seed_15.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 32,
+          "npz": "IMG_2098_seed_12040.npz",
+          "frames": [
+            0,
+            101,
+            202
+          ]
+        },
+        {
+          "episode_index": 33,
+          "npz": "IMG_2098_seed_12041.npz",
+          "frames": [
+            0,
+            102,
+            204
+          ]
+        },
+        {
+          "episode_index": 34,
+          "npz": "IMG_2098_seed_12042.npz",
+          "frames": [
+            0,
+            102,
+            204
+          ]
+        },
+        {
+          "episode_index": 35,
+          "npz": "IMG_2098_seed_12043.npz",
+          "frames": [
+            0,
+            101,
+            202
+          ]
+        },
+        {
+          "episode_index": 36,
+          "npz": "IMG_2098_seed_16.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 37,
+          "npz": "IMG_2098_seed_17.npz",
+          "frames": [
+            0,
+            105,
+            210
+          ]
+        },
+        {
+          "episode_index": 38,
+          "npz": "IMG_2098_seed_18.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        },
+        {
+          "episode_index": 39,
+          "npz": "IMG_2098_seed_19.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        }
+      ],
+      "differences": []
+    },
+    "recovery": {
+      "status": "passed",
+      "episodes": 40,
+      "sampled_frames": 120,
+      "camera_images_compared": 240,
+      "exact_rgb_pixel_matches": 240,
+      "encoded_formats": {
+        "PNG": 240
+      },
+      "encoded_image_modes": {
+        "RGB": 240
+      },
+      "max_channel_difference": 0,
+      "changed_rgb_pixels": 0,
+      "all_sampled_rows_present_once": true,
+      "npz_and_parquet_inputs_unchanged_since_numeric_audit": true,
+      "sampled_pixel_comparison_inventory_sha256": "b7c8498bb932637cffd08b9cd107699b0b7cfbdb46e18ffa77e8bce4396fc7bb",
+      "sampled_frames_per_episode": [
+        {
+          "episode_index": 0,
+          "npz": "IMG_2092_seed_0.npz",
+          "frames": [
+            0,
+            106,
+            211
+          ]
+        },
+        {
+          "episode_index": 1,
+          "npz": "IMG_2092_seed_1.npz",
+          "frames": [
+            0,
+            105,
+            209
+          ]
+        },
+        {
+          "episode_index": 2,
+          "npz": "IMG_2092_seed_2.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 3,
+          "npz": "IMG_2092_seed_3.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 4,
+          "npz": "IMG_2092_seed_3010_prefix_60.npz",
+          "frames": [
+            0,
+            101,
+            202
+          ]
+        },
+        {
+          "episode_index": 5,
+          "npz": "IMG_2092_seed_3012_prefix_80.npz",
+          "frames": [
+            0,
+            102,
+            203
+          ]
+        },
+        {
+          "episode_index": 6,
+          "npz": "IMG_2092_seed_3013_prefix_100.npz",
+          "frames": [
+            0,
+            104,
+            208
+          ]
+        },
+        {
+          "episode_index": 7,
+          "npz": "IMG_2092_seed_3014_prefix_120.npz",
+          "frames": [
+            0,
+            103,
+            206
+          ]
+        },
+        {
+          "episode_index": 8,
+          "npz": "IMG_2093_seed_3010_prefix_80.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 9,
+          "npz": "IMG_2093_seed_3012_prefix_100.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 10,
+          "npz": "IMG_2093_seed_3013_prefix_120.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 11,
+          "npz": "IMG_2093_seed_3015_prefix_60.npz",
+          "frames": [
+            0,
+            112,
+            224
+          ]
+        },
+        {
+          "episode_index": 12,
+          "npz": "IMG_2093_seed_4.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 13,
+          "npz": "IMG_2093_seed_5.npz",
+          "frames": [
+            0,
+            117,
+            234
+          ]
+        },
+        {
+          "episode_index": 14,
+          "npz": "IMG_2093_seed_6.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 15,
+          "npz": "IMG_2093_seed_7.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 16,
+          "npz": "IMG_2095_seed_10.npz",
+          "frames": [
+            0,
+            122,
+            243
+          ]
+        },
+        {
+          "episode_index": 17,
+          "npz": "IMG_2095_seed_11.npz",
+          "frames": [
+            0,
+            118,
+            235
+          ]
+        },
+        {
+          "episode_index": 18,
+          "npz": "IMG_2095_seed_3010_prefix_100.npz",
+          "frames": [
+            0,
+            121,
+            241
+          ]
+        },
+        {
+          "episode_index": 19,
+          "npz": "IMG_2095_seed_3012_prefix_120.npz",
+          "frames": [
+            0,
+            119,
+            237
+          ]
+        },
+        {
+          "episode_index": 20,
+          "npz": "IMG_2095_seed_3014_prefix_60.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 21,
+          "npz": "IMG_2095_seed_3015_prefix_80.npz",
+          "frames": [
+            0,
+            118,
+            236
+          ]
+        },
+        {
+          "episode_index": 22,
+          "npz": "IMG_2095_seed_8.npz",
+          "frames": [
+            0,
+            118,
+            236
+          ]
+        },
+        {
+          "episode_index": 23,
+          "npz": "IMG_2095_seed_9.npz",
+          "frames": [
+            0,
+            121,
+            242
+          ]
+        },
+        {
+          "episode_index": 24,
+          "npz": "IMG_2096_seed_12.npz",
+          "frames": [
+            0,
+            111,
+            222
+          ]
+        },
+        {
+          "episode_index": 25,
+          "npz": "IMG_2096_seed_13.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 26,
+          "npz": "IMG_2096_seed_14.npz",
+          "frames": [
+            0,
+            114,
+            228
+          ]
+        },
+        {
+          "episode_index": 27,
+          "npz": "IMG_2096_seed_15.npz",
+          "frames": [
+            0,
+            113,
+            226
+          ]
+        },
+        {
+          "episode_index": 28,
+          "npz": "IMG_2096_seed_3010_prefix_120.npz",
+          "frames": [
+            0,
+            116,
+            231
+          ]
+        },
+        {
+          "episode_index": 29,
+          "npz": "IMG_2096_seed_3013_prefix_60.npz",
+          "frames": [
+            0,
+            110,
+            219
+          ]
+        },
+        {
+          "episode_index": 30,
+          "npz": "IMG_2096_seed_3014_prefix_80.npz",
+          "frames": [
+            0,
+            108,
+            216
+          ]
+        },
+        {
+          "episode_index": 31,
+          "npz": "IMG_2096_seed_3015_prefix_100.npz",
+          "frames": [
+            0,
+            113,
+            225
+          ]
+        },
+        {
+          "episode_index": 32,
+          "npz": "IMG_2098_seed_16.npz",
+          "frames": [
+            0,
+            104,
+            207
+          ]
+        },
+        {
+          "episode_index": 33,
+          "npz": "IMG_2098_seed_17.npz",
+          "frames": [
+            0,
+            105,
+            210
+          ]
+        },
+        {
+          "episode_index": 34,
+          "npz": "IMG_2098_seed_18.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        },
+        {
+          "episode_index": 35,
+          "npz": "IMG_2098_seed_19.npz",
+          "frames": [
+            0,
+            103,
+            205
+          ]
+        },
+        {
+          "episode_index": 36,
+          "npz": "IMG_2098_seed_3012_prefix_60.npz",
+          "frames": [
+            0,
+            100,
+            200
+          ]
+        },
+        {
+          "episode_index": 37,
+          "npz": "IMG_2098_seed_3013_prefix_80.npz",
+          "frames": [
+            0,
+            102,
+            203
+          ]
+        },
+        {
+          "episode_index": 38,
+          "npz": "IMG_2098_seed_3014_prefix_100.npz",
+          "frames": [
+            0,
+            101,
+            201
+          ]
+        },
+        {
+          "episode_index": 39,
+          "npz": "IMG_2098_seed_3015_prefix_120.npz",
+          "frames": [
+            0,
+            105,
+            210
+          ]
+        }
+      ],
+      "differences": []
+    }
+  },
+  "file_sha256": {
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-000.parquet": "2defd4554efa48dcc813372c40513ae18e087d9a422c0a12e32ef557cfe4e7ad",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-001.parquet": "f27ad220a25a3cffc075ba70c88428c1337a206ea3af24ae8061ae61a60d7fd4",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-002.parquet": "b128f098a149e803b84885960044601adceed109ba24401438951ec166e42975",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-003.parquet": "52252e6b949b6375b95e07c1c9a42f566cf83b4e5a23228a1cb36f3bfb28a273",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-004.parquet": "b4905d79162f9bc4235175f4887613e9c076271d8da075c2eba76875107e8464",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-005.parquet": "16da2eaef743c8fd8b2ea56abbc57ecc68a298c9c1aebea2ff86bcd7842b35f3",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-006.parquet": "fd3f7b25c44b11666c61d1082505d4840846bec80314933a6f43a9e8dc87acf8",
+    "data/datasets/improvement_20261011/recovery/data/chunk-000/file-007.parquet": "d3feea3d3022e358b37520aa8d99987c5818262d3f03ab8ecdb685450ea983b8",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-000.parquet": "0393159c090056675f790ddac6fdf6aa236402a67cb71ec974537faa9e6070d4",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-001.parquet": "80dc4eff7b444764c245688052eae08d3a59d77bb1f6cf2e4de890a1c7849d57",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-002.parquet": "7d847eb359ce1b2eebd03927135a45832ca603e826a2139bcd948436df7ef9f8",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-003.parquet": "dd8aea5a69690b52b299d13568607f1e5481d17f3132f583e9fb27b63dc45eea",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-004.parquet": "0957e2fa9702d5c45738df379f22e0d621eddbbf16439f4c15baa0d7f5194513",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-005.parquet": "828abb3b35bb6cf9415b38fbcca4264955d55188f64fb7e214ce9fc525dbf38b",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-006.parquet": "1db46b2121a2db13d84f9161ffe4811151c7beead6ed1621b26d05b6327ded45",
+    "data/datasets/improvement_20261011/targeted/data/chunk-000/file-007.parquet": "4b98c5081c594ca80e14eab07d8a5da2897e9a891ca4b7228eb6ad5286391ed9",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-000.parquet": "562fa9c3933a86f29791fd661ec51eafda89847421f39bc7e566c8e6f8ba6ee3",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-001.parquet": "77abe1711e7e6c068647ba1b2e1c68b120fd4f8a5c26c53d1375376f8f5c0af0",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-002.parquet": "5008a89e7a66bb7e0e19fdbfaf1c29287e883ad56dd2f04275a15ebb79d082ba",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-003.parquet": "79a916b98ed760cf4db2a5f374091665d8ae4445aa51e36c9cbdf6bd5e76c41f",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-004.parquet": "c9b39a1367d4cbd3a24cdf34bbfdc34d26b4459966dfc4c4a2000710f71cf8ac",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-005.parquet": "6768fd08df32e5140799804054339988456095b2a946bcfba865a92f30e0d70c",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-006.parquet": "aed22e92dc8629911889175fe9c80c17ca65eece6464279a26fa5a776edb3001",
+    "data/datasets/improvement_20261011/uniform/data/chunk-000/file-007.parquet": "3774dcfe556baf442d5f941a931f22c81c43936199b1e22352eafeefccbac7f7",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3010_prefix_60.npz": "aa1d46faa54e71434f02cda76bc6106b12785a7a93c13f5aa5f5708c54c379ad",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3012_prefix_80.npz": "d06b14fae1c5886885d54ba1a8fbc55975326ff8066a230e06fd6e1535f2460c",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3013_prefix_100.npz": "80f965617071b4c037919ca1c128b33c2a1d6442b980bdcee22157141327c3a9",
+    "data/robot/improvement_20261011/recovery/IMG_2092_seed_3014_prefix_120.npz": "aa6751e1cb281ca95634f75e484d7d57a150cc3cfa77c8611f554461ce200061",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3010_prefix_80.npz": "0508cbbfd6c33334eaa06ca1585d253871d793a321d09d045d43ab90b6745227",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3012_prefix_100.npz": "411c0b9634253e624e4a773b9dfee6baa399f73ed6bb07880dddfb53e778ffb3",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3013_prefix_120.npz": "30f71de0320a24334c6b1bb445d56c379f1d2ce8f7120b4e1bdf8fe3ab47437d",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_3015_prefix_60.npz": "4ad9ff652782d2aab7c32d9cf8c5da16b99c57a64baaaa3a70586e6c5d82703d",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/improvement_20261011/recovery/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3010_prefix_100.npz": "c3862f44176908821cf9382e80dc99146f204d44aad4c2aa7c7d4dd24fae8683",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3012_prefix_120.npz": "ebf4ab43d38bdc60956383aab3e842e22feedc3e13f7db6f1c48d23cb3d3b388",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3014_prefix_60.npz": "215c58e9ddd85f50eda4707b865ad569a1db9504c5257ed003b906b44d5f9538",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_3015_prefix_80.npz": "7796826037ebf0199c1159e8f9b18421eda90d68dc8abcf1a8b243f431de5cef",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/improvement_20261011/recovery/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3010_prefix_120.npz": "cb9e407f8e67374fae9ccc4c256774cddbd66d115fb31ca9c73376e4b3f6f6f1",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3013_prefix_60.npz": "ba9074a6e97eac245f132ab5246b036e6d10f10667766ee6f5152429fd3e0d1b",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3014_prefix_80.npz": "feb7a6a8ca79610a10f1d34d32478f4ae14449c45a1bc737aace459c96906677",
+    "data/robot/improvement_20261011/recovery/IMG_2096_seed_3015_prefix_100.npz": "e043679d1e4cb47c43094fd0f4ae54da15e9f6e6e09714cc60d344a5f7cf7427",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3012_prefix_60.npz": "0de51f8ceaad6b770e0974c83b7a7a9a36f375cebb4fb7992255b6818335b5d3",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3013_prefix_80.npz": "35d36e3b7056f1cb8321050a2bf4f93676a26a31187410f90ca0e4d428f4e5fd",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3014_prefix_100.npz": "9deae919068de5d1fed16721916c903f8cc872a864b0b11c200b5ffb8a007ae9",
+    "data/robot/improvement_20261011/recovery/IMG_2098_seed_3015_prefix_120.npz": "41b9dc6ff0b547b1c1e6fa450fa4b26499a4d7f04523493dd26bc412df5afb78",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12000.npz": "9e18b80da8d82e56478526af436a0f4c4aa712b7947b0a4fb1120f090825cc0f",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12001.npz": "b7e9a3a1782d77f8789b836cef605dbd86101790e8227906d9a83efb02626e73",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12002.npz": "9d24ac7167c338b09d944e3869dfaeb6fbe01d9c0d852650ebeb92b10afe660d",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12003.npz": "eb45948689a601e2113f35c8b14d57ced5fd940925f2bc4b9cc63e1d34783684",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12010.npz": "b11cc536e2ea8642272ac4cb379f44c59aac208ddfc85ea62de0c7104a50c241",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12011.npz": "4112c52972967bab11da1f6b05695e974cce14011d2a3526c0b4524b870f1639",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12012.npz": "8f62dda4c552d61db81eafea053a60cb2185ad83ab11d888c4bf9bd1c8d162b1",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12013.npz": "3867b64cf876a2b25d14db9dac1980df7aeb896c822e3da4895667bf5752c49d",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12020.npz": "529103f950425cf3861583563103f083a752e7541677700999a0fea4bde69dd5",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12021.npz": "fe9cf25e21a60d2b27b1e0dc0db0fd34c18e96b5f26d68e4936a0e3ac67c590c",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12022.npz": "feff3c5fc00aedcc913b925f382541cb9ca49bf652793457134e6e58dc0f2ca3",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12023.npz": "1af8c4578fe7dfec67f676e6c8877303a8530d9c9378e34597f3139a52a0482e",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12030.npz": "ada79c008551341878a74c7bc5220bd5d66cd099f8e18ac7d621864397a3cfb4",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12031.npz": "b520e6cc9af011773a591df5bf41d8e9af06181af5d99dc5197501769d647919",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12032.npz": "345ec876f82a9d8570212192fb8b5ffc399b77dfdb7a536c540fc6f0f9d4a037",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12033.npz": "b53ed0693b20ddee6836b090e7a992d2b7b14b1a322812974707c71e34b7c5c6",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12040.npz": "4f4c1ce406e61b2aa23fb812df66dcd1059c1266668a49d67f5dc7e309dfbf4a",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12041.npz": "8acc0c79494b0ad419bea8c1cae38eb9ed1643b990b8b629efc76d4d443acc59",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12042.npz": "1b1e7d93085ef1e2381aa9e98031a6424820a3172c6901578b65a8e4e594fe84",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12043.npz": "867414575dee16019fa8ab8b709d49842e33b5ba731823f7d758775382e4997d",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_0.npz": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_1.npz": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11000.npz": "bb8143851881c6b68915a130aeb985146ca94e700e41ed9d0c3b8a35d49b1049",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11001.npz": "793df09f4dac8dd21d0156069a948aa5e14a5ccc117f60f116931230f56854f7",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11002.npz": "c29aa1c4cdd14f65cb96b683b071b0572291d4e6d6ed579a6c9b4fad686504a3",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11003.npz": "176ada43d5d544169c47830d91b53681e478f63ae51664a08599b2ccc0639429",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_2.npz": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_3.npz": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11010.npz": "a931ced5c96e14f33c8fd3facb2b475fab6e17a6319ee8fc2f0c7ea8d4b17555",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11011.npz": "ee830c2b0c5edd4a169284717c674fb2700a5881bdcdf3562fe9e69b32807c14",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11012.npz": "bec5825d39523e4eadb38a4675b3b6c02becb97ccf9fd78dc1d86a93215df0bb",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11013.npz": "83b5638165556373b2ca7f8695b4111efda3383468c91acd8e2b13866526d266",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_4.npz": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_5.npz": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_6.npz": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_7.npz": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_10.npz": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11.npz": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11020.npz": "7de918041b1d93e16ed5bb515fadb7a1e9d89166762031ce32715d783ade3cb3",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11021.npz": "b71bcd887c7f9ef4a588051470c51b9b6d4813cc5910e3a234e2f2e442468379",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11022.npz": "5ec10f25c474051ebfa4d73eacb903281b62d86a2e5a72d80e625a112a9eac85",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11023.npz": "7309863f03e6cea98ac822c8eb4914cf1dbf72c6606318aa2c3cde0f2317fb7c",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_8.npz": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_9.npz": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11030.npz": "c4691e1e0cde03c1d3807c74727379102f1dc4d830f382b43bf5b5a62093bf53",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11031.npz": "3f1ff335b8c2d3529aa758a63252e19c3a07fdd5ae73853d1d6f014658518882",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11032.npz": "c583cfa5f6ea4df319f683c22cd041fff08b87ee38e88d464358e8effa057b54",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11033.npz": "909da13982072b1b7b73e31e4b6ab2f02ea3fe36c4405a99b116eabbb1e8717c",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_12.npz": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_13.npz": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_14.npz": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_15.npz": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11040.npz": "da3eea78a1bd13919309e35abc71af6be0cedab10b60dabe7d3d99bbfcd69e56",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11041.npz": "a44b7988f374ba4c28c556492607e42993be2db3d78b959ef3e61807bae897c3",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11042.npz": "4daf51244d7275917fcf159410d130cd36d29ac14678a49f8f96d390059153ea",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11043.npz": "2a53c81fcec8eec7ba4218097c7000b5d5ef8d778662dd11d62c4c180e26adc8",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_16.npz": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_17.npz": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_18.npz": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_19.npz": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+    "runs/improvement_20261011/inspection/dataset_audit.json": "ac030f395f87ed0a8a071058a24d829489a4a5eb7d4c5e85618924193c99148b"
+  },
+  "limitations": [
+    "This deterministic sample checks 720 camera images; it does not assert pixel equality for unsampled frames.",
+    "Input file hashes match the prior numeric audit, which independently checked every exported state/action row.",
+    "No policy training, simulation rollout or final evaluation outcomes were used."
+  ]
+}

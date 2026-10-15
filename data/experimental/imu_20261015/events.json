@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "annotation_method": "manual_video_review",
+  "video_grasp_time_s": 1.1,
+  "video_release_time_s": 10.1,
+  "event_uncertainty_s": 0.25,
+  "imu_time_offset_s": 0.54,
+  "synchronization": "provisional",
+  "offset_uncertainty_s": 0.5,
+  "time_relation": "sensor_elapsed_s = video_elapsed_s + imu_time_offset_s",
+  "basis": "Broad reach, placement and return sequence agrees with creation-time difference. No explicit synchronization cue or shared clock; offset is not a measured synchronization result.",
+  "video_file": "IMG_2276.MOV",
+  "sensor_session_id": "20261015T165828Z_92196435",
+  "grasp_note": "Fingers close around the cube near 1 second; exact contact is manually estimated.",
+  "release_note": "Fingers begin opening after placement near 10 seconds; exact loss of contact is manually estimated."
+}

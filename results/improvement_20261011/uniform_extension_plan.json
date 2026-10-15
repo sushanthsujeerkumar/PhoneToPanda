@@ -1,0 +1,20 @@
+{
+  "specified_utc": "2026-10-11T17:03:18.996935+00:00",
+  "reason": "Uniform2000 retained10/10 narrow and6/10 wide, tying original16/20. Test whether conservative additional exposure improves grasp precision without the concentrated targeted-data regression.",
+  "condition_verified": {
+    "narrow": 10,
+    "wide": 6
+  },
+  "candidate": "uniform4000_h5",
+  "parent": "train_uniform/checkpoints/002000/pretrained_model",
+  "additional_updates": 2000,
+  "total_updates_after_original_checkpoint": 4000,
+  "new_optimizer": true,
+  "optimizer_lr": 5e-06,
+  "training_seed": 42,
+  "dataset": "same uniform40 episodes,8946 frames",
+  "normalization": "Preserve source normalization, numerically identical to original transforms.",
+  "config_sha256": "f15a980d0edd3719a608b1e12b586c1e2bd223c784e7b1d89786da5f342bdddf",
+  "selection": "Same20 development starts only. This exploratory extra-budget candidate ranks after all matched2k models in a tie. No final-test access before candidate lock.",
+  "comparison_scope": "Keep this extra-budget result separate from matched2k data-selection comparison."
+}

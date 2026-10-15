@@ -1,0 +1,304 @@
+{
+  "completed_utc": "2026-10-11T18:15:30.601400+00:00",
+  "illustration_plan_sha256": "4b23253d3ba9d6e4497bebeafadcde02653a8219e275f52e80abb81175f3480f",
+  "candidate_lock_sha256": "59d1e394c1b2aef399188c687e1b8a30a1a871af1e1c8f0ccb8022d408c8c095",
+  "contrast": [
+    "original_h5",
+    "uniform2000_h5"
+  ],
+  "role": "Secondary comparison; does not change the original selection.",
+  "available_examples_in_narrow_then_wide_seed_order": {
+    "improved": [
+      {
+        "group": "narrow",
+        "seed": 6128
+      }
+    ],
+    "regressed": [],
+    "both_successful": [
+      {
+        "group": "narrow",
+        "seed": 6100
+      },
+      {
+        "group": "narrow",
+        "seed": 6101
+      },
+      {
+        "group": "narrow",
+        "seed": 6102
+      },
+      {
+        "group": "narrow",
+        "seed": 6103
+      },
+      {
+        "group": "narrow",
+        "seed": 6104
+      },
+      {
+        "group": "narrow",
+        "seed": 6105
+      },
+      {
+        "group": "narrow",
+        "seed": 6106
+      },
+      {
+        "group": "narrow",
+        "seed": 6108
+      },
+      {
+        "group": "narrow",
+        "seed": 6109
+      },
+      {
+        "group": "narrow",
+        "seed": 6110
+      },
+      {
+        "group": "narrow",
+        "seed": 6111
+      },
+      {
+        "group": "narrow",
+        "seed": 6113
+      },
+      {
+        "group": "narrow",
+        "seed": 6115
+      },
+      {
+        "group": "narrow",
+        "seed": 6116
+      },
+      {
+        "group": "narrow",
+        "seed": 6117
+      },
+      {
+        "group": "narrow",
+        "seed": 6118
+      },
+      {
+        "group": "narrow",
+        "seed": 6119
+      },
+      {
+        "group": "narrow",
+        "seed": 6120
+      },
+      {
+        "group": "narrow",
+        "seed": 6121
+      },
+      {
+        "group": "narrow",
+        "seed": 6122
+      },
+      {
+        "group": "narrow",
+        "seed": 6123
+      },
+      {
+        "group": "narrow",
+        "seed": 6124
+      },
+      {
+        "group": "narrow",
+        "seed": 6125
+      },
+      {
+        "group": "narrow",
+        "seed": 6126
+      },
+      {
+        "group": "narrow",
+        "seed": 6129
+      },
+      {
+        "group": "wide",
+        "seed": 7100
+      },
+      {
+        "group": "wide",
+        "seed": 7101
+      },
+      {
+        "group": "wide",
+        "seed": 7103
+      },
+      {
+        "group": "wide",
+        "seed": 7105
+      },
+      {
+        "group": "wide",
+        "seed": 7106
+      },
+      {
+        "group": "wide",
+        "seed": 7108
+      },
+      {
+        "group": "wide",
+        "seed": 7110
+      },
+      {
+        "group": "wide",
+        "seed": 7113
+      },
+      {
+        "group": "wide",
+        "seed": 7115
+      },
+      {
+        "group": "wide",
+        "seed": 7116
+      },
+      {
+        "group": "wide",
+        "seed": 7118
+      },
+      {
+        "group": "wide",
+        "seed": 7120
+      },
+      {
+        "group": "wide",
+        "seed": 7121
+      },
+      {
+        "group": "wide",
+        "seed": 7124
+      },
+      {
+        "group": "wide",
+        "seed": 7125
+      },
+      {
+        "group": "wide",
+        "seed": 7126
+      },
+      {
+        "group": "wide",
+        "seed": 7127
+      },
+      {
+        "group": "wide",
+        "seed": 7128
+      }
+    ],
+    "both_failed": [
+      {
+        "group": "narrow",
+        "seed": 6107
+      },
+      {
+        "group": "narrow",
+        "seed": 6112
+      },
+      {
+        "group": "narrow",
+        "seed": 6114
+      },
+      {
+        "group": "narrow",
+        "seed": 6127
+      },
+      {
+        "group": "wide",
+        "seed": 7102
+      },
+      {
+        "group": "wide",
+        "seed": 7104
+      },
+      {
+        "group": "wide",
+        "seed": 7107
+      },
+      {
+        "group": "wide",
+        "seed": 7109
+      },
+      {
+        "group": "wide",
+        "seed": 7111
+      },
+      {
+        "group": "wide",
+        "seed": 7112
+      },
+      {
+        "group": "wide",
+        "seed": 7114
+      },
+      {
+        "group": "wide",
+        "seed": 7117
+      },
+      {
+        "group": "wide",
+        "seed": 7119
+      },
+      {
+        "group": "wide",
+        "seed": 7122
+      },
+      {
+        "group": "wide",
+        "seed": 7123
+      },
+      {
+        "group": "wide",
+        "seed": 7129
+      }
+    ]
+  },
+  "videos": [
+    {
+      "category": "improved",
+      "group": "narrow",
+      "seed": 6128,
+      "video": "media/final_uniform_improved_seed6128.mp4",
+      "sidecar": "media/final_uniform_improved_seed6128.json"
+    }
+  ],
+  "selection": "First improved and first regressed placement in declared group/seed order; absent categories are not replaced by another model. If all outcomes match, first shared success (otherwise first seed).",
+  "aggregate_comparison": {
+    "reference": "original_h5",
+    "groups": {
+      "narrow": {
+        "trials": 30,
+        "improved": 1,
+        "regressed": 0,
+        "both_success": 25,
+        "both_failure": 4,
+        "placement_rate_difference": 0.03333333333333333,
+        "exact_mcnemar_two_sided_p": 1.0,
+        "identical_initial_cube_and_robot_states": true
+      },
+      "wide": {
+        "trials": 30,
+        "improved": 0,
+        "regressed": 0,
+        "both_success": 18,
+        "both_failure": 12,
+        "placement_rate_difference": 0.0,
+        "exact_mcnemar_two_sided_p": 1.0,
+        "identical_initial_cube_and_robot_states": true
+      }
+    },
+    "combined": {
+      "trials": 60,
+      "improved": 1,
+      "regressed": 0,
+      "both_success": 43,
+      "both_failure": 16,
+      "placement_rate_difference": 0.016666666666666666,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "identical_initial_cube_and_robot_states": true
+    }
+  }
+}

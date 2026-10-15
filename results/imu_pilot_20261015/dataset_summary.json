@@ -1,0 +1,10 @@
+{
+  "episodes": 24,
+  "frames": 5657,
+  "original_video_demonstrations": 20,
+  "imu_assisted_demonstrations": 4,
+  "original_human_recordings": 5,
+  "new_paired_human_recordings": 1,
+  "dataset": "data/datasets/imu_pilot_20261015",
+  "uploaded": false
+}

@@ -1,0 +1,23 @@
+{
+  "verified_utc": "2026-10-11T16:53:21.952819+00:00",
+  "models": {
+    "uniform": {
+      "checkpoint": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model",
+      "checkpoint_step": 2000,
+      "normalization_transform_tensors_verified_exact": true,
+      "model_sha256": "79bd1f50ba3298f6a2b9e7383bddca48251f94aff10a8437050ec3edc7695afd"
+    },
+    "targeted": {
+      "checkpoint": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model",
+      "checkpoint_step": 2000,
+      "normalization_transform_tensors_verified_exact": true,
+      "model_sha256": "a397df828991e22e784a8c990fb5e7648e377bf0c798b8920d062fedcfd178f4"
+    },
+    "continuation": {
+      "checkpoint": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model",
+      "checkpoint_step": 2000,
+      "normalization_transform_tensors_verified_exact": true,
+      "model_sha256": "4deffd0d0e8db42f60f35ab516d6b67e8086da3fba590343bcb41ada0cda6d37"
+    }
+  }
+}

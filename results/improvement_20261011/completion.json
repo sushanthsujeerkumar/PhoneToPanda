@@ -1,0 +1,17 @@
+{
+  "completed_utc": "2026-10-11T18:44:58.881708+00:00",
+  "started_utc": "2026-10-11T16:05:51+00:00",
+  "elapsed_minutes": 159.13,
+  "authorized_wall_budget_minutes": 240,
+  "completed_within_budget": true,
+  "source_recordings": 5,
+  "new_human_recordings": 0,
+  "trained_variants": 5,
+  "development_trials": 140,
+  "final_trials": 300,
+  "default_checkpoint": "checkpoints/main",
+  "selected_candidate": "original_h5",
+  "git_publication": "Local changes only; no commit or push performed.",
+  "all_gpu_evaluation_processes_finished": true,
+  "verification": "final_verification.json"
+}

@@ -1,0 +1,104 @@
+{
+  "test_command": ".venv/bin/python -m pytest tests -q",
+  "tests_passed": 197,
+  "tests_skipped": 2,
+  "skipped_scope": "Opt-in physics unit tests; separate actual demonstration and policy trials completed below.",
+  "tests_log_sha256": "3a2866d15a8f444ce19b055cc8d3c809cddd543485048d5995d4af98c344dd59",
+  "demonstration_replays": 4,
+  "successful_demonstration_replays": 4,
+  "policy_trials_completed": 30,
+  "model_placements": {
+    "original": 6,
+    "continuation": 6,
+    "augmented": 5
+  },
+  "identical_initial_states_verified": true,
+  "all_failures_before_lift_without_recorded_firm_grasp": true,
+  "failure_cases": [
+    {
+      "model": "original",
+      "seed": 84003,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "original",
+      "seed": 84004,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "original",
+      "seed": 85001,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "original",
+      "seed": 85002,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "continuation",
+      "seed": 84003,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "continuation",
+      "seed": 84004,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "continuation",
+      "seed": 85001,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "continuation",
+      "seed": 85002,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "augmented",
+      "seed": 84003,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "augmented",
+      "seed": 84004,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "augmented",
+      "seed": 85001,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "augmented",
+      "seed": 85002,
+      "last_observed_stage": "contact_without_firm_grasp"
+    },
+    {
+      "model": "augmented",
+      "seed": 85003,
+      "last_observed_stage": "contact_without_firm_grasp"
+    }
+  ],
+  "normalization_reloaded_and_verified": true,
+  "original_default_preserved": true,
+  "public_upload_performed": false,
+  "python": "3.12.3",
+  "versions": {
+    "torch": "2.7.1+cu128",
+    "lerobot": "0.4.3",
+    "mujoco": "3.3.7",
+    "robosuite": "1.4.0",
+    "numpy": "2.2.6",
+    "opencv-python": "4.12.0.88",
+    "matplotlib": "3.11.2"
+  },
+  "viewer_checks": {
+    "javascript_syntax_passed": true,
+    "browser_playback_verified": true,
+    "regression_case_W4_available": true,
+    "normal_speed_completion_verified": true,
+    "documentation_links_resolve": true
+  }
+}

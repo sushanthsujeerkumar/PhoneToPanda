@@ -1,9 +1,10 @@
-"""Custom LIBERO/Panda cube-to-box task and contact-based demonstration replay.
+"""Simulate the Panda cube-to-box task and record demonstrations.
 
-The setup controller is an oracle, not a learned policy. Personal-video replay uses
-measured object motion for the carried path; approach, grasp, release, and minimum
-clearance are scripted robot-specific adaptations. No object is attached to the
-hand, and object poses are only assigned during reset.
+A scripted controller uses the simulator's cube and box poses for approach,
+grasp, lift, and release. A marker track or an explicitly experimental IMU wrist
+estimate supplies the carry-path shape, adapted to robot endpoints and height
+limits. The IMU pilot uses manual video event timing with a provisional offset.
+Contact forces move the cube; object poses are assigned only at episode reset.
 """
 from __future__ import annotations
 
@@ -21,6 +22,137 @@ TABLE_Z = 0.90
 CUBE_HALF = 0.020
 STATE_NAMES = ["eef_x", "eef_y", "eef_z", "eef_axisangle_x", "eef_axisangle_y", "eef_axisangle_z", "gripper_left", "gripper_right"]
 ACTION_NAMES = ["delta_x", "delta_y", "delta_z", "delta_axisangle_x", "delta_axisangle_y", "delta_axisangle_z", "gripper"]
+IMU_PILOT_KIND = "personal_video_imu_pilot"
+
+
+def _verified_source_file(source: dict, path_key: str, hash_key: str, root: Path) -> Path:
+    value, expected = source.get(path_key), source.get(hash_key)
+    if (not isinstance(value, str) or not value or not isinstance(expected, str)
+            or len(expected) != 64 or any(c not in "0123456789abcdef" for c in expected)):
+        raise ValueError(f"IMU pilot requires {path_key} and its SHA256 hash.")
+    path = Path(value).expanduser()
+    if not path.is_absolute():
+        path = root / path
+    if not path.is_file():
+        raise ValueError(f"IMU pilot source is missing: {path_key}.")
+    with path.open("rb") as stream:
+        actual = hashlib.file_digest(stream, "sha256").hexdigest()
+    if actual != expected:
+        raise ValueError(f"IMU pilot source hash differs: {path_key}.")
+    return path
+
+
+def validate_imu_pilot_source(source: dict, root: Path, quality: dict, trajectory: dict | None = None) -> dict:
+    """Verify sources and, when supplied, bind the replay path to recorded samples.
+
+    This pilot preserves every recorded wrist sample. Resampling, filtering or
+    replacing positions needs a separately defined provenance contract.
+    """
+    if source.get("kind") != IMU_PILOT_KIND:
+        raise ValueError("Expected an explicitly identified personal-video IMU pilot.")
+    if (not isinstance(quality, dict) or quality.get("accepted") is not True
+            or quality.get("estimated_wrist") is not True or quality.get("experimental") is not True
+            or quality.get("synchronization") != "provisional"):
+        raise ValueError("IMU pilot quality must disclose estimated wrist positions and provisional synchronization.")
+    _verified_source_file(source, "video", "sha256", root)
+    session_path = _verified_source_file(source, "imu_session", "imu_sha256", root)
+    events_path = _verified_source_file(source, "events", "events_sha256", root)
+    session, events = json.loads(session_path.read_text()), json.loads(events_path.read_text())
+    if not isinstance(session, dict) or not isinstance(events, dict) or not events:
+        raise ValueError("IMU pilot session and manual event annotations must be JSON objects.")
+    event_times = [events.get(key) for key in ("video_grasp_time_s", "video_release_time_s", "imu_time_offset_s")]
+    if (events.get("schema_version") != 1 or events.get("annotation_method") != "manual_video_review"
+            or events.get("synchronization") != "provisional"
+            or any(isinstance(v, bool) or not isinstance(v, (int, float)) or not np.isfinite(v) for v in event_times)
+            or not 0 <= event_times[0] < event_times[1]):
+        raise ValueError("IMU pilot requires ordered manual video events and a finite provisional time offset.")
+    metadata, frames = session.get("metadata", {}), session.get("frames", [])
+    if (not isinstance(metadata, dict) or metadata.get("schema_version") != 1
+            or metadata.get("source") != "serial" or metadata.get("synthetic") is not False
+            or not isinstance(frames, list) or len(frames) < 4):
+        raise ValueError("IMU pilot requires a real serial session with at least four recorded frames.")
+    config, calibration = metadata.get("config", {}), metadata.get("calibration", {})
+    if (not isinstance(config, dict) or not isinstance(calibration, dict)
+            or (config.get("upper_id"), config.get("forearm_id")) != ("3", "4")
+            or calibration.get("mapping") != {"upper": "3", "forearm": "4"}
+            or calibration.get("table_ready") is not True or calibration.get("neutral_ready") is not True
+            or calibration.get("stage") != "ready"
+            or any(isinstance(calibration.get(key), bool) or not isinstance(calibration.get(key), int)
+                   or calibration[key] < 0 for key in ("calibration_version", "generation"))):
+        raise ValueError("IMU pilot requires the calibrated right upper-arm and forearm sensors.")
+    if (events.get("sensor_session_id", metadata.get("id")) != metadata.get("id")
+            or source.get("session_id", metadata.get("id")) != metadata.get("id")):
+        raise ValueError("IMU pilot events do not identify the selected sensor session.")
+    if metadata.get("frames") != len(frames) or metadata.get("valid_pose_frames") != len(frames):
+        raise ValueError("IMU pilot requires complete, valid acquisition before retargeting.")
+    previous_host = previous_device = None
+    previous_sensor = {"3": None, "4": None}
+    for frame in frames:
+        if not isinstance(frame, dict):
+            raise ValueError("IMU pilot contains a malformed frame.")
+        host, packet, pose = frame.get("host_elapsed_s"), frame.get("device_frame", {}), frame.get("pose", {})
+        if not isinstance(packet, dict) or not isinstance(pose, dict):
+            raise ValueError("IMU pilot contains a malformed sensor packet or pose.")
+        device = packet.get("t_us")
+        if (isinstance(host, bool) or not isinstance(host, (int, float)) or not np.isfinite(host) or host < 0
+                or isinstance(device, bool) or not isinstance(device, int) or device < 0
+                or (previous_host is not None and host <= previous_host)
+                or (previous_device is not None and device <= previous_device)):
+            raise ValueError("IMU pilot clocks must be finite and strictly increasing.")
+        if previous_host is not None and (host - previous_host > .05 or device - previous_device > 50000):
+            raise ValueError("IMU pilot contains an acquisition gap over 50 ms.")
+        previous_host, previous_device = host, device
+        wrist = np.asarray(pose.get("wrist"), dtype=float)
+        if (pose.get("valid") is not True or wrist.shape != (3,) or not np.isfinite(wrist).all()
+                or pose.get("calibration_version") != calibration.get("calibration_version")
+                or pose.get("generation") != calibration.get("generation")):
+            raise ValueError("IMU pilot has an invalid wrist estimate or changed calibration.")
+        sensors = packet.get("sensors")
+        if not isinstance(sensors, list):
+            raise ValueError("IMU pilot sensor records are missing.")
+        for identity in ("3", "4"):
+            matches = [sensor for sensor in sensors if isinstance(sensor, dict) and sensor.get("id") == identity]
+            if len(matches) != 1:
+                raise ValueError("IMU pilot must contain each assigned sensor exactly once.")
+            sensor = matches[0]
+            stamp, flags, age = sensor.get("t_us"), sensor.get("flags"), sensor.get("age_ms")
+            quaternion = np.asarray(sensor.get("q"), dtype=float)
+            if (sensor.get("ok") is not True or sensor.get("reason")
+                    or isinstance(flags, bool) or not isinstance(flags, int) or (flags & 31) != 31 or flags & 224
+                    or isinstance(stamp, bool) or not isinstance(stamp, int) or not 0 < stamp <= device
+                    or (previous_sensor[identity] is not None and stamp <= previous_sensor[identity])
+                    or isinstance(age, bool) or not isinstance(age, (int, float)) or not np.isfinite(age) or not 0 <= age < 100
+                    or quaternion.shape != (4,) or not np.isfinite(quaternion).all()
+                    or not .8 <= np.linalg.norm(quaternion) <= 1.2):
+                raise ValueError("IMU pilot contains an invalid, stale or repeated selected-sensor sample.")
+            previous_sensor[identity] = stamp
+    grasp, release = event_times[0] + event_times[2], event_times[1] + event_times[2]
+    if not frames[0]["host_elapsed_s"] <= grasp < release <= frames[-1]["host_elapsed_s"]:
+        raise ValueError("IMU pilot event times fall outside the recorded sensor interval.")
+    if trajectory is not None:
+        for key, expected in (("grasp_time_s", grasp), ("release_time_s", release)):
+            value = trajectory.get(key)
+            if (isinstance(value, bool) or not isinstance(value, (int, float))
+                    or not np.isfinite(value) or not np.isclose(value, expected, atol=1e-6, rtol=0)):
+                raise ValueError("IMU pilot replay cut times do not match its manual video annotations.")
+        samples = trajectory.get("samples")
+        if not isinstance(samples, list) or len(samples) != len(frames):
+            raise ValueError("IMU pilot trajectory must retain every recorded wrist sample without resampling.")
+        for sample, frame in zip(samples, frames, strict=True):
+            if not isinstance(sample, dict) or sample.get("origin") != "recorded_imu_wrist_estimate":
+                raise ValueError("IMU pilot trajectory must identify each recorded wrist estimate.")
+            stamp, xyz = sample.get("t"), sample.get("xyz")
+            if (isinstance(stamp, bool) or not isinstance(stamp, (int, float))
+                    or not np.isfinite(stamp) or not isinstance(xyz, list) or len(xyz) != 3
+                    or any(isinstance(value, bool) or not isinstance(value, (int, float))
+                           or not np.isfinite(value) for value in xyz)):
+                raise ValueError("IMU pilot trajectory needs finite numeric timestamps and wrist positions.")
+            # JSON preserves these float64 values; allow only nanosecond and
+            # nanometre round-off, never a shifted or newly estimated path.
+            if (not np.isclose(stamp, frame["host_elapsed_s"], atol=1e-9, rtol=0)
+                    or not np.allclose(xyz, frame["pose"]["wrist"], atol=1e-9, rtol=0)):
+                raise ValueError("IMU pilot trajectory samples differ from the verified sensor recording.")
+    return {"session_id": metadata.get("id"), "frames": len(frames), "events": events}
 
 
 def _downward_rotation_action(quaternion) -> np.ndarray:
@@ -122,7 +254,12 @@ def _make_raw_env(root: Path, settings: dict):
 
 
 class PandaBoxEnv:
-    """Small adapter with the same state/action/camera contract used by SmolVLA."""
+    """Expose two RGB cameras and robot state to the policy.
+
+    State contains tool XYZ in metres, tool axis-angle in radians, and two finger
+    joint positions in metres. Cube and box poses are separate simulator helpers
+    for demonstration generation and scoring, absent from the policy observation.
+    """
     def __init__(self, config: dict, seed: int = 0):
         self.config, self.seed = config, int(seed)
         self.settings = config.get("simulation", {})
@@ -198,7 +335,47 @@ class PandaBoxEnv:
         return bool(self.raw_env.check_contact(self.raw_env.robots[0].gripper,
                                                self.raw_env.objects_dict["cube_1"]))
 
+    def grasp_diagnostics(self) -> dict[str, Any]:
+        """Read physics state for evaluation; never intervene in robot control.
+
+        gripper_contact includes any cube/gripper contact. bilateral_contact
+        requires positive normal force on both finger pads; firm_bilateral_grasp
+        requires the demonstration force threshold on both. These are contact
+        checks; successful lifting and placement are checked separately.
+        """
+        cube = self.cube_position
+        eef = np.asarray(self._raw_obs["robot0_eef_pos"], dtype=float)
+        offset = eef - cube
+        forces = self.grasp_contact_forces()
+        threshold = float(self.settings.get("grasp_min_normal_force_n", 1.))
+        if not np.isfinite(threshold) or threshold <= 0:
+            raise ValueError("Grasp diagnostics require a positive normal force threshold.")
+        lifted = bool(cube[2] > TABLE_Z + .070)
+        ever_lifted = bool(self._max_cube_height > TABLE_Z + .070)
+        return {
+            "eef_xyz": eef.tolist(), "cube_xyz": cube.tolist(),
+            "eef_cube_offset_m": offset.tolist(),
+            "eef_cube_distance_m": float(np.linalg.norm(offset)),
+            "eef_cube_xy_distance_m": float(np.linalg.norm(offset[:2])),
+            "eef_cube_z_offset_m": float(offset[2]),
+            "finger_aperture_m": float(np.abs(self._raw_obs["robot0_gripper_qpos"]).sum()),
+            "finger_normal_forces_n": forces.tolist(),
+            "gripper_contact": self.cube_touches_gripper(),
+            "bilateral_contact": bool(np.all(forces > 0.)),
+            "firm_bilateral_grasp": bool(np.all(forces >= threshold)),
+            "firm_grasp_threshold_n": threshold,
+            "cube_height_above_table_m": float(cube[2] - TABLE_Z),
+            "lifted": lifted, "ever_lifted": ever_lifted,
+            "lift_phase": "lifted" if lifted else ("after_lift" if ever_lifted else "before_lift"),
+        }
+
     def step(self, action):
+        """Apply seven normalized controls: XYZ, rotation, and gripper.
+
+        A value of 1 requests a 5 cm XYZ increment or a 0.5 rad rotation increment;
+        gripper -1 opens and +1 closes. fixed_downward replaces the three rotation
+        slots with wrist feedback while preserving XYZ and gripper commands.
+        """
         action = np.asarray(action, dtype=np.float32)
         if action.shape != (7,) or not np.isfinite(action).all():
             raise ValueError("Panda action must be seven finite numbers.")
@@ -225,11 +402,12 @@ def make_env(config: dict, seed: int = 0) -> PandaBoxEnv:
 
 
 def retarget_carried_path(trajectory: dict, start_xyz, end_xyz, settings: dict) -> tuple[np.ndarray, np.ndarray]:
-    """Map measured object motion to the simulator, retaining timing and curvature.
+    """Turn the selected source path into gripper targets for the carry phase.
 
-    Align start->end translation in the table plane, scale to robot displacement,
-    and preserve measured deviations from the endpoint line. A robot clearance
-    floor and workspace ceiling deliberately modify unsafe vertical portions.
+    Rotate and scale the horizontal path between the robot's start and end points.
+    Subtract the straight line between measured endpoint heights before scaling
+    vertical deviations, then clamp to the configured clearance and ceiling.
+    Sample times are retained when video_speed is 1, or divided by video_speed.
     """
     samples = trajectory.get("samples", [])
     if len(samples) < 4:
@@ -271,11 +449,19 @@ def retarget_carried_path(trajectory: dict, start_xyz, end_xyz, settings: dict) 
 
 
 class _Recorder:
-    def __init__(self, env: PandaBoxEnv, initial: dict):
+    """Pair each pre-action observation with the scripted command applied next.
+
+    These commands supply robot training labels. The source trajectory supplies
+    carry targets; it does not contain robot actions or joint measurements.
+    """
+    def __init__(self, env: PandaBoxEnv, initial: dict, observer=None):
         self.env, self.obs = env, initial
+        self.observer = observer
         self.states, self.images, self.images2, self.actions, self.phases = [], [], [], [], []
         self.max_cube_height = float(env.cube_position[2])
         self.transitions = []
+        if self.observer is not None:
+            self.observer(self.env, self.obs, "reset")
 
     def action_to(self, xyz, gripper):
         delta = (np.asarray(xyz) - self.obs["observation.state"][:3]) / .05
@@ -294,6 +480,8 @@ class _Recorder:
         self.phases.append(phase)
         self.obs, _, _, _ = self.env.step(action)
         self.max_cube_height = max(self.max_cube_height, float(self.env.cube_position[2]))
+        if self.observer is not None:
+            self.observer(self.env, self.obs, phase)
 
     def move(self, xyz, gripper, phase, min_steps=8, max_steps=80, tolerance=.009):
         for i in range(max_steps):
@@ -328,20 +516,28 @@ class _Recorder:
         raise RuntimeError("Cube did not release before the contact timeout; episode rejected.")
 
 
-def record_demo(config: dict, output_path, trajectory_path=None, seed: int = 0) -> dict[str, Any]:
-    """Export one physics replay; absence of a trajectory means synthetic setup-only."""
+def record_demo(config: dict, output_path, trajectory_path=None, seed: int = 0, observer=None) -> dict[str, Any]:
+    """Export one physics replay; absence of a trajectory means synthetic setup-only.
+
+    Optional observer(env, observation, phase) receives reset and post-step updates.
+    """
     output = Path(output_path).expanduser().resolve()
     if output.suffix != ".npz":
         output = output.with_suffix(".npz")
     trajectory = None
+    imu_pilot = False
     source = {"kind": "synthetic_setup_controller", "video": None, "sha256": None}
     if trajectory_path is not None:
         trajectory_path = Path(trajectory_path).expanduser().resolve()
         trajectory = json.loads(trajectory_path.read_text())
-        if trajectory.get("schema_version") != 1 or trajectory.get("coordinate_frame") != "table_marker":
-            raise ValueError("Unsupported trajectory schema/frame.")
         source = dict(trajectory.get("source", {}))
-        if source.get("kind") != "personal_video" or not source.get("video") or len(source.get("sha256", "")) != 64:
+        imu_pilot = source.get("kind") == IMU_PILOT_KIND
+        expected_frame = "fixed_shoulder" if imu_pilot else "table_marker"
+        if trajectory.get("schema_version") != 1 or trajectory.get("coordinate_frame") != expected_frame:
+            raise ValueError("Unsupported trajectory schema/frame.")
+        if imu_pilot:
+            validate_imu_pilot_source(source, _root(config), trajectory.get("quality", {}), trajectory=trajectory)
+        elif source.get("kind") != "personal_video" or not source.get("video") or len(source.get("sha256", "")) != 64:
             raise ValueError("Replay requires a personal-video source with a SHA256 provenance hash.")
         video = Path(source["video"]).expanduser()
         if not video.is_absolute():
@@ -365,7 +561,7 @@ def record_demo(config: dict, output_path, trajectory_path=None, seed: int = 0) 
     recorder = None
     failure = None
     try:
-        recorder = _Recorder(env, env.reset())
+        recorder = _Recorder(env, env.reset(), observer=observer)
         cube = env.cube_position
         box = env.box_position
         grasp = cube + np.array([0., 0., .003])
@@ -390,7 +586,8 @@ def record_demo(config: dict, output_path, trajectory_path=None, seed: int = 0) 
             times, path = retarget_carried_path(trajectory, np.r_[cube[:2], high], end, env.settings)
         for time in np.arange(0, times[-1] + 1 / env.control_hz, 1 / env.control_hz):
             point = np.array([np.interp(time, times, path[:, k]) for k in range(3)])
-            recorder.tick(point, 1., "carry_personal_video" if trajectory is not None else "carry_synthetic")
+            phase = "carry_imu_estimated_wrist" if imu_pilot else ("carry_personal_video" if trajectory is not None else "carry_synthetic")
+            recorder.tick(point, 1., phase)
         recorder.move(end, 1., "over_box", min_steps=1 if contact_mode else 8)
         release = np.r_[box[:2], TABLE_Z + .052]
         recorder.move(release, 1., "lower_into_box", min_steps=1 if contact_mode else 12)
@@ -430,7 +627,8 @@ def record_demo(config: dict, output_path, trajectory_path=None, seed: int = 0) 
                 "orientation_control": env.orientation_control,
                 "controller": ("Hybrid: XYZ and gripper commands plus fixed downward orientation feedback; rotation action slots ignored"
                                if env.orientation_control == "fixed_downward" else "Seven-dimensional OSC_POSE commands"),
-                "retargeting": "Measured carried object path, horizontal endpoint alignment/scaling, timed replay, safety height floor/ceiling; scripted approach/grasp/release" if trajectory else "Synthetic scripted setup check; not personal demonstration data or learned-policy performance",
+                "retargeting": ("Experimental IMU-estimated wrist path with manual video event timing and provisional synchronization; horizontal endpoint alignment/scaling and safety height limits; scripted approach/grasp/release; not measured object motion or learned sensor fusion"
+                                if imu_pilot else "Measured carried object path, horizontal endpoint alignment/scaling, timed replay, safety height floor/ceiling; scripted approach/grasp/release" if trajectory else "Synthetic scripted setup check; not personal demonstration data or learned-policy performance"),
                 "physics": "MuJoCo contacts and friction only; no attachment or object-pose assignment after reset",
                 "episode": str(output), "video": str(output.with_suffix(".mp4")),
             }
@@ -441,7 +639,8 @@ def record_demo(config: dict, output_path, trajectory_path=None, seed: int = 0) 
                     import imageio.v2 as imageio
                     import cv2
                     frames = []
-                    label = "PERSONAL VIDEO REPLAY (scripted grasp)" if trajectory else "SYNTHETIC SETUP CHECK (scripted controller)"
+                    label = ("IMU WRIST PILOT (manual video timing; scripted grasp)" if imu_pilot else
+                             "PERSONAL VIDEO REPLAY (scripted grasp)" if trajectory else "SYNTHETIC SETUP CHECK (scripted controller)")
                     for a, b in zip(recorder.images, recorder.images2):
                         frame = np.concatenate((a, b), axis=1)
                         canvas = np.zeros((frame.shape[0] + 28, frame.shape[1], 3), np.uint8)

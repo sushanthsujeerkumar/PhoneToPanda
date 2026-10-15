@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "completed_utc": "2026-10-11T18:42:21.315406+00:00",
+  "candidate_lock_sha256": "59d1e394c1b2aef399188c687e1b8a30a1a871af1e1c8f0ccb8022d408c8c095",
+  "archive_sha256": "22a47ef35023d0861b5164c335e3c93b5e6abd3728941dc7fee5408aee03a40f",
+  "verified_counts": {
+    "frozen_implementation_and_config_files": 25,
+    "raw_source_videos": 5,
+    "original_checkpoint_files": 8,
+    "selection_sidecars": 10,
+    "final_checkpoint_files": 44,
+    "unchanged_numeric_audit_inputs": 337,
+    "byte_identical_curated_source_copies": 53,
+    "verified_archive_files": 536,
+    "relocated_paired_video_source_checks": 1
+  },
+  "summary_regeneration": [
+    {
+      "summary": "action_timing_diagnostic",
+      "byte_identical_json": true,
+      "sha256": "7bab6ee49d0896e29c1d3d40efa106abdd0fa83380cac9140789f4757be7ba2c"
+    },
+    {
+      "summary": "matched_development",
+      "byte_identical_json": true,
+      "sha256": "3dfb79d372b016e126f05508ab24dcc993210981d96f527c5cd5691096d3a285"
+    },
+    {
+      "summary": "development",
+      "byte_identical_json": true,
+      "sha256": "6983483cae149be922df5dc4d48ffeb03d93b34dfd7dc51a3c4de79647c8165c"
+    },
+    {
+      "summary": "final",
+      "byte_identical_json": true,
+      "sha256": "8a0fdd2ae812942005b8477992a40d74c971e47ebfdb7513c01fe36889b828eb"
+    }
+  ],
+  "tests": {
+    "passed": 137,
+    "warnings": 3,
+    "log_in_archive": "tests_pre_final_evaluation.log",
+    "scope": "Pre-final evaluation suite with PHONE_PHYSICS_TEST=1; frozen implementation remained unchanged afterward."
+  },
+  "scope": "Verified every archived file hash, all four summary JSONs from a fresh extracted directory without model inference, paired illustration input provenance, frozen source/config/selection identities, original videos/checkpoint, all final checkpoint files, dataset-audit input hashes and curated copies.",
+  "limits": "This verifies evidence consistency and preservation, not independent replication by another researcher or new training seeds. Only the selected paired source videos are included in the archive."
+}

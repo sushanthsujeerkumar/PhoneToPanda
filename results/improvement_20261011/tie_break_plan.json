@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-10-11T16:30:35.711028+00:00",
+  "timing": "Before any adapted-model development result exists.",
+  "primary_metric": "Combined placements on new_narrow + new_wide (20 starts).",
+  "tie_order": [
+    "original_h5",
+    "continuation2000_h5",
+    "uniform2000_h5",
+    "targeted2000_h5"
+  ],
+  "reason": "Retain original when tied; otherwise favor original-data continuation, then uniform sampling, then targeted sampling as increasing intervention complexity.",
+  "h1": "Must exceed original_h5 on known-wide diagnostics to warrant new-development evaluation; now at zero of six, it cannot exceed five of ten and will not advance. Complete diagnostic still retained."
+}

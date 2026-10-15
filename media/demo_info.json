@@ -1,14 +1,67 @@
 {
-  "duration_seconds": 151.55,
-  "video_width": 1280,
-  "video_height": 720,
+  "duration_seconds": 109.55,
+  "video_width": 1180,
+  "video_height": 506,
+  "fps": 20,
+  "frame_count": 2191,
   "audio_present": false,
   "codec": "h264",
-  "source_filename": "Screencast from 2026-10-04 15-40-47.webm",
-  "source_duration_seconds": 151.549469,
-  "source_sha256": "e9df66f2d0d59407b39571a46a2cba1ba544b2eb5b85f31768d3cb1e4b3c397c",
-  "published_sha256": "7c641fcafbbff3d4f70d2877e80750fc8999e858fed65293f12c59b5d5f2b871",
-  "edits": "Full recording converted to H.264 MP4 at 1280x720 and 20 fps for playback. No sections removed or retimed. Source has no audio track.",
-  "interpretation": "Interactive demonstration; not an additional benchmark evaluation.",
-  "github_video_url": "https://github.com/user-attachments/assets/be2a7a18-ede6-4dbe-93df-fda033dd7acc"
+  "source_filename": "demo_original.mp4",
+  "source_duration_seconds": 151.55,
+  "source_frame_count": 3031,
+  "source_sha256": "7c641fcafbbff3d4f70d2877e80750fc8999e858fed65293f12c59b5d5f2b871",
+  "capture_source": {
+    "filename": "Screencast from 2026-10-04 15-40-47.webm",
+    "duration_seconds": 151.549469,
+    "sha256": "e9df66f2d0d59407b39571a46a2cba1ba544b2eb5b85f31768d3cb1e4b3c397c"
+  },
+  "published_sha256": "0acfec2b0853731e3c2e7e69f35f2ff92b4947cc12f96797aaa868f57d935f2d",
+  "edits": "Continuous excerpt from 42.0 seconds to the source end, at normal speed. Fixed crops of the placement-control and simulator windows are joined side by side without scaling. Startup and window arrangement before the first policy episode are omitted. No internal sections are removed or retimed; every source frame from frame 840 to frame 3030 is retained in order. The source has no audio track.",
+  "source_interval": {
+    "start_seconds": 42.0,
+    "end_seconds_exclusive": 151.55,
+    "first_frame_zero_based": 840,
+    "last_frame_zero_based": 3030,
+    "end_frame_exclusive": 3031
+  },
+  "crops": [
+    {
+      "window": "placement control",
+      "source_x": 48,
+      "source_y": 24,
+      "width": 326,
+      "height": 506,
+      "output_x": 0,
+      "output_y": 0
+    },
+    {
+      "window": "simulator",
+      "source_x": 398,
+      "source_y": 28,
+      "width": 854,
+      "height": 506,
+      "output_x": 326,
+      "output_y": 0
+    }
+  ],
+  "preview": {
+    "path": "media/demo_preview.jpg",
+    "output_frame_zero_based": 760,
+    "output_timestamp_seconds": 38.0,
+    "source_frame_zero_based": 1600,
+    "source_timestamp_seconds": 80.0,
+    "sha256": "63374848126eaaeca9312262432b6ae1412c7425d077ad1659a73feb346330f6",
+    "edits": "Single frame captured from the presentation video and encoded as JPEG."
+  },
+  "verification": {
+    "all_2191_output_frames_compared_with_corresponding_source_crops": true,
+    "maximum_mean_absolute_pixel_difference": 1.1090328487528194,
+    "visually_reviewed_source_frames": [
+      840,
+      1600,
+      3030
+    ],
+    "note": "H.264 re-encoding changes pixels slightly; the frame comparison verifies continuous source-to-output correspondence. Representative start, middle and end frames were visually checked."
+  },
+  "interpretation": "Historical interactive demonstration; not an additional benchmark evaluation. The uncropped source and its original metadata are preserved locally."
 }

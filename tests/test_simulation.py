@@ -110,6 +110,43 @@ def test_orientation_hold_changes_only_rotation_and_does_not_mutate_input(monkey
     assert info["orientation_control"] == mode
 
 
+def test_grasp_diagnostics_distinguishes_contact_load_and_lift_without_moving_robot():
+    from types import SimpleNamespace
+    env = PandaBoxEnv.__new__(PandaBoxEnv)
+    env.settings = {"grasp_min_normal_force_n": 1.}
+    env._max_cube_height = .92
+    env._raw_obs = {"robot0_eef_pos": np.array([.03, .04, .93]),
+                    "robot0_gripper_qpos": np.array([.03, -.03])}
+    positions = np.array([[0., 0., .92]])
+    env.raw_env = SimpleNamespace(obj_body_id={"cube_1": 0},
+                                  sim=SimpleNamespace(data=SimpleNamespace(body_xpos=positions)))
+    forces = np.array([2., .2])
+    env.grasp_contact_forces = lambda: forces.copy()
+    env.cube_touches_gripper = lambda: True
+    before = {key: value.copy() for key, value in env._raw_obs.items()}
+    diagnostic = env.grasp_diagnostics()
+    assert diagnostic["finger_aperture_m"] == pytest.approx(.06)
+    assert diagnostic["eef_cube_xy_distance_m"] == pytest.approx(.05)
+    assert diagnostic["eef_cube_z_offset_m"] == pytest.approx(.01)
+    assert diagnostic["bilateral_contact"]
+    assert not diagnostic["firm_bilateral_grasp"]
+    assert diagnostic["lift_phase"] == "before_lift"
+    forces[1] = 1.2
+    positions[0, 2] = 1.02
+    env._max_cube_height = 1.02
+    diagnostic = env.grasp_diagnostics()
+    assert diagnostic["firm_bilateral_grasp"]
+    assert diagnostic["lifted"] and diagnostic["ever_lifted"]
+    assert diagnostic["lift_phase"] == "lifted"
+    positions[0, 2] = .94
+    diagnostic = env.grasp_diagnostics()
+    assert not diagnostic["lifted"] and diagnostic["ever_lifted"]
+    assert diagnostic["lift_phase"] == "after_lift"
+    for key, value in before.items():
+        np.testing.assert_array_equal(env._raw_obs[key], value)
+    assert positions[0, 2] == .94
+
+
 @pytest.mark.skipif(os.environ.get("PHONE_PHYSICS_TEST") != "1", reason="Run PHONE_PHYSICS_TEST=1 for the EGL/MuJoCo integration test")
 @pytest.mark.parametrize("transition,orientation", [("timed", "policy"), ("contact", "fixed_downward")])
 def test_real_contact_physics_pick_and_place(tmp_path, transition, orientation):

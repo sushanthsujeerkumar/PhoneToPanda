@@ -1,0 +1,122 @@
+{
+  "identity_sha256": "484a0287819e8b71fbeed8e3c8be5d4591372259f63cf6b590f5efe2337dfcea",
+  "group": "narrow",
+  "episode_plan": {
+    "radius_m": 0.035,
+    "seed": 84000,
+    "episodes": 5
+  },
+  "config": {
+    "task": "Pick up the cube and place it inside the box.",
+    "paths": {
+      "raw": "data/raw",
+      "calibration": "data/calibration/camera.json",
+      "annotations": "data/annotations",
+      "processed": "data/processed",
+      "robot": "data/robot/main",
+      "dataset": "data/datasets/main",
+      "runs": "runs"
+    },
+    "video": {
+      "table_marker_size_m": 0.05,
+      "object_marker_size_m": 0.03,
+      "chess_square_size_m": 0.025,
+      "sample_hz": 30,
+      "max_gap_s": 0.2,
+      "tracking_mode": "multi_marker",
+      "object_marker_id": 1,
+      "write_previews": false,
+      "reference_markers": [
+        {
+          "id": 0,
+          "region": [
+            0.1,
+            0,
+            0.35,
+            0.2
+          ]
+        },
+        {
+          "id": 1,
+          "region": [
+            0.72,
+            0,
+            0.96,
+            0.2
+          ]
+        },
+        {
+          "id": 2,
+          "region": [
+            0.72,
+            0.75,
+            0.98,
+            1
+          ]
+        },
+        {
+          "id": 3,
+          "region": [
+            0.05,
+            0.7,
+            0.28,
+            1
+          ]
+        }
+      ],
+      "resting_height_range_m": [
+        -0.01,
+        0.15
+      ]
+    },
+    "simulation": {
+      "control_hz": 20,
+      "image_size": 256,
+      "horizon": 600,
+      "demo_transition_mode": "contact",
+      "orientation_control": "fixed_downward",
+      "save_replay_video": false,
+      "randomize_start_m": 0.035
+    },
+    "training": {
+      "policy_path": "/home/sushanth/PhoneToPanda/checkpoints/main",
+      "repo_id": "local/phone_to_panda",
+      "batch_size": 4,
+      "steps": 500,
+      "save_freq": 500,
+      "num_workers": 0,
+      "device": "cuda",
+      "use_amp": true,
+      "output_dir": "runs/imu_pilot_20261015/train_continuation",
+      "seed": 42,
+      "resize_imgs_with_padding": [
+        256,
+        256
+      ],
+      "n_action_steps": 5,
+      "chunk_size": 20,
+      "optimizer_lr": 1e-05,
+      "preserve_normalization": true
+    },
+    "evaluation": {
+      "episodes": 5,
+      "seed": 84000,
+      "save_video": true,
+      "save_trace": true,
+      "n_action_steps": 5
+    },
+    "batch": {
+      "name": "One experimental paired video and IMU recording",
+      "clips": [
+        "IMG_2276"
+      ],
+      "notes": "Fixed-shoulder IMU wrist estimate plus manual video timing; no position fusion."
+    },
+    "demonstrations": {
+      "replays_per_clip": 4,
+      "seed_start": 0,
+      "minimum_successes_per_clip": 4,
+      "minimum_successes": 20
+    }
+  }
+}

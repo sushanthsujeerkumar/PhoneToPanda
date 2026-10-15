@@ -1,0 +1,44 @@
+{
+  "specified_utc": "2026-10-11T17:20:29.196837+00:00",
+  "candidate": "recovery2000_h5",
+  "reason": "Matched replay additions and the gentler uniform extension did not beat original16/20 new-development placements. Missed grasps dominate original failures. Three capped expert-recovery pilots from exact saved failed-policy prefixes all physically succeeded, motivating recovery-state coverage rather than further start-position sampling.",
+  "extension_development_counts": {
+    "narrow": 10,
+    "wide": 6
+  },
+  "extension_report_sha256": {
+    "development/uniform4000_h5/new_narrow/evaluation/report.json": "edcda415441630eadb5b0de66383801e1e6e35a8b6355bd74836a1b1fef47960",
+    "development/uniform4000_h5/new_wide/evaluation/report.json": "65b60e8fb16dcfb6383aa28c356e90372f9d37cb995a35d9ab26af308c40593b"
+  },
+  "pilot_summary_sha256": "30d194fd5680aa93e14484a9241ab71900ef6a4141005488ccac706a2fd20339",
+  "fixed_seeds": [
+    3010,
+    3012,
+    3013,
+    3014,
+    3015
+  ],
+  "fixed_prefix_steps": [
+    60,
+    80,
+    100,
+    120
+  ],
+  "jobs": 20,
+  "jobs_per_existing_source_clip": 4,
+  "selection": "Cartesian product of five failed known-wide seeds and four prefix lengths, cyclically assigned to five clips. Require all20 successes; retain any failure and stop rather than substitute or retry.",
+  "training_data": "Byte-identical original20 demonstrations plus20 expert-labelled recovery segments; failed policy prefixes are context only and never training action labels.",
+  "human_contribution": "Existing measured carry-path shape and timing; recovery, approach, contact grasp and release actions come from a simulator expert. No new human recordings.",
+  "physics": "Reproduce initial state and fixed policy-action prefix with one reset; verify state/action agreement, continue same environment, no attachment or pose changes. Expert sees simulator state only during demonstration generation; evaluated policies receive no recovery controller.",
+  "parent": "checkpoints/main",
+  "additional_updates": 2000,
+  "optimizer_lr": 1e-05,
+  "batch_size": 4,
+  "training_seed": 42,
+  "normalization": "Frozen original observation/action transformation tensors",
+  "n_action_steps": 5,
+  "chunk_size": 20,
+  "development_selection": "Same20 new narrow/wide development seeds; recovery ranks after uniform4000_h5 in ties. Prefix source seeds cannot count as held-out evaluation.",
+  "final_boundary": "No final-test data accessed. Lock all final models and primary selection before final evaluation; no more tuning after this recovery experiment.",
+  "wall_budget_end_utc": "2026-10-11T20:05:51Z"
+}

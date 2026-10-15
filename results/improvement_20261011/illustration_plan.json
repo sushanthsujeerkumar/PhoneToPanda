@@ -1,0 +1,7 @@
+{
+  "recorded_utc": "2026-10-11T17:54:19.805777+00:00",
+  "purpose": "Presentation rule recorded while final evaluation is running. It changes no candidate selection, training, evaluation or analysis settings.",
+  "contrast": "original_h5 versus uniform2000_h5; the matched augmentation arm that tied original development placement count",
+  "selection_rule": "Within the complete final comparison for these two fixed checkpoints, order narrow before wide and seeds numerically. Show the first improved placement and first regressed placement if each exists. If no discordant pair exists, show the first shared success, otherwise the first seed. Report absent categories rather than substituting a different model.",
+  "label": "Secondary fixed-checkpoint illustrations. Aggregate counts remain the result; original_h5 was selected before final testing."
+}

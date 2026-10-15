@@ -1,0 +1,10 @@
+{
+  "source_hashes_verified": true,
+  "all_trajectory_samples_bound_to_original_session": true,
+  "sample_count": 1501,
+  "trajectory_sha256": "13507bebdc3ccc40985c939cd2e0143e883642913b52cf394c596c293664019e",
+  "episode_manifest_count": 24,
+  "original_20_demonstrations_byte_identical": true,
+  "new_demonstrations": 4,
+  "new_independent_human_recordings": 1
+}

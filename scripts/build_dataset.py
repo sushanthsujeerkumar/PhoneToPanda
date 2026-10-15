@@ -108,6 +108,12 @@ def prepare_tracks(config, skip_prepare=False):
 
 
 def build_dataset(config, skip_prepare=False):
+    """Build the planned simulator replays from the accepted phone trajectories.
+
+    Replays with different seeds reuse the same recordings; they are additional
+    robot episodes, not additional human demonstrations. Keep failed attempts in
+    rejected_replays, and export successful episodes only after coverage checks.
+    """
     tracks = prepare_tracks(config, skip_prepare)
     settings = config["demonstrations"]
     repetitions, start = int(settings["replays_per_clip"]), int(settings["seed_start"])

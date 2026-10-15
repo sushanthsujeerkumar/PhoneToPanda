@@ -23,8 +23,8 @@ the object is carried.
 The measured carry path, its curvature and its timing are mapped into the robot's
 workspace. Endpoint alignment, scaling and height limits adapt it to the simulated
 cube and box. A controller supplies the robot-specific approach, contact-based
-grasp and release. This makes the phone data useful without pretending it already
-contains robot actions.
+grasp and release. The video supplies the carry path; the simulator controller
+supplies the robot actions used as training labels.
 
 The Panda must move the cube through normal contacts and friction. Initial object
 poses are assigned at reset. During the episode, the cube is neither attached to
@@ -59,8 +59,11 @@ rotation.
 
 At evaluation time the scripted demonstration controller is absent. SmolVLA
 chooses the translation and gripper commands throughout the episode. It predicts
-20 actions at a time and executes five before taking another observation. The
-control rate is 20 Hz, and each trial has a limit of 600 steps.
+20 actions at a time and executes five before predicting again from the current
+observation. The control rate is 20 Hz, and each trial has a limit of 600 steps.
+
+For the corresponding functions, array formats and examples of small changes,
+see the [code walkthrough](code_walkthrough.md).
 
 ## What counts as success
 

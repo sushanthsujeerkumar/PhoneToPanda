@@ -1,0 +1,20 @@
+{
+  "verified_utc": "2026-10-11T17:14:58.298669+00:00",
+  "candidate": "uniform4000_h5",
+  "checkpoint": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model",
+  "total_extra_updates_after_original": 4000,
+  "last_stage_updates": 2000,
+  "last_stage_lr": 5e-06,
+  "original_transform_verified_exact": true,
+  "checkpoint_files": {
+    "config.json": "5eb0338844a5beffa036276ae39e833d4e599bd860f5bba372f4757a44d8d245",
+    "frozen_normalization.json": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+    "model.safetensors": "f0ada1ada9db6fe08cfeca5f528309c2ada89c726a578fce8fda801976a5761f",
+    "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+    "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+    "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+    "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+    "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+    "train_config.json": "4016cf14416e21df97de7cc76868ba5ac57ae941d65f57e70e11d350a00ec44d"
+  }
+}

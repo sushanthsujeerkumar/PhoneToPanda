@@ -1,0 +1,157 @@
+[
+  {
+    "seed": 85000,
+    "success": true,
+    "steps": 234,
+    "wall_seconds": 19.60663713699978,
+    "max_cube_height_m": 1.1966890127876801,
+    "final_cube_xyz": [
+      -0.0005184836321950164,
+      0.19403447905227722,
+      0.9296006147045897
+    ],
+    "first_events": {
+      "contact_step": 58,
+      "bilateral_contact_step": 60,
+      "firm_grasp_step": 60,
+      "lift_step": 70,
+      "release_after_lift_step": 231
+    },
+    "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+    "inference_timing": {
+      "action_calls": 234,
+      "prediction_calls": 47,
+      "total_seconds": 16.029164958987167,
+      "mean_action_seconds": 0.06850070495293661,
+      "prediction_total_seconds": 14.36045238499355,
+      "mean_prediction_seconds": 0.30554154010624573,
+      "p95_prediction_seconds": 0.35037610640010813,
+      "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+    },
+    "video": "episode_000.mp4"
+  },
+  {
+    "seed": 85001,
+    "success": false,
+    "steps": 600,
+    "wall_seconds": 48.44837993600049,
+    "max_cube_height_m": 0.931800564538944,
+    "final_cube_xyz": [
+      -0.025072626137228434,
+      -0.22576747437836045,
+      0.9199092400569476
+    ],
+    "first_events": {
+      "contact_step": 42,
+      "bilateral_contact_step": null,
+      "firm_grasp_step": null,
+      "lift_step": null,
+      "release_after_lift_step": null
+    },
+    "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+    "inference_timing": {
+      "action_calls": 600,
+      "prediction_calls": 120,
+      "total_seconds": 39.45172644800368,
+      "mean_action_seconds": 0.06575287741333947,
+      "prediction_total_seconds": 36.03690589000507,
+      "mean_prediction_seconds": 0.3003075490833756,
+      "p95_prediction_seconds": 0.3383172407001439,
+      "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+    },
+    "video": "episode_001.mp4"
+  },
+  {
+    "seed": 85002,
+    "success": false,
+    "steps": 600,
+    "wall_seconds": 43.55115652200038,
+    "max_cube_height_m": 0.9244265595765276,
+    "final_cube_xyz": [
+      0.05841140394276418,
+      -0.2075369322976458,
+      0.9199092400569475
+    ],
+    "first_events": {
+      "contact_step": 48,
+      "bilateral_contact_step": null,
+      "firm_grasp_step": null,
+      "lift_step": null,
+      "release_after_lift_step": null
+    },
+    "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+    "inference_timing": {
+      "action_calls": 600,
+      "prediction_calls": 120,
+      "total_seconds": 35.02732253900467,
+      "mean_action_seconds": 0.05837887089834112,
+      "prediction_total_seconds": 32.32791895701121,
+      "mean_prediction_seconds": 0.26939932464176003,
+      "p95_prediction_seconds": 0.28106682075067513,
+      "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+    },
+    "video": "episode_002.mp4"
+  },
+  {
+    "seed": 85003,
+    "success": false,
+    "steps": 600,
+    "wall_seconds": 42.659634227000424,
+    "max_cube_height_m": 0.9333795287654458,
+    "final_cube_xyz": [
+      0.06738119538758755,
+      -0.12172054264225891,
+      0.9199092400569475
+    ],
+    "first_events": {
+      "contact_step": 42,
+      "bilateral_contact_step": null,
+      "firm_grasp_step": null,
+      "lift_step": null,
+      "release_after_lift_step": null
+    },
+    "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+    "inference_timing": {
+      "action_calls": 600,
+      "prediction_calls": 120,
+      "total_seconds": 34.44810766499177,
+      "mean_action_seconds": 0.057413512774986276,
+      "prediction_total_seconds": 31.814667777001887,
+      "mean_prediction_seconds": 0.26512223147501573,
+      "p95_prediction_seconds": 0.2916404491507819,
+      "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+    },
+    "video": "episode_003.mp4"
+  },
+  {
+    "seed": 85004,
+    "success": true,
+    "steps": 292,
+    "wall_seconds": 21.536031892999745,
+    "max_cube_height_m": 1.142068641717683,
+    "final_cube_xyz": [
+      0.021747528065111623,
+      0.1833401918573659,
+      0.930717003996164
+    ],
+    "first_events": {
+      "contact_step": 60,
+      "bilateral_contact_step": 62,
+      "firm_grasp_step": 62,
+      "lift_step": 77,
+      "release_after_lift_step": 289
+    },
+    "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+    "inference_timing": {
+      "action_calls": 292,
+      "prediction_calls": 59,
+      "total_seconds": 17.541868364996844,
+      "mean_action_seconds": 0.0600748916609481,
+      "prediction_total_seconds": 16.286833491994912,
+      "mean_prediction_seconds": 0.27604802528804934,
+      "p95_prediction_seconds": 0.30344197440026616,
+      "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+    },
+    "video": "episode_004.mp4"
+  }
+]

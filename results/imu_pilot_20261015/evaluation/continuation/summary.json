@@ -1,0 +1,373 @@
+{
+  "kind": "single_recording_imu_assisted_policy_evaluation",
+  "model": "continuation",
+  "identity_sha256": "e8c4b94b8ed8ae7794837d4c34f3948cf0a5a244ccac89dad1052f70c16849fe",
+  "groups": {
+    "narrow": {
+      "radius_m": 0.035,
+      "successes": 3,
+      "episodes": 5,
+      "success_rate": 0.6,
+      "episode_results": [
+        {
+          "seed": 84000,
+          "success": true,
+          "steps": 309,
+          "wall_seconds": 24.817074808001053,
+          "max_cube_height_m": 1.1369212648959264,
+          "final_cube_xyz": [
+            0.019306814776410285,
+            0.18056266644337596,
+            0.9300792871337116
+          ],
+          "first_events": {
+            "contact_step": 58,
+            "bilateral_contact_step": 59,
+            "firm_grasp_step": 59,
+            "lift_step": 66,
+            "release_after_lift_step": 306
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 309,
+            "prediction_calls": 62,
+            "total_seconds": 20.384743791986693,
+            "mean_action_seconds": 0.06597004463426115,
+            "prediction_total_seconds": 18.415102157001456,
+            "mean_prediction_seconds": 0.29701777672582996,
+            "p95_prediction_seconds": 0.31465567129853295,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_000.mp4",
+          "failure_category": null,
+          "trace": "episode_000_trace.json"
+        },
+        {
+          "seed": 84001,
+          "success": true,
+          "steps": 220,
+          "wall_seconds": 16.303131730999667,
+          "max_cube_height_m": 1.0972239510809092,
+          "final_cube_xyz": [
+            0.0072753032299289495,
+            0.18121620869554467,
+            0.9300329794464686
+          ],
+          "first_events": {
+            "contact_step": 52,
+            "bilateral_contact_step": 54,
+            "firm_grasp_step": 54,
+            "lift_step": 65,
+            "release_after_lift_step": 217
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 220,
+            "prediction_calls": 44,
+            "total_seconds": 13.190659221007081,
+            "mean_action_seconds": 0.059957541913668554,
+            "prediction_total_seconds": 11.997741142011364,
+            "mean_prediction_seconds": 0.2726759350457128,
+            "p95_prediction_seconds": 0.2868095030996301,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_001.mp4",
+          "failure_category": null,
+          "trace": "episode_001_trace.json"
+        },
+        {
+          "seed": 84002,
+          "success": true,
+          "steps": 203,
+          "wall_seconds": 16.042078169000888,
+          "max_cube_height_m": 1.1455034794722934,
+          "final_cube_xyz": [
+            0.0035500771963258384,
+            0.1791966531274856,
+            0.9300940259434363
+          ],
+          "first_events": {
+            "contact_step": 54,
+            "bilateral_contact_step": 56,
+            "firm_grasp_step": 56,
+            "lift_step": 62,
+            "release_after_lift_step": 200
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 203,
+            "prediction_calls": 41,
+            "total_seconds": 13.038979747001576,
+            "mean_action_seconds": 0.06423142732513092,
+            "prediction_total_seconds": 11.804679182003383,
+            "mean_prediction_seconds": 0.2879190044391069,
+            "p95_prediction_seconds": 0.3043742370009568,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_002.mp4",
+          "failure_category": null,
+          "trace": "episode_002_trace.json"
+        },
+        {
+          "seed": 84003,
+          "success": false,
+          "steps": 600,
+          "wall_seconds": 49.820977388000756,
+          "max_cube_height_m": 0.9258641411832165,
+          "final_cube_xyz": [
+            0.008712618821935867,
+            -0.20326153468831462,
+            0.9199092400569475
+          ],
+          "first_events": {
+            "contact_step": 46,
+            "bilateral_contact_step": null,
+            "firm_grasp_step": null,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 600,
+            "prediction_calls": 120,
+            "total_seconds": 40.23746150302213,
+            "mean_action_seconds": 0.06706243583837022,
+            "prediction_total_seconds": 36.119885011990846,
+            "mean_prediction_seconds": 0.30099904176659037,
+            "p95_prediction_seconds": 0.3401451941999767,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_003.mp4",
+          "failure_category": "contact_without_firm_grasp",
+          "trace": "episode_003_trace.json"
+        },
+        {
+          "seed": 84004,
+          "success": false,
+          "steps": 600,
+          "wall_seconds": 43.808397430000696,
+          "max_cube_height_m": 0.9231206320925576,
+          "final_cube_xyz": [
+            -0.00738535581402359,
+            -0.19903514541376743,
+            0.9199092400569475
+          ],
+          "first_events": {
+            "contact_step": 45,
+            "bilateral_contact_step": null,
+            "firm_grasp_step": null,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 600,
+            "prediction_calls": 120,
+            "total_seconds": 35.21058753000216,
+            "mean_action_seconds": 0.058684312550003594,
+            "prediction_total_seconds": 32.32470924200243,
+            "mean_prediction_seconds": 0.2693725770166869,
+            "p95_prediction_seconds": 0.2848709228497682,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_004.mp4",
+          "failure_category": "contact_without_firm_grasp",
+          "trace": "episode_004_trace.json"
+        }
+      ],
+      "failure_categories": {
+        "contact_without_firm_grasp": 2
+      },
+      "wall_seconds": 155.38531821200013,
+      "report": "results/imu_pilot_20261015/evaluation/continuation/narrow/evaluation/report.json",
+      "report_sha256": "c9e894881eab8b2cb9ec09f31abe0890a1d51ee7488e1ea8679f8daec52e1633"
+    },
+    "wide": {
+      "radius_m": 0.07,
+      "successes": 3,
+      "episodes": 5,
+      "success_rate": 0.6,
+      "episode_results": [
+        {
+          "seed": 85000,
+          "success": true,
+          "steps": 222,
+          "wall_seconds": 16.418742928999563,
+          "max_cube_height_m": 1.2071025077621755,
+          "final_cube_xyz": [
+            -0.00524433136889164,
+            0.18720121564011052,
+            0.9298084107966967
+          ],
+          "first_events": {
+            "contact_step": 61,
+            "bilateral_contact_step": 64,
+            "firm_grasp_step": 64,
+            "lift_step": 73,
+            "release_after_lift_step": 220
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 222,
+            "prediction_calls": 45,
+            "total_seconds": 13.328558229984992,
+            "mean_action_seconds": 0.060038550585517984,
+            "prediction_total_seconds": 12.357955187000698,
+            "mean_prediction_seconds": 0.2746212263777933,
+            "p95_prediction_seconds": 0.29730785679930705,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_000.mp4",
+          "failure_category": null,
+          "trace": "episode_000_trace.json"
+        },
+        {
+          "seed": 85001,
+          "success": false,
+          "steps": 600,
+          "wall_seconds": 42.953656271998625,
+          "max_cube_height_m": 0.9315180837454298,
+          "final_cube_xyz": [
+            -0.027233613687229215,
+            -0.22387382475222128,
+            0.9199092400569475
+          ],
+          "first_events": {
+            "contact_step": 42,
+            "bilateral_contact_step": null,
+            "firm_grasp_step": null,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 600,
+            "prediction_calls": 120,
+            "total_seconds": 34.67163201496078,
+            "mean_action_seconds": 0.05778605335826796,
+            "prediction_total_seconds": 32.16182992499489,
+            "mean_prediction_seconds": 0.2680152493749574,
+            "p95_prediction_seconds": 0.2886217240486076,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_001.mp4",
+          "failure_category": "contact_without_firm_grasp",
+          "trace": "episode_001_trace.json"
+        },
+        {
+          "seed": 85002,
+          "success": false,
+          "steps": 600,
+          "wall_seconds": 40.96842139200089,
+          "max_cube_height_m": 0.9220791537438418,
+          "final_cube_xyz": [
+            0.05746093244965105,
+            -0.20822188822405,
+            0.9199092400569476
+          ],
+          "first_events": {
+            "contact_step": 49,
+            "bilateral_contact_step": null,
+            "firm_grasp_step": null,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 600,
+            "prediction_calls": 120,
+            "total_seconds": 32.70151630901455,
+            "mean_action_seconds": 0.054502527181690914,
+            "prediction_total_seconds": 30.230347801996686,
+            "mean_prediction_seconds": 0.25191956501663904,
+            "p95_prediction_seconds": 0.2599551914008771,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_002.mp4",
+          "failure_category": "contact_without_firm_grasp",
+          "trace": "episode_002_trace.json"
+        },
+        {
+          "seed": 85003,
+          "success": true,
+          "steps": 218,
+          "wall_seconds": 14.855302308000319,
+          "max_cube_height_m": 1.0427615127305456,
+          "final_cube_xyz": [
+            -0.0021645589196291133,
+            0.176561816573591,
+            0.9299674563190157
+          ],
+          "first_events": {
+            "contact_step": 41,
+            "bilateral_contact_step": 54,
+            "firm_grasp_step": 54,
+            "lift_step": 75,
+            "release_after_lift_step": 216
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 218,
+            "prediction_calls": 44,
+            "total_seconds": 11.958087624992913,
+            "mean_action_seconds": 0.05485361295868309,
+            "prediction_total_seconds": 11.057190383997295,
+            "mean_prediction_seconds": 0.25129978145448395,
+            "p95_prediction_seconds": 0.2626427377497748,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_003.mp4",
+          "failure_category": null,
+          "trace": "episode_003_trace.json"
+        },
+        {
+          "seed": 85004,
+          "success": true,
+          "steps": 226,
+          "wall_seconds": 15.43919298000037,
+          "max_cube_height_m": 1.165138770967917,
+          "final_cube_xyz": [
+            0.008664763822371664,
+            0.18548321309255553,
+            0.9302035156099133
+          ],
+          "first_events": {
+            "contact_step": 63,
+            "bilateral_contact_step": 64,
+            "firm_grasp_step": 64,
+            "lift_step": 72,
+            "release_after_lift_step": 223
+          },
+          "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+          "inference_timing": {
+            "action_calls": 226,
+            "prediction_calls": 46,
+            "total_seconds": 12.475532004998968,
+            "mean_action_seconds": 0.055201469048667996,
+            "prediction_total_seconds": 11.572617088993866,
+            "mean_prediction_seconds": 0.25157863236943184,
+            "p95_prediction_seconds": 0.26572946299984324,
+            "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics."
+          },
+          "video": "episode_004.mp4",
+          "failure_category": null,
+          "trace": "episode_004_trace.json"
+        }
+      ],
+      "failure_categories": {
+        "contact_without_firm_grasp": 2
+      },
+      "wall_seconds": 133.34482643199954,
+      "report": "results/imu_pilot_20261015/evaluation/continuation/wide/evaluation/report.json",
+      "report_sha256": "0ad994e8dcb56846234a2a749617c3aa65573e8dc3c86f3b7437ecee25b2cfd1"
+    }
+  },
+  "successes": 6,
+  "episodes": 10,
+  "selection": "No model selection on these pilot evaluation starts; report every result.",
+  "interpretation": "New simulator starts, same scene; not held-out human sessions.",
+  "scope": "Comparison of extra IMU-assisted demonstrations against equal-budget continued training. Not a matched vision-only vs IMU-only vs sensor-fusion ablation. Policy still consumes simulated cameras and robot state, not live IMUs.",
+  "source_human_recordings": 1,
+  "limitations": "Five starts per group in the same simulated scene. No model selection, held-out human sessions, real-robot result, or sensor-fusion claim. The policy consumes simulated cameras and robot state.",
+  "failure_category_meaning": "Last observed contact/lift stage, not a proven failure cause."
+}

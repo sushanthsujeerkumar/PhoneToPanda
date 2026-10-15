@@ -1,0 +1,56 @@
+{
+  "recorded_utc": "2026-10-11T16:27:24.134546+00:00",
+  "description": "Retrospective explanation of coordinate plans frozen before replay generation and training; exact JSON coordinates, not a new draw, are authoritative for reproduction.",
+  "source_clips": [
+    "IMG_2092",
+    "IMG_2093",
+    "IMG_2095",
+    "IMG_2096",
+    "IMG_2098"
+  ],
+  "uniform": "Uniform XY samples over x [-0.06,0.06], y [-0.23,-0.11] metres.",
+  "targeted": "Failure-area anchors with Gaussian XY perturbation, standard deviation 0.008 m, clipped to the same workspace rectangle.",
+  "failure_anchor_verification": [
+    {
+      "seed": 3010,
+      "cube_start_xy": [
+        -0.045558641944434236,
+        -0.1993192669871758
+      ]
+    },
+    {
+      "seed": 3012,
+      "cube_start_xy": [
+        -0.03775082614429805,
+        -0.1980566983570999
+      ]
+    },
+    {
+      "seed": 3013,
+      "cube_start_xy": [
+        -0.051580838825813546,
+        -0.18412371835651833
+      ]
+    },
+    {
+      "seed": 3014,
+      "cube_start_xy": [
+        0.011294672171106161,
+        -0.22720054910298254
+      ]
+    },
+    {
+      "seed": 3015,
+      "cube_start_xy": [
+        -0.051238920329419124,
+        -0.19964457776088243
+      ]
+    }
+  ],
+  "selection": "Each clip has ten predeclared candidates; try in listed order and retain first four successful contact-physics replays. All first four succeeded in each arm.",
+  "rng_note": "The one-off coordinate-sampling RNG state is not captured in this sidecar. Simulator seeds and every exact XY coordinate are captured in the immutable selection JSONs.",
+  "plan_sha256": {
+    "configs/improvement_20261011/uniform_selection.json": "03046e22f4cf3430a50b9a020bb99f432049d9819521425ee66682c85d22679c",
+    "configs/improvement_20261011/targeted_selection.json": "fefeaf3c39556db65426f1f7445f3ed9e40ae8a177ada889ea5e55c04d32444f"
+  }
+}

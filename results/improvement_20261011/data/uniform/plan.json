@@ -1,0 +1,585 @@
+{
+  "schema_version": 1,
+  "selection_plan": {
+    "selection_name": "uniform",
+    "successes_per_clip": 4,
+    "clips": {
+      "IMG_2092": [
+        {
+          "seed": 11000,
+          "cube_start_xy": [
+            0.052274616005188373,
+            -0.21653418288126003
+          ]
+        },
+        {
+          "seed": 11001,
+          "cube_start_xy": [
+            0.04613470285525431,
+            -0.2114660035411613
+          ]
+        },
+        {
+          "seed": 11002,
+          "cube_start_xy": [
+            -0.01934454381311161,
+            -0.14556095464792107
+          ]
+        },
+        {
+          "seed": 11003,
+          "cube_start_xy": [
+            -0.023074712421258428,
+            -0.15789841503124113
+          ]
+        },
+        {
+          "seed": 11004,
+          "cube_start_xy": [
+            -0.0599485859472188,
+            -0.15783080938965605
+          ]
+        },
+        {
+          "seed": 11005,
+          "cube_start_xy": [
+            0.04246637563144391,
+            -0.1427287529370446
+          ]
+        },
+        {
+          "seed": 11006,
+          "cube_start_xy": [
+            0.03326383280981551,
+            -0.1524173457300786
+          ]
+        },
+        {
+          "seed": 11007,
+          "cube_start_xy": [
+            -0.05841361159295869,
+            -0.16224318377583308
+          ]
+        },
+        {
+          "seed": 11008,
+          "cube_start_xy": [
+            0.007467288509800399,
+            -0.2023213009792777
+          ]
+        },
+        {
+          "seed": 11009,
+          "cube_start_xy": [
+            -0.0006420662238102309,
+            -0.18930103719396724
+          ]
+        }
+      ],
+      "IMG_2093": [
+        {
+          "seed": 11010,
+          "cube_start_xy": [
+            -0.020252418181153246,
+            -0.1988042562833963
+          ]
+        },
+        {
+          "seed": 11011,
+          "cube_start_xy": [
+            0.00823904405902151,
+            -0.1435910943591895
+          ]
+        },
+        {
+          "seed": 11012,
+          "cube_start_xy": [
+            -0.001270744874466663,
+            -0.18152919108793908
+          ]
+        },
+        {
+          "seed": 11013,
+          "cube_start_xy": [
+            0.05576493084651979,
+            -0.13287378906613567
+          ]
+        },
+        {
+          "seed": 11014,
+          "cube_start_xy": [
+            -0.046615391142185894,
+            -0.13165900113392828
+          ]
+        },
+        {
+          "seed": 11015,
+          "cube_start_xy": [
+            0.024551739611111165,
+            -0.207332253309739
+          ]
+        },
+        {
+          "seed": 11016,
+          "cube_start_xy": [
+            0.0258448203935277,
+            -0.15093829784763904
+          ]
+        },
+        {
+          "seed": 11017,
+          "cube_start_xy": [
+            -0.03425971656721337,
+            -0.13065834971549972
+          ]
+        },
+        {
+          "seed": 11018,
+          "cube_start_xy": [
+            -0.008739570763938435,
+            -0.19069757905303902
+          ]
+        },
+        {
+          "seed": 11019,
+          "cube_start_xy": [
+            -0.0054243967446955255,
+            -0.1535556951434713
+          ]
+        }
+      ],
+      "IMG_2095": [
+        {
+          "seed": 11020,
+          "cube_start_xy": [
+            -0.029359499135466528,
+            -0.17033096924275956
+          ]
+        },
+        {
+          "seed": 11021,
+          "cube_start_xy": [
+            0.03797319969491485,
+            -0.1654723593518225
+          ]
+        },
+        {
+          "seed": 11022,
+          "cube_start_xy": [
+            -0.0062510362533102284,
+            -0.13407943605077796
+          ]
+        },
+        {
+          "seed": 11023,
+          "cube_start_xy": [
+            0.058211142558027895,
+            -0.13477229702354188
+          ]
+        },
+        {
+          "seed": 11024,
+          "cube_start_xy": [
+            0.04865393351065263,
+            -0.2154933698021108
+          ]
+        },
+        {
+          "seed": 11025,
+          "cube_start_xy": [
+            -0.04858729567231465,
+            -0.18909172103295502
+          ]
+        },
+        {
+          "seed": 11026,
+          "cube_start_xy": [
+            0.04849469569219131,
+            -0.15997019869692217
+          ]
+        },
+        {
+          "seed": 11027,
+          "cube_start_xy": [
+            0.013637054840852744,
+            -0.139766700233529
+          ]
+        },
+        {
+          "seed": 11028,
+          "cube_start_xy": [
+            0.030853956933746957,
+            -0.18632023251233826
+          ]
+        },
+        {
+          "seed": 11029,
+          "cube_start_xy": [
+            0.053491035493098124,
+            -0.18441228427234288
+          ]
+        }
+      ],
+      "IMG_2096": [
+        {
+          "seed": 11030,
+          "cube_start_xy": [
+            -0.05893019070206262,
+            -0.11123235954253967
+          ]
+        },
+        {
+          "seed": 11031,
+          "cube_start_xy": [
+            0.057592259170509724,
+            -0.11799580589122166
+          ]
+        },
+        {
+          "seed": 11032,
+          "cube_start_xy": [
+            0.010522999613647499,
+            -0.21031844454950915
+          ]
+        },
+        {
+          "seed": 11033,
+          "cube_start_xy": [
+            -0.03196932165872394,
+            -0.14788551340867673
+          ]
+        },
+        {
+          "seed": 11034,
+          "cube_start_xy": [
+            0.01951099389015508,
+            -0.22403301989633226
+          ]
+        },
+        {
+          "seed": 11035,
+          "cube_start_xy": [
+            0.025881319206740416,
+            -0.2237579334803497
+          ]
+        },
+        {
+          "seed": 11036,
+          "cube_start_xy": [
+            -0.006322485392508251,
+            -0.1801608881068861
+          ]
+        },
+        {
+          "seed": 11037,
+          "cube_start_xy": [
+            0.05826587886429417,
+            -0.22775486267577164
+          ]
+        },
+        {
+          "seed": 11038,
+          "cube_start_xy": [
+            0.02266022072171603,
+            -0.15051882105145947
+          ]
+        },
+        {
+          "seed": 11039,
+          "cube_start_xy": [
+            0.043648936411798386,
+            -0.1667293369704162
+          ]
+        }
+      ],
+      "IMG_2098": [
+        {
+          "seed": 11040,
+          "cube_start_xy": [
+            -0.027067076035402968,
+            -0.1506067518170445
+          ]
+        },
+        {
+          "seed": 11041,
+          "cube_start_xy": [
+            0.057956974444136916,
+            -0.11687813851656216
+          ]
+        },
+        {
+          "seed": 11042,
+          "cube_start_xy": [
+            -0.05878468511664616,
+            -0.14152808935272165
+          ]
+        },
+        {
+          "seed": 11043,
+          "cube_start_xy": [
+            -0.03793181742854934,
+            -0.22045067589193795
+          ]
+        },
+        {
+          "seed": 11044,
+          "cube_start_xy": [
+            0.02999615108216705,
+            -0.1331549466088508
+          ]
+        },
+        {
+          "seed": 11045,
+          "cube_start_xy": [
+            -0.022805044649347593,
+            -0.17850910821835891
+          ]
+        },
+        {
+          "seed": 11046,
+          "cube_start_xy": [
+            0.021029541218170744,
+            -0.14092313891259242
+          ]
+        },
+        {
+          "seed": 11047,
+          "cube_start_xy": [
+            0.018274811427828275,
+            -0.2164891496197166
+          ]
+        },
+        {
+          "seed": 11048,
+          "cube_start_xy": [
+            -0.04213582517274352,
+            -0.2113010557618791
+          ]
+        },
+        {
+          "seed": 11049,
+          "cube_start_xy": [
+            0.035706771004847676,
+            -0.12464357233592817
+          ]
+        }
+      ]
+    }
+  },
+  "task": "Pick up the cube and place it inside the box.",
+  "config_sha256": "372090af4120e3332dc4921065f2d8bdec579660387162a92c0e005672327891",
+  "simulation": {
+    "control_hz": 20,
+    "image_size": 256,
+    "horizon": 600,
+    "demo_transition_mode": "contact",
+    "orientation_control": "fixed_downward",
+    "save_replay_video": false,
+    "randomize_start_m": 0.035
+  },
+  "video_settings": {
+    "table_marker_size_m": 0.05,
+    "object_marker_size_m": 0.03,
+    "chess_square_size_m": 0.025,
+    "sample_hz": 30,
+    "max_gap_s": 0.2,
+    "tracking_mode": "multi_marker",
+    "object_marker_id": 1,
+    "write_previews": false,
+    "reference_markers": [
+      {
+        "id": 0,
+        "region": [
+          0.1,
+          0,
+          0.35,
+          0.2
+        ]
+      },
+      {
+        "id": 1,
+        "region": [
+          0.72,
+          0,
+          0.96,
+          0.2
+        ]
+      },
+      {
+        "id": 2,
+        "region": [
+          0.72,
+          0.75,
+          0.98,
+          1
+        ]
+      },
+      {
+        "id": 3,
+        "region": [
+          0.05,
+          0.7,
+          0.28,
+          1
+        ]
+      }
+    ],
+    "resting_height_range_m": [
+      -0.01,
+      0.15
+    ]
+  },
+  "trajectory_sha256": {
+    "IMG_2092": "925ca053918f8f9dcd4421ba390fbb00582a5839a2370e596c7ac70d6e17dbe3",
+    "IMG_2093": "b48c5b226e3dbb5bfb39081b5bc692990bbf40f99aebd22cac25077c486629ca",
+    "IMG_2095": "8b16552ed2328dc50d9472708789092e5e4caaeae9d1306003066e261e1d1014",
+    "IMG_2096": "c312debd57d4bd39566de03ef27aa7db8de5954a2f34d85e66fc3a2d699cda90",
+    "IMG_2098": "c4de8bb9491e4947f27dbc26cd34b229c8e3069f6621ebdcf68c03422719e74a"
+  },
+  "original": [
+    {
+      "name": "IMG_2092_seed_0.npz",
+      "sha256": "f009b681d53369acc216ecd1765b82f41b5bd23707aa333a87896134950473d2",
+      "metadata_sha256": "94f1a2f200e660f59a3d99e5180a542b9322cbc44380f4442609927ac4f62150",
+      "seed": 0,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2092_seed_1.npz",
+      "sha256": "e2f9a4a49c54378f1e4a1aa7b9a019f92d9a039ce3f19344d497ffc3e3897100",
+      "metadata_sha256": "0d2b11599c4e0861d46f374a238f0c95144580856a94804e1ae889673c7b8b32",
+      "seed": 1,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2092_seed_2.npz",
+      "sha256": "720c56bc6293df0edc53cf561090f0bb918dc7132d3331e0b1bbd8424e5c89a9",
+      "metadata_sha256": "8abe9c118266bfae19e51533f52e2d77e6092d86c67564aacf9658bd060a459b",
+      "seed": 2,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2092_seed_3.npz",
+      "sha256": "f1314ed760983d65a4f7e2d096a3ca7f232d7c80dd3647bc90a8bee383e0228d",
+      "metadata_sha256": "729d62da47b1e2177dbb5185fd3f4ac4db76bfd25161d820b74676134b2965ba",
+      "seed": 3,
+      "clip": "IMG_2092"
+    },
+    {
+      "name": "IMG_2093_seed_4.npz",
+      "sha256": "d73f41587347aa419313c06ef53208e5a351d7d3812451a803dbc2fed8a4ebac",
+      "metadata_sha256": "e8ac9d4228eea6351847652e2b40624d4ffd768e141c9ffba3a0d586383e4c5a",
+      "seed": 4,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2093_seed_5.npz",
+      "sha256": "24ea61ef0d58cbdf36c9d2fa9fd6fa5ccf22b148f1655381bb593ae34681a0c5",
+      "metadata_sha256": "ee14e90ca32b880cffcaf22a059edf996ad0e38b31239e4a53f4e2b26df61cdb",
+      "seed": 5,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2093_seed_6.npz",
+      "sha256": "5ece0604207679be6e60e95c16a1eb33777ae5ba0ff2a5c1a3934a2645ebcaa4",
+      "metadata_sha256": "6c113e54e852c3ad7b14598e4f4a4d59e4924f158fcb2bf9915832aad29cfd1f",
+      "seed": 6,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2093_seed_7.npz",
+      "sha256": "3c352400766bb31557af5fec5d729175974e7039aca00f094ecc81b601b441b2",
+      "metadata_sha256": "2729e29f649e53a3bac534d675f1da5678c283229a908356485792265f2a72a4",
+      "seed": 7,
+      "clip": "IMG_2093"
+    },
+    {
+      "name": "IMG_2095_seed_10.npz",
+      "sha256": "3e52832f2e48b031497030e6af3e74393bada2b3166198839b7731800450d556",
+      "metadata_sha256": "0f5a5d3a499e85ffa75639418a62771687230f5398a10047b6b779c4a17cdfb7",
+      "seed": 10,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2095_seed_11.npz",
+      "sha256": "3c79cd7c7deed4b2cbeb923d5075b8882d864a70f998243b8a453fd25d5b1062",
+      "metadata_sha256": "ad64e93ff5b8cf1319aa9dacb3efc865edce831a359c391607de7556132a32cf",
+      "seed": 11,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2095_seed_8.npz",
+      "sha256": "6f126a40c5ec035c13cdbc9d4c635a77fb6bf696c55e7e298a95946f9c6f8c12",
+      "metadata_sha256": "c23858dd725c354b9e396e494e4b7e3729ca5c6d04de6b242bffd6c64c250a04",
+      "seed": 8,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2095_seed_9.npz",
+      "sha256": "e0c2f901837bc2d3f325edd8879d1e9a37f5b9443fcd473f87ca544059793def",
+      "metadata_sha256": "f5488b39b7189ea4455f6c512b333726bca3605bc9a37d7bc488bda56f595a26",
+      "seed": 9,
+      "clip": "IMG_2095"
+    },
+    {
+      "name": "IMG_2096_seed_12.npz",
+      "sha256": "e78a580b904f0a9881ab8ee8adff3ba843d5ddaea332e8e7fb6dea3f9c424254",
+      "metadata_sha256": "f5e92a42ab988e267623a0d17a42f0828bb080d0720a7158fbaffb712e2395d0",
+      "seed": 12,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2096_seed_13.npz",
+      "sha256": "73a572a832ecdbb428d2907c7b697454ea95cb8a2a1d0552477681d00d4faf8c",
+      "metadata_sha256": "1bebce785584758cbc26a06f1dda5c6da28295fe35a2db55337127df9f1b20ff",
+      "seed": 13,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2096_seed_14.npz",
+      "sha256": "1cc1efb2d9de24df595ee8508d8e1d0a7696148891e3b0aced2fc12510bd3b48",
+      "metadata_sha256": "31557b8ed60db67b5870ff5c06135e76248f53e59900339ae1264d84726784ac",
+      "seed": 14,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2096_seed_15.npz",
+      "sha256": "29ed07f91e0f51edbcf6e6582206c9072c421e38344bdc789afcb71f808d0bf0",
+      "metadata_sha256": "379e491fdc3c73d490808e14ec079fa51831a6f003ecdba123ac30b562b60afa",
+      "seed": 15,
+      "clip": "IMG_2096"
+    },
+    {
+      "name": "IMG_2098_seed_16.npz",
+      "sha256": "4868ae02dcee820c99751f14db09e111d8b15aa7a9e2f0945153d68670613344",
+      "metadata_sha256": "bb212c5b798c420c5001ed0c74cd619722603e35830dd14608fddc363b4e4b80",
+      "seed": 16,
+      "clip": "IMG_2098"
+    },
+    {
+      "name": "IMG_2098_seed_17.npz",
+      "sha256": "985844cf6617217cc51036780521eb54955fb8d4626c33382ef83c8b30c9b8aa",
+      "metadata_sha256": "e7caebd5bceb72ab19ea72f4bed93fd2132afd513cee7034674a72d272537a22",
+      "seed": 17,
+      "clip": "IMG_2098"
+    },
+    {
+      "name": "IMG_2098_seed_18.npz",
+      "sha256": "afa819d7db785c35b1c44aeaa14bede50a383fb302d1baa20d0b9b312bb07a41",
+      "metadata_sha256": "1470752c275800c95e717bee448d59a6f073e6b8dabb61a313a6f9f26af83674",
+      "seed": 18,
+      "clip": "IMG_2098"
+    },
+    {
+      "name": "IMG_2098_seed_19.npz",
+      "sha256": "97678be9f3f0793833cc136de0dc72684fca2c5f5bc33eff385d1f0abcd539dc",
+      "metadata_sha256": "43cb2fe1068f1882ad9cdd36e6840c1d4c35d7c4740f2fd1b21d31ccdaa31bb4",
+      "seed": 19,
+      "clip": "IMG_2098"
+    }
+  ],
+  "original_dir": "/home/sushanth/PhoneToPanda/data/robot/main",
+  "robot_dir": "/home/sushanth/PhoneToPanda/data/robot/improvement_20261011/uniform",
+  "dataset_dir": "/home/sushanth/PhoneToPanda/data/datasets/improvement_20261011/uniform",
+  "export_repo_id": "local/phonetopanda_uniform_20261011"
+}

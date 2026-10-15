@@ -1,4 +1,4 @@
-"""Small shared path/config helpers; all paths are relative to the project."""
+"""Load YAML settings and resolve relative data paths from the project root."""
 from pathlib import Path
 import yaml
 

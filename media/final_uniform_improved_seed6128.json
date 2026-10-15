@@ -1,0 +1,147 @@
+{
+  "phase": "final_test",
+  "group": "narrow",
+  "seed": 6128,
+  "study_plan_sha256": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f",
+  "paired_initial_cube_and_robot_states_verified": true,
+  "playback_fps": 20,
+  "output_frames": 601,
+  "size": [
+    512,
+    676
+  ],
+  "timing": "One video frame per 20 Hz simulator step plus the final state frame. Shorter completed rollouts hold their final frame. Playback is not inference wall time.",
+  "interpretation": "Illustration of one selected seed; aggregate study counts provide the performance comparison.",
+  "models": [
+    {
+      "name": "original_h5",
+      "seed": 6128,
+      "success": false,
+      "steps": 600,
+      "candidate_lock_sha256": "59d1e394c1b2aef399188c687e1b8a30a1a871af1e1c8f0ccb8022d408c8c095",
+      "reference_candidate": "original_h5",
+      "selected_candidate": "original_h5",
+      "contrast_role": "Locked reference",
+      "selected_contrast": true,
+      "identity": {
+        "checkpoint_files": {
+          "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+          "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+          "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+          "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+          "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+          "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+        },
+        "n_action_steps": 5
+      },
+      "initial_cube_xyz": [
+        0.011969651766149681,
+        -0.20295362287093754,
+        0.9199083359543676
+      ],
+      "initial_observation_state": [
+        -0.20846466720104218,
+        2.486378941277123e-12,
+        1.1732795238494873,
+        3.1403393745422363,
+        0.0007735038525424898,
+        -0.0892220064997673,
+        0.038133252412080765,
+        -0.03813319280743599
+      ],
+      "comparison_contract": {
+        "control_hz": 20,
+        "image_size": 256,
+        "horizon": 600,
+        "orientation_control": "fixed_downward"
+      },
+      "sources": {
+        "manifest": {
+          "path": "final_test/original_h5/narrow/manifest.json",
+          "sha256": "b23b58b6a7ccf65aacc4e0171bb08de6fd3a498c9c0701496b85ffa9512afbd8"
+        },
+        "report": {
+          "path": "final_test/original_h5/narrow/evaluation/report.json",
+          "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+        },
+        "trace": {
+          "path": "final_test/original_h5/narrow/evaluation/episode_028_trace.json",
+          "sha256": "30f3581dc0f3e706c97441c15fc0e5241bdd2105e9395caa1b4758619376e854"
+        },
+        "video": {
+          "path": "final_test/original_h5/narrow/evaluation/episode_028.mp4",
+          "sha256": "cb2ceaaadfef70fb775e353580a4a4813cf8e43c2740ed3e6a08c22ecd4e426b"
+        }
+      },
+      "video_frames": 601
+    },
+    {
+      "name": "uniform2000_h5",
+      "seed": 6128,
+      "success": true,
+      "steps": 199,
+      "candidate_lock_sha256": "59d1e394c1b2aef399188c687e1b8a30a1a871af1e1c8f0ccb8022d408c8c095",
+      "reference_candidate": "original_h5",
+      "selected_candidate": "original_h5",
+      "contrast_role": "Secondary matched2k uniform replay-augmentation contrast.",
+      "selected_contrast": false,
+      "identity": {
+        "checkpoint_files": {
+          "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+          "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+          "model.safetensors": "79bd1f50ba3298f6a2b9e7383bddca48251f94aff10a8437050ec3edc7695afd",
+          "phone_to_panda_provenance.json": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+          "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+          "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+          "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+          "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+          "train_config.json": "8676aa17abf5b00b7766709477209a799d0c9a49f0f4e8c6a9537b890e32e8a2"
+        },
+        "n_action_steps": 5
+      },
+      "initial_cube_xyz": [
+        0.011969651766149681,
+        -0.20295362287093754,
+        0.9199083359543676
+      ],
+      "initial_observation_state": [
+        -0.20846466720104218,
+        2.486378941277123e-12,
+        1.1732795238494873,
+        3.1403393745422363,
+        0.0007735038525424898,
+        -0.0892220064997673,
+        0.038133252412080765,
+        -0.03813319280743599
+      ],
+      "comparison_contract": {
+        "control_hz": 20,
+        "image_size": 256,
+        "horizon": 600,
+        "orientation_control": "fixed_downward"
+      },
+      "sources": {
+        "manifest": {
+          "path": "final_test/uniform2000_h5/narrow/manifest.json",
+          "sha256": "20335e3ea14a58c9f44eb3e1ba3fe122d8bcbf6c6c7d7ae603111b47a8a5ad28"
+        },
+        "report": {
+          "path": "final_test/uniform2000_h5/narrow/evaluation/report.json",
+          "sha256": "29c0f7b0fb31864aba318469ce82637f4c40d7a1584fac8a188277ffe081bdfe"
+        },
+        "trace": {
+          "path": "final_test/uniform2000_h5/narrow/evaluation/episode_028_trace.json",
+          "sha256": "2c4d0721ad6fbdbc1c65135304afd303b3a1a5ca50fd998a27d0233657c325fe"
+        },
+        "video": {
+          "path": "final_test/uniform2000_h5/narrow/evaluation/episode_028.mp4",
+          "sha256": "c615ecefcd0761350759c00ff70af62b60102b50fea03c6cfd22a21ed01970df"
+        }
+      },
+      "video_frames": 200
+    }
+  ],
+  "output_sha256": "402d000bd38b124cfd9d792966abc14ae80f1cb3a84b6d6b98580ba7f6afad90"
+}

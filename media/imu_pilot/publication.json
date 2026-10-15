@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "purpose": "Public viewing copies and mapping to the unchanged experimental inputs",
+  "source_video": {
+    "filename": "IMG_2276.MOV",
+    "sha256": "76217a274c97f8999f328c98bd7b15c6776963c2c9fb2b952f039a0814431225",
+    "included": false,
+    "reason": "Untouched private original retains audio and personal phone metadata."
+  },
+  "public_video": {
+    "file": "media/imu_pilot/phone_recording.mp4",
+    "sha256": "eb4308949375227e21c1beebd3585ca86a558d6d0975aaf094f57cf35a93eaa1",
+    "bytes": 4866882,
+    "edits": [
+      "Video stream only; audio and data streams omitted",
+      "Location, device and creation metadata omitted",
+      "HLG/BT.2020 to SDR/BT.709 tone mapping for common browser playback",
+      "H.264 compression; full field of view, all 442 frames and original presentation timing retained"
+    ],
+    "ffmpeg_video_filter": "zscale=t=linear:npl=100,format=gbrpf32le,zscale=p=bt709,tonemap=tonemap=mobius:desat=0,zscale=t=bt709:m=bt709:r=tv,format=yuv420p",
+    "frames": 442,
+    "fps": "30",
+    "duration_s": 14.733333333333333,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "first_pts_s": 0.0,
+    "last_pts_s": 14.7
+  },
+  "sensor_session": {
+    "original_filename": "20261015T165828Z_92196435.json",
+    "public_file": "data/experimental/imu_20261015/sensor_session.json",
+    "sha256": "500ce448410581ebd9e9927883ccb36e27fa59bba4146b4f8cd9f3b88dde7889",
+    "exact_byte_copy": true
+  },
+  "paired_preview": {
+    "file": "media/imu_pilot/paired_video_imu.mp4",
+    "sha256": "111a4022163ca1c2fd89fd70f975c7a1d28623b85f00931aa0d4a5f167d34a2d",
+    "receipt": "media/imu_pilot/paired_video_imu.json",
+    "copied_byte_for_byte": true,
+    "basis": "Rendered earlier from the original private video and exact sensor recording; normal-speed overlapping interval, provisional alignment."
+  },
+  "experimental_inputs": {
+    "events": "data/experimental/imu_20261015/events.json",
+    "events_sha256": "92a3932b7d1398d7b66c4ddd28bd0a59c674271fa60e6d89b3211b8a7f70a670",
+    "trajectory": "data/experimental/imu_20261015/trajectory.json",
+    "trajectory_sha256": "13507bebdc3ccc40985c939cd2e0143e883642913b52cf394c596c293664019e"
+  },
+  "reproduction_boundary": "Historical source hashes and absolute paths remain in frozen records. The silent tone-mapped MP4 is a new derived file and cannot substitute for the original video in exact-hash replay checks. The source sensor JSON is unchanged."
+}

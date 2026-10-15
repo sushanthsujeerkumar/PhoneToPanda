@@ -1,0 +1,4887 @@
+{
+  "schema_version": 1,
+  "kind": "post_final_descriptive_original_failure_analysis",
+  "created_utc": "2026-10-11T18:17:38.096716+00:00",
+  "candidate": "original_h5",
+  "phase": "final_test",
+  "candidate_lock": {
+    "path": "candidate_lock.json",
+    "sha256": "59d1e394c1b2aef399188c687e1b8a30a1a871af1e1c8f0ccb8022d408c8c095"
+  },
+  "source_reports": {
+    "narrow": {
+      "report": {
+        "path": "final_test/original_h5/narrow/evaluation/report.json",
+        "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+      },
+      "manifest": {
+        "path": "final_test/original_h5/narrow/manifest.json",
+        "sha256": "b23b58b6a7ccf65aacc4e0171bb08de6fd3a498c9c0701496b85ffa9512afbd8"
+      }
+    },
+    "wide": {
+      "report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "manifest": {
+        "path": "final_test/original_h5/wide/manifest.json",
+        "sha256": "cdaa5a1bd724a2052c171dcf807e7b37d7bde1f341024adc69ea3743e708b105"
+      }
+    }
+  },
+  "diagnostic_source_files": {
+    "phone_to_panda/simulation.py": "97b3dc35cc276a9fa2771d3661357d2730ee531732dc65571d1a752bb9ec4a41",
+    "phone_to_panda/learning.py": "f6f1787e56d29d05f9654e17b3f5052a01259393aea01a5adc9971b112f1338c"
+  },
+  "definitions": {
+    "scope": "All 17 failed original-policy final episodes, selected solely by success=false in the complete 60-episode original reports; no other model outcomes used.",
+    "time": "Zero-based action steps at 20 Hz. Gap measurements use pre-action diagnostics at the first close-run action. Contacts use the initial state plus every post-action diagnostic, with no duplicate intermediate states.",
+    "sustained_close": "At least three consecutive applied_action[6] > 0.5, equivalent to at least 0.15 s of close commands at 20 Hz. This is a descriptive post-hoc command threshold, not proof that the fingers closed or grasped.",
+    "open": "applied_action[6] < -0.5; a sustained open run also requires at least three consecutive actions. Intermediate is the inclusive interval [-0.5, 0.5].",
+    "xy_gap": "Euclidean XY separation between end-effector reference position and cube centre, in metres; not a fingertip clearance or calibrated grasp-error threshold.",
+    "z_gap": "Signed end-effector Z minus cube-centre Z, in metres; positive means end-effector reference above cube centre.",
+    "bilateral_contact": "Recorded positive normal force on both finger pads.",
+    "firm_bilateral_grasp": "Recorded normal force >=1.0 N on each finger pad, using the existing simulator diagnostic.",
+    "gripper_contact": "Existing simulator any gripper-to-cube contact diagnostic; does not imply bilateral or firm contact.",
+    "lift": "Existing criterion cube-centre Z >0.97 m; table Z is 0.9 m.",
+    "classifications": {
+      "neverclosed": "No qualifying sustained-close command run and no firm contact; does not mean no individual positive command or no finger motion.",
+      "closedwithoutfirmcontact": "At least one qualifying sustained-close command run, but no recorded firm bilateral contact.",
+      "transientfirmcontactwithoutlift": "Some recorded firm bilateral contact that is absent at the final state, without ever crossing the lift threshold."
+    },
+    "command_patterns": "All qualifying close/open runs are retained with inclusive zero-based endpoints; shorter or intermediate command segments are represented by action totals and transition counts. Complete raw applied commands remain in the hashed source traces."
+  },
+  "summary": {
+    "groups": {
+      "narrow": {
+        "episodes": 30,
+        "placements": 25,
+        "failures": 5
+      },
+      "wide": {
+        "episodes": 30,
+        "placements": 18,
+        "failures": 12
+      }
+    },
+    "failed_episodes": 17,
+    "failed_seeds": [
+      6107,
+      6112,
+      6114,
+      6127,
+      6128,
+      7102,
+      7104,
+      7107,
+      7109,
+      7111,
+      7112,
+      7114,
+      7117,
+      7119,
+      7122,
+      7123,
+      7129
+    ],
+    "classifications": {
+      "neverclosed": 0,
+      "closedwithoutfirmcontact": 17,
+      "transientfirmcontactwithoutlift": 0
+    },
+    "failures_with_any_gripper_contact": 17,
+    "failures_with_any_bilateral_contact": 0,
+    "failures_with_any_firm_bilateral_grasp": 0,
+    "failures_with_any_lift": 0,
+    "failures_with_sustained_open_after_first_sustained_close": 6,
+    "first_sustained_close_action_step": {
+      "minimum": 45,
+      "median": 51,
+      "maximum": 80
+    },
+    "first_sustained_close_xy_distance_m": {
+      "minimum": 0.004603019418625054,
+      "median": 0.03147059034252827,
+      "maximum": 0.05042542997594411
+    },
+    "first_sustained_close_signed_z_offset_m": {
+      "minimum": 0.017368407933749164,
+      "median": 0.02598184999412312,
+      "maximum": 0.035066909150347714
+    },
+    "peak_cube_height_m": {
+      "minimum": 0.9209326665305742,
+      "median": 0.9247879544363148,
+      "maximum": 0.9326294996344436
+    }
+  },
+  "episodes": [
+    {
+      "group": "narrow",
+      "seed": 6107,
+      "episode_index": 7,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/narrow/evaluation/episode_007_trace.json",
+        "sha256": "2e1d40b98980e791d880b1d1225bbf048c4bc6275ec8dc93b6a480721783b2a7"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/narrow/evaluation/report.json",
+        "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 45,
+        "simulation_time_s": 2.25,
+        "close_run_actions": 5,
+        "first_three_applied_gripper_commands": [
+          0.8479169607162476,
+          0.6212166547775269,
+          0.8308122754096985
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.0302162117221774,
+        "eef_cube_z_offset_m": 0.02480365674026752,
+        "eef_cube_offset_m": [
+          0.0027549937423234395,
+          0.030090354938405256,
+          0.02480365674026752
+        ],
+        "eef_xyz": [
+          -0.027089342940792117,
+          -0.15386557624463304,
+          0.9428184312603471
+        ],
+        "cube_xyz": [
+          -0.029844336683115556,
+          -0.1839559311830383,
+          0.9180147745200796
+        ],
+        "finger_aperture_m": 0.07983815972471411,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 16,
+          "first_post_action_step": 42,
+          "last_post_action_step": 57,
+          "longest_consecutive_state_samples": 16
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9225712707280928,
+      "peak_cube_height_above_table_m": 0.02257127072809273,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 73,
+          "close": 230,
+          "intermediate": 297
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 45,
+            "last_action_step": 49,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 52,
+            "last_action_step": 85,
+            "actions": 34
+          },
+          {
+            "kind": "close",
+            "first_action_step": 88,
+            "last_action_step": 94,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 96,
+            "last_action_step": 99,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 101,
+            "last_action_step": 104,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 117,
+            "last_action_step": 122,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 124,
+            "last_action_step": 133,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 136,
+            "last_action_step": 139,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 157,
+            "last_action_step": 159,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 195,
+            "last_action_step": 197,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 200,
+            "last_action_step": 209,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 249,
+            "last_action_step": 253,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 260,
+            "last_action_step": 266,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 279,
+            "last_action_step": 281,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 287,
+            "last_action_step": 289,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 303,
+            "last_action_step": 307,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 319,
+            "last_action_step": 322,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 347,
+            "last_action_step": 350,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 354,
+            "last_action_step": 359,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 384,
+            "last_action_step": 386,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 409,
+            "last_action_step": 412,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 567,
+            "last_action_step": 570,
+            "actions": 4
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 44,
+            "actions": 45
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 228,
+        "command_state_transition_counts": {
+          "open->close": 5,
+          "close->intermediate": 90,
+          "intermediate->close": 90,
+          "intermediate->open": 18,
+          "open->intermediate": 19,
+          "close->open": 5
+        },
+        "sustained_close_run_count": 22,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 34,
+        "longest_sustained_open_run_actions": 45
+      },
+      "report_first_events": {
+        "contact_step": 42,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "narrow",
+      "seed": 6112,
+      "episode_index": 12,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/narrow/evaluation/episode_012_trace.json",
+        "sha256": "eda83bd7a4f4e159c934d23c871fcc212e5b7d3a299f69fd2b4c9df73693187e"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/narrow/evaluation/report.json",
+        "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 62,
+        "simulation_time_s": 3.1,
+        "close_run_actions": 3,
+        "first_three_applied_gripper_commands": [
+          0.6828674077987671,
+          0.7646753191947937,
+          0.7720842361450195
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.004603019418625054,
+        "eef_cube_z_offset_m": 0.030357516930588857,
+        "eef_cube_offset_m": [
+          0.001356516730939587,
+          0.004398596381451736,
+          0.030357516930588857
+        ],
+        "eef_xyz": [
+          -0.0065741076110834434,
+          -0.18765622846635024,
+          0.9522522880566093
+        ],
+        "cube_xyz": [
+          -0.00793062434202303,
+          -0.19205482484780198,
+          0.9218947711260205
+        ],
+        "finger_aperture_m": 0.010925731027577858,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 17,
+          "first_post_action_step": 45,
+          "last_post_action_step": 61,
+          "longest_consecutive_state_samples": 17
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9221079434026058,
+      "peak_cube_height_above_table_m": 0.0221079434026058,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 59,
+          "intermediate": 339,
+          "close": 202
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 62,
+            "last_action_step": 64,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 68,
+            "last_action_step": 89,
+            "actions": 22
+          },
+          {
+            "kind": "close",
+            "first_action_step": 91,
+            "last_action_step": 101,
+            "actions": 11
+          },
+          {
+            "kind": "close",
+            "first_action_step": 103,
+            "last_action_step": 105,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 109,
+            "last_action_step": 114,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 162,
+            "last_action_step": 164,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 201,
+            "last_action_step": 203,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 211,
+            "last_action_step": 214,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 230,
+            "last_action_step": 232,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 254,
+            "last_action_step": 256,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 265,
+            "last_action_step": 269,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 280,
+            "last_action_step": 285,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 316,
+            "last_action_step": 319,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 332,
+            "last_action_step": 335,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 337,
+            "last_action_step": 340,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 342,
+            "last_action_step": 344,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 346,
+            "last_action_step": 350,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 395,
+            "last_action_step": 398,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 462,
+            "last_action_step": 467,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 539,
+            "last_action_step": 544,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 550,
+            "last_action_step": 552,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 558,
+            "last_action_step": 560,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 47,
+            "actions": 48
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 204,
+        "command_state_transition_counts": {
+          "open->intermediate": 8,
+          "intermediate->close": 90,
+          "close->intermediate": 92,
+          "intermediate->open": 9,
+          "open->close": 3,
+          "close->open": 1
+        },
+        "sustained_close_run_count": 22,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 22,
+        "longest_sustained_open_run_actions": 48
+      },
+      "report_first_events": {
+        "contact_step": 45,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "narrow",
+      "seed": 6114,
+      "episode_index": 14,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/narrow/evaluation/episode_014_trace.json",
+        "sha256": "57b5a8a2e2e1541a5bf1ea58596e0ed863f1fb0aac6fb41ebcdfbafa6a12509b"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/narrow/evaluation/report.json",
+        "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 51,
+        "simulation_time_s": 2.55,
+        "close_run_actions": 15,
+        "first_three_applied_gripper_commands": [
+          0.8220697045326233,
+          0.6400150060653687,
+          0.7051773071289062
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.029357637526761807,
+        "eef_cube_z_offset_m": 0.025981111757908848,
+        "eef_cube_offset_m": [
+          0.002986891169785813,
+          0.029205296819114657,
+          0.025981111757908848
+        ],
+        "eef_xyz": [
+          -0.004488030032519473,
+          -0.16879292057897197,
+          0.9447198481802553
+        ],
+        "cube_xyz": [
+          -0.007474921202305286,
+          -0.19799821739808662,
+          0.9187387364223465
+        ],
+        "finger_aperture_m": 0.07938832890296374,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 10,
+          "first_post_action_step": 45,
+          "last_post_action_step": 54,
+          "longest_consecutive_state_samples": 10
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9209326665305742,
+      "peak_cube_height_above_table_m": 0.02093266653057413,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 77,
+          "intermediate": 310,
+          "close": 213
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 51,
+            "last_action_step": 65,
+            "actions": 15
+          },
+          {
+            "kind": "close",
+            "first_action_step": 68,
+            "last_action_step": 96,
+            "actions": 29
+          },
+          {
+            "kind": "close",
+            "first_action_step": 99,
+            "last_action_step": 134,
+            "actions": 36
+          },
+          {
+            "kind": "close",
+            "first_action_step": 137,
+            "last_action_step": 139,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 160,
+            "last_action_step": 164,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 236,
+            "last_action_step": 240,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 299,
+            "last_action_step": 303,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 385,
+            "last_action_step": 389,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 457,
+            "last_action_step": 459,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 462,
+            "last_action_step": 464,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 506,
+            "last_action_step": 509,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 542,
+            "last_action_step": 544,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 555,
+            "last_action_step": 563,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 592,
+            "last_action_step": 594,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 49,
+            "actions": 50
+          },
+          {
+            "kind": "open",
+            "first_action_step": 275,
+            "last_action_step": 277,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [
+          {
+            "kind": "open",
+            "first_action_step": 275,
+            "last_action_step": 277,
+            "actions": 3
+          }
+        ],
+        "command_segment_count": 214,
+        "command_state_transition_counts": {
+          "open->intermediate": 22,
+          "intermediate->close": 83,
+          "close->intermediate": 83,
+          "intermediate->open": 21,
+          "close->open": 2,
+          "open->close": 2
+        },
+        "sustained_close_run_count": 14,
+        "sustained_open_run_count": 2,
+        "longest_sustained_close_run_actions": 36,
+        "longest_sustained_open_run_actions": 50
+      },
+      "report_first_events": {
+        "contact_step": 45,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "narrow",
+      "seed": 6127,
+      "episode_index": 27,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/narrow/evaluation/episode_027_trace.json",
+        "sha256": "7aaa9c33ba6ce6adbe843027f38f6aaf327a90566ca7dc414f9940f2aa70ab15"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/narrow/evaluation/report.json",
+        "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 49,
+        "simulation_time_s": 2.45,
+        "close_run_actions": 6,
+        "first_three_applied_gripper_commands": [
+          0.7357487082481384,
+          0.7589089870452881,
+          0.9119406938552856
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.024248689421459888,
+        "eef_cube_z_offset_m": 0.025991781842261363,
+        "eef_cube_offset_m": [
+          -0.00024104190731650925,
+          0.024247491364207924,
+          0.025991781842261363
+        ],
+        "eef_xyz": [
+          -0.006099378234148637,
+          -0.1688050780972474,
+          0.9450348131699473
+        ],
+        "cube_xyz": [
+          -0.005858336326832128,
+          -0.19305256946145533,
+          0.9190430313276859
+        ],
+        "finger_aperture_m": 0.0795698841539873,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 17,
+          "first_post_action_step": 43,
+          "last_post_action_step": 59,
+          "longest_consecutive_state_samples": 17
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9244798584884856,
+      "peak_cube_height_above_table_m": 0.02447985848848555,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 66,
+          "intermediate": 290,
+          "close": 244
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 49,
+            "last_action_step": 54,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 57,
+            "last_action_step": 65,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 67,
+            "last_action_step": 94,
+            "actions": 28
+          },
+          {
+            "kind": "close",
+            "first_action_step": 96,
+            "last_action_step": 115,
+            "actions": 20
+          },
+          {
+            "kind": "close",
+            "first_action_step": 172,
+            "last_action_step": 174,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 210,
+            "last_action_step": 214,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 218,
+            "last_action_step": 220,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 270,
+            "last_action_step": 273,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 285,
+            "last_action_step": 289,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 317,
+            "last_action_step": 319,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 333,
+            "last_action_step": 335,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 356,
+            "last_action_step": 358,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 365,
+            "last_action_step": 367,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 430,
+            "last_action_step": 439,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 441,
+            "last_action_step": 443,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 449,
+            "last_action_step": 451,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 453,
+            "last_action_step": 455,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 467,
+            "last_action_step": 471,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 500,
+            "last_action_step": 503,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 512,
+            "last_action_step": 515,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 530,
+            "last_action_step": 532,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 553,
+            "last_action_step": 559,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 582,
+            "last_action_step": 585,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 595,
+            "last_action_step": 598,
+            "actions": 4
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 47,
+            "actions": 48
+          },
+          {
+            "kind": "open",
+            "first_action_step": 165,
+            "last_action_step": 167,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [
+          {
+            "kind": "open",
+            "first_action_step": 165,
+            "last_action_step": 167,
+            "actions": 3
+          }
+        ],
+        "command_segment_count": 234,
+        "command_state_transition_counts": {
+          "open->intermediate": 11,
+          "intermediate->close": 100,
+          "close->intermediate": 102,
+          "intermediate->open": 12,
+          "close->open": 3,
+          "open->close": 5
+        },
+        "sustained_close_run_count": 24,
+        "sustained_open_run_count": 2,
+        "longest_sustained_close_run_actions": 28,
+        "longest_sustained_open_run_actions": 48
+      },
+      "report_first_events": {
+        "contact_step": 43,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "narrow",
+      "seed": 6128,
+      "episode_index": 28,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/narrow/evaluation/episode_028_trace.json",
+        "sha256": "30f3581dc0f3e706c97441c15fc0e5241bdd2105e9395caa1b4758619376e854"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/narrow/evaluation/report.json",
+        "sha256": "167555220b3810d9b3ec01a26db660185648c724d3e7d6ca31690060809b4cbb"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 51,
+        "simulation_time_s": 2.55,
+        "close_run_actions": 44,
+        "first_three_applied_gripper_commands": [
+          0.6151303052902222,
+          0.7350866794586182,
+          0.9309058785438538
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.02368141265211921,
+        "eef_cube_z_offset_m": 0.02513432363071677,
+        "eef_cube_offset_m": [
+          0.007760093574183538,
+          0.022373874338609018,
+          0.02513432363071677
+        ],
+        "eef_xyz": [
+          0.02089963878911415,
+          -0.18191086010518692,
+          0.9439108106986663
+        ],
+        "cube_xyz": [
+          0.013139545214930612,
+          -0.20428473444379594,
+          0.9187764870679496
+        ],
+        "finger_aperture_m": 0.07921963191667392,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 12,
+          "first_post_action_step": 47,
+          "last_post_action_step": 58,
+          "longest_consecutive_state_samples": 12
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9247879544363148,
+      "peak_cube_height_above_table_m": 0.024787954436314763,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 53,
+          "intermediate": 271,
+          "close": 276
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 51,
+            "last_action_step": 94,
+            "actions": 44
+          },
+          {
+            "kind": "close",
+            "first_action_step": 98,
+            "last_action_step": 100,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 102,
+            "last_action_step": 146,
+            "actions": 45
+          },
+          {
+            "kind": "close",
+            "first_action_step": 148,
+            "last_action_step": 150,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 153,
+            "last_action_step": 156,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 176,
+            "last_action_step": 178,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 216,
+            "last_action_step": 218,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 300,
+            "last_action_step": 304,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 322,
+            "last_action_step": 324,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 390,
+            "last_action_step": 392,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 401,
+            "last_action_step": 405,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 459,
+            "last_action_step": 461,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 470,
+            "last_action_step": 482,
+            "actions": 13
+          },
+          {
+            "kind": "close",
+            "first_action_step": 485,
+            "last_action_step": 490,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 495,
+            "last_action_step": 498,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 513,
+            "last_action_step": 515,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 528,
+            "last_action_step": 530,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 533,
+            "last_action_step": 536,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 548,
+            "last_action_step": 550,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 554,
+            "last_action_step": 557,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 567,
+            "last_action_step": 570,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 573,
+            "last_action_step": 575,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 581,
+            "last_action_step": 583,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 49,
+            "actions": 50
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 206,
+        "command_state_transition_counts": {
+          "open->intermediate": 2,
+          "intermediate->close": 99,
+          "close->intermediate": 99,
+          "close->open": 2,
+          "intermediate->open": 1,
+          "open->close": 2
+        },
+        "sustained_close_run_count": 23,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 45,
+        "longest_sustained_open_run_actions": 50
+      },
+      "report_first_events": {
+        "contact_step": 47,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7102,
+      "episode_index": 2,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_002_trace.json",
+        "sha256": "30e9f26d2e9a3022a6bb57833eb12999423f00122b9e04395255e0c922266b97"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 51,
+        "simulation_time_s": 2.55,
+        "close_run_actions": 40,
+        "first_three_applied_gripper_commands": [
+          0.5366698503494263,
+          0.681594967842102,
+          0.5371780395507812
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.03699603888317761,
+        "eef_cube_z_offset_m": 0.026489516584571993,
+        "eef_cube_offset_m": [
+          0.007172345247204351,
+          0.036294136671100125,
+          0.026489516584571993
+        ],
+        "eef_xyz": [
+          -0.019610467647932887,
+          -0.1521596362511756,
+          0.945504552998295
+        ],
+        "cube_xyz": [
+          -0.026782812895137238,
+          -0.18845377292227572,
+          0.919015036413723
+        ],
+        "finger_aperture_m": 0.07873501180401686,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 18,
+          "first_post_action_step": 44,
+          "last_post_action_step": 61,
+          "longest_consecutive_state_samples": 18
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.92867314963872,
+      "peak_cube_height_above_table_m": 0.02867314963872003,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 71,
+          "intermediate": 267,
+          "close": 262
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 51,
+            "last_action_step": 90,
+            "actions": 40
+          },
+          {
+            "kind": "close",
+            "first_action_step": 95,
+            "last_action_step": 97,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 99,
+            "last_action_step": 113,
+            "actions": 15
+          },
+          {
+            "kind": "close",
+            "first_action_step": 117,
+            "last_action_step": 124,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 129,
+            "last_action_step": 132,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 136,
+            "last_action_step": 138,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 180,
+            "last_action_step": 192,
+            "actions": 13
+          },
+          {
+            "kind": "close",
+            "first_action_step": 202,
+            "last_action_step": 204,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 210,
+            "last_action_step": 213,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 215,
+            "last_action_step": 219,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 230,
+            "last_action_step": 241,
+            "actions": 12
+          },
+          {
+            "kind": "close",
+            "first_action_step": 243,
+            "last_action_step": 248,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 252,
+            "last_action_step": 255,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 286,
+            "last_action_step": 288,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 325,
+            "last_action_step": 328,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 355,
+            "last_action_step": 357,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 377,
+            "last_action_step": 379,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 409,
+            "last_action_step": 411,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 425,
+            "last_action_step": 427,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 429,
+            "last_action_step": 434,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 455,
+            "last_action_step": 459,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 496,
+            "last_action_step": 500,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 505,
+            "last_action_step": 508,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 535,
+            "last_action_step": 537,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 539,
+            "last_action_step": 541,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 575,
+            "last_action_step": 577,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 590,
+            "last_action_step": 592,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 46,
+            "actions": 47
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 226,
+        "command_state_transition_counts": {
+          "open->intermediate": 14,
+          "intermediate->close": 93,
+          "close->intermediate": 95,
+          "intermediate->open": 16,
+          "close->open": 2,
+          "open->close": 5
+        },
+        "sustained_close_run_count": 27,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 40,
+        "longest_sustained_open_run_actions": 47
+      },
+      "report_first_events": {
+        "contact_step": 44,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7104,
+      "episode_index": 4,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_004_trace.json",
+        "sha256": "c3056a12caa099c92268fc38acaabf4e33931d4b7cedf95cbda8631ee4f9efdf"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 51,
+        "simulation_time_s": 2.55,
+        "close_run_actions": 4,
+        "first_three_applied_gripper_commands": [
+          0.6597640514373779,
+          0.6138060092926025,
+          0.6439024209976196
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.02586681346369176,
+        "eef_cube_z_offset_m": 0.026279238165639263,
+        "eef_cube_offset_m": [
+          -0.0009727666384191044,
+          0.0258485156988289,
+          0.026279238165639263
+        ],
+        "eef_xyz": [
+          -0.0034140703492992843,
+          -0.16922876763423408,
+          0.9449520458801844
+        ],
+        "cube_xyz": [
+          -0.00244130371088018,
+          -0.19507728333306298,
+          0.9186728077145452
+        ],
+        "finger_aperture_m": 0.07448418088272701,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 17,
+          "first_post_action_step": 44,
+          "last_post_action_step": 60,
+          "longest_consecutive_state_samples": 17
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9223642651185252,
+      "peak_cube_height_above_table_m": 0.022364265118525184,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 62,
+          "intermediate": 288,
+          "close": 250
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 51,
+            "last_action_step": 54,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 56,
+            "last_action_step": 93,
+            "actions": 38
+          },
+          {
+            "kind": "close",
+            "first_action_step": 95,
+            "last_action_step": 101,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 103,
+            "last_action_step": 105,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 110,
+            "last_action_step": 119,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 121,
+            "last_action_step": 136,
+            "actions": 16
+          },
+          {
+            "kind": "close",
+            "first_action_step": 155,
+            "last_action_step": 157,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 169,
+            "last_action_step": 176,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 197,
+            "last_action_step": 199,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 247,
+            "last_action_step": 249,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 281,
+            "last_action_step": 283,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 291,
+            "last_action_step": 293,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 340,
+            "last_action_step": 342,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 358,
+            "last_action_step": 360,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 380,
+            "last_action_step": 383,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 415,
+            "last_action_step": 418,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 420,
+            "last_action_step": 423,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 449,
+            "last_action_step": 451,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 465,
+            "last_action_step": 467,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 504,
+            "last_action_step": 506,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 510,
+            "last_action_step": 515,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 517,
+            "last_action_step": 520,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 544,
+            "last_action_step": 546,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 549,
+            "last_action_step": 553,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 560,
+            "last_action_step": 568,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 586,
+            "last_action_step": 588,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 597,
+            "last_action_step": 599,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 46,
+            "actions": 47
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 215,
+        "command_state_transition_counts": {
+          "open->intermediate": 10,
+          "intermediate->open": 11,
+          "intermediate->close": 94,
+          "close->intermediate": 95,
+          "open->close": 3,
+          "close->open": 1
+        },
+        "sustained_close_run_count": 27,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 38,
+        "longest_sustained_open_run_actions": 47
+      },
+      "report_first_events": {
+        "contact_step": 44,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7107,
+      "episode_index": 7,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_007_trace.json",
+        "sha256": "dbebc31ee334d1edd0b9a51848b6fd089a13a72772fd04cd7d9bd700c6450858"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 49,
+        "simulation_time_s": 2.45,
+        "close_run_actions": 6,
+        "first_three_applied_gripper_commands": [
+          0.6319581270217896,
+          0.6382889747619629,
+          0.5636144876480103
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.0473829737226615,
+        "eef_cube_z_offset_m": 0.026102410965944123,
+        "eef_cube_offset_m": [
+          0.00593143931217908,
+          0.047010256609471585,
+          0.026102410965944123
+        ],
+        "eef_xyz": [
+          0.0033368083671083573,
+          -0.17702311477412083,
+          0.9444847104046601
+        ],
+        "cube_xyz": [
+          -0.002594630945070722,
+          -0.22403337138359242,
+          0.918382299438716
+        ],
+        "finger_aperture_m": 0.07768300120242896,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 18,
+          "first_post_action_step": 44,
+          "last_post_action_step": 61,
+          "longest_consecutive_state_samples": 18
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9271846486144729,
+      "peak_cube_height_above_table_m": 0.027184648614472895,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 57,
+          "close": 225,
+          "intermediate": 318
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 49,
+            "last_action_step": 54,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 56,
+            "last_action_step": 60,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 63,
+            "last_action_step": 78,
+            "actions": 16
+          },
+          {
+            "kind": "close",
+            "first_action_step": 81,
+            "last_action_step": 99,
+            "actions": 19
+          },
+          {
+            "kind": "close",
+            "first_action_step": 101,
+            "last_action_step": 119,
+            "actions": 19
+          },
+          {
+            "kind": "close",
+            "first_action_step": 123,
+            "last_action_step": 130,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 132,
+            "last_action_step": 134,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 138,
+            "last_action_step": 142,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 147,
+            "last_action_step": 150,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 159,
+            "last_action_step": 163,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 196,
+            "last_action_step": 200,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 211,
+            "last_action_step": 214,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 271,
+            "last_action_step": 273,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 310,
+            "last_action_step": 312,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 325,
+            "last_action_step": 328,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 352,
+            "last_action_step": 354,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 362,
+            "last_action_step": 364,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 396,
+            "last_action_step": 399,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 402,
+            "last_action_step": 407,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 435,
+            "last_action_step": 439,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 467,
+            "last_action_step": 470,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 522,
+            "last_action_step": 524,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 564,
+            "last_action_step": 566,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 577,
+            "last_action_step": 579,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 595,
+            "last_action_step": 598,
+            "actions": 4
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 48,
+            "actions": 49
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 177,
+        "command_state_transition_counts": {
+          "open->close": 2,
+          "close->intermediate": 81,
+          "intermediate->close": 80,
+          "intermediate->open": 6,
+          "open->intermediate": 6,
+          "close->open": 1
+        },
+        "sustained_close_run_count": 25,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 19,
+        "longest_sustained_open_run_actions": 49
+      },
+      "report_first_events": {
+        "contact_step": 44,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7109,
+      "episode_index": 9,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_009_trace.json",
+        "sha256": "989b6a0c13245657eb4275774b4f505e3e5475e175d71275cdd478f55bfdd84d"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 47,
+        "simulation_time_s": 2.35,
+        "close_run_actions": 13,
+        "first_three_applied_gripper_commands": [
+          0.542137861251831,
+          0.8338649868965149,
+          0.6559431552886963
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.03147059034252827,
+        "eef_cube_z_offset_m": 0.025881450958381902,
+        "eef_cube_offset_m": [
+          0.023311245676380293,
+          0.021141993319521102,
+          0.025881450958381902
+        ],
+        "eef_xyz": [
+          -0.033373478355176435,
+          -0.15326080960552818,
+          0.9454969965544608
+        ],
+        "cube_xyz": [
+          -0.05668472403155673,
+          -0.17440280292504928,
+          0.9196155455960789
+        ],
+        "finger_aperture_m": 0.07915391614153336,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 19,
+          "first_post_action_step": 43,
+          "last_post_action_step": 61,
+          "longest_consecutive_state_samples": 19
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9308426639902202,
+      "peak_cube_height_above_table_m": 0.030842663990220176,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 70,
+          "intermediate": 273,
+          "close": 257
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 47,
+            "last_action_step": 59,
+            "actions": 13
+          },
+          {
+            "kind": "close",
+            "first_action_step": 61,
+            "last_action_step": 84,
+            "actions": 24
+          },
+          {
+            "kind": "close",
+            "first_action_step": 86,
+            "last_action_step": 91,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 103,
+            "last_action_step": 105,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 116,
+            "last_action_step": 119,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 128,
+            "last_action_step": 132,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 186,
+            "last_action_step": 188,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 190,
+            "last_action_step": 207,
+            "actions": 18
+          },
+          {
+            "kind": "close",
+            "first_action_step": 209,
+            "last_action_step": 212,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 236,
+            "last_action_step": 239,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 241,
+            "last_action_step": 245,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 255,
+            "last_action_step": 258,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 300,
+            "last_action_step": 302,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 320,
+            "last_action_step": 358,
+            "actions": 39
+          },
+          {
+            "kind": "close",
+            "first_action_step": 436,
+            "last_action_step": 438,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 486,
+            "last_action_step": 491,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 524,
+            "last_action_step": 527,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 549,
+            "last_action_step": 557,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 559,
+            "last_action_step": 561,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 590,
+            "last_action_step": 593,
+            "actions": 4
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 45,
+            "actions": 46
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 224,
+        "command_state_transition_counts": {
+          "open->intermediate": 18,
+          "intermediate->close": 87,
+          "close->intermediate": 89,
+          "intermediate->open": 19,
+          "open->close": 6,
+          "close->open": 4
+        },
+        "sustained_close_run_count": 20,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 39,
+        "longest_sustained_open_run_actions": 46
+      },
+      "report_first_events": {
+        "contact_step": 43,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7111,
+      "episode_index": 11,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_011_trace.json",
+        "sha256": "d28834e285bc1e25e9395cf41997fe49459ddfc25cd0465734921aa06726590b"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 54,
+        "simulation_time_s": 2.7,
+        "close_run_actions": 26,
+        "first_three_applied_gripper_commands": [
+          0.7630157470703125,
+          0.8460792303085327,
+          0.8803210258483887
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.01823377710063804,
+        "eef_cube_z_offset_m": 0.02598184999412312,
+        "eef_cube_offset_m": [
+          0.015701837381422147,
+          -0.009269462239155313,
+          0.02598184999412312
+        ],
+        "eef_xyz": [
+          -0.03578021047792362,
+          -0.14283629044196278,
+          0.9458910900510707
+        ],
+        "cube_xyz": [
+          -0.051482047859345764,
+          -0.13356682820280746,
+          0.9199092400569476
+        ],
+        "finger_aperture_m": 0.06713936347807492,
+        "gripper_contact": false,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 5,
+          "first_post_action_step": 55,
+          "last_post_action_step": 59,
+          "longest_consecutive_state_samples": 5
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.926938729507517,
+      "peak_cube_height_above_table_m": 0.026938729507516967,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 223,
+          "intermediate": 235,
+          "close": 142
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 54,
+            "last_action_step": 79,
+            "actions": 26
+          },
+          {
+            "kind": "close",
+            "first_action_step": 84,
+            "last_action_step": 87,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 90,
+            "last_action_step": 92,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 106,
+            "last_action_step": 108,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 124,
+            "last_action_step": 127,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 140,
+            "last_action_step": 142,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 170,
+            "last_action_step": 174,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 255,
+            "last_action_step": 259,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 261,
+            "last_action_step": 267,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 269,
+            "last_action_step": 278,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 285,
+            "last_action_step": 287,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 326,
+            "last_action_step": 330,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 333,
+            "last_action_step": 343,
+            "actions": 11
+          },
+          {
+            "kind": "close",
+            "first_action_step": 345,
+            "last_action_step": 353,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 389,
+            "last_action_step": 393,
+            "actions": 5
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 43,
+            "actions": 44
+          },
+          {
+            "kind": "open",
+            "first_action_step": 235,
+            "last_action_step": 237,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 314,
+            "last_action_step": 316,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 435,
+            "last_action_step": 437,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 441,
+            "last_action_step": 448,
+            "actions": 8
+          },
+          {
+            "kind": "open",
+            "first_action_step": 465,
+            "last_action_step": 476,
+            "actions": 12
+          },
+          {
+            "kind": "open",
+            "first_action_step": 478,
+            "last_action_step": 486,
+            "actions": 9
+          },
+          {
+            "kind": "open",
+            "first_action_step": 490,
+            "last_action_step": 492,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 494,
+            "last_action_step": 498,
+            "actions": 5
+          },
+          {
+            "kind": "open",
+            "first_action_step": 505,
+            "last_action_step": 518,
+            "actions": 14
+          },
+          {
+            "kind": "open",
+            "first_action_step": 525,
+            "last_action_step": 538,
+            "actions": 14
+          },
+          {
+            "kind": "open",
+            "first_action_step": 540,
+            "last_action_step": 553,
+            "actions": 14
+          },
+          {
+            "kind": "open",
+            "first_action_step": 555,
+            "last_action_step": 575,
+            "actions": 21
+          },
+          {
+            "kind": "open",
+            "first_action_step": 579,
+            "last_action_step": 581,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 583,
+            "last_action_step": 585,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 587,
+            "last_action_step": 599,
+            "actions": 13
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [
+          {
+            "kind": "open",
+            "first_action_step": 235,
+            "last_action_step": 237,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 314,
+            "last_action_step": 316,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 435,
+            "last_action_step": 437,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 441,
+            "last_action_step": 448,
+            "actions": 8
+          },
+          {
+            "kind": "open",
+            "first_action_step": 465,
+            "last_action_step": 476,
+            "actions": 12
+          },
+          {
+            "kind": "open",
+            "first_action_step": 478,
+            "last_action_step": 486,
+            "actions": 9
+          },
+          {
+            "kind": "open",
+            "first_action_step": 490,
+            "last_action_step": 492,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 494,
+            "last_action_step": 498,
+            "actions": 5
+          },
+          {
+            "kind": "open",
+            "first_action_step": 505,
+            "last_action_step": 518,
+            "actions": 14
+          },
+          {
+            "kind": "open",
+            "first_action_step": 525,
+            "last_action_step": 538,
+            "actions": 14
+          },
+          {
+            "kind": "open",
+            "first_action_step": 540,
+            "last_action_step": 553,
+            "actions": 14
+          },
+          {
+            "kind": "open",
+            "first_action_step": 555,
+            "last_action_step": 575,
+            "actions": 21
+          },
+          {
+            "kind": "open",
+            "first_action_step": 579,
+            "last_action_step": 581,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 583,
+            "last_action_step": 585,
+            "actions": 3
+          },
+          {
+            "kind": "open",
+            "first_action_step": 587,
+            "last_action_step": 599,
+            "actions": 13
+          }
+        ],
+        "command_segment_count": 199,
+        "command_state_transition_counts": {
+          "open->intermediate": 51,
+          "intermediate->open": 51,
+          "intermediate->close": 47,
+          "close->intermediate": 47,
+          "close->open": 1,
+          "open->close": 1
+        },
+        "sustained_close_run_count": 15,
+        "sustained_open_run_count": 16,
+        "longest_sustained_close_run_actions": 26,
+        "longest_sustained_open_run_actions": 44
+      },
+      "report_first_events": {
+        "contact_step": 55,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7112,
+      "episode_index": 12,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_012_trace.json",
+        "sha256": "d3c0ba1548b5ecc6ccd5989ca652f191cbee960412fdd6ad93d680b2a62854ff"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 47,
+        "simulation_time_s": 2.35,
+        "close_run_actions": 3,
+        "first_three_applied_gripper_commands": [
+          0.6202723979949951,
+          0.8855843544006348,
+          0.7683752775192261
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.0441804838808645,
+        "eef_cube_z_offset_m": 0.025026800615704947,
+        "eef_cube_offset_m": [
+          0.01288629217554546,
+          0.04225942060551474,
+          0.025026800615704947
+        ],
+        "eef_xyz": [
+          -0.014545179709608624,
+          -0.1681390520095677,
+          0.9437030505242079
+        ],
+        "cube_xyz": [
+          -0.027431471885154084,
+          -0.21039847261508243,
+          0.9186762499085029
+        ],
+        "finger_aperture_m": 0.07635056702861653,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 16,
+          "first_post_action_step": 42,
+          "last_post_action_step": 57,
+          "longest_consecutive_state_samples": 16
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9307311669773296,
+      "peak_cube_height_above_table_m": 0.030731166977329583,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 57,
+          "intermediate": 286,
+          "close": 257
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 47,
+            "last_action_step": 49,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 51,
+            "last_action_step": 85,
+            "actions": 35
+          },
+          {
+            "kind": "close",
+            "first_action_step": 89,
+            "last_action_step": 99,
+            "actions": 11
+          },
+          {
+            "kind": "close",
+            "first_action_step": 102,
+            "last_action_step": 109,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 114,
+            "last_action_step": 118,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 121,
+            "last_action_step": 124,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 135,
+            "last_action_step": 137,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 145,
+            "last_action_step": 147,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 150,
+            "last_action_step": 153,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 165,
+            "last_action_step": 170,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 190,
+            "last_action_step": 194,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 196,
+            "last_action_step": 200,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 209,
+            "last_action_step": 213,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 255,
+            "last_action_step": 257,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 271,
+            "last_action_step": 279,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 314,
+            "last_action_step": 317,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 338,
+            "last_action_step": 340,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 362,
+            "last_action_step": 365,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 390,
+            "last_action_step": 392,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 394,
+            "last_action_step": 399,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 433,
+            "last_action_step": 435,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 438,
+            "last_action_step": 440,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 452,
+            "last_action_step": 460,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 475,
+            "last_action_step": 477,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 479,
+            "last_action_step": 482,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 498,
+            "last_action_step": 501,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 536,
+            "last_action_step": 538,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 561,
+            "last_action_step": 565,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 592,
+            "last_action_step": 594,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 44,
+            "actions": 45
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 227,
+        "command_state_transition_counts": {
+          "open->intermediate": 12,
+          "intermediate->close": 102,
+          "close->intermediate": 99,
+          "intermediate->open": 8,
+          "close->open": 4,
+          "open->close": 1
+        },
+        "sustained_close_run_count": 29,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 35,
+        "longest_sustained_open_run_actions": 45
+      },
+      "report_first_events": {
+        "contact_step": 42,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7114,
+      "episode_index": 14,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_014_trace.json",
+        "sha256": "31b091d2e59d4a4557248256f2cd41afd53758d87df91b4d700e6bf6f2799fed"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 48,
+        "simulation_time_s": 2.4,
+        "close_run_actions": 32,
+        "first_three_applied_gripper_commands": [
+          0.7084509134292603,
+          0.8095857501029968,
+          0.6901454329490662
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.04802696693798704,
+        "eef_cube_z_offset_m": 0.02570121961351679,
+        "eef_cube_offset_m": [
+          0.01249271140386058,
+          0.04637371793421735,
+          0.02570121961351679
+        ],
+        "eef_xyz": [
+          -0.019217691553311968,
+          -0.16637005468658567,
+          0.9451355141742797
+        ],
+        "cube_xyz": [
+          -0.03171040295717255,
+          -0.21274377262080302,
+          0.9194342945607629
+        ],
+        "finger_aperture_m": 0.07380487909426803,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 13,
+          "first_post_action_step": 42,
+          "last_post_action_step": 54,
+          "longest_consecutive_state_samples": 13
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9297352025871536,
+      "peak_cube_height_above_table_m": 0.029735202587153564,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 66,
+          "intermediate": 299,
+          "close": 235
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 48,
+            "last_action_step": 79,
+            "actions": 32
+          },
+          {
+            "kind": "close",
+            "first_action_step": 81,
+            "last_action_step": 85,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 87,
+            "last_action_step": 96,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 98,
+            "last_action_step": 107,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 111,
+            "last_action_step": 117,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 122,
+            "last_action_step": 124,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 141,
+            "last_action_step": 144,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 150,
+            "last_action_step": 152,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 180,
+            "last_action_step": 191,
+            "actions": 12
+          },
+          {
+            "kind": "close",
+            "first_action_step": 194,
+            "last_action_step": 198,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 200,
+            "last_action_step": 204,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 224,
+            "last_action_step": 226,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 228,
+            "last_action_step": 234,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 268,
+            "last_action_step": 270,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 295,
+            "last_action_step": 299,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 340,
+            "last_action_step": 346,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 379,
+            "last_action_step": 381,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 449,
+            "last_action_step": 451,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 497,
+            "last_action_step": 501,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 547,
+            "last_action_step": 549,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 572,
+            "last_action_step": 576,
+            "actions": 5
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 44,
+            "actions": 45
+          },
+          {
+            "kind": "open",
+            "first_action_step": 305,
+            "last_action_step": 307,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [
+          {
+            "kind": "open",
+            "first_action_step": 305,
+            "last_action_step": 307,
+            "actions": 3
+          }
+        ],
+        "command_segment_count": 221,
+        "command_state_transition_counts": {
+          "open->intermediate": 15,
+          "intermediate->close": 95,
+          "close->intermediate": 92,
+          "close->open": 5,
+          "intermediate->open": 11,
+          "open->close": 2
+        },
+        "sustained_close_run_count": 21,
+        "sustained_open_run_count": 2,
+        "longest_sustained_close_run_actions": 32,
+        "longest_sustained_open_run_actions": 45
+      },
+      "report_first_events": {
+        "contact_step": 42,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7117,
+      "episode_index": 17,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_017_trace.json",
+        "sha256": "08e988908dfe6ccdf281847b2fb50c53807b3eda7ee69e121cb646936a232c6c"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 52,
+        "simulation_time_s": 2.6,
+        "close_run_actions": 15,
+        "first_three_applied_gripper_commands": [
+          0.7390560507774353,
+          0.6452969908714294,
+          0.6406741142272949
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.04049802094820955,
+        "eef_cube_z_offset_m": 0.026111208688926135,
+        "eef_cube_offset_m": [
+          0.008070853528495646,
+          0.03968565262211507,
+          0.026111208688926135
+        ],
+        "eef_xyz": [
+          0.0035097647267619348,
+          -0.16884562269663803,
+          0.9460351588914251
+        ],
+        "cube_xyz": [
+          -0.00456108880173371,
+          -0.2085312753187531,
+          0.919923950202499
+        ],
+        "finger_aperture_m": 0.06826240250789639,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 10,
+          "first_post_action_step": 44,
+          "last_post_action_step": 53,
+          "longest_consecutive_state_samples": 10
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9247188815225595,
+      "peak_cube_height_above_table_m": 0.02471888152255952,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 55,
+          "intermediate": 273,
+          "close": 272
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 52,
+            "last_action_step": 66,
+            "actions": 15
+          },
+          {
+            "kind": "close",
+            "first_action_step": 68,
+            "last_action_step": 79,
+            "actions": 12
+          },
+          {
+            "kind": "close",
+            "first_action_step": 81,
+            "last_action_step": 85,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 87,
+            "last_action_step": 95,
+            "actions": 9
+          },
+          {
+            "kind": "close",
+            "first_action_step": 102,
+            "last_action_step": 121,
+            "actions": 20
+          },
+          {
+            "kind": "close",
+            "first_action_step": 123,
+            "last_action_step": 133,
+            "actions": 11
+          },
+          {
+            "kind": "close",
+            "first_action_step": 137,
+            "last_action_step": 152,
+            "actions": 16
+          },
+          {
+            "kind": "close",
+            "first_action_step": 155,
+            "last_action_step": 159,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 180,
+            "last_action_step": 182,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 226,
+            "last_action_step": 229,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 256,
+            "last_action_step": 260,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 290,
+            "last_action_step": 294,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 315,
+            "last_action_step": 319,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 326,
+            "last_action_step": 333,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 335,
+            "last_action_step": 338,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 340,
+            "last_action_step": 344,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 351,
+            "last_action_step": 355,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 358,
+            "last_action_step": 362,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 369,
+            "last_action_step": 371,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 385,
+            "last_action_step": 388,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 426,
+            "last_action_step": 429,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 458,
+            "last_action_step": 462,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 465,
+            "last_action_step": 467,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 475,
+            "last_action_step": 481,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 500,
+            "last_action_step": 505,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 525,
+            "last_action_step": 529,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 587,
+            "last_action_step": 590,
+            "actions": 4
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 47,
+            "actions": 48
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 208,
+        "command_state_transition_counts": {
+          "open->intermediate": 8,
+          "intermediate->close": 96,
+          "close->intermediate": 96,
+          "intermediate->open": 7
+        },
+        "sustained_close_run_count": 27,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 20,
+        "longest_sustained_open_run_actions": 48
+      },
+      "report_first_events": {
+        "contact_step": 44,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7119,
+      "episode_index": 19,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_019_trace.json",
+        "sha256": "46c36fec424cac7ecae8f0146a1a67458463d42c5ff29eb9add724e5a5f3dddd"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 51,
+        "simulation_time_s": 2.55,
+        "close_run_actions": 4,
+        "first_three_applied_gripper_commands": [
+          0.7910455465316772,
+          0.8386501669883728,
+          0.794269323348999
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.031782893955356994,
+        "eef_cube_z_offset_m": 0.026376165683912545,
+        "eef_cube_offset_m": [
+          0.000662257113007326,
+          0.03177599351230012,
+          0.026376165683912545
+        ],
+        "eef_xyz": [
+          0.005744141948906904,
+          -0.1681410447311524,
+          0.9449352839694747
+        ],
+        "cube_xyz": [
+          0.005081884835899578,
+          -0.19991703824345253,
+          0.9185591182855621
+        ],
+        "finger_aperture_m": 0.077984322364818,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 20,
+          "first_post_action_step": 45,
+          "last_post_action_step": 64,
+          "longest_consecutive_state_samples": 20
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9223905929221415,
+      "peak_cube_height_above_table_m": 0.022390592922141517,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 58,
+          "intermediate": 264,
+          "close": 278
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 51,
+            "last_action_step": 54,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 65,
+            "last_action_step": 89,
+            "actions": 25
+          },
+          {
+            "kind": "close",
+            "first_action_step": 91,
+            "last_action_step": 100,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 103,
+            "last_action_step": 119,
+            "actions": 17
+          },
+          {
+            "kind": "close",
+            "first_action_step": 121,
+            "last_action_step": 140,
+            "actions": 20
+          },
+          {
+            "kind": "close",
+            "first_action_step": 142,
+            "last_action_step": 154,
+            "actions": 13
+          },
+          {
+            "kind": "close",
+            "first_action_step": 158,
+            "last_action_step": 161,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 171,
+            "last_action_step": 174,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 202,
+            "last_action_step": 204,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 245,
+            "last_action_step": 249,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 251,
+            "last_action_step": 254,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 267,
+            "last_action_step": 269,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 275,
+            "last_action_step": 280,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 308,
+            "last_action_step": 311,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 351,
+            "last_action_step": 353,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 360,
+            "last_action_step": 366,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 381,
+            "last_action_step": 384,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 410,
+            "last_action_step": 414,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 422,
+            "last_action_step": 424,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 430,
+            "last_action_step": 432,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 435,
+            "last_action_step": 442,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 445,
+            "last_action_step": 447,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 449,
+            "last_action_step": 451,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 464,
+            "last_action_step": 466,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 485,
+            "last_action_step": 488,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 500,
+            "last_action_step": 502,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 517,
+            "last_action_step": 520,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 540,
+            "last_action_step": 544,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 546,
+            "last_action_step": 551,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 565,
+            "last_action_step": 567,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 575,
+            "last_action_step": 577,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 583,
+            "last_action_step": 590,
+            "actions": 8
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 49,
+            "actions": 50
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 201,
+        "command_state_transition_counts": {
+          "open->intermediate": 7,
+          "intermediate->close": 93,
+          "close->intermediate": 92,
+          "intermediate->open": 6,
+          "close->open": 1,
+          "open->close": 1
+        },
+        "sustained_close_run_count": 32,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 25,
+        "longest_sustained_open_run_actions": 50
+      },
+      "report_first_events": {
+        "contact_step": 45,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7122,
+      "episode_index": 22,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_022_trace.json",
+        "sha256": "cd8957ff45aa29a800c1d3d7b714d8d67c451df6605767f1b4a3b3e3aa8b829c"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 73,
+        "simulation_time_s": 3.65,
+        "close_run_actions": 7,
+        "first_three_applied_gripper_commands": [
+          0.5707476139068604,
+          0.6016258001327515,
+          0.527252197265625
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.006524564409037646,
+        "eef_cube_z_offset_m": 0.035066909150347714,
+        "eef_cube_offset_m": [
+          0.0005788742359936552,
+          0.006498834152875693,
+          0.035066909150347714
+        ],
+        "eef_xyz": [
+          0.03342302393942002,
+          -0.22145755118295757,
+          0.9549480394705703
+        ],
+        "cube_xyz": [
+          0.03284414970342636,
+          -0.22795638533583326,
+          0.9198811303202226
+        ],
+        "finger_aperture_m": 0.0034602648914145474,
+        "gripper_contact": false,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 22,
+          "first_post_action_step": 46,
+          "last_post_action_step": 67,
+          "longest_consecutive_state_samples": 22
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9214991794841841,
+      "peak_cube_height_above_table_m": 0.021499179484184117,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 50,
+          "intermediate": 266,
+          "close": 284
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 73,
+            "last_action_step": 79,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 82,
+            "last_action_step": 94,
+            "actions": 13
+          },
+          {
+            "kind": "close",
+            "first_action_step": 96,
+            "last_action_step": 109,
+            "actions": 14
+          },
+          {
+            "kind": "close",
+            "first_action_step": 111,
+            "last_action_step": 127,
+            "actions": 17
+          },
+          {
+            "kind": "close",
+            "first_action_step": 129,
+            "last_action_step": 144,
+            "actions": 16
+          },
+          {
+            "kind": "close",
+            "first_action_step": 146,
+            "last_action_step": 179,
+            "actions": 34
+          },
+          {
+            "kind": "close",
+            "first_action_step": 183,
+            "last_action_step": 186,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 189,
+            "last_action_step": 195,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 212,
+            "last_action_step": 219,
+            "actions": 8
+          },
+          {
+            "kind": "close",
+            "first_action_step": 221,
+            "last_action_step": 224,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 256,
+            "last_action_step": 259,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 290,
+            "last_action_step": 294,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 330,
+            "last_action_step": 336,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 345,
+            "last_action_step": 348,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 354,
+            "last_action_step": 356,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 365,
+            "last_action_step": 369,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 424,
+            "last_action_step": 426,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 433,
+            "last_action_step": 435,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 450,
+            "last_action_step": 455,
+            "actions": 6
+          },
+          {
+            "kind": "close",
+            "first_action_step": 501,
+            "last_action_step": 505,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 536,
+            "last_action_step": 538,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 561,
+            "last_action_step": 563,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 579,
+            "last_action_step": 584,
+            "actions": 6
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 49,
+            "actions": 50
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [],
+        "command_segment_count": 201,
+        "command_state_transition_counts": {
+          "open->intermediate": 1,
+          "intermediate->close": 100,
+          "close->intermediate": 99
+        },
+        "sustained_close_run_count": 23,
+        "sustained_open_run_count": 1,
+        "longest_sustained_close_run_actions": 34,
+        "longest_sustained_open_run_actions": 50
+      },
+      "report_first_events": {
+        "contact_step": 46,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7123,
+      "episode_index": 23,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_023_trace.json",
+        "sha256": "16fad6b43484d3f99fc1c175e538405b14d06a98e3da31bc6c41423163af7146"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 80,
+        "simulation_time_s": 4.0,
+        "close_run_actions": 7,
+        "first_three_applied_gripper_commands": [
+          0.8073233366012573,
+          0.8337820172309875,
+          0.8638160824775696
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.05042542997594411,
+        "eef_cube_z_offset_m": 0.017368407933749164,
+        "eef_cube_offset_m": [
+          0.02287360482020904,
+          -0.044939094236396804,
+          0.017368407933749164
+        ],
+        "eef_xyz": [
+          0.07956348499952273,
+          -0.17020676160121034,
+          0.9499979075681928
+        ],
+        "cube_xyz": [
+          0.056689880179313694,
+          -0.12526766736481354,
+          0.9326294996344436
+        ],
+        "finger_aperture_m": 0.04018035052197874,
+        "gripper_contact": false,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 201,
+          "first_post_action_step": 50,
+          "last_post_action_step": 339,
+          "longest_consecutive_state_samples": 66
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.9326294996344436,
+      "peak_cube_height_above_table_m": 0.032629499634443615,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 414,
+          "intermediate": 58,
+          "close": 128
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 80,
+            "last_action_step": 86,
+            "actions": 7
+          },
+          {
+            "kind": "close",
+            "first_action_step": 95,
+            "last_action_step": 119,
+            "actions": 25
+          },
+          {
+            "kind": "close",
+            "first_action_step": 122,
+            "last_action_step": 124,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 127,
+            "last_action_step": 150,
+            "actions": 24
+          },
+          {
+            "kind": "close",
+            "first_action_step": 152,
+            "last_action_step": 154,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 156,
+            "last_action_step": 166,
+            "actions": 11
+          },
+          {
+            "kind": "close",
+            "first_action_step": 168,
+            "last_action_step": 183,
+            "actions": 16
+          },
+          {
+            "kind": "close",
+            "first_action_step": 185,
+            "last_action_step": 188,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 190,
+            "last_action_step": 216,
+            "actions": 27
+          },
+          {
+            "kind": "close",
+            "first_action_step": 219,
+            "last_action_step": 221,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 53,
+            "actions": 54
+          },
+          {
+            "kind": "open",
+            "first_action_step": 60,
+            "last_action_step": 67,
+            "actions": 8
+          },
+          {
+            "kind": "open",
+            "first_action_step": 250,
+            "last_action_step": 599,
+            "actions": 350
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [
+          {
+            "kind": "open",
+            "first_action_step": 250,
+            "last_action_step": 599,
+            "actions": 350
+          }
+        ],
+        "command_segment_count": 37,
+        "command_state_transition_counts": {
+          "open->intermediate": 4,
+          "intermediate->open": 4,
+          "intermediate->close": 14,
+          "close->intermediate": 14
+        },
+        "sustained_close_run_count": 10,
+        "sustained_open_run_count": 3,
+        "longest_sustained_close_run_actions": 27,
+        "longest_sustained_open_run_actions": 350
+      },
+      "report_first_events": {
+        "contact_step": 50,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    },
+    {
+      "group": "wide",
+      "seed": 7129,
+      "episode_index": 29,
+      "steps": 600,
+      "trace": {
+        "path": "final_test/original_h5/wide/evaluation/episode_029_trace.json",
+        "sha256": "e90937f85d0611d2aa94098a22667da59c956128eb741feaefa518b912c8124a"
+      },
+      "source_report": {
+        "path": "final_test/original_h5/wide/evaluation/report.json",
+        "sha256": "9266868bd089bd7b020dd8a94277fdc29b7f2442c8aa9090622086c12c6877e0"
+      },
+      "classification": "closedwithoutfirmcontact",
+      "first_sustained_close": {
+        "action_step": 58,
+        "simulation_time_s": 2.9,
+        "close_run_actions": 54,
+        "first_three_applied_gripper_commands": [
+          0.5111829042434692,
+          0.5214454531669617,
+          0.8919308185577393
+        ],
+        "measurement_time": "Immediately before the first action in the qualifying run.",
+        "eef_cube_xy_distance_m": 0.032100125925080866,
+        "eef_cube_z_offset_m": 0.024888858276290726,
+        "eef_cube_offset_m": [
+          0.020283389764002464,
+          -0.024879754502157153,
+          0.024888858276290726
+        ],
+        "eef_xyz": [
+          -0.011491976712275524,
+          -0.14250805408480657,
+          0.9517776415056094
+        ],
+        "cube_xyz": [
+          -0.03177536647627799,
+          -0.11762829958264942,
+          0.9268887832293187
+        ],
+        "finger_aperture_m": 0.05432041564381232,
+        "gripper_contact": true,
+        "bilateral_contact": false,
+        "firm_bilateral_grasp": false
+      },
+      "contact_observations": {
+        "gripper_contact": {
+          "ever": true,
+          "initial_state": false,
+          "post_action_samples": 21,
+          "first_post_action_step": 40,
+          "last_post_action_step": 60,
+          "longest_consecutive_state_samples": 21
+        },
+        "bilateral_contact": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "firm_bilateral_grasp": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        },
+        "ever_lifted": {
+          "ever": false,
+          "initial_state": false,
+          "post_action_samples": 0,
+          "first_post_action_step": null,
+          "last_post_action_step": null,
+          "longest_consecutive_state_samples": 0
+        }
+      },
+      "peak_cube_height_m": 0.932372647007103,
+      "peak_cube_height_above_table_m": 0.03237264700710296,
+      "gripper_command_pattern": {
+        "action_counts": {
+          "open": 80,
+          "intermediate": 281,
+          "close": 239
+        },
+        "any_close_command": true,
+        "sustained_close_runs": [
+          {
+            "kind": "close",
+            "first_action_step": 58,
+            "last_action_step": 111,
+            "actions": 54
+          },
+          {
+            "kind": "close",
+            "first_action_step": 113,
+            "last_action_step": 124,
+            "actions": 12
+          },
+          {
+            "kind": "close",
+            "first_action_step": 126,
+            "last_action_step": 135,
+            "actions": 10
+          },
+          {
+            "kind": "close",
+            "first_action_step": 142,
+            "last_action_step": 144,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 185,
+            "last_action_step": 188,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 218,
+            "last_action_step": 220,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 235,
+            "last_action_step": 239,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 253,
+            "last_action_step": 256,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 266,
+            "last_action_step": 268,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 275,
+            "last_action_step": 277,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 281,
+            "last_action_step": 283,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 297,
+            "last_action_step": 299,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 333,
+            "last_action_step": 335,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 345,
+            "last_action_step": 348,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 365,
+            "last_action_step": 368,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 415,
+            "last_action_step": 417,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 425,
+            "last_action_step": 429,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 487,
+            "last_action_step": 490,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 496,
+            "last_action_step": 498,
+            "actions": 3
+          },
+          {
+            "kind": "close",
+            "first_action_step": 522,
+            "last_action_step": 526,
+            "actions": 5
+          },
+          {
+            "kind": "close",
+            "first_action_step": 553,
+            "last_action_step": 556,
+            "actions": 4
+          },
+          {
+            "kind": "close",
+            "first_action_step": 563,
+            "last_action_step": 565,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs": [
+          {
+            "kind": "open",
+            "first_action_step": 0,
+            "last_action_step": 45,
+            "actions": 46
+          },
+          {
+            "kind": "open",
+            "first_action_step": 262,
+            "last_action_step": 264,
+            "actions": 3
+          }
+        ],
+        "sustained_open_runs_after_first_sustained_close": [
+          {
+            "kind": "open",
+            "first_action_step": 262,
+            "last_action_step": 264,
+            "actions": 3
+          }
+        ],
+        "command_segment_count": 232,
+        "command_state_transition_counts": {
+          "open->intermediate": 22,
+          "intermediate->open": 23,
+          "intermediate->close": 85,
+          "close->intermediate": 87,
+          "close->open": 6,
+          "open->close": 8
+        },
+        "sustained_close_run_count": 22,
+        "sustained_open_run_count": 2,
+        "longest_sustained_close_run_actions": 54,
+        "longest_sustained_open_run_actions": 46
+      },
+      "report_first_events": {
+        "contact_step": 40,
+        "bilateral_contact_step": null,
+        "firm_grasp_step": null,
+        "lift_step": null,
+        "release_after_lift_step": null
+      }
+    }
+  ],
+  "checks": [
+    "All expected failed seeds included exactly once; 600 ordered trace rows per failed episode.",
+    "Reported event indices match post-action diagnostics; reported peak cube heights match complete trace states within 1e-12 m.",
+    "First-close XY/Z diagnostics checked against recorded end-effector and cube coordinates.",
+    "Both manifests bind the unchanged final candidate lock; contact threshold and control rate verified."
+  ],
+  "limits": [
+    "This post-hoc symptom analysis does not identify a causal controller error or establish that changing closure timing/position would improve outcomes.",
+    "Diagnostics sample control steps rather than every internal physics substep; brief inter-step contacts may be unobserved.",
+    "End-effector reference offsets are not fingertip/object surface distances; command thresholds do not directly measure finger closure.",
+    "No source code, policy, success criterion, evaluation plan or candidate selection was changed."
+  ],
+  "source_path_base": "Paths in candidate_lock, source_reports and each episode trace/source_report are relative to the study directory (runs/improvement_20261011, or its extracted archive). Diagnostic-source file paths are repository-relative."
+}

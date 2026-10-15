@@ -1,0 +1,300 @@
+{
+  "kind": "imu_assisted_demonstration_pilot",
+  "models": {
+    "original": {
+      "groups": {
+        "narrow": {
+          "successes": 3,
+          "trials": 5,
+          "episodes": [
+            {
+              "seed": 84000,
+              "success": true,
+              "lifted": true,
+              "steps": 311,
+              "failure": null
+            },
+            {
+              "seed": 84001,
+              "success": true,
+              "lifted": true,
+              "steps": 214,
+              "failure": null
+            },
+            {
+              "seed": 84002,
+              "success": true,
+              "lifted": true,
+              "steps": 204,
+              "failure": null
+            },
+            {
+              "seed": 84003,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 84004,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            }
+          ],
+          "report": "results/imu_pilot_20261015/evaluation/original/narrow/evaluation/report.json"
+        },
+        "wide": {
+          "successes": 3,
+          "trials": 5,
+          "episodes": [
+            {
+              "seed": 85000,
+              "success": true,
+              "lifted": true,
+              "steps": 230,
+              "failure": null
+            },
+            {
+              "seed": 85001,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85002,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85003,
+              "success": true,
+              "lifted": true,
+              "steps": 221,
+              "failure": null
+            },
+            {
+              "seed": 85004,
+              "success": true,
+              "lifted": true,
+              "steps": 232,
+              "failure": null
+            }
+          ],
+          "report": "results/imu_pilot_20261015/evaluation/original/wide/evaluation/report.json"
+        }
+      },
+      "successes": 6,
+      "trials": 10
+    },
+    "continuation": {
+      "groups": {
+        "narrow": {
+          "successes": 3,
+          "trials": 5,
+          "episodes": [
+            {
+              "seed": 84000,
+              "success": true,
+              "lifted": true,
+              "steps": 309,
+              "failure": null
+            },
+            {
+              "seed": 84001,
+              "success": true,
+              "lifted": true,
+              "steps": 220,
+              "failure": null
+            },
+            {
+              "seed": 84002,
+              "success": true,
+              "lifted": true,
+              "steps": 203,
+              "failure": null
+            },
+            {
+              "seed": 84003,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 84004,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            }
+          ],
+          "report": "results/imu_pilot_20261015/evaluation/continuation/narrow/evaluation/report.json"
+        },
+        "wide": {
+          "successes": 3,
+          "trials": 5,
+          "episodes": [
+            {
+              "seed": 85000,
+              "success": true,
+              "lifted": true,
+              "steps": 222,
+              "failure": null
+            },
+            {
+              "seed": 85001,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85002,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85003,
+              "success": true,
+              "lifted": true,
+              "steps": 218,
+              "failure": null
+            },
+            {
+              "seed": 85004,
+              "success": true,
+              "lifted": true,
+              "steps": 226,
+              "failure": null
+            }
+          ],
+          "report": "results/imu_pilot_20261015/evaluation/continuation/wide/evaluation/report.json"
+        }
+      },
+      "successes": 6,
+      "trials": 10
+    },
+    "augmented": {
+      "groups": {
+        "narrow": {
+          "successes": 3,
+          "trials": 5,
+          "episodes": [
+            {
+              "seed": 84000,
+              "success": true,
+              "lifted": true,
+              "steps": 260,
+              "failure": null
+            },
+            {
+              "seed": 84001,
+              "success": true,
+              "lifted": true,
+              "steps": 221,
+              "failure": null
+            },
+            {
+              "seed": 84002,
+              "success": true,
+              "lifted": true,
+              "steps": 249,
+              "failure": null
+            },
+            {
+              "seed": 84003,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 84004,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            }
+          ],
+          "report": "results/imu_pilot_20261015/evaluation/augmented/narrow/evaluation/report.json"
+        },
+        "wide": {
+          "successes": 2,
+          "trials": 5,
+          "episodes": [
+            {
+              "seed": 85000,
+              "success": true,
+              "lifted": true,
+              "steps": 234,
+              "failure": null
+            },
+            {
+              "seed": 85001,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85002,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85003,
+              "success": false,
+              "lifted": false,
+              "steps": 600,
+              "failure": "before_lift"
+            },
+            {
+              "seed": 85004,
+              "success": true,
+              "lifted": true,
+              "steps": 292,
+              "failure": null
+            }
+          ],
+          "report": "results/imu_pilot_20261015/evaluation/augmented/wide/evaluation/report.json"
+        }
+      },
+      "successes": 5,
+      "trials": 10
+    }
+  },
+  "paired": {
+    "augmented_vs_original": {
+      "improved": 0,
+      "regressed": 1,
+      "both_successful": 5,
+      "both_failed": 4,
+      "identical_initial_cube_and_robot_states": true
+    },
+    "augmented_vs_continuation": {
+      "improved": 0,
+      "regressed": 1,
+      "both_successful": 5,
+      "both_failed": 4,
+      "identical_initial_cube_and_robot_states": true
+    }
+  },
+  "default_checkpoint_changed": false,
+  "limits": [
+    "One new human recording; four robot replays reuse its path.",
+    "Ten new simulator starts per model, one scene and one training seed.",
+    "Timing is provisional; shoulder is fixed; physical tracking accuracy is unmeasured.",
+    "The policy uses simulator images and robot state, not IMUs.",
+    "This tests demonstration augmentation, not vision/IMU sensor fusion.",
+    "Every planned result is reported; no model is selected using these starts."
+  ]
+}

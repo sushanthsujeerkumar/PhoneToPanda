@@ -1,0 +1,8 @@
+{
+  "kind": "presentation_only_plot",
+  "source": "final/summary.json",
+  "source_sha256": "8a0fdd2ae812942005b8477992a40d74c971e47ebfdb7513c01fe36889b828eb",
+  "image": "final_overview.png",
+  "image_sha256": "b3fb6485020359370dc846cba6d4a62d78c20d3f4595d4252a265cf5a2691519",
+  "note": "Displays the existing frozen summary counts and intervals; no new analyses or model selection."
+}

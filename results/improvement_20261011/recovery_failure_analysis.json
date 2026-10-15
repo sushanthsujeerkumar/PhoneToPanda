@@ -1,0 +1,1004 @@
+{
+  "schema_version": 1,
+  "kind": "development_recovery_narrow_failure_analysis",
+  "created_utc": "2026-10-11T17:45:56.856395+00:00",
+  "scope": "All failed episodes in the completed recovery2000_h5/new_narrow development group, paired against the original at identical starts. No final-test data read and no tuning proposed.",
+  "definitions": {
+    "sustained_close": "At least three consecutive raw policy_action[6] values >0.5; first close is the first zero-based index of the first such run. This describes commanded closure, not grasp.",
+    "sustained_open": "At least three consecutive raw policy_action[6] values <\u22120.5. Raw actions are clipped to [\u22121,1] before simulator application; clipping does not change these thresholds.",
+    "close_open_reclose_pattern": "A sustained close followed by a sustained open and then another sustained close. Repeated opens before one reclosure count as one pattern. This is a command-sequence description, not proof of an intentional or successful retry.",
+    "measurement_time": "Alignment and aperture use diagnostics immediately before the indexed action; contact and force runs use next_diagnostics immediately after it. Zero-based action steps at 20 Hz.",
+    "alignment": "End-effector reference position minus cube centre, in world axes. XY distance is the norm of the first two components; this is not a calibrated finger-centre error.",
+    "lift": "Cube centre exceeded 0.97 m (table Z 0.90 m plus 0.07 m).",
+    "firm_bilateral_contact": "Both finger-pad normal forces are at least 1 N. A short contact run does not imply retained grasp."
+  },
+  "completed_group": {
+    "episodes": 10,
+    "recovery_placements": 7,
+    "original_placements": 10,
+    "recovery_failures": 3,
+    "pre_lift_failures": 3,
+    "post_lift_failures": 0
+  },
+  "failures": [
+    {
+      "seed": 4101,
+      "identical_initial_cube_and_robot_states": true,
+      "models": {
+        "original_h5": {
+          "success": true,
+          "steps": 213,
+          "failure_stage": null,
+          "max_cube_height_m": 1.08402623074493,
+          "initial_cube_xyz_m": [
+            -3.306425253753881e-05,
+            -0.16339037623614347,
+            0.9199083359543676
+          ],
+          "final_cube_xyz_m": [
+            0.012677903058551458,
+            0.1906431449994109,
+            0.9303967677873934
+          ],
+          "final_cube_displacement_mm": [
+            12.710967311088996,
+            354.03352123555436,
+            10.488431833025835
+          ],
+          "first_sustained_close": {
+            "step": 52,
+            "simulation_time_s": 2.6,
+            "eef_cube_offset_mm": [
+              -11.221398228880835,
+              8.72304449964295,
+              15.497161190584974
+            ],
+            "eef_cube_xy_distance_mm": 14.213067352048997,
+            "eef_cube_z_offset_mm": 15.497161190584974,
+            "finger_aperture_before_mm": 78.81658359338861,
+            "finger_normal_forces_after_n": [
+              0.0,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "sustained_close_runs": [
+            {
+              "start_step": 52,
+              "end_step": 206,
+              "steps": 155
+            }
+          ],
+          "sustained_open_runs": [
+            {
+              "start_step": 0,
+              "end_step": 49,
+              "steps": 50
+            },
+            {
+              "start_step": 207,
+              "end_step": 212,
+              "steps": 6
+            }
+          ],
+          "opening_runs_after_first_close": [
+            {
+              "start_step": 207,
+              "end_step": 212,
+              "steps": 6
+            }
+          ],
+          "close_open_reclose_patterns": [],
+          "first_lift_step": 64,
+          "any_finger_contact_steps": 156,
+          "bilateral_contact_steps": 154,
+          "firm_bilateral_steps": 154,
+          "bilateral_contact_runs": [
+            {
+              "start_step": 57,
+              "end_step": 210,
+              "steps": 154
+            }
+          ],
+          "firm_bilateral_runs": [
+            {
+              "start_step": 57,
+              "end_step": 210,
+              "steps": 154
+            }
+          ],
+          "first_contact": {
+            "step": 55,
+            "simulation_time_s": 2.75,
+            "eef_cube_offset_mm": [
+              -11.13452345502442,
+              8.440853675160342,
+              10.824341535632165
+            ],
+            "eef_cube_xy_distance_mm": 13.972316319635654,
+            "eef_cube_z_offset_mm": 10.824341535632165,
+            "finger_aperture_before_mm": 59.39462792858721,
+            "finger_normal_forces_after_n": [
+              6.198109601879637,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "first_firm_contact": {
+            "step": 57,
+            "simulation_time_s": 2.85,
+            "eef_cube_offset_mm": [
+              -11.123549203232589,
+              4.7091944024383325,
+              10.829332637759537
+            ],
+            "eef_cube_xy_distance_mm": 12.079315328142274,
+            "eef_cube_z_offset_mm": 10.829332637759537,
+            "finger_aperture_before_mm": 45.02166593770937,
+            "finger_normal_forces_after_n": [
+              14.18745940738605,
+              15.257218540241581
+            ],
+            "bilateral_contact_after": true,
+            "firm_bilateral_grasp_after": true
+          },
+          "maximum_simultaneous_minimum_finger_force_n": 18.475000889471396,
+          "forces_at_maximum_simultaneous_minimum_n": [
+            18.475000889471396,
+            19.37650576842458
+          ],
+          "maximum_each_finger_force_n": [
+            20.338618012194342,
+            20.114734585890954
+          ],
+          "minimum_aperture_mm": 39.90035109905414,
+          "raw_policy_gripper_command_range": [
+            -1.1848993301391602,
+            1.079094409942627
+          ],
+          "raw_command_positive_steps": 156,
+          "raw_command_above_point5_steps": 155
+        },
+        "recovery2000_h5": {
+          "success": false,
+          "steps": 600,
+          "failure_stage": "pre_lift",
+          "max_cube_height_m": 0.9199092400569476,
+          "initial_cube_xyz_m": [
+            -3.306425253753881e-05,
+            -0.16339037623614347,
+            0.9199083359543676
+          ],
+          "final_cube_xyz_m": [
+            -3.306425253755866e-05,
+            -0.16339037623614347,
+            0.9199092400569476
+          ],
+          "final_cube_displacement_mm": [
+            -1.98544522836408e-14,
+            0.0,
+            0.0009041025800238245
+          ],
+          "first_sustained_close": {
+            "step": 59,
+            "simulation_time_s": 2.95,
+            "eef_cube_offset_mm": [
+              -31.462513320431185,
+              -1.7323151375567836,
+              4.091283049226013
+            ],
+            "eef_cube_xy_distance_mm": 31.510167568169454,
+            "eef_cube_z_offset_mm": 4.091283049226013,
+            "finger_aperture_before_mm": 45.69962746905027,
+            "finger_normal_forces_after_n": [
+              0.0,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "sustained_close_runs": [
+            {
+              "start_step": 59,
+              "end_step": 64,
+              "steps": 6
+            },
+            {
+              "start_step": 161,
+              "end_step": 165,
+              "steps": 5
+            },
+            {
+              "start_step": 200,
+              "end_step": 202,
+              "steps": 3
+            },
+            {
+              "start_step": 427,
+              "end_step": 431,
+              "steps": 5
+            },
+            {
+              "start_step": 477,
+              "end_step": 479,
+              "steps": 3
+            },
+            {
+              "start_step": 555,
+              "end_step": 558,
+              "steps": 4
+            }
+          ],
+          "sustained_open_runs": [
+            {
+              "start_step": 0,
+              "end_step": 50,
+              "steps": 51
+            },
+            {
+              "start_step": 492,
+              "end_step": 494,
+              "steps": 3
+            },
+            {
+              "start_step": 550,
+              "end_step": 552,
+              "steps": 3
+            },
+            {
+              "start_step": 561,
+              "end_step": 563,
+              "steps": 3
+            }
+          ],
+          "opening_runs_after_first_close": [
+            {
+              "start_step": 492,
+              "end_step": 494,
+              "steps": 3
+            },
+            {
+              "start_step": 550,
+              "end_step": 552,
+              "steps": 3
+            },
+            {
+              "start_step": 561,
+              "end_step": 563,
+              "steps": 3
+            }
+          ],
+          "close_open_reclose_patterns": [
+            {
+              "close_before": {
+                "start_step": 477,
+                "end_step": 479,
+                "steps": 3
+              },
+              "open_between": {
+                "start_step": 492,
+                "end_step": 494,
+                "steps": 3
+              },
+              "close_after": {
+                "start_step": 555,
+                "end_step": 558,
+                "steps": 4
+              },
+              "any_lift_before_reclose": false,
+              "firm_contact_steps_after_reclose": 0
+            }
+          ],
+          "first_lift_step": null,
+          "any_finger_contact_steps": 0,
+          "bilateral_contact_steps": 0,
+          "firm_bilateral_steps": 0,
+          "bilateral_contact_runs": [],
+          "firm_bilateral_runs": [],
+          "first_contact": null,
+          "first_firm_contact": null,
+          "maximum_simultaneous_minimum_finger_force_n": 0.0,
+          "forces_at_maximum_simultaneous_minimum_n": [
+            0.0,
+            0.0
+          ],
+          "maximum_each_finger_force_n": [
+            0.0,
+            0.0
+          ],
+          "minimum_aperture_mm": 2.1672867184540645,
+          "raw_policy_gripper_command_range": [
+            -1.1905975341796875,
+            0.8777639865875244
+          ],
+          "raw_command_positive_steps": 335,
+          "raw_command_above_point5_steps": 61
+        }
+      },
+      "descriptive_observation": "The recovery-trained policy closes with 31.5 mm lateral offset and never registers contact with either finger. The cube remains at its starting XY position. Later opening/reclosure command patterns also have no bilateral grasp or lift. Original policy closes at 14.2 mm lateral offset and subsequently grasps and places."
+    },
+    {
+      "seed": 4102,
+      "identical_initial_cube_and_robot_states": true,
+      "models": {
+        "original_h5": {
+          "success": true,
+          "steps": 258,
+          "failure_stage": null,
+          "max_cube_height_m": 1.1291670796023716,
+          "initial_cube_xyz_m": [
+            -0.007764309948406177,
+            -0.16654935400685075,
+            0.9199083359543676
+          ],
+          "final_cube_xyz_m": [
+            0.01419725115297816,
+            0.1678079266626917,
+            0.9307344299597341
+          ],
+          "final_cube_displacement_mm": [
+            21.961561101384337,
+            334.35728066954243,
+            10.826094005366492
+          ],
+          "first_sustained_close": {
+            "step": 52,
+            "simulation_time_s": 2.6,
+            "eef_cube_offset_mm": [
+              -0.39414722507359784,
+              7.450843439444466,
+              4.554682881159899
+            ],
+            "eef_cube_xy_distance_mm": 7.4612612870845005,
+            "eef_cube_z_offset_mm": 4.554682881159899,
+            "finger_aperture_before_mm": 77.0083950625842,
+            "finger_normal_forces_after_n": [
+              0.0,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "sustained_close_runs": [
+            {
+              "start_step": 52,
+              "end_step": 219,
+              "steps": 168
+            },
+            {
+              "start_step": 225,
+              "end_step": 227,
+              "steps": 3
+            },
+            {
+              "start_step": 235,
+              "end_step": 237,
+              "steps": 3
+            }
+          ],
+          "sustained_open_runs": [
+            {
+              "start_step": 0,
+              "end_step": 48,
+              "steps": 49
+            },
+            {
+              "start_step": 238,
+              "end_step": 240,
+              "steps": 3
+            },
+            {
+              "start_step": 247,
+              "end_step": 249,
+              "steps": 3
+            }
+          ],
+          "opening_runs_after_first_close": [
+            {
+              "start_step": 238,
+              "end_step": 240,
+              "steps": 3
+            },
+            {
+              "start_step": 247,
+              "end_step": 249,
+              "steps": 3
+            }
+          ],
+          "close_open_reclose_patterns": [],
+          "first_lift_step": 65,
+          "any_finger_contact_steps": 199,
+          "bilateral_contact_steps": 197,
+          "firm_bilateral_steps": 197,
+          "bilateral_contact_runs": [
+            {
+              "start_step": 57,
+              "end_step": 253,
+              "steps": 197
+            }
+          ],
+          "firm_bilateral_runs": [
+            {
+              "start_step": 57,
+              "end_step": 253,
+              "steps": 197
+            }
+          ],
+          "first_contact": {
+            "step": 55,
+            "simulation_time_s": 2.75,
+            "eef_cube_offset_mm": [
+              -0.3927056159505754,
+              7.304616383580181,
+              1.487300345100473
+            ],
+            "eef_cube_xy_distance_mm": 7.315164947700573,
+            "eef_cube_z_offset_mm": 1.487300345100473,
+            "finger_aperture_before_mm": 59.068825275034875,
+            "finger_normal_forces_after_n": [
+              7.935585931384997,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "first_firm_contact": {
+            "step": 57,
+            "simulation_time_s": 2.85,
+            "eef_cube_offset_mm": [
+              -0.20161275509641713,
+              4.87382167760364,
+              1.045869496684615
+            ],
+            "eef_cube_xy_distance_mm": 4.877989898318439,
+            "eef_cube_z_offset_mm": 1.045869496684615,
+            "finger_aperture_before_mm": 45.3647150093956,
+            "finger_normal_forces_after_n": [
+              14.351022449510262,
+              16.176897911798747
+            ],
+            "bilateral_contact_after": true,
+            "firm_bilateral_grasp_after": true
+          },
+          "maximum_simultaneous_minimum_finger_force_n": 18.86620245998185,
+          "forces_at_maximum_simultaneous_minimum_n": [
+            18.86620245998185,
+            18.87227488710252
+          ],
+          "maximum_each_finger_force_n": [
+            18.86620245998185,
+            18.88779334038192
+          ],
+          "minimum_aperture_mm": 39.63732913571103,
+          "raw_policy_gripper_command_range": [
+            -1.140899896621704,
+            1.1264041662216187
+          ],
+          "raw_command_positive_steps": 188,
+          "raw_command_above_point5_steps": 180
+        },
+        "recovery2000_h5": {
+          "success": false,
+          "steps": 600,
+          "failure_stage": "pre_lift",
+          "max_cube_height_m": 0.9392275181939379,
+          "initial_cube_xyz_m": [
+            -0.007764309948406177,
+            -0.16654935400685075,
+            0.9199083359543676
+          ],
+          "final_cube_xyz_m": [
+            0.011091116067208426,
+            -0.15847817597003752,
+            0.9199092400569475
+          ],
+          "final_cube_displacement_mm": [
+            18.8554260156146,
+            8.071178036813231,
+            0.0009041025799128022
+          ],
+          "first_sustained_close": {
+            "step": 56,
+            "simulation_time_s": 2.8,
+            "eef_cube_offset_mm": [
+              -27.49029597435993,
+              -1.8749800036373387,
+              -10.003141218726142
+            ],
+            "eef_cube_xy_distance_mm": 27.55416343807138,
+            "eef_cube_z_offset_mm": -10.003141218726142,
+            "finger_aperture_before_mm": 59.10549981983276,
+            "finger_normal_forces_after_n": [
+              0.0,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "sustained_close_runs": [
+            {
+              "start_step": 56,
+              "end_step": 64,
+              "steps": 9
+            },
+            {
+              "start_step": 225,
+              "end_step": 227,
+              "steps": 3
+            },
+            {
+              "start_step": 250,
+              "end_step": 252,
+              "steps": 3
+            },
+            {
+              "start_step": 285,
+              "end_step": 287,
+              "steps": 3
+            },
+            {
+              "start_step": 305,
+              "end_step": 312,
+              "steps": 8
+            },
+            {
+              "start_step": 347,
+              "end_step": 349,
+              "steps": 3
+            },
+            {
+              "start_step": 370,
+              "end_step": 375,
+              "steps": 6
+            },
+            {
+              "start_step": 415,
+              "end_step": 419,
+              "steps": 5
+            },
+            {
+              "start_step": 495,
+              "end_step": 497,
+              "steps": 3
+            },
+            {
+              "start_step": 514,
+              "end_step": 519,
+              "steps": 6
+            },
+            {
+              "start_step": 556,
+              "end_step": 563,
+              "steps": 8
+            }
+          ],
+          "sustained_open_runs": [
+            {
+              "start_step": 0,
+              "end_step": 43,
+              "steps": 44
+            },
+            {
+              "start_step": 70,
+              "end_step": 72,
+              "steps": 3
+            }
+          ],
+          "opening_runs_after_first_close": [
+            {
+              "start_step": 70,
+              "end_step": 72,
+              "steps": 3
+            }
+          ],
+          "close_open_reclose_patterns": [
+            {
+              "close_before": {
+                "start_step": 56,
+                "end_step": 64,
+                "steps": 9
+              },
+              "open_between": {
+                "start_step": 70,
+                "end_step": 72,
+                "steps": 3
+              },
+              "close_after": {
+                "start_step": 225,
+                "end_step": 227,
+                "steps": 3
+              },
+              "any_lift_before_reclose": false,
+              "firm_contact_steps_after_reclose": 0
+            }
+          ],
+          "first_lift_step": null,
+          "any_finger_contact_steps": 5,
+          "bilateral_contact_steps": 4,
+          "firm_bilateral_steps": 4,
+          "bilateral_contact_runs": [
+            {
+              "start_step": 59,
+              "end_step": 62,
+              "steps": 4
+            }
+          ],
+          "firm_bilateral_runs": [
+            {
+              "start_step": 59,
+              "end_step": 62,
+              "steps": 4
+            }
+          ],
+          "first_contact": {
+            "step": 59,
+            "simulation_time_s": 2.95,
+            "eef_cube_offset_mm": [
+              -26.839566395718556,
+              -3.0211859255928344,
+              -10.672486503555012
+            ],
+            "eef_cube_xy_distance_mm": 27.009070489507504,
+            "eef_cube_z_offset_mm": -10.672486503555012,
+            "finger_aperture_before_mm": 45.40790550904231,
+            "finger_normal_forces_after_n": [
+              7.193569182744258,
+              18.521153443722657
+            ],
+            "bilateral_contact_after": true,
+            "firm_bilateral_grasp_after": true
+          },
+          "first_firm_contact": {
+            "step": 59,
+            "simulation_time_s": 2.95,
+            "eef_cube_offset_mm": [
+              -26.839566395718556,
+              -3.0211859255928344,
+              -10.672486503555012
+            ],
+            "eef_cube_xy_distance_mm": 27.009070489507504,
+            "eef_cube_z_offset_mm": -10.672486503555012,
+            "finger_aperture_before_mm": 45.40790550904231,
+            "finger_normal_forces_after_n": [
+              7.193569182744258,
+              18.521153443722657
+            ],
+            "bilateral_contact_after": true,
+            "firm_bilateral_grasp_after": true
+          },
+          "maximum_simultaneous_minimum_finger_force_n": 7.193569182744258,
+          "forces_at_maximum_simultaneous_minimum_n": [
+            7.193569182744258,
+            18.521153443722657
+          ],
+          "maximum_each_finger_force_n": [
+            7.193569182744258,
+            18.521153443722657
+          ],
+          "minimum_aperture_mm": 1.6011508027803947,
+          "raw_policy_gripper_command_range": [
+            -1.3042712211608887,
+            1.006833553314209
+          ],
+          "raw_command_positive_steps": 369,
+          "raw_command_above_point5_steps": 90
+        }
+      },
+      "descriptive_observation": "The recovery-trained policy closes at 27.6 mm lateral offset. Both finger forces reach the firm threshold for only four consecutive post-action states (59\u201362); contact is lost before the sustained opening at 70\u201372. Later closure commands do not regain bilateral contact. Maximum cube centre Z is 0.9392 m, below the 0.97 m lift threshold. Original policy closes at 7.5 mm lateral offset and places."
+    },
+    {
+      "seed": 4106,
+      "identical_initial_cube_and_robot_states": true,
+      "models": {
+        "original_h5": {
+          "success": true,
+          "steps": 264,
+          "failure_stage": null,
+          "max_cube_height_m": 1.166277572869569,
+          "initial_cube_xyz_m": [
+            0.02026216363828539,
+            -0.14198485281135018,
+            0.9199083359543676
+          ],
+          "final_cube_xyz_m": [
+            0.002890103013519445,
+            0.1629547305528471,
+            0.9307983366649581
+          ],
+          "final_cube_displacement_mm": [
+            -17.372060624765947,
+            304.93958336419723,
+            10.890000710590542
+          ],
+          "first_sustained_close": {
+            "step": 84,
+            "simulation_time_s": 4.2,
+            "eef_cube_offset_mm": [
+              5.244111392616862,
+              -12.713138226812164,
+              -10.685894684176134
+            ],
+            "eef_cube_xy_distance_mm": 13.752257555478181,
+            "eef_cube_z_offset_mm": -10.685894684176134,
+            "finger_aperture_before_mm": 68.61946586800909,
+            "finger_normal_forces_after_n": [
+              0.0,
+              10.97631140522295
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "sustained_close_runs": [
+            {
+              "start_step": 84,
+              "end_step": 86,
+              "steps": 3
+            },
+            {
+              "start_step": 88,
+              "end_step": 253,
+              "steps": 166
+            }
+          ],
+          "sustained_open_runs": [
+            {
+              "start_step": 0,
+              "end_step": 53,
+              "steps": 54
+            },
+            {
+              "start_step": 55,
+              "end_step": 73,
+              "steps": 19
+            },
+            {
+              "start_step": 257,
+              "end_step": 260,
+              "steps": 4
+            }
+          ],
+          "opening_runs_after_first_close": [
+            {
+              "start_step": 257,
+              "end_step": 260,
+              "steps": 4
+            }
+          ],
+          "close_open_reclose_patterns": [],
+          "first_lift_step": 98,
+          "any_finger_contact_steps": 196,
+          "bilateral_contact_steps": 174,
+          "firm_bilateral_steps": 174,
+          "bilateral_contact_runs": [
+            {
+              "start_step": 86,
+              "end_step": 259,
+              "steps": 174
+            }
+          ],
+          "firm_bilateral_runs": [
+            {
+              "start_step": 86,
+              "end_step": 259,
+              "steps": 174
+            }
+          ],
+          "first_contact": {
+            "step": 46,
+            "simulation_time_s": 2.3,
+            "eef_cube_offset_mm": [
+              -7.036636986715264,
+              -22.905688044940753,
+              29.779843543769392
+            ],
+            "eef_cube_xy_distance_mm": 23.962153594678238,
+            "eef_cube_z_offset_mm": 29.779843543769392,
+            "finger_aperture_before_mm": 79.6574187216869,
+            "finger_normal_forces_after_n": [
+              0.0,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "first_firm_contact": {
+            "step": 86,
+            "simulation_time_s": 4.3,
+            "eef_cube_offset_mm": [
+              5.576270244602037,
+              -7.2858061861174885,
+              -10.849261781607943
+            ],
+            "eef_cube_xy_distance_mm": 9.174843956302578,
+            "eef_cube_z_offset_mm": -10.849261781607943,
+            "finger_aperture_before_mm": 50.095473835732356,
+            "finger_normal_forces_after_n": [
+              19.151440559940813,
+              18.142709813763705
+            ],
+            "bilateral_contact_after": true,
+            "firm_bilateral_grasp_after": true
+          },
+          "maximum_simultaneous_minimum_finger_force_n": 18.865501191667175,
+          "forces_at_maximum_simultaneous_minimum_n": [
+            18.865501191667175,
+            18.87190944149442
+          ],
+          "maximum_each_finger_force_n": [
+            19.151440559940813,
+            33.00980955441229
+          ],
+          "minimum_aperture_mm": 39.63734507843099,
+          "raw_policy_gripper_command_range": [
+            -1.2284188270568848,
+            1.086052656173706
+          ],
+          "raw_command_positive_steps": 175,
+          "raw_command_above_point5_steps": 172
+        },
+        "recovery2000_h5": {
+          "success": false,
+          "steps": 600,
+          "failure_stage": "pre_lift",
+          "max_cube_height_m": 0.9287617083569683,
+          "initial_cube_xyz_m": [
+            0.02026216363828539,
+            -0.14198485281135018,
+            0.9199083359543676
+          ],
+          "final_cube_xyz_m": [
+            0.13629778404930437,
+            -0.16228913700858177,
+            0.9199092400569475
+          ],
+          "final_cube_displacement_mm": [
+            116.03562041101897,
+            -20.3042841972316,
+            0.0009041025799128022
+          ],
+          "first_sustained_close": null,
+          "sustained_close_runs": [],
+          "sustained_open_runs": [
+            {
+              "start_step": 0,
+              "end_step": 436,
+              "steps": 437
+            },
+            {
+              "start_step": 440,
+              "end_step": 443,
+              "steps": 4
+            },
+            {
+              "start_step": 445,
+              "end_step": 452,
+              "steps": 8
+            },
+            {
+              "start_step": 454,
+              "end_step": 457,
+              "steps": 4
+            },
+            {
+              "start_step": 460,
+              "end_step": 463,
+              "steps": 4
+            },
+            {
+              "start_step": 465,
+              "end_step": 480,
+              "steps": 16
+            },
+            {
+              "start_step": 486,
+              "end_step": 488,
+              "steps": 3
+            },
+            {
+              "start_step": 520,
+              "end_step": 599,
+              "steps": 80
+            }
+          ],
+          "opening_runs_after_first_close": [],
+          "close_open_reclose_patterns": [],
+          "first_lift_step": null,
+          "any_finger_contact_steps": 472,
+          "bilateral_contact_steps": 0,
+          "firm_bilateral_steps": 0,
+          "bilateral_contact_runs": [],
+          "firm_bilateral_runs": [],
+          "first_contact": {
+            "step": 44,
+            "simulation_time_s": 2.2,
+            "eef_cube_offset_mm": [
+              -23.33653124992984,
+              -36.8531177378493,
+              33.33259110148623
+            ],
+            "eef_cube_xy_distance_mm": 43.62047658816596,
+            "eef_cube_z_offset_mm": 33.33259110148623,
+            "finger_aperture_before_mm": 79.62779432728858,
+            "finger_normal_forces_after_n": [
+              0.0,
+              0.0
+            ],
+            "bilateral_contact_after": false,
+            "firm_bilateral_grasp_after": false
+          },
+          "first_firm_contact": null,
+          "maximum_simultaneous_minimum_finger_force_n": 0.0,
+          "forces_at_maximum_simultaneous_minimum_n": [
+            0.0,
+            0.0
+          ],
+          "maximum_each_finger_force_n": [
+            0.0,
+            81.29694885575452
+          ],
+          "minimum_aperture_mm": 62.20222527402704,
+          "raw_policy_gripper_command_range": [
+            -1.4018959999084473,
+            0.49993056058883667
+          ],
+          "raw_command_positive_steps": 11,
+          "raw_command_above_point5_steps": 0
+        }
+      },
+      "descriptive_observation": "No raw gripper command exceeds 0.5; the minimum aperture is 62.2 mm. There is unilateral contact, with one finger force reaching 81.3 N, but no bilateral contact or lift. Cube displacement ends approximately +116.0 mm in world X. Original policy has a sustained close at step 84, bilateral grasp and successful placement."
+    }
+  ],
+  "interpretation": [
+    "The three observed regressions are failures to establish and retain a grasp before lift, including a mostly-open unilateral-contact case.",
+    "Opening and later reclosure occur in two failures but neither produces a later bilateral grasp or lift; these are learned-policy outputs, not an added evaluation recovery controller.",
+    "These traces describe outcomes for one fixed checkpoint on ten development starts; they do not identify a causal effect of recovery data or optimizer randomness.",
+    "The complete wide development group is required before the frozen selection rule is applied. No winner is selected in this artifact."
+  ],
+  "evaluation_checkpoint_identities": {
+    "original_h5": {
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "n_action_steps": 5
+    },
+    "recovery2000_h5": {
+      "checkpoint_files": {
+        "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+        "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+        "model.safetensors": "16e4f0d7d476770c1c55072cfae80d05029ab8cfdcb02ff7ae82624905e484f2",
+        "phone_to_panda_provenance.json": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "23b4f54e4a4e8563a30645eeebc746eab7014dbf64d7ec82be8981c2133a1dbd"
+      },
+      "n_action_steps": 5
+    }
+  },
+  "source_files_sha256": {
+    "phone_to_panda/learning.py": "f6f1787e56d29d05f9654e17b3f5052a01259393aea01a5adc9971b112f1338c",
+    "phone_to_panda/simulation.py": "97b3dc35cc276a9fa2771d3661357d2730ee531732dc65571d1a752bb9ec4a41",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_001_trace.json": "e92b90bb5dc0625f4e605a89bc04fe20241eeb0b01c5c5257b209b59f4476159",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_002_trace.json": "f228fbe5712fee769a0179b8c47e646b4a22968543484b319161f038b42a7f65",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_006_trace.json": "2773ee81fd6a405d12be17571cbb390bbab57617257fb1189a5beab0ff365a72",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/report.json": "2a7aa38e32d852b7fccad863b9337daa9cd76cad1cfd1295e4e53989d285868f",
+    "runs/improvement_20261011/development/original_h5/new_narrow/manifest.json": "bffa431237a6568bfe4cc009a7bf80162ffb46409bd184146f38c5bf6fb9db66",
+    "runs/improvement_20261011/development/recovery2000_h5/new_narrow/evaluation/episode_001_trace.json": "ff5daec862951df21643d16f5607f78d3e2f9111a6acf6cb6f1a099009cdf47a",
+    "runs/improvement_20261011/development/recovery2000_h5/new_narrow/evaluation/episode_002_trace.json": "f47f55da92e4d946008fc641d17d2b386fd0a31c4d0bc1f9497f976125c2c828",
+    "runs/improvement_20261011/development/recovery2000_h5/new_narrow/evaluation/episode_006_trace.json": "2b3e3077157ddef66575db83a6ecbd54afc212abdde808fa36e992c30bb3f744",
+    "runs/improvement_20261011/development/recovery2000_h5/new_narrow/evaluation/report.json": "91e11b6259c2ceb0423fe522560c1f8b28c30e30a6e0070b728ba37b24c04e6e",
+    "runs/improvement_20261011/development/recovery2000_h5/new_narrow/manifest.json": "b6f86ad3e6aacb4e5b84c25dc59c6892077c2bfb2697917367940483dd9620ac",
+    "runs/improvement_20261011/recovery_plan.json": "44d78b2546e6efa88c5ba0a1bcceed66740b075826d8e0b54cf684be86d0e198",
+    "runs/improvement_20261011/study_plan.json": "fdf850f4afc40f9bd9005f8d98e4a7d2c39c9af871ded04addfe7cb37705924f"
+  }
+}

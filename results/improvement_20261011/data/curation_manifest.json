@@ -1,0 +1,405 @@
+{
+  "kind": "compact_immutable_study_evidence_curation",
+  "created_utc": "2026-10-11T17:33:07.883563+00:00",
+  "description": "Byte-preserved metadata and first fixed expert recovery example. No learned-policy score is inferred from the expert video.",
+  "copied_file_count": 46,
+  "copied_bytes": 4362441,
+  "files": [
+    {
+      "source": "data/robot/improvement_20261011/uniform/build/plan.json",
+      "target": "results/improvement_20261011/data/uniform/plan.json",
+      "source_sha256": "e9233fbe2278bacbf3f93fd479dacb72897cbc92e99005a1cc6c6ffecf60cc3d",
+      "target_sha256": "e9233fbe2278bacbf3f93fd479dacb72897cbc92e99005a1cc6c6ffecf60cc3d",
+      "bytes": 15357,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/robot/improvement_20261011/uniform/build/summary.json",
+      "target": "results/improvement_20261011/data/uniform/summary.json",
+      "source_sha256": "43648502285b3c9644d3b3a5daf1624f8f42d7bb313adeecdf460ecf5ac51423",
+      "target_sha256": "43648502285b3c9644d3b3a5daf1624f8f42d7bb313adeecdf460ecf5ac51423",
+      "bytes": 1308,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/robot/improvement_20261011/uniform/build/replays.json",
+      "target": "results/improvement_20261011/data/uniform/replays.json",
+      "source_sha256": "c05bce4af15ade19293a3adba9a2cd3ab60ce31fd465425880935ea2732572f7",
+      "target_sha256": "c05bce4af15ade19293a3adba9a2cd3ab60ce31fd465425880935ea2732572f7",
+      "bytes": 4461,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/datasets/improvement_20261011/uniform/meta/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/data/uniform/phone_to_panda_provenance.json",
+      "source_sha256": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+      "target_sha256": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+      "bytes": 441427,
+      "role": "full exported episode provenance"
+    },
+    {
+      "source": "data/robot/improvement_20261011/targeted/build/plan.json",
+      "target": "results/improvement_20261011/data/targeted/plan.json",
+      "source_sha256": "58d26905c4a0aa46a571af3bec2bd55987b2c9dfa58da616a0591ef25cb7ffe6",
+      "target_sha256": "58d26905c4a0aa46a571af3bec2bd55987b2c9dfa58da616a0591ef25cb7ffe6",
+      "bytes": 15228,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/robot/improvement_20261011/targeted/build/summary.json",
+      "target": "results/improvement_20261011/data/targeted/summary.json",
+      "source_sha256": "1c157328955adf0e0f16b535b9cf37168f688192a9ceabac57d79804f1def6dc",
+      "target_sha256": "1c157328955adf0e0f16b535b9cf37168f688192a9ceabac57d79804f1def6dc",
+      "bytes": 1311,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/robot/improvement_20261011/targeted/build/replays.json",
+      "target": "results/improvement_20261011/data/targeted/replays.json",
+      "source_sha256": "858f95564b53b1826af22e56c44ca49716d389423c8484de70a857bd83eb5560",
+      "target_sha256": "858f95564b53b1826af22e56c44ca49716d389423c8484de70a857bd83eb5560",
+      "bytes": 4383,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/datasets/improvement_20261011/targeted/meta/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/data/targeted/phone_to_panda_provenance.json",
+      "source_sha256": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+      "target_sha256": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+      "bytes": 440006,
+      "role": "full exported episode provenance"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/plan.json",
+      "target": "results/improvement_20261011/data/recovery/plan.json",
+      "source_sha256": "940a41896c6c334d99ba3b28d4b331b4cb56709851aca446cebdd13c9d24afab",
+      "target_sha256": "940a41896c6c334d99ba3b28d4b331b4cb56709851aca446cebdd13c9d24afab",
+      "bytes": 48831,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/summary.json",
+      "target": "results/improvement_20261011/data/recovery/summary.json",
+      "source_sha256": "3caf317df12f59164eb4075df354ff35bba04a1352402dff95161f68758ec562",
+      "target_sha256": "3caf317df12f59164eb4075df354ff35bba04a1352402dff95161f68758ec562",
+      "bytes": 3478,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/export_receipt.json",
+      "target": "results/improvement_20261011/data/recovery/export_receipt.json",
+      "source_sha256": "6811123b1e0a6d71f094850ed9292b850271de868aec50f401eca4d2ff113157",
+      "target_sha256": "6811123b1e0a6d71f094850ed9292b850271de868aec50f401eca4d2ff113157",
+      "bytes": 1463,
+      "role": "dataset build evidence"
+    },
+    {
+      "source": "data/datasets/improvement_20261011/recovery/meta/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/data/recovery/phone_to_panda_provenance.json",
+      "source_sha256": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+      "target_sha256": "16852ac1275b4988adfdadd150422c6b9025ca5106e640e0b5ef8da1ed1f194e",
+      "bytes": 885162,
+      "role": "full exported episode provenance"
+    },
+    {
+      "source": "runs/improvement_20261011/completed_training_2000.json",
+      "target": "results/improvement_20261011/training/completed_training_2000.json",
+      "source_sha256": "3841e93b4c378d8d2261ba3b75bb9768454c3e83f2a323a0e638da0ade244fa5",
+      "target_sha256": "3841e93b4c378d8d2261ba3b75bb9768454c3e83f2a323a0e638da0ade244fa5",
+      "bytes": 1086,
+      "role": "existing completed training verification"
+    },
+    {
+      "source": "runs/improvement_20261011/completed_training_uniform_extended.json",
+      "target": "results/improvement_20261011/training/completed_training_uniform_extended.json",
+      "source_sha256": "7a40e3820ba24d324b716d2d77ccb0a988ed2510fe93a16fce48f85e63b322b4",
+      "target_sha256": "7a40e3820ba24d324b716d2d77ccb0a988ed2510fe93a16fce48f85e63b322b4",
+      "bytes": 1351,
+      "role": "existing completed extended training verification"
+    },
+    {
+      "source": "checkpoints/main/config.json",
+      "target": "results/improvement_20261011/training/original_main/config.json",
+      "source_sha256": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+      "target_sha256": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+      "bytes": 1909,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "checkpoints/main/train_config.json",
+      "target": "results/improvement_20261011/training/original_main/train_config.json",
+      "source_sha256": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d",
+      "target_sha256": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d",
+      "bytes": 4873,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "checkpoints/main/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/training/original_main/phone_to_panda_provenance.json",
+      "source_sha256": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+      "target_sha256": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+      "bytes": 212674,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "checkpoints/main/policy_preprocessor.json",
+      "target": "results/improvement_20261011/training/original_main/policy_preprocessor.json",
+      "source_sha256": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+      "target_sha256": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+      "bytes": 1719,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "checkpoints/main/policy_postprocessor.json",
+      "target": "results/improvement_20261011/training/original_main/policy_postprocessor.json",
+      "source_sha256": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+      "target_sha256": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+      "bytes": 661,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model/config.json",
+      "target": "results/improvement_20261011/training/uniform2k/config.json",
+      "source_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "target_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "bytes": 2235,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model/train_config.json",
+      "target": "results/improvement_20261011/training/uniform2k/train_config.json",
+      "source_sha256": "8676aa17abf5b00b7766709477209a799d0c9a49f0f4e8c6a9537b890e32e8a2",
+      "target_sha256": "8676aa17abf5b00b7766709477209a799d0c9a49f0f4e8c6a9537b890e32e8a2",
+      "bytes": 6432,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model/frozen_normalization.json",
+      "target": "results/improvement_20261011/training/uniform2k/frozen_normalization.json",
+      "source_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "target_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "bytes": 1729,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/training/uniform2k/phone_to_panda_provenance.json",
+      "source_sha256": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+      "target_sha256": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+      "bytes": 441427,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model/policy_preprocessor.json",
+      "target": "results/improvement_20261011/training/uniform2k/policy_preprocessor.json",
+      "source_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "target_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "bytes": 1718,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform/checkpoints/002000/pretrained_model/policy_postprocessor.json",
+      "target": "results/improvement_20261011/training/uniform2k/policy_postprocessor.json",
+      "source_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "target_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "bytes": 660,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/config.json",
+      "target": "results/improvement_20261011/training/targeted2k/config.json",
+      "source_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "target_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "bytes": 2235,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/train_config.json",
+      "target": "results/improvement_20261011/training/targeted2k/train_config.json",
+      "source_sha256": "9d0dc8757e8216c592f6e8aabed835246969e1eb4c884598d6fc0529853761df",
+      "target_sha256": "9d0dc8757e8216c592f6e8aabed835246969e1eb4c884598d6fc0529853761df",
+      "bytes": 6435,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/frozen_normalization.json",
+      "target": "results/improvement_20261011/training/targeted2k/frozen_normalization.json",
+      "source_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "target_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "bytes": 1729,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/training/targeted2k/phone_to_panda_provenance.json",
+      "source_sha256": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+      "target_sha256": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+      "bytes": 440006,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/policy_preprocessor.json",
+      "target": "results/improvement_20261011/training/targeted2k/policy_preprocessor.json",
+      "source_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "target_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "bytes": 1718,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/policy_postprocessor.json",
+      "target": "results/improvement_20261011/training/targeted2k/policy_postprocessor.json",
+      "source_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "target_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "bytes": 660,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model/config.json",
+      "target": "results/improvement_20261011/training/continuation2k/config.json",
+      "source_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "target_sha256": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+      "bytes": 2235,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model/train_config.json",
+      "target": "results/improvement_20261011/training/continuation2k/train_config.json",
+      "source_sha256": "069b37cf7a953b553fadce5b848ca87567ce1331458eaae6e4361fa88dd83d8c",
+      "target_sha256": "069b37cf7a953b553fadce5b848ca87567ce1331458eaae6e4361fa88dd83d8c",
+      "bytes": 6398,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model/frozen_normalization.json",
+      "target": "results/improvement_20261011/training/continuation2k/frozen_normalization.json",
+      "source_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "target_sha256": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+      "bytes": 1729,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/training/continuation2k/phone_to_panda_provenance.json",
+      "source_sha256": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0",
+      "target_sha256": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0",
+      "bytes": 214422,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model/policy_preprocessor.json",
+      "target": "results/improvement_20261011/training/continuation2k/policy_preprocessor.json",
+      "source_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "target_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "bytes": 1718,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_continuation/checkpoints/002000/pretrained_model/policy_postprocessor.json",
+      "target": "results/improvement_20261011/training/continuation2k/policy_postprocessor.json",
+      "source_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "target_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "bytes": 660,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model/config.json",
+      "target": "results/improvement_20261011/training/uniform4k/config.json",
+      "source_sha256": "5eb0338844a5beffa036276ae39e833d4e599bd860f5bba372f4757a44d8d245",
+      "target_sha256": "5eb0338844a5beffa036276ae39e833d4e599bd860f5bba372f4757a44d8d245",
+      "bytes": 2294,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model/train_config.json",
+      "target": "results/improvement_20261011/training/uniform4k/train_config.json",
+      "source_sha256": "4016cf14416e21df97de7cc76868ba5ac57ae941d65f57e70e11d350a00ec44d",
+      "target_sha256": "4016cf14416e21df97de7cc76868ba5ac57ae941d65f57e70e11d350a00ec44d",
+      "bytes": 6500,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model/frozen_normalization.json",
+      "target": "results/improvement_20261011/training/uniform4k/frozen_normalization.json",
+      "source_sha256": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+      "target_sha256": "c0bc45b963613a856a22b0c8a8035dd873aec7ce02bb44a2d31f83a734812feb",
+      "bytes": 1889,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model/phone_to_panda_provenance.json",
+      "target": "results/improvement_20261011/training/uniform4k/phone_to_panda_provenance.json",
+      "source_sha256": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+      "target_sha256": "493759edcecde71f21b7f8f1e156149683a5b713c53c681cb8ee3d757feebb03",
+      "bytes": 441427,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model/policy_preprocessor.json",
+      "target": "results/improvement_20261011/training/uniform4k/policy_preprocessor.json",
+      "source_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "target_sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+      "bytes": 1718,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "runs/improvement_20261011/train_uniform_extended/checkpoints/002000/pretrained_model/policy_postprocessor.json",
+      "target": "results/improvement_20261011/training/uniform4k/policy_postprocessor.json",
+      "source_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "target_sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+      "bytes": 660,
+      "role": "checkpoint metadata only; no weights or tensors"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/candidates/IMG_2092_seed_3010_prefix_60.mp4",
+      "target": "media/recovery_example.mp4",
+      "source_sha256": "7f81b16c70c92d4e8c80e6038034f31549556b3df15ec51f167f3c08c5f2c66b",
+      "target_sha256": "7f81b16c70c92d4e8c80e6038034f31549556b3df15ec51f167f3c08c5f2c66b",
+      "bytes": 663807,
+      "role": "first fixed job expert recovery video"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/candidates/IMG_2092_seed_3010_prefix_60.json",
+      "target": "media/recovery_example.report.json",
+      "source_sha256": "fd470a64cc3bfd896066f30ae4e3d5db14db27c3cc77fc24427ba50764e0d1d3",
+      "target_sha256": "fd470a64cc3bfd896066f30ae4e3d5db14db27c3cc77fc24427ba50764e0d1d3",
+      "bytes": 22875,
+      "role": "exact original expert recovery report"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/candidates/IMG_2092_seed_3010_prefix_60.receipt.json",
+      "target": "media/recovery_example.source_receipt.json",
+      "source_sha256": "7e9daf0ed342ee440ff8dbc741c1f5600fa757158604b38e3ae0c9ee26502075",
+      "target_sha256": "7e9daf0ed342ee440ff8dbc741c1f5600fa757158604b38e3ae0c9ee26502075",
+      "bytes": 437,
+      "role": "exact original collection receipt"
+    }
+  ],
+  "optional_artifacts_not_present": [
+    {
+      "source": "data/robot/improvement_20261011/uniform/build/export_receipt.json",
+      "reason": "Source build did not create this optional artifact."
+    },
+    {
+      "source": "data/robot/improvement_20261011/targeted/build/export_receipt.json",
+      "reason": "Source build did not create this optional artifact."
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/replays.json",
+      "reason": "Source build did not create this optional artifact."
+    },
+    {
+      "source": "checkpoints/main/frozen_normalization.json",
+      "reason": "Original checkpoint predates the frozen-normalization continuation wrapper; original processors are recorded separately."
+    }
+  ],
+  "omitted_payloads": [
+    "Robot NPZ arrays",
+    "LeRobot dataset payloads",
+    "Model weights and processor tensors",
+    "Pending recovery checkpoint"
+  ],
+  "generated_metadata": [
+    "results/improvement_20261011/training/model_identities.json",
+    "media/recovery_example.curation.json"
+  ]
+}

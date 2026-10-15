@@ -1,0 +1,586 @@
+{
+  "kind": "development_targeted_narrow_failure_analysis",
+  "created_utc": "2026-10-11T17:03:06.551532+00:00",
+  "scope": "Completed development new_narrow results only; no final-test results were read.",
+  "definitions": {
+    "sustained_close": "First zero-based action index i for which policy_action[6] > 0.5 at i, i+1 and i+2. This is an analysis heuristic for commanded closure, not proof of grasp.",
+    "measurement_time": "Offsets and aperture use diagnostics immediately BEFORE the indexed action; finger normal forces use next_diagnostics immediately AFTER it.",
+    "eef_offset": "End-effector reference position minus cube centre in simulator world axes; this is not a calibrated finger-centre error.",
+    "lift": "Cube centre exceeded 0.97 m, matching table Z 0.90 m plus simulator lift criterion 0.07 m.",
+    "firm_contact": "Both finger-pad normal forces meet the saved threshold (1 N in these evaluations); transient contact does not guarantee a retained grasp."
+  },
+  "completed_group": {
+    "seed_start": 4100,
+    "episodes": 10,
+    "radius_m": 0.035,
+    "original_placements": 10,
+    "targeted_placements": 7,
+    "targeted_failed_seeds": [
+      4100,
+      4103,
+      4106
+    ]
+  },
+  "failures": [
+    {
+      "seed": 4100,
+      "initial_cube_xyz_m": [
+        -0.02599543501476624,
+        -0.1424340624189067,
+        0.9199083359543676
+      ],
+      "paired_initial_cube_and_robot_states_identical": true,
+      "models": {
+        "original_h5": {
+          "trace": "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_000_trace.json",
+          "trace_sha256": "e115f60b160af5ade6ab02aacd3f8b1341d553f61072bce08bba323379472d4c",
+          "placed": true,
+          "max_cube_height_m": 1.0740810094296365,
+          "lifted": true,
+          "first_events": {
+            "contact_step": 51,
+            "bilateral_contact_step": 53,
+            "firm_grasp_step": 53,
+            "lift_step": 67,
+            "release_after_lift_step": 272
+          },
+          "first_sustained_close": {
+            "step": 52,
+            "policy_gripper_action": 0.9586037397384644,
+            "eef_cube_offset_mm": [
+              9.080797749276673,
+              -5.9915648362005856,
+              10.598304232638412
+            ],
+            "eef_cube_xy_distance_mm": 10.87932612571494,
+            "finger_aperture_mm": 51.08865411699978,
+            "cube_height_above_table_mm": 19.573794252005673,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              11.420147491872374
+            ]
+          },
+          "first_contact": {
+            "step": 51,
+            "policy_gripper_action": 0.47963178157806396,
+            "eef_cube_offset_mm": [
+              9.047301797316978,
+              -6.121199798738708,
+              12.23553573908076
+            ],
+            "eef_cube_xy_distance_mm": 10.92349563042041,
+            "finger_aperture_mm": 59.38760379207766,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              9.933604106956372
+            ]
+          },
+          "first_firm_bilateral_contact": {
+            "step": 53,
+            "policy_gripper_action": 0.9774956107139587,
+            "eef_cube_offset_mm": [
+              9.339082241386107,
+              -4.847250943966374,
+              10.27152595508085
+            ],
+            "eef_cube_xy_distance_mm": 10.522086239199728,
+            "finger_aperture_mm": 45.56051633483632,
+            "cube_height_above_table_mm": 18.724605572247533,
+            "finger_normal_forces_after_action_n": [
+              19.249294856394968,
+              15.817932983142931
+            ]
+          },
+          "firm_bilateral_contact_steps": 219,
+          "bilateral_contact_steps": 219
+        },
+        "targeted2000_h5": {
+          "trace": "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/episode_000_trace.json",
+          "trace_sha256": "b4521c25a8c19fb92041b4a2ff65249e3adeb0acdfbc2af6b7b5d6132ec81bff",
+          "placed": false,
+          "max_cube_height_m": 0.9300969038260724,
+          "lifted": false,
+          "first_events": {
+            "contact_step": 43,
+            "bilateral_contact_step": null,
+            "firm_grasp_step": null,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "first_sustained_close": {
+            "step": 47,
+            "policy_gripper_action": 0.7416485548019409,
+            "eef_cube_offset_mm": [
+              9.902825284070413,
+              -29.851444115500254,
+              24.093688245213297
+            ],
+            "eef_cube_xy_distance_mm": 31.45114726663654,
+            "finger_aperture_mm": 79.53316036538774,
+            "cube_height_above_table_mm": 17.83761626744873,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_contact": {
+            "step": 43,
+            "policy_gripper_action": -1.1437993049621582,
+            "eef_cube_offset_mm": [
+              8.553836655693914,
+              -30.166539836350065,
+              32.85961267867599
+            ],
+            "eef_cube_xy_distance_mm": 31.355832746562292,
+            "finger_aperture_mm": 79.60862914773605,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_firm_bilateral_contact": null,
+          "firm_bilateral_contact_steps": 0,
+          "bilateral_contact_steps": 0
+        }
+      }
+    },
+    {
+      "seed": 4103,
+      "initial_cube_xyz_m": [
+        0.02459633816393363,
+        -0.18427097420519076,
+        0.9199083359543676
+      ],
+      "paired_initial_cube_and_robot_states_identical": true,
+      "models": {
+        "original_h5": {
+          "trace": "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_003_trace.json",
+          "trace_sha256": "abfbe0942977a3d86257322e99a19bb8fd0f580b2df02a8495b78db1ed1462c5",
+          "placed": true,
+          "max_cube_height_m": 1.1706950803355232,
+          "lifted": true,
+          "first_events": {
+            "contact_step": 57,
+            "bilateral_contact_step": 57,
+            "firm_grasp_step": 57,
+            "lift_step": 65,
+            "release_after_lift_step": 244
+          },
+          "first_sustained_close": {
+            "step": 52,
+            "policy_gripper_action": 0.7727341651916504,
+            "eef_cube_offset_mm": [
+              -8.39944346895015,
+              1.2728483899175635,
+              -6.815858342348768
+            ],
+            "eef_cube_xy_distance_mm": 8.49533952304468,
+            "finger_aperture_mm": 78.81625502201386,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_contact": {
+            "step": 57,
+            "policy_gripper_action": 1.0838422775268555,
+            "eef_cube_offset_mm": [
+              -8.219141041604408,
+              0.9836372512236347,
+              -10.63306090159022
+            ],
+            "eef_cube_xy_distance_mm": 8.277790870986095,
+            "finger_aperture_mm": 48.85899015157606,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              18.161605875280195,
+              19.013402376729324
+            ]
+          },
+          "first_firm_bilateral_contact": {
+            "step": 57,
+            "policy_gripper_action": 1.0838422775268555,
+            "eef_cube_offset_mm": [
+              -8.219141041604408,
+              0.9836372512236347,
+              -10.63306090159022
+            ],
+            "eef_cube_xy_distance_mm": 8.277790870986095,
+            "finger_aperture_mm": 48.85899015157606,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              18.161605875280195,
+              19.013402376729324
+            ]
+          },
+          "firm_bilateral_contact_steps": 187,
+          "bilateral_contact_steps": 187
+        },
+        "targeted2000_h5": {
+          "trace": "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/episode_003_trace.json",
+          "trace_sha256": "4d146bf4f8e4a505f86adb497526731719bf14214e0cfc786a7add694375bf4f",
+          "placed": false,
+          "max_cube_height_m": 0.9420853847804134,
+          "lifted": false,
+          "first_events": {
+            "contact_step": 45,
+            "bilateral_contact_step": 90,
+            "firm_grasp_step": 90,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "first_sustained_close": {
+            "step": 88,
+            "policy_gripper_action": 0.7275693416595459,
+            "eef_cube_offset_mm": [
+              15.82328662874543,
+              -6.985661305830088,
+              6.303532774115994
+            ],
+            "eef_cube_xy_distance_mm": 17.296700945995614,
+            "finger_aperture_mm": 64.35895723336832,
+            "cube_height_above_table_mm": 30.330244426327702,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              3.530081839452351
+            ]
+          },
+          "first_contact": {
+            "step": 45,
+            "policy_gripper_action": -1.0285060405731201,
+            "eef_cube_offset_mm": [
+              -2.70291096612367,
+              -23.99836459191121,
+              33.55564768066088
+            ],
+            "eef_cube_xy_distance_mm": 24.15009794549681,
+            "finger_aperture_mm": 79.64184508252696,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_firm_bilateral_contact": {
+            "step": 90,
+            "policy_gripper_action": 0.7571917772293091,
+            "eef_cube_offset_mm": [
+              19.491859852810283,
+              -0.4123184727154172,
+              7.555876208212742
+            ],
+            "eef_cube_xy_distance_mm": 19.496220327143913,
+            "finger_aperture_mm": 47.4477701601119,
+            "cube_height_above_table_mm": 30.621139864867473,
+            "finger_normal_forces_after_action_n": [
+              1.0214499011824572,
+              3.1805526556525052
+            ]
+          },
+          "firm_bilateral_contact_steps": 6,
+          "bilateral_contact_steps": 6
+        }
+      }
+    },
+    {
+      "seed": 4106,
+      "initial_cube_xyz_m": [
+        0.02026216363828539,
+        -0.14198485281135018,
+        0.9199083359543676
+      ],
+      "paired_initial_cube_and_robot_states_identical": true,
+      "models": {
+        "original_h5": {
+          "trace": "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_006_trace.json",
+          "trace_sha256": "2773ee81fd6a405d12be17571cbb390bbab57617257fb1189a5beab0ff365a72",
+          "placed": true,
+          "max_cube_height_m": 1.166277572869569,
+          "lifted": true,
+          "first_events": {
+            "contact_step": 46,
+            "bilateral_contact_step": 86,
+            "firm_grasp_step": 86,
+            "lift_step": 98,
+            "release_after_lift_step": 260
+          },
+          "first_sustained_close": {
+            "step": 84,
+            "policy_gripper_action": 0.8518390655517578,
+            "eef_cube_offset_mm": [
+              5.244111392616862,
+              -12.713138226812164,
+              -10.685894684176134
+            ],
+            "eef_cube_xy_distance_mm": 13.752257555478181,
+            "finger_aperture_mm": 68.61946586800909,
+            "cube_height_above_table_mm": 19.90923993670013,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              10.97631140522295
+            ]
+          },
+          "first_contact": {
+            "step": 46,
+            "policy_gripper_action": -1.1864421367645264,
+            "eef_cube_offset_mm": [
+              -7.036636986715264,
+              -22.905688044940753,
+              29.779843543769392
+            ],
+            "eef_cube_xy_distance_mm": 23.962153594678238,
+            "finger_aperture_mm": 79.6574187216869,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_firm_bilateral_contact": {
+            "step": 86,
+            "policy_gripper_action": 0.6596323847770691,
+            "eef_cube_offset_mm": [
+              5.576270244602037,
+              -7.2858061861174885,
+              -10.849261781607943
+            ],
+            "eef_cube_xy_distance_mm": 9.174843956302578,
+            "finger_aperture_mm": 50.095473835732356,
+            "cube_height_above_table_mm": 20.155989832639776,
+            "finger_normal_forces_after_action_n": [
+              19.151440559940813,
+              18.142709813763705
+            ]
+          },
+          "firm_bilateral_contact_steps": 174,
+          "bilateral_contact_steps": 174
+        },
+        "targeted2000_h5": {
+          "trace": "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/episode_006_trace.json",
+          "trace_sha256": "6d664401a55a08232e55f49939d91dab676d5c305123da66678925b3576b1804",
+          "placed": false,
+          "max_cube_height_m": 0.926738472052437,
+          "lifted": false,
+          "first_events": {
+            "contact_step": 46,
+            "bilateral_contact_step": null,
+            "firm_grasp_step": null,
+            "lift_step": null,
+            "release_after_lift_step": null
+          },
+          "first_sustained_close": {
+            "step": 114,
+            "policy_gripper_action": 0.500546932220459,
+            "eef_cube_offset_mm": [
+              29.79486389016843,
+              -45.72460527116809,
+              12.110987533357488
+            ],
+            "eef_cube_xy_distance_mm": 54.57539227012295,
+            "finger_aperture_mm": 67.7031550332654,
+            "cube_height_above_table_mm": 19.77308046594761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_contact": {
+            "step": 46,
+            "policy_gripper_action": -1.1197259426116943,
+            "eef_cube_offset_mm": [
+              -9.57472764110599,
+              -45.45186813902807,
+              32.318732815016624
+            ],
+            "eef_cube_xy_distance_mm": 46.44941040238244,
+            "finger_aperture_mm": 79.65765261248323,
+            "cube_height_above_table_mm": 19.90924005694761,
+            "finger_normal_forces_after_action_n": [
+              0.0,
+              0.0
+            ]
+          },
+          "first_firm_bilateral_contact": null,
+          "firm_bilateral_contact_steps": 0,
+          "bilateral_contact_steps": 0
+        }
+      }
+    }
+  ],
+  "additional_replay_coverage": {
+    "uniform": {
+      "additional_episodes": 20,
+      "source_recordings": 5,
+      "mean_xy_m": [
+        0.003521691181353457,
+        -0.16049043637686797
+      ],
+      "minimum_xy_m": [
+        -0.05893019070206262,
+        -0.22045067589193795
+      ],
+      "maximum_xy_m": [
+        0.058211142558027895,
+        -0.11123235954253967
+      ],
+      "count_with_y_above_minus_0_17_m": 13,
+      "original_episodes_retained": 20
+    },
+    "targeted": {
+      "additional_episodes": 20,
+      "source_recordings": 5,
+      "mean_xy_m": [
+        -0.036607499043949984,
+        -0.20406318903367274
+      ],
+      "minimum_xy_m": [
+        -0.06,
+        -0.23
+      ],
+      "maximum_xy_m": [
+        0.019236553189723837,
+        -0.18455084339200528
+      ],
+      "count_with_y_above_minus_0_17_m": 0,
+      "original_episodes_retained": 20
+    }
+  },
+  "normalization_verification": {
+    "verified_against_source_checkpoint": "/home/sushanth/PhoneToPanda/checkpoints/main",
+    "targeted_checkpoint": "/home/sushanth/PhoneToPanda/runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model",
+    "source_provenance_hashes_rechecked": true,
+    "mean_std_transform_changed": false,
+    "processors": [
+      {
+        "processor": "normalizer_processor",
+        "source": {
+          "path": "checkpoints/main/policy_preprocessor_step_5_normalizer_processor.safetensors",
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "targeted": {
+          "path": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/policy_preprocessor_step_5_normalizer_processor.safetensors",
+          "sha256": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8"
+        },
+        "verified_tensor_count": 90,
+        "exact_action_state_image_transform_tensor_count": 36,
+        "all_transform_values_and_shapes_exact": true,
+        "allowed_scalarized_ancillary_metadata_count": 54
+      },
+      {
+        "processor": "unnormalizer_processor",
+        "source": {
+          "path": "checkpoints/main/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "targeted": {
+          "path": "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/policy_postprocessor_step_0_unnormalizer_processor.safetensors",
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "verified_tensor_count": 90,
+        "exact_action_state_image_transform_tensor_count": 36,
+        "all_transform_values_and_shapes_exact": true,
+        "allowed_scalarized_ancillary_metadata_count": 0
+      }
+    ],
+    "interpretation": "Saved source and targeted action/state/image transform statistics have identical tensor shapes and values. Allowed scalarization affects only unused ancillary metadata. This rules out a changed normalization transform in this comparison, but does not rule out every possible implementation issue."
+  },
+  "interpretation": {
+    "finding": "All three targeted regressions occur before a successful lift. Seeds 4100 and 4106 never establish bilateral finger-pad contact; 4103 has six transient firm-contact steps but does not lift.",
+    "coverage_hypothesis": "Sampling bias is plausible, not proven. All 20 added targeted replays have Y <= -0.18455 m; two regressions start near Y=-0.142 m and their approach stays too far toward negative Y. Seed 4103 starts slightly beyond the added set positive-X extent. The original 20 demonstrations remain in every arm.",
+    "causal_limit": "These associations come from one optimizer seed and a small development sample; ordinary fine-tuning variation is another explanation. They are diagnostic evidence, not a held-out performance claim.",
+    "conditional_next_intervention": "Only if complete uniform development results retain 10/10 narrow placements and meet or exceed the original wide result: test one additional 2000-update continuation on the unchanged uniform40 dataset at LR5e-6 with frozen normalization and horizon5. Keep the 2000-update checkpoint. Treat this as a separate extra-budget experiment, not part of the matched 2000-update data-selection comparison."
+  },
+  "evaluation_checkpoint_identities": {
+    "original_h5": {
+      "checkpoint_files": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "n_action_steps": 5
+    },
+    "targeted2000_h5": {
+      "checkpoint_files": {
+        "config.json": "5fdc1959422258c33f1bed923fb14a4a3db02763866b05571479e5f28048b3a9",
+        "frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+        "model.safetensors": "a397df828991e22e784a8c990fb5e7648e377bf0c798b8920d062fedcfd178f4",
+        "phone_to_panda_provenance.json": "c97325e23f8bc0dc6ca1ae1f0dfef1cd582d4c4a7b5c874f3be559b2d04fd1a3",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "9d0dc8757e8216c592f6e8aabed835246969e1eb4c884598d6fc0529853761df"
+      },
+      "n_action_steps": 5
+    }
+  },
+  "source_files_sha256": {
+    "runs/improvement_20261011/development/original_h5/new_narrow/manifest.json": "bffa431237a6568bfe4cc009a7bf80162ffb46409bd184146f38c5bf6fb9db66",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/report.json": "2a7aa38e32d852b7fccad863b9337daa9cd76cad1cfd1295e4e53989d285868f",
+    "runs/improvement_20261011/development/targeted2000_h5/new_narrow/manifest.json": "0bb1bfcafda00329172aa2f4f317f1c2d0792e2e973b07dedac958b852b8bada",
+    "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/report.json": "3c793c667d206374f9764314adf6691705f7a4a29047087a5132251e37768d59",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_000_trace.json": "e115f60b160af5ade6ab02aacd3f8b1341d553f61072bce08bba323379472d4c",
+    "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/episode_000_trace.json": "b4521c25a8c19fb92041b4a2ff65249e3adeb0acdfbc2af6b7b5d6132ec81bff",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_003_trace.json": "abfbe0942977a3d86257322e99a19bb8fd0f580b2df02a8495b78db1ed1462c5",
+    "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/episode_003_trace.json": "4d146bf4f8e4a505f86adb497526731719bf14214e0cfc786a7add694375bf4f",
+    "runs/improvement_20261011/development/original_h5/new_narrow/evaluation/episode_006_trace.json": "2773ee81fd6a405d12be17571cbb390bbab57617257fb1189a5beab0ff365a72",
+    "runs/improvement_20261011/development/targeted2000_h5/new_narrow/evaluation/episode_006_trace.json": "6d664401a55a08232e55f49939d91dab676d5c305123da66678925b3576b1804",
+    "data/robot/improvement_20261011/uniform/build/summary.json": "43648502285b3c9644d3b3a5daf1624f8f42d7bb313adeecdf460ecf5ac51423",
+    "data/robot/improvement_20261011/uniform/build/plan.json": "e9233fbe2278bacbf3f93fd479dacb72897cbc92e99005a1cc6c6ffecf60cc3d",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11000.json": "45461deecf97b5a1b33b8e6e0d002008db8329332be60400e9db00e63d0fd21b",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11001.json": "13cf58ad33300dc839501230aa1ad4c3295fc27fcd3ac1bfb4f9d274a1587309",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11002.json": "4da78e433185c1e19641457fac2f26611e4beabc547a151be3910fe5be2f7049",
+    "data/robot/improvement_20261011/uniform/IMG_2092_seed_11003.json": "c7ef6a57afbdf4d21d97610e7fedcc7180432044f92ee7e7ca0fcc98e3e6021a",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11010.json": "2ffb96a98b5e527a680bc110a3750e7dc42f1b50fb5aacae7cb85112f2eb67ad",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11011.json": "6c5b046d3bd5a1403cba30c345aa474fbd468f49079c65d4890075aa40d55c10",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11012.json": "eb20e1ea177a912a49a0ffd11498f0c64237076c16c24d508ef395bcb837c430",
+    "data/robot/improvement_20261011/uniform/IMG_2093_seed_11013.json": "2cb9c10d8ed10186210da6629cf849f96fc4124f5301806c458ec9b094002f32",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11020.json": "b45af8cf01cc47026898686264e399024505911257f8d3f9c7e061003ff1ae29",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11021.json": "1f0afbc7ae50c651c8c5cc470f089b5dedf88a4452b21e331d098f4fa852e976",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11022.json": "be0c03ef8d65b93be9ce585f4ae88bc15f17ecd3a1e5b6beab8740ba8d839f01",
+    "data/robot/improvement_20261011/uniform/IMG_2095_seed_11023.json": "b86f0ee07c8565f919bba5ab94a4a687c3b47afd0dd08538a19f72a67080506b",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11030.json": "b329681eb9a4e792767e19db4c217df20f141498e25604769742b9b9c120866d",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11031.json": "9038cbfb3ae022850e6e5f815dfbd24da3b713c52025b8a0d1041ad96d7c1da9",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11032.json": "4b478dfd3dd0b754a9cdc534f6d3b8b4088e80de3d2f28a21db19a240f4beba8",
+    "data/robot/improvement_20261011/uniform/IMG_2096_seed_11033.json": "c96cecd0e842f42eba764892cd981807f565a39d144abcd0e9835c8dd029009f",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11040.json": "ee7a227dba8271275476423ee375926f96daa5b6d251004d59265532e45a8d29",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11041.json": "92fc3b6aa17c0c9f1abcc44052810ab1e4c5cdd3010d22297488b938bb1524ac",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11042.json": "53a10cbcc6a4ff45f738a6c79e38573bbe101f6d0a09faefcbce98fffb4154e7",
+    "data/robot/improvement_20261011/uniform/IMG_2098_seed_11043.json": "883b187f73a5f998a544b87df45708eaae00a7427f6dc1f2f8e502700dc80eb5",
+    "data/robot/improvement_20261011/targeted/build/summary.json": "1c157328955adf0e0f16b535b9cf37168f688192a9ceabac57d79804f1def6dc",
+    "data/robot/improvement_20261011/targeted/build/plan.json": "58d26905c4a0aa46a571af3bec2bd55987b2c9dfa58da616a0591ef25cb7ffe6",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12000.json": "7dc082a6c86744839f2733b895de730508c361ab033fcea5c79c7514cc9f1fdd",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12001.json": "2253760f2dacdf5ef94fc94adff686dfc9f6c80bbc4150179fd3559a2a756f8e",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12002.json": "cc8023a919045120e6f40f99d56b2b6b88af1a5c8b785408ab4041d788d9cf91",
+    "data/robot/improvement_20261011/targeted/IMG_2092_seed_12003.json": "a1a8b1ee5c3ea075fbbc177bb825f1c1d7659f6e43be3f621476ef8bb31b1b78",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12010.json": "144a3794b2854805af909aff8d833b91968db4dc0a880992c628a4681c2502b6",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12011.json": "4b47db8fdba3c6ef8390f687a605af4c639ee95b6b1596604268d4c1d90ed9a0",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12012.json": "d1f65022b3fb339b788b2a2c50c258b41098f338441b6f007fd6bdf5b5e6e75d",
+    "data/robot/improvement_20261011/targeted/IMG_2093_seed_12013.json": "9c2a8becf30262d18e7146e096815ed360ed59b931855ba4c369db4c02d201f1",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12020.json": "403a2119da71f07895c2b16006dd7167d2d3a36b83bfe739fffc7b1070fab484",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12021.json": "54b32bba234d365803eee0fb1f12a20f9415cdec22637bba258a111af89bba55",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12022.json": "b97932a90dcb7c9ceec8858937475d04e0104eebf3bece322b9336e380d885a7",
+    "data/robot/improvement_20261011/targeted/IMG_2095_seed_12023.json": "8736ce2912a5f70b8bd12cc8150e5b9d61ab3729a3ed4f5f8eb023bc7f7dd2c1",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12030.json": "fa0a1cfcb1d8c6581c81e80096df216227d5bf277aaa0338e770ee09bd2d6cc9",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12031.json": "89015e89b10ca40a5f9c34f7b012677b778efc3da4b97141440870deee571aa6",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12032.json": "6ef3bf52eb25d4955f2a3319f6080a9209918e6b69dbeb8f5264c645b903747e",
+    "data/robot/improvement_20261011/targeted/IMG_2096_seed_12033.json": "796f55de0f37ee46324716a9b9edaf0784e7babcd5f0e2a6c6df959aa8ecc9d7",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12040.json": "d7bb545e9853d4fb2ffa6142d73cbeff8f1d078052fc17d313ceb85f1dc51c3a",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12041.json": "3787214c983afe4e371bb91f9f5a34b4ac7857255ad0d24205e632b896b7b97c",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12042.json": "a434f3d94acecde8f3d53e6ac55172c73a727ea4e014d55b5f614101570d5a91",
+    "data/robot/improvement_20261011/targeted/IMG_2098_seed_12043.json": "05ab2cb12892092b5b749e4799ff58b65f24938e6c9fb40cb5fee2d3099b5db5",
+    "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/frozen_normalization.json": "e3a3b7051e660d195b0e466df1d3066ec6857400b593e8743f609344beca0a06",
+    "checkpoints/main/policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+    "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+    "checkpoints/main/policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+    "runs/improvement_20261011/train_targeted/checkpoints/002000/pretrained_model/policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a"
+  }
+}

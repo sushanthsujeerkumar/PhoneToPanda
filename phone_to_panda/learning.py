@@ -1,7 +1,7 @@
-"""Local LeRobot export, genuine SmolVLA fine-tuning, and physics evaluation.
+"""Local LeRobot export, SmolVLA fine-tuning, and simulation evaluation.
 
 Imports of the ML stack are lazy so annotation tools remain lightweight.
-The private smoke test uses a tiny random model and is never a trained result.
+The smoke test uses a tiny random model to check the API, not task performance.
 """
 from __future__ import annotations
 
@@ -9,12 +9,15 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import random
 import subprocess
 import sys
 import time
 from typing import Any, Iterable
 
 import numpy as np
+
+from .simulation import IMU_PILOT_KIND, validate_imu_pilot_source
 
 STATE = "observation.state"
 IMAGES = ("observation.images.image", "observation.images.image2")
@@ -93,10 +96,12 @@ def _validate_episode(path: Path, root: Path) -> tuple[dict[str, np.ndarray], di
         raise ValueError(f"Missing provenance sidecar: {metadata_path}")
     metadata = json.loads(metadata_path.read_text())
     source = metadata.get("source", {})
-    if source.get("kind") != "personal_video":
-        raise ValueError(f"{path.name}: only personal_video demonstrations may enter training; setup/synthetic data rejected")
+    if source.get("kind") not in {"personal_video", IMU_PILOT_KIND}:
+        raise ValueError(f"{path.name}: only personal_video or explicitly verified IMU-pilot demonstrations may enter training; setup/synthetic data rejected")
     if metadata.get("success") is not True:
         raise ValueError(f"{path.name}: unsuccessful or unverified demonstration rejected")
+    if source.get("kind") == IMU_PILOT_KIND:
+        validate_imu_pilot_source(source, root, metadata.get("trajectory_quality", {}))
     sha256 = source.get("sha256", "")
     if not isinstance(source.get("video"), str) or not isinstance(sha256, str):
         raise ValueError(f"{path.name}: missing source video or SHA256 provenance")
@@ -192,7 +197,9 @@ def training_command(config: dict, dataset_dir: str | Path | None = None,
     output = Path(output_dir or settings.get("output_dir", "runs/train"))
     if not output.is_absolute():
         output = _root(config) / output
-    executable = [sys.executable, "-m", "lerobot.scripts.lerobot_train"]
+    executable = ([sys.executable, str(_root(config) / "scripts/train_with_frozen_stats.py")]
+                  if settings.get("preserve_normalization", False)
+                  else [sys.executable, "-m", "lerobot.scripts.lerobot_train"])
     if resume:
         checkpoint_config = output / "checkpoints" / "last" / "pretrained_model" / "train_config.json"
         return [*executable, f"--config_path={checkpoint_config}", "--resume=true"]
@@ -240,8 +247,12 @@ def train(config: dict, dry_run: bool = False, resume: bool = False) -> dict:
     provenance = json.loads(provenance_path.read_text())
     validate_controller_contract(config, provenance)
     episodes = provenance.get("provenance", [])
-    if not episodes or any(ep.get("source", {}).get("kind") != "personal_video" or ep.get("success") is not True for ep in episodes):
-        raise ValueError("Training requires successful personal-video-derived episodes; setup-test datasets are forbidden.")
+    if not episodes or any(ep.get("source", {}).get("kind") not in {"personal_video", IMU_PILOT_KIND}
+                           or ep.get("success") is not True for ep in episodes):
+        raise ValueError("Training requires successful personal-video-derived or verified IMU-pilot episodes; setup-test datasets are forbidden.")
+    for episode in episodes:
+        if episode.get("source", {}).get("kind") == IMU_PILOT_KIND:
+            validate_imu_pilot_source(episode["source"], _root(config), episode.get("trajectory_quality", {}))
     base = Path(config.get("training", {}).get("policy_path", "lerobot/smolvla_base"))
     if (base / "SETUP_TEST_ONLY.json").exists():
         raise ValueError("The tiny random smoke-test model cannot be used as the pretrained training policy.")
@@ -261,7 +272,17 @@ def train(config: dict, dry_run: bool = False, resume: bool = False) -> dict:
             "note": "Training completion is not evidence of task success. Evaluate the saved checkpoint in physics."}
 
 
-def _load_policy(checkpoint: Path, device: str):
+def _evaluation_action_steps(saved_steps: int, chunk_size: int, override=None) -> int:
+    """Validate an inference-only queue length without coercing invalid values."""
+    steps = saved_steps if override is None else override
+    if (isinstance(steps, bool) or not isinstance(steps, int)
+            or isinstance(chunk_size, bool) or not isinstance(chunk_size, int)
+            or not 1 <= steps <= chunk_size):
+        raise ValueError("evaluation.n_action_steps must be an integer from 1 through the saved chunk_size.")
+    return steps
+
+
+def _load_policy(checkpoint: Path, device: str, n_action_steps: int | None = None):
     from lerobot.configs.policies import PreTrainedConfig
     from lerobot.policies.smolvla.configuration_smolvla import SmolVLAConfig
     from lerobot.policies.smolvla.modeling_smolvla import SmolVLAPolicy
@@ -272,6 +293,10 @@ def _load_policy(checkpoint: Path, device: str):
     config = PreTrainedConfig.from_pretrained(str(checkpoint))
     if not isinstance(config, SmolVLAConfig):
         raise ValueError("Checkpoint must contain a SmolVLA policy.")
+    # Each prediction still produces chunk_size actions. Execute n_action_steps
+    # before predicting again. Set this before constructing the action queue;
+    # checkpoint files and the trained chunk size remain unchanged.
+    config.n_action_steps = _evaluation_action_steps(config.n_action_steps, config.chunk_size, n_action_steps)
     config.device = device
     config.load_vlm_weights = False
     if config.output_features[ACTION].shape != (7,) or config.input_features[STATE].shape != (8,):
@@ -282,6 +307,20 @@ def _load_policy(checkpoint: Path, device: str):
     pre, post = make_pre_post_processors(config, pretrained_path=str(checkpoint),
                                        preprocessor_overrides={"device_processor": {"device": device}})
     return policy, pre, post
+
+
+def _timing_summary(action_seconds: list[float], prediction_seconds: list[float]) -> dict:
+    """CPU wall time includes preprocessing, policy selection and action transfer."""
+    return {
+        "action_calls": len(action_seconds),
+        "prediction_calls": len(prediction_seconds),
+        "total_seconds": float(sum(action_seconds)),
+        "mean_action_seconds": float(np.mean(action_seconds)) if action_seconds else 0.,
+        "prediction_total_seconds": float(sum(prediction_seconds)),
+        "mean_prediction_seconds": float(np.mean(prediction_seconds)) if prediction_seconds else 0.,
+        "p95_prediction_seconds": float(np.percentile(prediction_seconds, 95)) if prediction_seconds else 0.,
+        "scope": "Observation preprocessing, policy.select_action, postprocessing and blocking CPU action transfer; excludes rendering, diagnostics and physics.",
+    }
 
 
 def _observation_batch(obs: dict, task: str) -> dict:
@@ -304,6 +343,8 @@ def run_policy(config: dict, checkpoint: str | Path, output_dir: str | Path,
 
     if episodes < 1:
         raise ValueError("episodes must be positive")
+    if isinstance(seed, bool) or not isinstance(seed, int) or seed < 0 or seed + episodes > 2**32:
+        raise ValueError("Evaluation seeds must be integers in the NumPy seed range [0, 2**32).")
     checkpoint = Path(checkpoint).resolve()
     if not (checkpoint / "model.safetensors").is_file():
         raise ValueError("Choose the pretrained_model directory of a completed local checkpoint.")
@@ -313,6 +354,9 @@ def run_policy(config: dict, checkpoint: str | Path, output_dir: str | Path,
     if not training_config_path.is_file():
         raise ValueError("Missing training configuration; use a checkpoint produced by the training command.")
     training_config = json.loads(training_config_path.read_text())
+    saved_policy = json.loads((checkpoint / "config.json").read_text())
+    action_override = config.get("evaluation", {}).get("n_action_steps")
+    effective_steps = _evaluation_action_steps(saved_policy["n_action_steps"], saved_policy["chunk_size"], action_override)
     provenance_path = checkpoint / "phone_to_panda_provenance.json"
     if not provenance_path.is_file():
         provenance_path = Path(training_config["dataset"]["root"]) / "meta" / "phone_to_panda_provenance.json"
@@ -332,7 +376,16 @@ def run_policy(config: dict, checkpoint: str | Path, output_dir: str | Path,
     device = config.get("training", {}).get("device", "cuda")
     if str(device).startswith("cuda") and not torch.cuda.is_available():
         raise RuntimeError("CUDA unavailable; explicitly select CPU in configuration if intended.")
-    policy, pre, post = _load_policy(checkpoint, device)
+    policy, pre, post = _load_policy(checkpoint, device, n_action_steps=action_override)
+    policy_settings = {
+        "checkpoint_n_action_steps": saved_policy["n_action_steps"],
+        "n_action_steps": int(policy.config.n_action_steps),
+        "chunk_size": int(policy.config.chunk_size),
+        "denoising_steps": int(policy.config.num_steps),
+        "evaluation_override": action_override,
+    }
+    if policy_settings["n_action_steps"] != effective_steps:
+        raise ValueError("Loaded policy did not apply the requested evaluation action horizon.")
     max_steps = int(config.get("simulation", {}).get("horizon", 400))
     if max_steps < 1:
         raise ValueError("simulation.horizon must be positive")
@@ -340,49 +393,92 @@ def run_policy(config: dict, checkpoint: str | Path, output_dir: str | Path,
     results = []
     save_video = bool(config.get("evaluation", {}).get("save_video", True))
     save_trace = bool(config.get("evaluation", {}).get("save_trace", False))
+    all_action_seconds, all_prediction_seconds = [], []
     started = time.perf_counter()
     for index in range(episodes):
-        torch.manual_seed(seed + index)
-        env = make_env(config, seed=seed + index)
+        # Reset simulation and policy random streams per episode. Replanning
+        # intervals change random-sample consumption, so equal seeds need not
+        # yield equal predictions. Seed exclusion covers simulator seeds only,
+        # not separate recording sessions or scenes.
+        episode_seed = seed + index
+        random.seed(episode_seed)
+        np.random.seed(episode_seed)
+        torch.manual_seed(episode_seed)
+        env = make_env(config, seed=episode_seed)
         policy.reset()
         writer = None
         trace = []
+        action_seconds, prediction_seconds = [], []
+        first_events = {key: None for key in ("contact_step", "bilateral_contact_step", "firm_grasp_step", "lift_step", "release_after_lift_step")}
+        previous_diagnostics = None
         episode_started = time.perf_counter()
         try:
             if save_video:
                 writer = imageio.get_writer(destination / f"episode_{index:03d}.mp4", fps=fps, codec="libx264", macro_block_size=1)
             obs = env.reset()
+            if save_trace:
+                previous_diagnostics = env.grasp_diagnostics()
             success = False
             for step in range(max_steps):
                 if writer is not None:
                     writer.append_data(np.concatenate([obs[IMAGES[0]], obs[IMAGES[1]]], axis=1))
+                # The pinned SmolVLA implementation predicts only when its action
+                # queue is empty. Record actual refreshes, not assumed timing.
+                prediction_refresh = bool(policy._check_get_actions_condition())
+                inference_started = time.perf_counter()
                 with torch.inference_mode():
                     action = post(policy.select_action(pre(_observation_batch(obs, config["task"]))))
                 array = action.detach().cpu().numpy().reshape(-1)
+                inference_seconds = time.perf_counter() - inference_started
+                action_seconds.append(inference_seconds)
+                if prediction_refresh:
+                    prediction_seconds.append(inference_seconds)
                 if array.shape != (7,) or not np.isfinite(array).all():
                     raise ValueError("Policy produced an invalid action")
                 if save_trace:
                     trace.append({"step": step, "observation_state": obs[STATE].tolist(),
                                   "cube_xyz": env.cube_position.tolist(),
-                                  "policy_action": array.tolist()})
+                                  "policy_action": array.tolist(),
+                                  "episode_seed": episode_seed,
+                                  "prediction_refresh": prediction_refresh,
+                                  "inference_seconds": inference_seconds,
+                                  "diagnostics": previous_diagnostics})
                 obs, reward, done, info = env.step(np.clip(array, -1.0, 1.0))
                 if save_trace:
+                    diagnostics = env.grasp_diagnostics()
                     trace[-1].update(applied_action=info.get("applied_action"),
-                                     next_cube_xyz=env.cube_position.tolist(), success=bool(env.success()))
+                                     next_cube_xyz=env.cube_position.tolist(), success=bool(env.success()),
+                                     next_diagnostics=diagnostics)
+                    events = {
+                        "contact_step": diagnostics["gripper_contact"],
+                        "bilateral_contact_step": diagnostics["bilateral_contact"],
+                        "firm_grasp_step": diagnostics["firm_bilateral_grasp"],
+                        "lift_step": diagnostics["lifted"],
+                        "release_after_lift_step": diagnostics["ever_lifted"] and not diagnostics["gripper_contact"],
+                    }
+                    for event, happened in events.items():
+                        if happened and first_events[event] is None:
+                            first_events[event] = step
+                    previous_diagnostics = diagnostics
                 success = bool(env.success())
                 if success or done:
                     break
             if writer is not None:
                 writer.append_data(np.concatenate([obs[IMAGES[0]], obs[IMAGES[1]]], axis=1))
-            results.append({"seed": seed + index, "success": success, "steps": step + 1,
+            results.append({"seed": episode_seed, "success": success, "steps": step + 1,
                             "wall_seconds": time.perf_counter() - episode_started,
                             "max_cube_height_m": env._max_cube_height,
                             "final_cube_xyz": env.cube_position.tolist(),
+                            "first_events": first_events if save_trace else None,
+                            "event_step_convention": "Zero-based action index; event observed immediately after that action.",
+                            "inference_timing": _timing_summary(action_seconds, prediction_seconds),
                             "video": f"episode_{index:03d}.mp4" if save_video else None})
         finally:
             if writer is not None:
                 writer.close()
             env.close()
+        all_action_seconds.extend(action_seconds)
+        all_prediction_seconds.extend(prediction_seconds)
         _write_json(destination / "episodes.json", results)
         if save_trace:
             _write_json(destination / f"episode_{index:03d}_trace.json", trace)
@@ -395,16 +491,23 @@ def run_policy(config: dict, checkpoint: str | Path, output_dir: str | Path,
               "orientation_control": orientation_control,
               "controller": "SmolVLA XYZ and gripper plus fixed downward wrist feedback" if orientation_control == "fixed_downward" else "SmolVLA XYZ, rotation and gripper",
               "video_recorded": save_video,
+              "policy_settings": policy_settings,
+              "inference_timing": _timing_summary(all_action_seconds, all_prediction_seconds),
+              "seed_scheme": {
+                  "episode_seed": "seed_start + episode_index",
+                  "seeded_rngs": ["python.random", "numpy.random", "torch", "simulator"],
+                  "note": "Seeded per episode before simulator construction. Backend/version changes may still change numerical results; changing replanning frequency changes RNG consumption.",
+              },
               "interpretation": "Held-out random seeds test this simulation distribution; they do not prove real-world transfer."}
     _write_json(destination / "report.json", report)
     return report
 
 
 def smoke_test(config: dict, output_dir: str | Path) -> dict:
-    """Exercise real LeRobot training+reload without network or personal data.
+    """Check LeRobot training and checkpoint reload without network or personal data.
 
-    A tiny random SmolVLM/SmolVLA is deliberately written under work/, never to
-    the user's training-data directories. This is an API/infrastructure test.
+    Write synthetic setup data and a tiny random SmolVLM/SmolVLA under the
+    supplied output directory. This checks the API, not task performance.
     """
     import torch
     from tokenizers import Tokenizer

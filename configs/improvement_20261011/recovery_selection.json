@@ -1,0 +1,109 @@
+{
+  "selection_name": "recovery",
+  "require_all_successful": true,
+  "source_phase": "development",
+  "source_candidate": "original_h5",
+  "source_group": "known_wide",
+  "jobs": [
+    {
+      "seed": 3010,
+      "prefix_steps": 60,
+      "clip": "IMG_2092"
+    },
+    {
+      "seed": 3010,
+      "prefix_steps": 80,
+      "clip": "IMG_2093"
+    },
+    {
+      "seed": 3010,
+      "prefix_steps": 100,
+      "clip": "IMG_2095"
+    },
+    {
+      "seed": 3010,
+      "prefix_steps": 120,
+      "clip": "IMG_2096"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 60,
+      "clip": "IMG_2098"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 80,
+      "clip": "IMG_2092"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 100,
+      "clip": "IMG_2093"
+    },
+    {
+      "seed": 3012,
+      "prefix_steps": 120,
+      "clip": "IMG_2095"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 60,
+      "clip": "IMG_2096"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 80,
+      "clip": "IMG_2098"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 100,
+      "clip": "IMG_2092"
+    },
+    {
+      "seed": 3013,
+      "prefix_steps": 120,
+      "clip": "IMG_2093"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 60,
+      "clip": "IMG_2095"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 80,
+      "clip": "IMG_2096"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 100,
+      "clip": "IMG_2098"
+    },
+    {
+      "seed": 3014,
+      "prefix_steps": 120,
+      "clip": "IMG_2092"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 60,
+      "clip": "IMG_2093"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 80,
+      "clip": "IMG_2095"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 100,
+      "clip": "IMG_2096"
+    },
+    {
+      "seed": 3015,
+      "prefix_steps": 120,
+      "clip": "IMG_2098"
+    }
+  ]
+}

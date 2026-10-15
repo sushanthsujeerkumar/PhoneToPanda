@@ -1,0 +1,32 @@
+{
+  "time_utc": "2026-10-11T16:36:41.203883+00:00",
+  "observed_error": "Source normalization was not preserved: action.count",
+  "likely_cause": "Upstream scalar count (1,) -> () reshaping after processor device conversion; under verification.",
+  "runs": {
+    "uniform": {
+      "log": "runs/improvement_20261011/train_uniform_attempt1.log",
+      "output": "runs/improvement_20261011/train_uniform_attempt1",
+      "reason": "Uniform failed save precheck at2000 steps; targeted/continuation interrupted to prevent same known failure. No checkpoint used for evaluation.",
+      "output_directory_exists": false
+    },
+    "targeted": {
+      "log": "runs/improvement_20261011/train_targeted_attempt1.log",
+      "output": "runs/improvement_20261011/train_targeted_attempt1",
+      "reason": "Uniform failed save precheck at2000 steps; targeted/continuation interrupted to prevent same known failure. No checkpoint used for evaluation.",
+      "output_directory_exists": false
+    },
+    "continuation": {
+      "log": "runs/improvement_20261011/train_continuation_attempt1.log",
+      "output": "runs/improvement_20261011/train_continuation_attempt1",
+      "reason": "Uniform failed save precheck at2000 steps; targeted/continuation interrupted to prevent same known failure. No checkpoint used for evaluation.",
+      "output_directory_exists": false
+    }
+  },
+  "confirmed_cause": "LeRobot scalarizes singleton count and index metadata during processor device conversion. Actual model normalization transform tensors were unchanged.",
+  "resolution": "Allow exact-valued scalar representations only for ancillary metadata; reject any changed transform tensor. All source statistics audited; actual two-step CUDA training, checkpoint save and strict model reload passed.",
+  "restarted_utc": "2026-10-11T16:41:32.356729+00:00",
+  "artifact_clarification": {
+    "verified_utc": "2026-10-11T17:27:52.214554+00:00",
+    "note": "The output paths above were intended archive names. No checkpoint directories were created by these failed or interrupted attempts, so only the attempt logs exist. Every evaluated adaptation was retrained successfully after the guard fix."
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "schema_version": 1,
+  "repository": "sushanthsujeerkumar/PhoneToPanda",
+  "release_tag": "imu-pilot-20261015",
+  "release_url": "https://github.com/sushanthsujeerkumar/PhoneToPanda/releases/tag/imu-pilot-20261015",
+  "license": "Apache-2.0",
+  "scope": "Exact evaluated policy files; no optimizer states, training data or runtime environments. Policy weights are fine-tuned derivatives of SmolVLA.",
+  "models": {
+    "original": {
+      "checkpoint_path": "checkpoints/pilot_20261015/original",
+      "notices_path": "checkpoints/pilot_20261015/original.licenses",
+      "archive": {
+        "filename": "phone-to-panda-original-20261015.tar.gz",
+        "url": "https://github.com/sushanthsujeerkumar/PhoneToPanda/releases/download/imu-pilot-20261015/phone-to-panda-original-20261015.tar.gz",
+        "bytes": 797022613,
+        "sha256": "5269711fcadbe456bf139f8bd35da89cfec1744055e1522c0e7340f7a3a31c2e"
+      },
+      "files": {
+        "checkpoints/pilot_20261015/original/config.json": {
+          "bytes": 1909,
+          "sha256": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9"
+        },
+        "checkpoints/pilot_20261015/original/model.safetensors": {
+          "bytes": 1197789224,
+          "sha256": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f"
+        },
+        "checkpoints/pilot_20261015/original/phone_to_panda_provenance.json": {
+          "bytes": 212674,
+          "sha256": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2"
+        },
+        "checkpoints/pilot_20261015/original/policy_postprocessor.json": {
+          "bytes": 661,
+          "sha256": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005"
+        },
+        "checkpoints/pilot_20261015/original/policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7668,
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "checkpoints/pilot_20261015/original/policy_preprocessor.json": {
+          "bytes": 1719,
+          "sha256": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92"
+        },
+        "checkpoints/pilot_20261015/original/policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "bytes": 7668,
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "checkpoints/pilot_20261015/original/train_config.json": {
+          "bytes": 4873,
+          "sha256": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+        },
+        "checkpoints/pilot_20261015/original.licenses/Apache-2.0.txt": {
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        "checkpoints/pilot_20261015/original.licenses/LeRobot-0.4.3-LICENSE.txt": {
+          "bytes": 27627,
+          "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c"
+        },
+        "checkpoints/pilot_20261015/original.licenses/source_licenses.json": {
+          "bytes": 992,
+          "sha256": "da15a8722571ccfec8708404293dd5aa7abb227b1684fe01aceef7f0222fa627"
+        },
+        "checkpoints/pilot_20261015/original.licenses/NOTICE.txt": {
+          "bytes": 1207,
+          "sha256": "fe0804b7895b4bc291bca0c70fe84398d99e6cfce1a571bbf9d1d37e4ed0f46d"
+        }
+      },
+      "checkpoint_files_sha256": {
+        "config.json": "14604bd816ceac59281cc2f7e745843926aefe77cdb11cb84d435c6969d3bcc9",
+        "model.safetensors": "ab6cadeeb6ce8fd42d3066c9813f13734c0801a31e738ec4a671c902e3145d0f",
+        "phone_to_panda_provenance.json": "4e6d4bdb9f5d2b4ad5d331e3705ca4f5a21731591be924aaa1cc06f6472333e2",
+        "policy_postprocessor.json": "803de1668c25da24663ff994748154ba4463963d166f40cdd020d5c029488005",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "06ad98cace588631abbf7889f8612f1334c42155e3c075321b9e4ac3c4e31f92",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "train_config.json": "e4be14263383830ad085820dc2b54ecbe8175766799f1862038bc287db5bd09d"
+      },
+      "evaluation_identity": {
+        "path": "results/imu_pilot_20261015/evaluation/original/identity.json",
+        "sha256": "484a0287819e8b71fbeed8e3c8be5d4591372259f63cf6b590f5efe2337dfcea"
+      },
+      "verified_against_evaluated_checkpoint": true
+    },
+    "continuation": {
+      "checkpoint_path": "checkpoints/pilot_20261015/continuation",
+      "notices_path": "checkpoints/pilot_20261015/continuation.licenses",
+      "archive": {
+        "filename": "phone-to-panda-continuation-20261015.tar.gz",
+        "url": "https://github.com/sushanthsujeerkumar/PhoneToPanda/releases/download/imu-pilot-20261015/phone-to-panda-continuation-20261015.tar.gz",
+        "bytes": 797022857,
+        "sha256": "ba55f38f2ec383e554aeb9f1618f9ced48a1485282c45562459cb47e3a511911"
+      },
+      "files": {
+        "checkpoints/pilot_20261015/continuation/config.json": {
+          "bytes": 2233,
+          "sha256": "1c31c8a57a2fc8c3178e8ac633c7b166de37d5d989b1586f500ef63f2cdd149e"
+        },
+        "checkpoints/pilot_20261015/continuation/frozen_normalization.json": {
+          "bytes": 1728,
+          "sha256": "69ad5670040e2d5c9abeec0242a6b5d0632f5e49ba8eccf17585303730078611"
+        },
+        "checkpoints/pilot_20261015/continuation/model.safetensors": {
+          "bytes": 1197789224,
+          "sha256": "276c8c568b138ec3642787f2a0461d8bc1199ee22bd467420d9a3a274465e5ae"
+        },
+        "checkpoints/pilot_20261015/continuation/phone_to_panda_provenance.json": {
+          "bytes": 214422,
+          "sha256": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0"
+        },
+        "checkpoints/pilot_20261015/continuation/policy_postprocessor.json": {
+          "bytes": 660,
+          "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a"
+        },
+        "checkpoints/pilot_20261015/continuation/policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7668,
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "checkpoints/pilot_20261015/continuation/policy_preprocessor.json": {
+          "bytes": 1718,
+          "sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8"
+        },
+        "checkpoints/pilot_20261015/continuation/policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "bytes": 7620,
+          "sha256": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8"
+        },
+        "checkpoints/pilot_20261015/continuation/train_config.json": {
+          "bytes": 6390,
+          "sha256": "3ce1a2193dcac545c8b559dd565044ccc49f7a08919030ac3d96759946a6f4cb"
+        },
+        "checkpoints/pilot_20261015/continuation.licenses/Apache-2.0.txt": {
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        "checkpoints/pilot_20261015/continuation.licenses/LeRobot-0.4.3-LICENSE.txt": {
+          "bytes": 27627,
+          "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c"
+        },
+        "checkpoints/pilot_20261015/continuation.licenses/source_licenses.json": {
+          "bytes": 992,
+          "sha256": "da15a8722571ccfec8708404293dd5aa7abb227b1684fe01aceef7f0222fa627"
+        },
+        "checkpoints/pilot_20261015/continuation.licenses/NOTICE.txt": {
+          "bytes": 1225,
+          "sha256": "b7c9ecde6ac7c16c6e52a722528699a767e30c9eebdc9e3e7a4d520a16de76fc"
+        }
+      },
+      "checkpoint_files_sha256": {
+        "config.json": "1c31c8a57a2fc8c3178e8ac633c7b166de37d5d989b1586f500ef63f2cdd149e",
+        "frozen_normalization.json": "69ad5670040e2d5c9abeec0242a6b5d0632f5e49ba8eccf17585303730078611",
+        "model.safetensors": "276c8c568b138ec3642787f2a0461d8bc1199ee22bd467420d9a3a274465e5ae",
+        "phone_to_panda_provenance.json": "324e1126c96237ad9b30c5a22044167467192925e15a76d9ab8d6370c430f6b0",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "3ce1a2193dcac545c8b559dd565044ccc49f7a08919030ac3d96759946a6f4cb"
+      },
+      "evaluation_identity": {
+        "path": "results/imu_pilot_20261015/evaluation/continuation/identity.json",
+        "sha256": "e8c4b94b8ed8ae7794837d4c34f3948cf0a5a244ccac89dad1052f70c16849fe"
+      },
+      "verified_against_evaluated_checkpoint": true
+    },
+    "augmented": {
+      "checkpoint_path": "checkpoints/pilot_20261015/augmented",
+      "notices_path": "checkpoints/pilot_20261015/augmented.licenses",
+      "archive": {
+        "filename": "phone-to-panda-augmented-20261015.tar.gz",
+        "url": "https://github.com/sushanthsujeerkumar/PhoneToPanda/releases/download/imu-pilot-20261015/phone-to-panda-augmented-20261015.tar.gz",
+        "bytes": 797020325,
+        "sha256": "360a11dcf4757c1c467ea829c51df39512227ec344843f9b5c719c4e06d8bbe6"
+      },
+      "files": {
+        "checkpoints/pilot_20261015/augmented/config.json": {
+          "bytes": 2233,
+          "sha256": "1c31c8a57a2fc8c3178e8ac633c7b166de37d5d989b1586f500ef63f2cdd149e"
+        },
+        "checkpoints/pilot_20261015/augmented/frozen_normalization.json": {
+          "bytes": 1728,
+          "sha256": "69ad5670040e2d5c9abeec0242a6b5d0632f5e49ba8eccf17585303730078611"
+        },
+        "checkpoints/pilot_20261015/augmented/model.safetensors": {
+          "bytes": 1197789224,
+          "sha256": "c0800832eee9fa2a5c9ac7e86acf450c3ce63887329c8665208eebb2777b2969"
+        },
+        "checkpoints/pilot_20261015/augmented/phone_to_panda_provenance.json": {
+          "bytes": 266487,
+          "sha256": "4953b00ac4cb16ac2ffd43364549a8de559477374b0944312086bd5b55a716ae"
+        },
+        "checkpoints/pilot_20261015/augmented/policy_postprocessor.json": {
+          "bytes": 660,
+          "sha256": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a"
+        },
+        "checkpoints/pilot_20261015/augmented/policy_postprocessor_step_0_unnormalizer_processor.safetensors": {
+          "bytes": 7668,
+          "sha256": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704"
+        },
+        "checkpoints/pilot_20261015/augmented/policy_preprocessor.json": {
+          "bytes": 1718,
+          "sha256": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8"
+        },
+        "checkpoints/pilot_20261015/augmented/policy_preprocessor_step_5_normalizer_processor.safetensors": {
+          "bytes": 7620,
+          "sha256": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8"
+        },
+        "checkpoints/pilot_20261015/augmented/train_config.json": {
+          "bytes": 6401,
+          "sha256": "5df8fe98660b0c26379a7d1bc034bd8cf914e9ce5e681385f89da6c46257571d"
+        },
+        "checkpoints/pilot_20261015/augmented.licenses/Apache-2.0.txt": {
+          "bytes": 11358,
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        "checkpoints/pilot_20261015/augmented.licenses/LeRobot-0.4.3-LICENSE.txt": {
+          "bytes": 27627,
+          "sha256": "0583375a0ec642ec79c447781f34322b0cfa66baff31258214d040f1f6d86d7c"
+        },
+        "checkpoints/pilot_20261015/augmented.licenses/source_licenses.json": {
+          "bytes": 992,
+          "sha256": "da15a8722571ccfec8708404293dd5aa7abb227b1684fe01aceef7f0222fa627"
+        },
+        "checkpoints/pilot_20261015/augmented.licenses/NOTICE.txt": {
+          "bytes": 1368,
+          "sha256": "81c26ebcbce81b1f45ddfa808a3a63ea4f6244945c2ec26c6975e638d4ba2186"
+        }
+      },
+      "checkpoint_files_sha256": {
+        "config.json": "1c31c8a57a2fc8c3178e8ac633c7b166de37d5d989b1586f500ef63f2cdd149e",
+        "frozen_normalization.json": "69ad5670040e2d5c9abeec0242a6b5d0632f5e49ba8eccf17585303730078611",
+        "model.safetensors": "c0800832eee9fa2a5c9ac7e86acf450c3ce63887329c8665208eebb2777b2969",
+        "phone_to_panda_provenance.json": "4953b00ac4cb16ac2ffd43364549a8de559477374b0944312086bd5b55a716ae",
+        "policy_postprocessor.json": "3b51f092c70c710ce0213ee1b63bf51b4878ec67828dd2d67daf9ef51081a41a",
+        "policy_postprocessor_step_0_unnormalizer_processor.safetensors": "083333026b96675bb80bc39daf24674eb95cac841c2e3beaabc87b0d85665704",
+        "policy_preprocessor.json": "6d1a7667b273c448056591b05cb69b2e56b460dd693d34548111e57db789fcf8",
+        "policy_preprocessor_step_5_normalizer_processor.safetensors": "d88e35e38b8a2269a6c56ccf330b9f1d54608dd3ac493bf1811d1ad9747c24c8",
+        "train_config.json": "5df8fe98660b0c26379a7d1bc034bd8cf914e9ce5e681385f89da6c46257571d"
+      },
+      "evaluation_identity": {
+        "path": "results/imu_pilot_20261015/evaluation/augmented/identity.json",
+        "sha256": "55ac6ef2638b3971315c2b86667feb36c77bdbfe3fc6469b0a59228cc521186c"
+      },
+      "verified_against_evaluated_checkpoint": true
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "expert_recovery_demonstration",
+  "label": "Scripted expert recovery demonstration; not a learned-policy evaluation score.",
+  "selection_rule": "First job in the fixed recovery collection plan, chosen by predetermined order rather than outcome.",
+  "job_index": 0,
+  "seed": 3010,
+  "prefix_steps": 60,
+  "clip": "IMG_2092",
+  "fps": 20,
+  "clock": "Simulation time at 20 Hz; not inference wall time.",
+  "prefix_labels": "Initial 60 saved policy actions are unlabelled context. Only subsequent scripted expert actions entered training.",
+  "source_selection_plan": "configs/improvement_20261011/recovery_selection.json",
+  "source_selection_plan_sha256": "1bb389c4ea1d02648be74f2e3c10735a672b31b7a707c7b5d8caaa172bb057d5",
+  "files": [
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/candidates/IMG_2092_seed_3010_prefix_60.mp4",
+      "target": "media/recovery_example.mp4",
+      "source_sha256": "7f81b16c70c92d4e8c80e6038034f31549556b3df15ec51f167f3c08c5f2c66b",
+      "target_sha256": "7f81b16c70c92d4e8c80e6038034f31549556b3df15ec51f167f3c08c5f2c66b",
+      "bytes": 663807,
+      "role": "first fixed job expert recovery video"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/candidates/IMG_2092_seed_3010_prefix_60.json",
+      "target": "media/recovery_example.report.json",
+      "source_sha256": "fd470a64cc3bfd896066f30ae4e3d5db14db27c3cc77fc24427ba50764e0d1d3",
+      "target_sha256": "fd470a64cc3bfd896066f30ae4e3d5db14db27c3cc77fc24427ba50764e0d1d3",
+      "bytes": 22875,
+      "role": "exact original expert recovery report"
+    },
+    {
+      "source": "data/robot/improvement_20261011/recovery/build/candidates/IMG_2092_seed_3010_prefix_60.receipt.json",
+      "target": "media/recovery_example.source_receipt.json",
+      "source_sha256": "7e9daf0ed342ee440ff8dbc741c1f5600fa757158604b38e3ae0c9ee26502075",
+      "target_sha256": "7e9daf0ed342ee440ff8dbc741c1f5600fa757158604b38e3ae0c9ee26502075",
+      "bytes": 437,
+      "role": "exact original collection receipt"
+    }
+  ]
+}

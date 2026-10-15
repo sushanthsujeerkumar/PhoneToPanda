@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-15",
+  "phase": "local_verification_before_publication",
+  "repository": "https://github.com/sushanthsujeerkumar/PhoneToPanda",
+  "tests": {
+    "main_project": {
+      "passed": 224,
+      "skipped": 2,
+      "skip_reason": "Optional physics tests; four actual IMU replay demonstrations and all 30 planned policy trials were completed separately."
+    },
+    "arm_checker": {
+      "passed": 111,
+      "warnings": 1,
+      "warning": "Upstream Starlette/AnyIO deprecation"
+    },
+    "browser_recording_timers": {
+      "passed": 10
+    }
+  },
+  "checks": {
+    "git_diff_check": "passed",
+    "local_markdown_links": "passed",
+    "relocated_saved_result_summary": "reproduced the committed JSON exactly from a clean staged-file copy",
+    "imu_policy_successes": {
+      "original": 6,
+      "continuation": 6,
+      "augmented": 5
+    },
+    "comparison_source_frames": "all displayed panels verified against the saved evaluation video frames",
+    "pdf": "all 11 pages rendered and inspected; corrected calibration and timing instructions; no embedded prompt attachment",
+    "gui_pdf_route": "serves the current illustrated guide",
+    "model_archives": "all checkpoint files match frozen evaluation identities; archive members verified; original archive installed and validated in a temporary folder",
+    "public_phone_video": "442 original presentation times retained; silent video only; location/device metadata removed; HLG to SDR conversion disclosed",
+    "scoped_credential_and_assistant_branding_scan": "no matches in staged source, documentation, JSON and scanned archive text"
+  },
+  "excluded": [
+    "private original IMG_2276.MOV",
+    "other local sensor sessions and recovery Trash",
+    "generated training datasets and optimizer state",
+    "virtual environments and caches",
+    "review contact sheets, intermediate renders and prompt files"
+  ],
+  "historical_evidence": "Original experiment files, hashes and dated local-path references are preserved. Public viewing copies have separate receipts. Saved-model inference does not require historical data paths.",
+  "selected_file_sha256": {
+    "media/imu_pilot/phone_recording.mp4": "eb4308949375227e21c1beebd3585ca86a558d6d0975aaf094f57cf35a93eaa1",
+    "media/imu_pilot/paired_video_imu.mp4": "111a4022163ca1c2fd89fd70f975c7a1d28623b85f00931aa0d4a5f167d34a2d",
+    "media/imu_pilot/policy_comparison.mp4": "9697b4099fd36f450e73f86869e8b21a72f635057f445906c3c7474548ac166d",
+    "arm_checker/guide/PhoneToPanda_Phone_IMU_Recording_Guide.pdf": "0e2e818e94a3e49353184797f669ce82f0291683738894e5d775cdfdebe8e369",
+    "data/experimental/imu_20261015/sensor_session.json": "500ce448410581ebd9e9927883ccb36e27fa59bba4146b4f8cd9f3b88dde7889",
+    "checkpoints/release_20261015.json": "6d38f98883614c6599910d18af7488ff5972d6bdbf71fc3ec2c3a6bdf4a0f5fd",
+    "results/imu_pilot_20261015/summary.json": "91ca195b3cbea6d431e6f7a1e0e3bb436416a47c18e96f6a65fbcbad5f4e787e",
+    "results/improvement_20261011/study_evidence.tar.gz": "22a47ef35023d0861b5164c335e3c93b5e6abd3728941dc7fee5408aee03a40f"
+  }
+}

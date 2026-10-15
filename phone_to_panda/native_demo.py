@@ -128,7 +128,17 @@ def run_desktop(config, checkpoint, seed=1000, auto_start=False, exit_when_done=
     report = {"kind": "interactive_native_policy", "benchmark_evaluation": False, "video_recorded": False}
     try:
         panel.root.update()
-        policy, pre, post = _load_policy(checkpoint, config.get("training", {}).get("device", "cuda"))
+        action_override = config.get("evaluation", {}).get("n_action_steps")
+        policy, pre, post = _load_policy(checkpoint, config.get("training", {}).get("device", "cuda"),
+                                         n_action_steps=action_override)
+        saved_policy = json.loads((checkpoint / "config.json").read_text())
+        report.update(checkpoint=str(checkpoint), seed=seed, policy_settings={
+            "checkpoint_n_action_steps": saved_policy["n_action_steps"],
+            "n_action_steps": int(policy.config.n_action_steps),
+            "chunk_size": int(policy.config.chunk_size),
+            "denoising_steps": int(policy.config.num_steps),
+            "evaluation_override": action_override,
+        })
         env = make_env(copy.deepcopy(config), seed=seed)
         obs = env.reset()
         selected = env.cube_position[:2].copy()

@@ -1,0 +1,345 @@
+{
+  "kind": "illustrative_paired_learned_policy_comparison",
+  "width": 1600,
+  "height": 900,
+  "fps": 20,
+  "frame_count": 913,
+  "duration_seconds": 45.65,
+  "selection": "N1 is the first planned narrow start; W4 is the sole augmented regression against both original and continued training. This illustrative selection was made after inspecting all 30 outcomes; it is not an additional benchmark or model selection.",
+  "all_trial_success_counts": {
+    "original": {
+      "successes": 6,
+      "trials": 10
+    },
+    "continuation": {
+      "successes": 6,
+      "trials": 10
+    },
+    "augmented": {
+      "successes": 5,
+      "trials": 10
+    }
+  },
+  "segments": [
+    {
+      "case": "N1",
+      "group": "narrow",
+      "seed": 84000,
+      "first_output_frame": 0,
+      "end_output_frame_exclusive": 312,
+      "start_s": 0.0,
+      "end_s_exclusive": 15.6,
+      "duration_s": 15.6,
+      "source_clips": [
+        {
+          "model": "original",
+          "case": "N1",
+          "seed": 84000,
+          "success": true,
+          "steps": 311,
+          "source_frames": 312,
+          "duration_s": 15.6,
+          "initial_cube_and_robot_state": [
+            [
+              0.03171115369237534,
+              -0.15153590062241715,
+              0.9199083359543676
+            ],
+            [
+              -0.20846466720104218,
+              2.486378941277123e-12,
+              1.1732795238494873,
+              3.1403393745422363,
+              0.0007735038525424898,
+              -0.0892220064997673,
+              0.038133252412080765,
+              -0.03813319280743599
+            ]
+          ],
+          "sources": {
+            "video": {
+              "path": "results/imu_pilot_20261015/evaluation/original/narrow/evaluation/episode_000.mp4",
+              "sha256": "56df0641e66ea9ba91f7567164b2c5d2d17532c8faeb8a6909d3ac7214d953f4"
+            },
+            "trace": {
+              "path": "results/imu_pilot_20261015/evaluation/original/narrow/evaluation/episode_000_trace.json",
+              "sha256": "7b4abbad7e078c0dd6950e9725401fc08b6c3ed117908a769334f4391c212eb1"
+            },
+            "report": {
+              "path": "results/imu_pilot_20261015/evaluation/original/narrow/evaluation/report.json",
+              "sha256": "d5872a26e02f9584fa7763d1b9f9d7f6c8456f653da7f1b62adaa9b238615901"
+            }
+          },
+          "final_frame_repetitions": 0
+        },
+        {
+          "model": "continuation",
+          "case": "N1",
+          "seed": 84000,
+          "success": true,
+          "steps": 309,
+          "source_frames": 310,
+          "duration_s": 15.5,
+          "initial_cube_and_robot_state": [
+            [
+              0.03171115369237534,
+              -0.15153590062241715,
+              0.9199083359543676
+            ],
+            [
+              -0.20846466720104218,
+              2.486378941277123e-12,
+              1.1732795238494873,
+              3.1403393745422363,
+              0.0007735038525424898,
+              -0.0892220064997673,
+              0.038133252412080765,
+              -0.03813319280743599
+            ]
+          ],
+          "sources": {
+            "video": {
+              "path": "results/imu_pilot_20261015/evaluation/continuation/narrow/evaluation/episode_000.mp4",
+              "sha256": "e9e29d1e7333f365db920af3ecc0594964de50250080bfad734e66a16dbbe750"
+            },
+            "trace": {
+              "path": "results/imu_pilot_20261015/evaluation/continuation/narrow/evaluation/episode_000_trace.json",
+              "sha256": "fecba870334b33bab849fcca57d01a452bdbae8d4381c3ec93e28078d7881b5c"
+            },
+            "report": {
+              "path": "results/imu_pilot_20261015/evaluation/continuation/narrow/evaluation/report.json",
+              "sha256": "c9e894881eab8b2cb9ec09f31abe0890a1d51ee7488e1ea8679f8daec52e1633"
+            }
+          },
+          "final_frame_repetitions": 2
+        },
+        {
+          "model": "augmented",
+          "case": "N1",
+          "seed": 84000,
+          "success": true,
+          "steps": 260,
+          "source_frames": 261,
+          "duration_s": 13.05,
+          "initial_cube_and_robot_state": [
+            [
+              0.03171115369237534,
+              -0.15153590062241715,
+              0.9199083359543676
+            ],
+            [
+              -0.20846466720104218,
+              2.486378941277123e-12,
+              1.1732795238494873,
+              3.1403393745422363,
+              0.0007735038525424898,
+              -0.0892220064997673,
+              0.038133252412080765,
+              -0.03813319280743599
+            ]
+          ],
+          "sources": {
+            "video": {
+              "path": "results/imu_pilot_20261015/evaluation/augmented/narrow/evaluation/episode_000.mp4",
+              "sha256": "82f81945207b6995c3813f31ffc1a069e485d18ecdff51f019024ba6b9ce4a1c"
+            },
+            "trace": {
+              "path": "results/imu_pilot_20261015/evaluation/augmented/narrow/evaluation/episode_000_trace.json",
+              "sha256": "fd4bc1a16d74c4d06354a67e5ba588596b96ce13d9966c49dffbf0a745863254"
+            },
+            "report": {
+              "path": "results/imu_pilot_20261015/evaluation/augmented/narrow/evaluation/report.json",
+              "sha256": "1f99d3b014de0ec93ad4ff2c3011d97aea06ad87d61afab800a8441fb1410909"
+            }
+          },
+          "final_frame_repetitions": 51
+        }
+      ]
+    },
+    {
+      "case": "W4",
+      "group": "wide",
+      "seed": 85003,
+      "first_output_frame": 312,
+      "end_output_frame_exclusive": 913,
+      "start_s": 15.6,
+      "end_s_exclusive": 45.65,
+      "duration_s": 30.05,
+      "source_clips": [
+        {
+          "model": "original",
+          "case": "W4",
+          "seed": 85003,
+          "success": true,
+          "steps": 221,
+          "source_frames": 222,
+          "duration_s": 11.1,
+          "initial_cube_and_robot_state": [
+            [
+              -0.02250783147753739,
+              -0.1259652400005211,
+              0.9199083359543676
+            ],
+            [
+              -0.20846466720104218,
+              2.486378941277123e-12,
+              1.1732795238494873,
+              3.1403393745422363,
+              0.0007735038525424898,
+              -0.0892220064997673,
+              0.038133252412080765,
+              -0.03813319280743599
+            ]
+          ],
+          "sources": {
+            "video": {
+              "path": "results/imu_pilot_20261015/evaluation/original/wide/evaluation/episode_003.mp4",
+              "sha256": "74a28b724a5159fac02b611e37f69f4f06a6f4263010007d04532b7c0d616317"
+            },
+            "trace": {
+              "path": "results/imu_pilot_20261015/evaluation/original/wide/evaluation/episode_003_trace.json",
+              "sha256": "2c73df6abcd2701bb0848fc55ff14a3e3057f1823ec41da0f74a67f2651a85e4"
+            },
+            "report": {
+              "path": "results/imu_pilot_20261015/evaluation/original/wide/evaluation/report.json",
+              "sha256": "0cb3a19b3fda977074d5267da49e985bac399bfb71e6ff4343b12d3f7144ed61"
+            }
+          },
+          "final_frame_repetitions": 379
+        },
+        {
+          "model": "continuation",
+          "case": "W4",
+          "seed": 85003,
+          "success": true,
+          "steps": 218,
+          "source_frames": 219,
+          "duration_s": 10.95,
+          "initial_cube_and_robot_state": [
+            [
+              -0.02250783147753739,
+              -0.1259652400005211,
+              0.9199083359543676
+            ],
+            [
+              -0.20846466720104218,
+              2.486378941277123e-12,
+              1.1732795238494873,
+              3.1403393745422363,
+              0.0007735038525424898,
+              -0.0892220064997673,
+              0.038133252412080765,
+              -0.03813319280743599
+            ]
+          ],
+          "sources": {
+            "video": {
+              "path": "results/imu_pilot_20261015/evaluation/continuation/wide/evaluation/episode_003.mp4",
+              "sha256": "ff6f79b48953d8cd6f4c0c894a771ae749556ff61ef38ad42ca28280af45ae2e"
+            },
+            "trace": {
+              "path": "results/imu_pilot_20261015/evaluation/continuation/wide/evaluation/episode_003_trace.json",
+              "sha256": "319cb97a8a7825f69ff620b78a3954ecba5dd372ba76922e60608cd1cae2350b"
+            },
+            "report": {
+              "path": "results/imu_pilot_20261015/evaluation/continuation/wide/evaluation/report.json",
+              "sha256": "0ad994e8dcb56846234a2a749617c3aa65573e8dc3c86f3b7437ecee25b2cfd1"
+            }
+          },
+          "final_frame_repetitions": 382
+        },
+        {
+          "model": "augmented",
+          "case": "W4",
+          "seed": 85003,
+          "success": false,
+          "steps": 600,
+          "source_frames": 601,
+          "duration_s": 30.05,
+          "initial_cube_and_robot_state": [
+            [
+              -0.02250783147753739,
+              -0.1259652400005211,
+              0.9199083359543676
+            ],
+            [
+              -0.20846466720104218,
+              2.486378941277123e-12,
+              1.1732795238494873,
+              3.1403393745422363,
+              0.0007735038525424898,
+              -0.0892220064997673,
+              0.038133252412080765,
+              -0.03813319280743599
+            ]
+          ],
+          "sources": {
+            "video": {
+              "path": "results/imu_pilot_20261015/evaluation/augmented/wide/evaluation/episode_003.mp4",
+              "sha256": "32d6dc592c04b638a185ec785b6cec5fe5912c07d19a2bcb840dafa85a322873"
+            },
+            "trace": {
+              "path": "results/imu_pilot_20261015/evaluation/augmented/wide/evaluation/episode_003_trace.json",
+              "sha256": "d9e5392b9df9a34a92073d03c37b0cfcf99310f18e1dd8dd50308acd3dd90005"
+            },
+            "report": {
+              "path": "results/imu_pilot_20261015/evaluation/augmented/wide/evaluation/report.json",
+              "sha256": "204d3d7783821d6a7360ae02fbb33997021249440e272aedc78d64ea2150df05"
+            }
+          },
+          "final_frame_repetitions": 0
+        }
+      ]
+    }
+  ],
+  "edits": "Two complete selected cases are joined in disclosed order at normal 20 Hz simulation speed. Each panel retains every source frame in order with no cuts, motion synthesis or speed change. Shorter attempts hold their final source frame with an explicit Finished label. Only padding, headings, aggregate outcomes and other textual/graphic annotations are added. Both source simulator cameras are retained at native 512x256 resolution.",
+  "playback_scope": "Simulation time, not inference wall time or real-robot latency.",
+  "controller": "Learned policy actions with common fixed downward wrist feedback; no grasping expert at evaluation.",
+  "runtime_inputs": "Simulated camera images and robot state; no IMU inputs or sensor fusion.",
+  "audio_present": false,
+  "original_metadata_copied": false,
+  "summary": {
+    "path": "results/imu_pilot_20261015/summary.json",
+    "sha256": "91ca195b3cbea6d431e6f7a1e0e3bb436416a47c18e96f6a65fbcbad5f4e787e"
+  },
+  "plan": {
+    "path": "results/imu_pilot_20261015/plan.json",
+    "sha256": "bbdb97f0573c55bb8f5562953396734efb3e4f107482b37d7c1e889a3cf97b75"
+  },
+  "renderer": {
+    "path": "scripts/render_imu_policy_comparison.py",
+    "sha256": "a715793bd3c8108e5efc71f6a8d5c0d02e66fe6fe4122a11ae6556778e4bee7e"
+  },
+  "output_sha256": "9697b4099fd36f450e73f86869e8b21a72f635057f445906c3c7474548ac166d",
+  "poster": {
+    "path": "media/imu_pilot/policy_comparison.jpg",
+    "output_frame_zero_based": 552,
+    "timestamp_s": 27.6,
+    "sha256": "b376730a9a0739b4e20c54191c74a9f81f3ce061dae116fbb253ccb97f2ffa69"
+  },
+  "limits": [
+    "One new human recording; four robot replays reuse its path.",
+    "Ten new simulator starts per model, one scene and one training seed.",
+    "Timing is provisional; shoulder is fixed; physical tracking accuracy is unmeasured.",
+    "The policy uses simulator images and robot state, not IMUs.",
+    "This tests demonstration augmentation, not vision/IMU sensor fusion.",
+    "Every planned result is reported; no model is selected using these starts."
+  ],
+  "verification": {
+    "all_913_frames_compared_with_corresponding_source_panels": true,
+    "panels_checked": 2739,
+    "maximum_mean_absolute_pixel_difference": 1.7902475992838542,
+    "mean_absolute_pixel_difference": 1.5060199246842363,
+    "source_frames_retained_in_order": true,
+    "duration_and_timestamps_verified": true,
+    "audio_absent_verified": true,
+    "location_and_creation_metadata_absent_verified": true,
+    "note": "H.264 re-encoding slightly changes pixels. Every displayed panel matched its corresponding source frame or explicitly held final source frame.",
+    "visually_reviewed_output_frames": [
+      0,
+      552,
+      912
+    ],
+    "visual_review_note": "Start, regression poster at 12 seconds within W4, and final frame checked for readable labels, correct outcomes, camera framing and explicit final-frame holds."
+  }
+}

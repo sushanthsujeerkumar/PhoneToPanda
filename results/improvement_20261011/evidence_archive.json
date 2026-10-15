@@ -1,0 +1,11 @@
+{
+  "archive": "study_evidence.tar.gz",
+  "sha256": "22a47ef35023d0861b5164c335e3c93b5e6abd3728941dc7fee5408aee03a40f",
+  "bytes": 51313964,
+  "source_file_count": 536,
+  "embedded_manifest": "evidence_manifest.json",
+  "episodes": {
+    "development": 140,
+    "final_test": 300
+  }
+}
