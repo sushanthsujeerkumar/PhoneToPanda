@@ -4,6 +4,19 @@ This checker consumes orientation estimates; it does not flash firmware or
 change wiring. Start with [the demo](README.md#quick-start-without-hardware),
 then use the existing USB rig. Only one process should open its serial port.
 
+## Right-arm wiring
+
+![Right-arm wiring schematic](images/right_arm_wiring.svg)
+
+![Sensor address jumper detail](images/right_arm_addresses.svg)
+
+The drawings follow the right-arm branch in the supplied Phase 1 build guide
+(pages 3–5), checked against the existing ESP32-S3 firmware. GPIO 8 is SDA and
+GPIO 9 is SCL on this rig. Both sensors share SD2/SC2, 3V3 and GND; only the
+forearm has an AD0-to-VCC jumper. The upper-arm breakout already holds AD0 low.
+The mux uses its existing default address, 0x70. These defaults depend on the
+breakout boards; follow printed labels and unplug USB before changing wires.
+
 ## Existing rig and record identity
 
 The existing ESP32-S3 firmware sends COBS-framed AM v1 packets with CRC32 at

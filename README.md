@@ -245,6 +245,16 @@ until you are comfortable with the main pipeline:
 
 ## Check an IMU setup
 
+![ESP32-S3, TCA9548A and two right-arm IMU connections](arm_checker/images/right_arm_wiring.svg)
+
+![Upper-arm default address and forearm AD0-to-VCC jumper](arm_checker/images/right_arm_addresses.svg)
+
+This is the right-arm branch of my existing harness: GPIO 8/9 connect to the
+multiplexer, and both IMUs share channel 2. The forearm's AD0 jumper gives it a
+different address. Everything uses 3.3 V and common ground. Follow printed pin
+labels; these drawings show connections, not physical pin positions.
+See the [hardware notes](arm_checker/hardware_setup.md#right-arm-wiring).
+
 The separate [right-arm checker](arm_checker/README.md) shows a two-segment arm,
 sensor health and calibration, and saves local recordings for replay. Try it
 without hardware:

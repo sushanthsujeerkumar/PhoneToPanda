@@ -39,6 +39,9 @@ launcher is intended for Linux/macOS; Windows use has not been verified.
 
 ## Use the existing ESP32 rig
 
+The [wiring images](hardware_setup.md#right-arm-wiring) show the two right-arm
+sensors, multiplexer connections and forearm address jumper.
+
 Close any other serial viewer first. Keep the existing firmware, USB connection
 and wiring unchanged:
 

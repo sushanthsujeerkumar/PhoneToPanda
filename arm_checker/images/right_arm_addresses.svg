@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1560" height="690" viewBox="0 0 1560 690" role="img" aria-labelledby="title desc">
+<title id="title">Right-arm sensor address jumper</title><desc id="desc">Both right-arm modules use multiplexer channel 2. The upper arm uses address 0x68 with its breakout default AD0 low. The forearm uses 0x69 with an external jumper between AD0 and VCC at 3.3 volts. The shared cable connects VCC, GND, SCL and SDA in parallel.</desc>
+<rect width="1560" height="690" rx="24" fill="#f6f9fa"/>
+<g font-family="DejaVu Sans, Arial, sans-serif">
+<text x="55" y="55" font-size="19" fill="#087e85" font-weight="700" text-anchor="start">PHONE TO PANDA  /  ADDRESS DETAIL</text>
+<text x="55" y="108" font-size="36" fill="#183039" font-weight="700" text-anchor="start">One shared cable. Two different addresses.</text>
+<text x="55" y="149" font-size="25" fill="#536975" font-weight="400" text-anchor="start">Only the forearm board gets the extra AD0-to-VCC jumper.</text>
+<rect x="55" y="195" width="700" height="360" rx="18" fill="white" stroke="#d6e2e7" stroke-width="2"/>
+<text x="85" y="242" font-size="25" fill="#087e85" font-weight="700" text-anchor="start">S4 · RIGHT UPPER ARM</text>
+<text x="85" y="280" font-size="22" fill="#536975" font-weight="400" text-anchor="start">Stream ID 3</text>
+<text x="715" y="267" font-size="38" fill="#183039" font-weight="700" text-anchor="end">0x68</text>
+<rect x="95" y="315" width="620" height="170" rx="12" fill="#eaf0f4" stroke="#c6d6dd" stroke-width="2"/>
+<circle cx="145" cy="370" r="8" fill="white" stroke="#c83c48" stroke-width="4"/>
+<text x="145" y="344" font-size="20" fill="#c83c48" font-weight="700" text-anchor="middle">VCC</text>
+<path d="M 145 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 145 370 V 430" fill="none" stroke="#c83c48" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="145" y="462" font-size="20" fill="#c83c48" font-weight="700" text-anchor="middle">3V3</text>
+<circle cx="270" cy="370" r="8" fill="white" stroke="#566371" stroke-width="4"/>
+<text x="270" y="344" font-size="20" fill="#566371" font-weight="700" text-anchor="middle">GND</text>
+<path d="M 270 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 270 370 V 430" fill="none" stroke="#566371" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="270" y="462" font-size="20" fill="#566371" font-weight="700" text-anchor="middle">GND</text>
+<circle cx="395" cy="370" r="8" fill="white" stroke="#ba6b0c" stroke-width="4"/>
+<text x="395" y="344" font-size="20" fill="#ba6b0c" font-weight="700" text-anchor="middle">SCL</text>
+<path d="M 395 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 395 370 V 430" fill="none" stroke="#ba6b0c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="395" y="462" font-size="20" fill="#ba6b0c" font-weight="700" text-anchor="middle">SC2</text>
+<circle cx="520" cy="370" r="8" fill="white" stroke="#2563c5" stroke-width="4"/>
+<text x="520" y="344" font-size="20" fill="#2563c5" font-weight="700" text-anchor="middle">SDA</text>
+<path d="M 520 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 520 370 V 430" fill="none" stroke="#2563c5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="520" y="462" font-size="20" fill="#2563c5" font-weight="700" text-anchor="middle">SD2</text>
+<circle cx="645" cy="370" r="8" fill="white" stroke="#566371" stroke-width="4"/>
+<text x="645" y="344" font-size="20" fill="#566371" font-weight="700" text-anchor="middle">AD0</text>
+<text x="645" y="411" font-size="18" fill="#566371" font-weight="700" text-anchor="middle">LOW</text>
+<text x="645" y="440" font-size="15" fill="#566371" font-weight="400" text-anchor="middle">on board</text>
+<text x="85" y="526" font-size="22" fill="#183039" font-weight="400" text-anchor="start">No VCC jumper; this breakout holds AD0 low.</text>
+<rect x="800" y="195" width="700" height="360" rx="18" fill="white" stroke="#d6e2e7" stroke-width="2"/>
+<text x="830" y="242" font-size="25" fill="#087e85" font-weight="700" text-anchor="start">S5 · RIGHT FOREARM</text>
+<text x="830" y="280" font-size="22" fill="#536975" font-weight="400" text-anchor="start">Stream ID 4</text>
+<text x="1460" y="267" font-size="38" fill="#183039" font-weight="700" text-anchor="end">0x69</text>
+<rect x="840" y="315" width="620" height="170" rx="12" fill="#eaf0f4" stroke="#c6d6dd" stroke-width="2"/>
+<circle cx="890" cy="370" r="8" fill="white" stroke="#c83c48" stroke-width="4"/>
+<text x="890" y="344" font-size="20" fill="#c83c48" font-weight="700" text-anchor="middle">VCC</text>
+<path d="M 890 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 890 370 V 430" fill="none" stroke="#c83c48" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="890" y="462" font-size="20" fill="#c83c48" font-weight="700" text-anchor="middle">3V3</text>
+<circle cx="1015" cy="370" r="8" fill="white" stroke="#566371" stroke-width="4"/>
+<text x="1015" y="344" font-size="20" fill="#566371" font-weight="700" text-anchor="middle">GND</text>
+<path d="M 1015 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1015 370 V 430" fill="none" stroke="#566371" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1015" y="462" font-size="20" fill="#566371" font-weight="700" text-anchor="middle">GND</text>
+<circle cx="1140" cy="370" r="8" fill="white" stroke="#ba6b0c" stroke-width="4"/>
+<text x="1140" y="344" font-size="20" fill="#ba6b0c" font-weight="700" text-anchor="middle">SCL</text>
+<path d="M 1140 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1140 370 V 430" fill="none" stroke="#ba6b0c" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1140" y="462" font-size="20" fill="#ba6b0c" font-weight="700" text-anchor="middle">SC2</text>
+<circle cx="1265" cy="370" r="8" fill="white" stroke="#2563c5" stroke-width="4"/>
+<text x="1265" y="344" font-size="20" fill="#2563c5" font-weight="700" text-anchor="middle">SDA</text>
+<path d="M 1265 370 V 430" fill="none" stroke="#f6f9fa" stroke-width="11" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 1265 370 V 430" fill="none" stroke="#2563c5" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1265" y="462" font-size="20" fill="#2563c5" font-weight="700" text-anchor="middle">SD2</text>
+<circle cx="1390" cy="370" r="8" fill="white" stroke="#c83c48" stroke-width="4"/>
+<text x="1390" y="344" font-size="20" fill="#c83c48" font-weight="700" text-anchor="middle">AD0</text>
+<path d="M 890 370 V 401 H 1390 V 370" fill="none" stroke="#f6f9fa" stroke-width="12" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 890 370 V 401 H 1390 V 370" fill="none" stroke="#c83c48" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="890" cy="370" r="6" fill="#c83c48"/>
+<circle cx="1390" cy="370" r="6" fill="#c83c48"/>
+<text x="830" y="526" font-size="24" fill="#c83c48" font-weight="700" text-anchor="start">Added wire: AD0 to VCC (3.3 V).</text>
+<text x="55" y="602" font-size="23" fill="#183039" font-weight="400" text-anchor="start">All four cable wires continue to both boards: VCC to VCC, GND to GND, SCL to SCL, SDA to SDA.</text>
+<text x="55" y="642" font-size="21" fill="#536975" font-weight="400" text-anchor="start">Pin positions here are illustrative. Check printed labels and the breakout’s AD0 default. Unplug USB before rewiring.</text>
+</g></svg>
