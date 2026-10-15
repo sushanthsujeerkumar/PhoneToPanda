@@ -13,8 +13,8 @@ smaller experiment adds one phone-and-IMU recording and tests whether it helps.
 
 | Phone recording and arm estimate | Three-model comparison |
 | --- | --- |
-| [![Phone footage beside the recorded right-arm estimate](media/imu_pilot/paired_preview_108.jpg)](media/imu_pilot/paired_video_imu.mp4) | [![Original, continued-training and IMU-assisted policies on the same start](media/imu_pilot/policy_comparison.jpg)](media/imu_pilot/policy_comparison.mp4) |
-| **[Play phone + IMU replay](media/imu_pilot/paired_video_imu.mp4)** · 14.4 seconds. Real phone footage beside a fixed-shoulder arm estimate. Alignment is approximate, not a tracking-accuracy measurement. | **[Play the policy comparison](media/imu_pilot/policy_comparison.mp4)** · 45.65 seconds. A shared success followed by the sole IMU-model regression, with every attempt shown in full. |
+| [![Phone footage beside the recorded right-arm estimate](media/imu_pilot/paired_preview_108.jpg)](#phone-and-imu-replay) | [![Original, continued-training and IMU-assisted policies on the same start](media/imu_pilot/policy_comparison.jpg)](#three-model-comparison) |
+| **[Play phone + IMU replay](#phone-and-imu-replay)** · 14.4 seconds. Real phone footage beside a fixed-shoulder arm estimate. Alignment is approximate, not a tracking-accuracy measurement. | **[Play the policy comparison](#three-model-comparison)** · 45.65 seconds. A shared success followed by the sole IMU-model regression, with every attempt shown in full. |
 
 The IMU pilot scored **6/10 original, 6/10 continued training, and 5/10 with
 IMU-assisted demonstrations**. It did not demonstrate an improvement. The
@@ -23,8 +23,23 @@ attempts hold their final frame. All 30 outcomes remain visible. The examples ar
 N1 (the first planned narrow start) and W4 (the only augmented regression), not a
 selection of only successful attempts.
 
+### Phone and IMU replay
+
+https://github.com/user-attachments/assets/fd77a2ce-bcf4-40fd-b95f-831d87905c92
+
+### Three-model comparison
+
+https://github.com/user-attachments/assets/358c801e-04f7-4bf5-8e96-ca9819406703
+
+<details>
+<summary>Watch the full phone recording from the IMU take</summary>
+
+https://github.com/user-attachments/assets/f407df74-4ec6-40a4-8f8c-1756380ca6cf
+
+</details>
+
 [Original marker-based phone clip](data/raw/IMG_2096.MOV) ·
-[Full phone clip from the IMU take](media/imu_pilot/phone_recording.mp4) ·
+[Download the full phone clip from the IMU take](media/imu_pilot/phone_recording.mp4) ·
 [Video edits and source mapping](media/imu_pilot/publication.json) ·
 [Comparison provenance](media/imu_pilot/policy_comparison.json)
 
@@ -35,14 +50,14 @@ main project. The IMU extension adds one paired human recording.
 
 ## Demo
 
-[![Interactive Panda demo with placement controls](media/demo_preview.jpg)](media/demo.mp4)
+https://github.com/user-attachments/assets/cd2a40a9-f291-4689-98fd-d2583f1f6e8b
 
 **Interactive demo · silent · normal speed.** Choose a cube position and test the
 saved model in the desktop MuJoCo viewer. The video shows the placement controls
 and simulator side by side. Startup and window arrangement are omitted, and the
 surrounding desktop is cropped out; the robot attempts remain one continuous
 sequence. These interactive attempts are separate from the measured evaluation
-below. [Watch the MP4](media/demo.mp4) · [Video edit record](media/demo_info.json).
+below. [Download the MP4](media/demo.mp4) · [Video edit record](media/demo_info.json).
 
 The method is **object-motion retargeting followed by imitation learning**.
 Markers make the object's carry path measurable. That path is replayed by the
